@@ -11,7 +11,7 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 <meta content="Flatroshop online shopping point" name="description">
 <meta content="logoby.us" name="author">
-<link href="images/ico.html" rel="shortcut icon">
+<link href="fonts/images/ico.html" rel="shortcut icon">
 <title>Flatro - Online Shop Template</title>
 
 <!-- Reset CSS -->
@@ -183,13 +183,13 @@
                     <ul class="dropdown-menu sub flyout-menu">
                       <li><a href="category-grid.html">Category Grid</a></li>
                       <li><a href="category-list.html">Category List</a></li>
-                      <li><a href="product.html">Product Page</a> </li>
+                      <li><a href="product.php">Product Page</a> </li>
                     </ul>
                   </li>
                   <li><a href="cart.html">Shoping Cart</a></li>
                   <li><a href="checkout.html">Checkout</a></li>
                   <li><a href="blog-single.html">Blog Post</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
+                  <li><a href="contact.php">Contact us</a></li>
                 </ul>
                 <!-- end: Sub Menu --> 
               </div>
@@ -208,12 +208,12 @@
                     <ul class="dropdown-menu sub flyout-menu">
                       <li><a href="category-grid.html">Category Grid</a></li>
                       <li><a href="category-list.html">Category List</a></li>
-                      <li><a href="product.html">Product Page</a> </li>
+                      <li><a href="product.php">Product Page</a> </li>
                     </ul>
                   </li>
                   <li><a href="cart.html">Shoping Cart</a></li>
                   <li><a href="checkout.html">Checkout</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
+                  <li><a href="contact.php">Contact us</a></li>
                 </ul>
                 <!-- end: Sub Menu --> 
               </div>
@@ -258,7 +258,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                      <p> <a href="#a"><img alt="" src="images/menu-ad.jpg"></a> </p>
+                      <p> <a href="#a"><img alt="" src="fonts/images/menu-ad.jpg"></a> </p>
                     </div>
                   </div>
                 </div>
@@ -286,9 +286,9 @@
                       <div class="product-block">
                         <div class="image">
                           <div class="product-label product-sale"><span>SALE</span></div>
-                          <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                          <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product1.jpg" title="product title"></a> </div>
                         <div class="product-meta">
-                          <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                          <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                           <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                           <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                             Cart</a> </div>
@@ -335,7 +335,7 @@
             <li> <a href="index.html"> <i class="fa fa-home fa-fw"></i> <span class="hidden-sm">Home</span></a> </li>
             <li> <a href="about.html"> <i class="fa fa-info-circle fa-fw"></i> <span class="hidden-sm">About</span></a> </li>
             <li> <a href="blog.html"> <i class="fa fa-bullhorn fa-fw"></i> <span class="hidden-sm">Blog</span></a> </li>
-            <li> <a href="contact.html"> <i class="fa fa-pencil-square-o fa-fw"></i> <span class="hidden-sm ">Contact</span></a> </li>
+            <li> <a href="contact.php"> <i class="fa fa-pencil-square-o fa-fw"></i> <span class="hidden-sm ">Contact</span></a> </li>
             <li class="dropdown"> <a href="cart.html"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-sm"> 5 items | $4530.00</span></a> 
               <!-- Quick Cart -->
               <div class="dropdown-menu quick-cart">
@@ -363,7 +363,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <div class="breadcrumb"> <a href="index.html"> <i class="fa fa-home fa-fw"></i> Home </a> <i class="fa fa-angle-right fa-fw"></i> <a href="product.html"> Product </a> </div>
+      <div class="breadcrumb"> <a href="index.html"> <i class="fa fa-home fa-fw"></i> Home </a> <i class="fa fa-angle-right fa-fw"></i> <a href="product.php"> Product </a> </div>
       
       <!-- Quick Help for tablets and large screens -->
       <div class="quick-message hidden-xs">
@@ -401,14 +401,14 @@
               <!-- Small Images -->
               <div class="thumbs col-md-3 col-sm-3 col-xs-3"  id="thumbs">
                 <ul>
-                  <li class=""><a href="#a" data-image="images/products/product1.jpg" data-zoom-image="images/products/product1.jpg" class="elevatezoom-gallery active" ><img src="images/products/product1.jpg" alt="small image" /></a></li>
-                  <li class=""> <a href="#a" data-image="images/products/product1-1.jpg" data-zoom-image="images/products/product1-1.jpg"  class="elevatezoom-gallery" > <img src="images/products/product1-1.jpg" alt="small image" /></a></li>
-                  <li class=""> <a href="#a" data-image="images/products/product1-2.jpg" data-zoom-image="images/products/product1-2.jpg" class="elevatezoom-gallery"><img src="images/products/product1-2.jpg" alt="small image" /></a></li>
+                  <li class=""><a href="#a" data-image="images/products/product1.jpg" data-zoom-image="images/products/product1.jpg" class="elevatezoom-gallery active" ><img src="fonts/images/products/product1.jpg" alt="small image" /></a></li>
+                  <li class=""> <a href="#a" data-image="images/products/product1-1.jpg" data-zoom-image="images/products/product1-1.jpg"  class="elevatezoom-gallery" > <img src="fonts/images/products/product1-1.jpg" alt="small image" /></a></li>
+                  <li class=""> <a href="#a" data-image="images/products/product1-2.jpg" data-zoom-image="images/products/product1-2.jpg" class="elevatezoom-gallery"><img src="fonts/images/products/product1-2.jpg" alt="small image" /></a></li>
                 </ul>
               </div>
               <!-- end: Small Images --> 
               <!-- Big Image and Zoom -->
-              <div class="big-image col-md-9 col-sm-9 col-xs-9"> <img id="product-image" src="images/products/product1.jpg" data-zoom-image="images/products/product1.jpg" alt="big image" /> </div>
+              <div class="big-image col-md-9 col-sm-9 col-xs-9"> <img id="product-image" src="fonts/images/products/product1.jpg" data-zoom-image="images/products/product1.jpg" alt="big image" /> </div>
               <!-- end: Big Image and Zoom --> 
             </div>
           </div>
@@ -686,9 +686,9 @@ var addthis_config = {"data_track_addressbar":true};
               <div class="product-block">
                 <div class="image">
                   <div class="product-label product-hot"><span>HOT</span></div>
-                  <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                  <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product1.jpg" title="product title"></a> </div>
                 <div class="product-meta">
-                  <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                  <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                   <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> </div>
                   <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                     Cart</a> </div>
@@ -700,9 +700,9 @@ var addthis_config = {"data_track_addressbar":true};
             <!-- item -->
             <div class="item">
               <div class="product-block">
-                <div class="image"> <a class="img" href="product.html"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
+                <div class="image"> <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product2.jpg" title="product title"></a> </div>
                 <div class="product-meta">
-                  <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                  <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                   <div class="big-price"> <span class="price-new"><span class="sym">$</span>654.87</span> </div>
                   <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                     Cart</a> </div>
@@ -714,9 +714,9 @@ var addthis_config = {"data_track_addressbar":true};
             <!-- item -->
             <div class="item">
               <div class="product-block">
-                <div class="image"> <a class="img" href="product.html"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
+                <div class="image"> <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product3.jpg" title="product title"></a> </div>
                 <div class="product-meta">
-                  <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                  <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                   <div class="big-price"> <span class="price-new"><span class="sym">$</span>1600</span> </div>
                   <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                     Cart</a> </div>
@@ -758,9 +758,9 @@ var addthis_config = {"data_track_addressbar":true};
                   <div class="product-block">
                     <div class="image">
                       <div class="product-label product-sale"><span>SALE</span></div>
-                      <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                      <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product1.jpg" title="product title"></a> </div>
                     <div class="product-meta">
-                      <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                      <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                       <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                       <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                         Cart</a> </div>
@@ -779,9 +779,9 @@ var addthis_config = {"data_track_addressbar":true};
                 <!-- Product -->
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                   <div class="product-block">
-                    <div class="image"> <a class="img" href="product.html"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
+                    <div class="image"> <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product2.jpg" title="product title"></a> </div>
                     <div class="product-meta">
-                      <div class="name"><a href="product.html">Female Strips Handbag</a></div>
+                      <div class="name"><a href="product.php">Female Strips Handbag</a></div>
                       <div class="big-price"> <span class="price-new"><span class="sym">$</span>520</span> </div>
                       <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                         Cart</a> </div>
@@ -802,9 +802,9 @@ var addthis_config = {"data_track_addressbar":true};
                   <div class="product-block">
                     <div class="image">
                       <div class="product-label product-new"><span>NEW</span></div>
-                      <a class="img" href="product.html"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
+                      <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product3.jpg" title="product title"></a> </div>
                     <div class="product-meta">
-                      <div class="name"><a href="product.html">Blue Fashion Bag</a></div>
+                      <div class="name"><a href="product.php">Blue Fashion Bag</a></div>
                       <div class="big-price"> <span class="price-new"><span class="sym">$</span>320</span> </div>
                       <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                         Cart</a> </div>
@@ -825,9 +825,9 @@ var addthis_config = {"data_track_addressbar":true};
                   <div class="product-block">
                     <div class="image">
                       <div class="product-label product-sale"><span>SALE</span></div>
-                      <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                      <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product1.jpg" title="product title"></a> </div>
                     <div class="product-meta">
-                      <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                      <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                       <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                       <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                         Cart</a> </div>
@@ -852,9 +852,9 @@ var addthis_config = {"data_track_addressbar":true};
                 <!-- Product -->
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                   <div class="product-block">
-                    <div class="image"> <a class="img" href="product.html"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
+                    <div class="image"> <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product2.jpg" title="product title"></a> </div>
                     <div class="product-meta">
-                      <div class="name"><a href="product.html">Female Strips Handbag</a></div>
+                      <div class="name"><a href="product.php">Female Strips Handbag</a></div>
                       <div class="big-price"> <span class="price-new"><span class="sym">$</span>520</span> </div>
                       <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                         Cart</a> </div>
@@ -875,9 +875,9 @@ var addthis_config = {"data_track_addressbar":true};
                   <div class="product-block">
                     <div class="image">
                       <div class="product-label product-new"><span>NEW</span></div>
-                      <a class="img" href="product.html"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
+                      <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product3.jpg" title="product title"></a> </div>
                     <div class="product-meta">
-                      <div class="name"><a href="product.html">Blue Fashion Bag</a></div>
+                      <div class="name"><a href="product.php">Blue Fashion Bag</a></div>
                       <div class="big-price"> <span class="price-new"><span class="sym">$</span>320</span> </div>
                       <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                         Cart</a> </div>
@@ -898,9 +898,9 @@ var addthis_config = {"data_track_addressbar":true};
                   <div class="product-block">
                     <div class="image">
                       <div class="product-label product-sale"><span>SALE</span></div>
-                      <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                      <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product1.jpg" title="product title"></a> </div>
                     <div class="product-meta">
-                      <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                      <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                       <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                       <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                         Cart</a> </div>
@@ -921,9 +921,9 @@ var addthis_config = {"data_track_addressbar":true};
                   <div class="product-block">
                     <div class="image">
                       <div class="product-label product-sale"><span>SALE</span></div>
-                      <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                      <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product1.jpg" title="product title"></a> </div>
                     <div class="product-meta">
-                      <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                      <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                       <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                       <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                         Cart</a> </div>
@@ -1084,7 +1084,7 @@ var addthis_config = {"data_track_addressbar":true};
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-sm-8 col-xs-12"> <span class="copytxt">&copy; Copyright 2013 by <a href="#a">Flatro</a> - All rights reserved</span> <span class="btmlinks"><a href="#a">Return Policy</a> | <a href="#a">Privacy Policy</a> | <a href="#a">Terms of Use</a></span> </div>
-        <div class="col-lg-4 col-sm-4 col-xs-12 payment-icons"> <a href="#a"> <img alt="discover" src="images/icons/discover.png"> </a> <a href="#a"> <img alt="2co" src="images/icons/2co.png"> </a> <a href="#a"> <img alt="paypal" src="images/icons/paypal.png"> </a> <a href="#a"> <img alt="master card" src="images/icons/mastercard.png"> </a> <a href="#a"> <img alt="visa card" src="images/icons/visa.png"> </a> <a href="#a"> <img alt="moneybookers" src="images/icons/moneybookers.png"> </a> </div>
+        <div class="col-lg-4 col-sm-4 col-xs-12 payment-icons"> <a href="#a"> <img alt="discover" src="fonts/images/icons/discover.png"> </a> <a href="#a"> <img alt="2co" src="fonts/images/icons/2co.png"> </a> <a href="#a"> <img alt="paypal" src="fonts/images/icons/paypal.png"> </a> <a href="#a"> <img alt="master card" src="fonts/images/icons/mastercard.png"> </a> <a href="#a"> <img alt="visa card" src="fonts/images/icons/visa.png"> </a> <a href="#a"> <img alt="moneybookers" src="fonts/images/icons/moneybookers.png"> </a> </div>
       </div>
     </div>
   </div>

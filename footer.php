@@ -68,7 +68,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-sm-8 col-xs-12"> <span class="copytxt">&copy; Copyright 2013 by <a href="#a">Flatro</a> -  All rights reserved</span> <span class="btmlinks"><a href="#a">Return Policy</a> | <a href="#a">Privacy Policy</a> | <a href="#a">Terms of Use</a></span> </div>
-                <div class="col-lg-4 col-sm-4 col-xs-12 payment-icons"> <a href="#a"> <img src="images/icons/discover.png" alt="discover"> </a> <a href="#a"> <img src="images/icons/2co.png" alt="2co"> </a> <a href="#a"> <img src="images/icons/paypal.png" alt="paypal"> </a> <a href="#a"> <img src="images/icons/mastercard.png" alt="master card"> </a> <a href="#a"> <img src="images/icons/visa.png" alt="visa card"> </a> <a href="#a"> <img src="images/icons/moneybookers.png" alt="moneybookers"> </a> </div>
+                <div class="col-lg-4 col-sm-4 col-xs-12 payment-icons"> <a href="#a"> <img src="fonts/images/icons/discover.png" alt="discover"> </a> <a href="#a"> <img src="fonts/images/icons/2co.png" alt="2co"> </a> <a href="#a"> <img src="fonts/images/icons/paypal.png" alt="paypal"> </a> <a href="#a"> <img src="fonts/images/icons/mastercard.png" alt="master card"> </a> <a href="#a"> <img src="fonts/images/icons/visa.png" alt="visa card"> </a> <a href="#a"> <img src="fonts/images/icons/moneybookers.png" alt="moneybookers"> </a> </div>
             </div>
         </div>
     </div>

@@ -23,13 +23,13 @@
                                     <ul class="dropdown-menu sub flyout-menu">
                                         <li><a href="category-grid.html">Category Grid</a></li>
                                         <li><a href="category-list.html">Category List</a></li>
-                                        <li><a href="product.html">Product Page</a> </li>
+                                        <li><a href="product.php">Product Page</a> </li>
                                     </ul>
                                 </li>
                                 <li><a href="cart.html">Shoping Cart</a></li>
                                 <li><a href="checkout.html">Checkout</a></li>
                                 <li><a href="blog-single.html">Blog Post</a></li>
-                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="contact.php">Contact us</a></li>
                             </ul>
                             <!-- end: Sub Menu -->
                         </div>
@@ -48,12 +48,12 @@
                                     <ul class="dropdown-menu sub flyout-menu">
                                         <li><a href="category-grid.html">Category Grid</a></li>
                                         <li><a href="category-list.html">Category List</a></li>
-                                        <li><a href="product.html">Product Page</a> </li>
+                                        <li><a href="product.php">Product Page</a> </li>
                                     </ul>
                                 </li>
                                 <li><a href="cart.html">Shoping Cart</a></li>
                                 <li><a href="checkout.html">Checkout</a></li>
-                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="contact.php">Contact us</a></li>
                             </ul>
                             <!-- end: Sub Menu -->
                         </div>
@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <p> <a href="#a"><img alt="" src="images/menu-ad.jpg"></a> </p>
+                                        <p> <a href="#a"><img alt="" src="fonts/images/menu-ad.jpg"></a> </p>
                                     </div>
                                 </div>
                             </div>
@@ -126,9 +126,9 @@
                                         <div class="product-block">
                                             <div class="image">
                                                 <div class="product-label product-sale"><span>SALE</span></div>
-                                                <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                                                <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product1.jpg" title="product title"></a> </div>
                                             <div class="product-meta">
-                                                <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                                                <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                                                 <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                                                 <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                         Cart</a> </div>
@@ -175,7 +175,7 @@
                     <li> <a href="index.html"> <i class="fa fa-home fa-fw"></i> <span class="hidden-sm">Home</span></a> </li>
                     <li> <a href="about.html"> <i class="fa fa-info-circle fa-fw"></i> <span class="hidden-sm">About</span></a> </li>
                     <li> <a href="blog.html"> <i class="fa fa-bullhorn fa-fw"></i> <span class="hidden-sm">Blog</span></a> </li>
-                    <li> <a href="contact.html"> <i class="fa fa-pencil-square-o fa-fw"></i> <span class="hidden-sm ">Contact</span></a> </li>
+                    <li> <a href="contact.php"> <i class="fa fa-pencil-square-o fa-fw"></i> <span class="hidden-sm ">Contact</span></a> </li>
                     <li class="dropdown"> <a href="cart.html"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-sm"> 5 items | $4530.00</span></a>
                         <!-- Quick Cart -->
                         <div class="dropdown-menu quick-cart">
