@@ -39,7 +39,7 @@
                         <div class="product-block">
                             <div class="image">
                                 <div class="product-label product-hot"><span>HOT</span></div>
-                                <a class="img" href="product.php?articleId=<?php echo $articleId;?>"><img alt="product info" src="fonts/images/products/<?php echo $picture1?>" title="product title"></a> </div>
+                                <a class="img" href="product.php?articleId=<?php echo $articleId;?>"><img alt="product info" src="images/products/<?php echo $picture1?>" title="product title"></a> </div>
                             <div class="product-meta">
                                 <div class="name"><a href="product.php?articleId=<?php echo $articleId;?>"><?php echo $articleName?></a></div>
                                 <div class="big-price"> <span class="price-new"><span class="sym">Rs.</span><?php echo $price?></span> </div>

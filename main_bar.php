@@ -1,7 +1,7 @@
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 menu-col">
-            <div class="menu-heading"> <span> <i class="fa fa-bars"></i> Categories</span> </div>
+            <div class="menu-heading menuHeadingdropdown"> <span> <i class="fa fa-bars"></i> Categories</span> </div>
             <!-- Mega Menu -->
-            <div class="menu3dmega vertical" id="menuMega">
+            <div class="menu3dmega vertical menuMegasub" id="menuMega">
                 <ul>
                     <!-- Menu Item Links for Mobiles Only -->
                     <li class="visible-xs"> <a href="index.html"> <i class="fa fa-home"></i> <span>Home</span> <i class="fa fa-angle-right"></i> </a>
@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <p> <a href="#a"><img alt="" src="fonts/images/menu-ad.jpg"></a> </p>
+                                        <p> <a href="#a"><img alt="" src="images/menu-ad.jpg"></a> </p>
                                     </div>
                                 </div>
                             </div>
@@ -126,7 +126,7 @@
                                         <div class="product-block">
                                             <div class="image">
                                                 <div class="product-label product-sale"><span>SALE</span></div>
-                                                <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product1.jpg" title="product title"></a> </div>
+                                                <a class="img" href="product.php"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
                                             <div class="product-meta">
                                                 <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                                                 <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>

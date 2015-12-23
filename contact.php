@@ -11,7 +11,7 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
 <meta content="Flatroshop online shopping point" name="description">
 <meta content="logoby.us" name="author">
-<link href="fonts/images/ico.html" rel="shortcut icon">
+<link href="images/ico.html" rel="shortcut icon">
 <title>Flatro - Online Shop Template</title>
 
 <!-- Reset CSS -->
@@ -266,7 +266,7 @@
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                      <p> <a href="#a"><img alt="" src="fonts/images/menu-ad.jpg"></a> </p>
+                      <p> <a href="#a"><img alt="" src="images/menu-ad.jpg"></a> </p>
                     </div>
                   </div>
                 </div>
@@ -294,7 +294,7 @@
                       <div class="product-block">
                         <div class="image">
                           <div class="product-label product-sale"><span>SALE</span></div>
-                          <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product1.jpg" title="product title"></a> </div>
+                          <a class="img" href="product.php"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
                         <div class="product-meta">
                           <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                           <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
@@ -471,7 +471,7 @@
               <div class="product-block">
                 <div class="image">
                   <div class="product-label product-hot"><span>HOT</span></div>
-                  <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product1.jpg" title="product title"></a> </div>
+                  <a class="img" href="product.php"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
                 <div class="product-meta">
                   <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                   <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> </div>
@@ -485,7 +485,7 @@
             <!-- item -->
             <div class="item">
               <div class="product-block">
-                <div class="image"> <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product2.jpg" title="product title"></a> </div>
+                <div class="image"> <a class="img" href="product.php"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
                 <div class="product-meta">
                   <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                   <div class="big-price"> <span class="price-new"><span class="sym">$</span>654.87</span> </div>
@@ -499,7 +499,7 @@
             <!-- item -->
             <div class="item">
               <div class="product-block">
-                <div class="image"> <a class="img" href="product.php"><img alt="product info" src="fonts/images/products/product3.jpg" title="product title"></a> </div>
+                <div class="image"> <a class="img" href="product.php"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
                 <div class="product-meta">
                   <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                   <div class="big-price"> <span class="price-new"><span class="sym">$</span>1600</span> </div>
@@ -598,7 +598,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-sm-8 col-xs-12"> <span class="copytxt">&copy; Copyright 2013 by <a href="#a">Flatro</a> - All rights reserved</span> <span class="btmlinks"><a href="#a">Return Policy</a> | <a href="#a">Privacy Policy</a> | <a href="#a">Terms of Use</a></span> </div>
-        <div class="col-lg-4 col-sm-4 col-xs-12 payment-icons"> <a href="#a"> <img alt="discover" src="fonts/images/icons/discover.png"> </a> <a href="#a"> <img alt="2co" src="fonts/images/icons/2co.png"> </a> <a href="#a"> <img alt="paypal" src="fonts/images/icons/paypal.png"> </a> <a href="#a"> <img alt="master card" src="fonts/images/icons/mastercard.png"> </a> <a href="#a"> <img alt="visa card" src="fonts/images/icons/visa.png"> </a> <a href="#a"> <img alt="moneybookers" src="fonts/images/icons/moneybookers.png"> </a> </div>
+        <div class="col-lg-4 col-sm-4 col-xs-12 payment-icons"> <a href="#a"> <img alt="discover" src="images/icons/discover.png"> </a> <a href="#a"> <img alt="2co" src="images/icons/2co.png"> </a> <a href="#a"> <img alt="paypal" src="images/icons/paypal.png"> </a> <a href="#a"> <img alt="master card" src="images/icons/mastercard.png"> </a> <a href="#a"> <img alt="visa card" src="images/icons/visa.png"> </a> <a href="#a"> <img alt="moneybookers" src="images/icons/moneybookers.png"> </a> </div>
       </div>
     </div>
   </div>
