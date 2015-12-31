@@ -62,59 +62,7 @@
     <!--[if IE 8]>
     <script type="text/javascript" src="js/selectivizr.js"></script>
     <![endif]-->
-    <script>
-        var ratings = "";
-        var ratingDone = false;
 
-        function checkSubmitBtn()
-        {
-            var text = document.getElementById("review-textarea").value;
-            if( text.length == 0 || text.length < 50 || text.length > 1000 )
-            {
-                document.getElementById("error").innerHTML = "<span style='color:red'>Please Submit a valid review, Review must be atleast 50 characters long</span>";
-                return false;
-            }
-            else
-            {
-                if(ratingDone == false)
-                {
-                    document.getElementById("ratingLabel").innerHTML = "<span style='color:red'>Please rate the product</span>";
-                    return false;
-                }
-                else {
-                    document.getElementById("rated").value = ratings;
-                    document.getElementById("error").innerHTML = "";
-                    var star = document.getElementById("ratingStar");
-                    return true;
-                }
-            }
-        }
-
-        function postToController() {
-            for (i = 0; i < document.getElementsByName('star').length; i++) {
-                if (document.getElementsByName('star')[i].checked == true) {
-                    var ratingValue = document.getElementsByName('star')[i].value;
-                    ratingDone = true;
-                    document.getElementById("ratingLabel").innerHTML = "";
-                    var text = document.getElementById("review-textarea").value;
-                    if(text.length >= 50)
-                    {
-                        document.getElementById("error").innerHTML = "";
-                    }
-                    break;
-                }
-            }
-            ratings = ratingValue;
-        }
-
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
 </head>
 
 <body>

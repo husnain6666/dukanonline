@@ -4,13 +4,16 @@ include "connectdb.php";
 /* Variables */
 /* Message */
 $alpha= $_POST['alpha'];
-if(!empty($_POST['reviewText']) && !empty($_POST['alpha']))
+
+if(!isset($_SESSION['loginId']))
 {
     $review = $_POST['reviewText'];
     $rating = $_POST['rated'];
-    $userId = $_SESSION['loginId'];
-
+    //$userId = $_SESSION['loginId'];
+    $userId = 177;
     $query="insert into reviews (review, articleId, userId, date) VALUES ('$review',$alpha,$userId,NOW())";
+    echo $review;
+    echo $rating;
 
     try{
         $result=mysqli_query($connection,$query);
@@ -23,14 +26,13 @@ if(!empty($_POST['reviewText']) && !empty($_POST['alpha']))
             //insert ratings after review
             $insquery="insert into ratings (rating, articleId, userId, reviewId,date) VALUES ($rating,$alpha,$userId,$reviewId,NOW())";
             $result2=mysqli_query($connection,$insquery);
-            $table_record2=mysqli_fetch_array($result2);
             mysqli_close($connection);
-            header("location: products_page_v1.php?articleId=".$alpha);
+            header("location: product.php?articleId=".$alpha);
         }
         else
         {
             mysqli_close($connection);
-            header("location: products_page_v1.php?articleId=".$alpha);
+            header("location: product.php?articleId=".$alpha);
             throw new Exception("Problem in Query");
         }
     }
@@ -43,7 +45,7 @@ if(!empty($_POST['reviewText']) && !empty($_POST['alpha']))
 else
 {
     $error = true;
-    header("location: products_page_v1.php?articleId=".$alpha."&warning=Please login first");
+    header("location: product.php?articleId=".$alpha."&warning=Please login first");
 }
 
 ?>

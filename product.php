@@ -20,6 +20,7 @@
     </div>
 </div>
 </div>
+
 </header>
 <!-- end: Header -->
 
@@ -188,7 +189,7 @@
 
                       </div>
                       <div class="row">
-                          <div class="short-info-opt-wr col-md-8 col-sm-8 col-xs-12">
+                          <div class="short-info-opt-wr col-md-6 col-sm-6 col-xs-6">
                               <div class="short-info-opt">
                                   <div class="att-row">
                                       <div class="qty-wr">
@@ -202,15 +203,12 @@
                                   </div>
                               </div>
                           </div>
-                          <div class="short-info-share-wr col-md-4 col-sm-4 col-xs-12">
+                          <div class="short-info-share-wr col-md-6 col-sm-6 col-xs-6">
                               <div class="short-info-opt">
                                   <!-- AddThis Button BEGIN -->
-                                  <div class="addthis_toolbox addthis_default_style addthis_32x32_style"> <a class="addthis_button_facebook addthis-btn"></a> <a class="addthis_button_twitter addthis-btn" ></a> <a class="addthis_button_google_plusone_share addthis-btn"></a> <a class="addthis_button_compact addthis-btn"></a> </div>
-                                  <script type="text/javascript">
-                                      var addthis_config = {"data_track_addressbar":true};
-                                  </script>
-                                  <script type="text/javascript" src="../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4df5ee7405c65a76"></script>
-                                  <!-- AddThis Button END -->
+                                  <div class="social-share">
+                                      <div class="fb-like" data-href="https://www.facebook.com/www.electroshop.pk/?fref=ts" data-width="250" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                                  </div>
                               </div>
                           </div>
                       </div>
@@ -317,7 +315,23 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
             <div class="review-info">
               <div class="name"><i class="fa fa-comment-o fa-flip-horizontal fa-fw"></i> <?php echo $fName." ".$lName;?></div>
               <div class="date"> on <em><?php echo $date;?></em></div>
-              <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> <i class="fa fa-star-o"></i> </div>
+                <?php
+                $ratingLimit = 0;
+
+                ?>
+                <div class="rating"><?php
+                    while ($ratingLimit < 5) {
+                        if ($ratingLimit < $rating1) {
+                            ?>
+                            <i class="fa fa-star"></i>
+                        <?php } else {
+                            ?>
+                            <i class="fa fa-star-o"></i>
+                        <?php
+                        }
+                        $ratingLimit++;
+                    }?>
+                </div>
             </div>
             <div class="text"><?php echo $review;?></div>
           </div>
@@ -329,26 +343,33 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
             <div class="fr-border"></div>
 
             <!-- Form -->
-            <form action = "submit_review.php" method="post" onsubmit="return checkSubmitBtn();" id="review_form">
+            <form action = "submit_review.php" method="post" onsubmit="return checkSubmitBtn();">
               <div class="row">
                 <div class="col-md-4 col-xs-12"> <a name="wr"> </a>
+                    <input type="text" name = "rated" id="rated" hidden="true"/>
                   <fieldset class="rating">
-                    <input type="radio" id="star5" name="rating" value="5" onclick=""/>
+                    <input type="radio" id="star5" name="rating" value="5" onclick="postToController()"/>
                     <label for="star5" title="Rocks!" class="fa fa-star">5 stars</label>
-                    <input type="radio" id="star4" name="rating" value="4" />
+                    <input type="radio" id="star4" name="rating" value="4" onclick="postToController()"/>
                     <label for="star4" title="Pretty good" class="fa fa-star">4 stars</label>
-                    <input type="radio" id="star3" name="rating" value="3" />
+                    <input type="radio" id="star3" name="rating" value="3" onclick="postToController()"/>
                     <label for="star3" title="Cool" class="fa fa-star">3 stars</label>
-                    <input type="radio" id="star2" name="rating" value="2" />
+                    <input type="radio" id="star2" name="rating" value="2" onclick="postToController()"/>
                     <label for="star2" title="Kinda bad" class="fa fa-star">2 stars</label>
-                    <input type="radio" id="star1" name="rating" value="1" />
+                    <input type="radio" id="star1" name="rating" value="1" onclick="postToController()"/>
                     <label for="star1" title="Oops!" class="fa fa-star">1 star</label>
                   </fieldset>
                 </div>
+
                 <div class="col-md-8 col-xs-12">
-                  <textarea name="" id="review" placeholder="Review" rows="8"></textarea>
+                    <textarea id="review-textarea" name="reviewText" rows="8" placeholder="Type your review here..."></textarea>
                 </div>
+                  <div class="char-counter" style="margin-right: 13px">
+                      <label>Characters written</label>
+                      <input data-target="#review-textarea" type="text">
+                  </div>
               </div>
+                <input type="text" hidden="true" name="alpha" value="<?php echo $articleId; ?>">
               <button class="btn normal color1 pull-right" type="submit">Submit</button>
             </form>
             <!-- end: Form -->
@@ -644,6 +665,8 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
   <div id="reset" class="inner"><a href="#" class="btn normal color2 ">Reset</a></div>
 </section>
 <script src="js/jquery.elevatezoom.js" type="text/javascript"></script>
+<script src="js/charCount.js" type="text/javascript"></script>
+<script src="js/notie.js" type="text/javascript"></script>
 <script>
 
 (function($) {
@@ -684,4 +707,54 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
 
  </script>
 </body>
+<script>
+    var ratings = "";
+    var ratingDone = false;
+
+    function checkSubmitBtn()
+    {
+        var text = document.getElementById("review-textarea").value;
+        if( text.length == 0 || text.length < 50 || text.length > 1000 )
+        {
+            notie.alert(3, 'Please Submit a valid review, Review must be atleast 50 characters long', 2);
+            //document.getElementById("error").innerHTML = "<span style='color:red'>Please Submit a valid review, Review must be atleast 50 characters long</span>";
+            return false;
+        }
+        else
+        {
+            if(ratingDone == false)
+            {
+                notie.alert(3, 'Please rate the product!', 1);
+                //document.getElementById("ratingLabel").innerHTML = "<span style='color:red'>Please rate the product</span>";
+                return false;
+            }
+            else {
+                document.getElementById("rated").value = ratings;
+                //document.getElementById("error").innerHTML = "";
+                return true;
+            }
+        }
+    }
+
+    function postToController() {
+        for (i = 0; i < document.getElementsByName('rating').length; i++) {
+            if (document.getElementsByName('rating')[i].checked == true) {
+                var ratingValue = document.getElementsByName('rating')[i].value;
+                ratingDone = true;
+                //document.getElementById("ratingLabel").innerHTML = "";
+                var text = document.getElementById("review-textarea").value;
+                break;
+            }
+        }
+        ratings = ratingValue;
+    }
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 </html>

@@ -71,6 +71,17 @@ body {
 	background: #ff9e8f;
 	color: #ffffff;
 }
+
+.char-counter{
+    float:right;
+    position:relative;
+    top:-10px;
+}
+
+.char-counter input[type="text"]{
+    width:100px!important;
+}
+
 input {
 	border: 0;
 	background-color: #f76b5c;
@@ -1307,7 +1318,7 @@ a.color3:hover {
 .product-block:hover .big-price {
 	height: auto;
 	opacity: 1;
-	overflow: visable;
+	overflow: visible;
 }
 .product-block:hover .small-price {
 	height: 0px;
@@ -2078,7 +2089,7 @@ h2 {
 	text-decoration: none;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	color: none;
+	color: transparent;
 	color: #444444;
 	background-color: #f3f3f3;
 	border: 0;
@@ -2120,7 +2131,7 @@ h2 {
 	background-color: #f3f3f3;
 }
 .nav-tabs > li.active > a {
-	background-color: none;
+	background-color: transparent;
 }
 .tab-content > .active, .pill-content {
 	padding: 15px;

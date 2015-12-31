@@ -822,53 +822,28 @@
                     <!-- Blog widget Box -->
                     <div class="box-content slide carousel-fade" id="blogslide">
                         <div class="carousel-inner">
+                            <?php
+                            $sql = "SELECT title,description,Date_FORMAT(date, '%d') as day,Date_FORMAT(date, '%b') as month,Date_FORMAT(date, '%Y') as year,picture FROM advertisement ORDER BY date DESC limit 5";
+                            $result=mysqli_query($connection,$sql);
+                            while($table_record=mysqli_fetch_array($result)) {
+                            $title = $table_record['title'];
+                            $desc = $table_record['description'];
+                            $day = $table_record['day'];
+                            $month = $table_record['month'];
+                            $year = $table_record['year'];
+                            $picture = $table_record['picture'];
+
+                            ?>
                             <!-- Post -->
                             <div class="blog-entry item">
                                 <div class="image"> <span class="blogico"> <i class="fa fa-bullhorn fa-fw"></i><br>
                   Blog entry</span> <img class="ani-image" src="images/blog-4.jpg" alt="image info"> </div>
                                 <div class="entry-row">
-                                    <div class="date col-xs-12"><span>12</span><span>Aug 2013</span></div>
-                                    <div class="blog-text"> <span>A decent blog title goes here...</span> <span>Appropriately supply high-quality intellectual capital after
-                    client-centered quality vectors. Collaboratively orchestrate end-to-end
-                    strategic theme areas after...</span> <span> <a href="#a"> <i class="fa fa-user fa-fw"></i>John Doe</a> <a href="#a"> <i class="fa fa-comments fa-fw"></i>4 Comments</a> </span> </div>
+                                    <div class="date col-xs-12"><span><?php echo $day;?></span><span><?php echo $month." ".$year;?></span></div>
+                                    <div class="blog-text"> <span><?php echo $title?></span> <span><?php echo $desc;?>...</span> <span> <a href="#a"> <i class="fa fa-user fa-fw"></i>John Doe</a> <a href="#a"> <i class="fa fa-comments fa-fw"></i>4 Comments</a> </span> </div>
                                 </div>
                             </div>
-                            <!--END Post -->
-                            <!-- Post -->
-                            <div class="blog-entry item">
-                                <div class="image"> <span class="blogico"> <i class="fa fa-bullhorn fa-fw"></i><br>
-                  Blog entry</span> <img class="ani-image" src="images/blog-1.jpg" alt=""> </div>
-                                <div class="entry-row">
-                                    <div class="date col-xs-12"><span>27</span><span>Oct 2013</span></div>
-                                    <div class="blog-text"> <span>Nulla quis lorem ut libero malesuada...</span> <span>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec
-                    rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada
-                    feugiat. Curabitur arcu erat, accumsan id imperdiet....</span> <span> <a href="#a"> <i class="fa fa-user fa-fw"></i>John Doe</a> <a href="#a"> <i class="fa fa-comments fa-fw"></i>2 Comments</a> </span> </div>
-                                </div>
-                            </div>
-                            <!--END Post -->
-                            <!-- Post -->
-                            <div class="blog-entry item active">
-                                <div class="image"> <span class="blogico"> <i class="fa fa-bullhorn fa-fw"></i><br>
-                  Blog entry</span> <img class="ani-image" src="images/blog-2.jpg" alt=""> </div>
-                                <div class="entry-row">
-                                    <div class="date col-xs-12"><span>05</span><span>Feb 2013</span></div>
-                                    <div class="blog-text"> <span>Convallis a pellentesque nec, egestas...</span> <span>Praesent sapien massa, convallis a pellentesque nec, egestas non
-                    nisi. Vivamus magna justo, lacinia eget consectetur sed, convallis at
-                    tellus. Sed porttitor lectus nibh....</span> <span> <a href="#a"> <i class="fa fa-user fa-fw"></i>John Doe</a> <a href="#a"> <i class="fa fa-comments fa-fw"></i>14 Comments</a> </span> </div>
-                                </div>
-                            </div>
-                            <!--END Post -->
-                            <!-- Post -->
-                            <div class="blog-entry item">
-                                <div class="image"> <span class="blogico"> <i class="fa fa-bullhorn fa-fw"></i><br>
-                  Blog entry</span> <img class="ani-image" src="images/blog-3.jpg" alt=""> </div>
-                                <div class="entry-row">
-                                    <div class="date col-xs-12"><span>11</span><span>Jan 2013</span></div>
-                                    <div class="blog-text"><span>Dynamically empower equity...</span> <span>Completely cultivate standardized internal or "organic" sources
-                    with unique total linkage. Dynamically empower equity invested e-markets
-                    without premier schemas....</span> <span> <a href="#a"> <i class="fa fa-user fa-fw"></i>John Doe</a> <a href="#a"> <i class="fa fa-comments fa-fw"></i>19 Comments</a> </span> </div>
-                                </div>
-                            </div>
+                            <?php }// end of while loop?>
                             <!--END Post -->
                         </div>
                         <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#blogslide"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#blogslide"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
