@@ -90,15 +90,16 @@
                         <li> <a href="#a"> <i class="fa fa-heart fa-fw"></i> <span class="hidden-xs">Wishlist(0)</span></a> </li>
                         <li class="dropdown"> <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> Login</span></a>
                             <div class="loginbox dropdown-menu"> <span class="form-header">Login</span>
-                                <form>
+                                <form method="post" action="login.php">
                                     <div class="form-group"> <i class="fa fa-user fa-fw"></i>
-                                        <input class="form-control" id="InputUserName" placeholder="Username" type="text" data-validation="required">
+                                        <input class="form-control" name="emailAddress" id="InputUserName" placeholder="Username" type="text" data-validation="required">
                                     </div>
                                     <div class="form-group"> <i class="fa fa-lock fa-fw"></i>
-                                        <input class="form-control" id="InputPassword" placeholder="Password" type="password" data-validation="required">
+                                        <input class="form-control" name="password" id="InputPassword" placeholder="Password" type="password" data-validation="required">
                                     </div>
-                                    <button class="btn medium color1 pull-right" type="submit">Login</button>
+                                    <button class="btn medium color1 pull-right" name="submit" type="submit">Login</button>
                                 </form>
+                                <button class="btn medium color1 pull-right" style="font-size: 13px;width: 210px" onClick="document.location.href='facebook.php'">Login through facebook</button>
                             </div>
                         </li>
                     </ul>

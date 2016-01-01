@@ -44,10 +44,10 @@ if(isset($_REQUEST['logout'])){
 }
 
 //2.Use app id,secret and redirect url
-$app_id = '530049460505506';
-$app_secret = '0cb7ae18cd9ee7a288def42a4a2842f7';
+$app_id = '1119371311414975';
+$app_secret = 'b1deed597b5fa3b766e3c3c04d4ca20a';
 
-$redirect_url='http://electroshop.pk/facebook.php';
+$redirect_url='http://localhost:63342/dukanonline/facebook.php';
 
 //3.Initialize application, create helper object and get fb sess
 FacebookSession::setDefaultApplication($app_id,$app_secret);
@@ -71,7 +71,7 @@ if(isset($_SESSION['fb_token'])){
 
 //logout
 //$logout = 'http://localhost:63342/newfblogin&logout=true';
-$logout = 'http://electroshop.pk/facebook.php?logout=true﻿';
+$logout = 'http://localhost:63342/dukanonline/facebook.php?logout=true﻿';
 //$logout = 'http://localhost:63342/facebook/index.php?logout=true﻿';
 //4. if fb sess exists echo name
 if(isset($sess)){
@@ -158,7 +158,7 @@ if(isset($sess)){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Facebook Login Demo</title>
+    <title>buymore.pk</title>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<style>
     body{

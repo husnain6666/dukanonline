@@ -3,7 +3,7 @@
 
 include('connectdb.php');
 
-session_start();
+//session_start();
 if(isset($_POST['submit']))
 {
     if (empty($_POST['emailAddress']) || empty($_POST['password'])) {
