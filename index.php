@@ -835,14 +835,14 @@
 
                             ?>
                             <!-- Post -->
-                            <div class="blog-entry item">
-                                <div class="image"> <span class="blogico"> <i class="fa fa-bullhorn fa-fw"></i><br>
+                                <div class="blog-entry item">
+                                    <div class="image"> <span class="blogico"> <i class="fa fa-bullhorn fa-fw"></i><br>
                   Blog entry</span> <img class="ani-image" src="images/blog-4.jpg" alt="image info"> </div>
-                                <div class="entry-row">
-                                    <div class="date col-xs-12"><span><?php echo $day;?></span><span><?php echo $month." ".$year;?></span></div>
-                                    <div class="blog-text"> <span><?php echo $title?></span> <span><?php echo $desc;?>...</span> <span> <a href="#a"> <i class="fa fa-user fa-fw"></i>John Doe</a> <a href="#a"> <i class="fa fa-comments fa-fw"></i>4 Comments</a> </span> </div>
+                                    <div class="entry-row">
+                                        <div class="date col-xs-12"><span><?php echo $day;?></span><span><?php echo $month." ".$year;?></span></div>
+                                        <div class="blog-text"> <span><?php echo $title?></span> <span><?php echo $desc;?>...</span> <span> <a href="#a"> <i class="fa fa-user fa-fw"></i>John Doe</a> <a href="#a"> <i class="fa fa-comments fa-fw"></i>4 Comments</a> </span> </div>
+                                    </div>
                                 </div>
-                            </div>
                             <?php }// end of while loop?>
                             <!--END Post -->
                         </div>
