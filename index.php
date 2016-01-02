@@ -326,7 +326,9 @@
                 </div>
             </div>
         </div>
-        <?php include "specials.php";?>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 box-block sidebar" style="padding: 0px">
+            <?php include "specials.php";?>
+        </div>
     </div>
 </div>
 <div class="row clearfix f-space30"></div>
