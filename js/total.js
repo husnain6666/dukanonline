@@ -172,3 +172,27 @@ function addtocartNewfeatured(article){
     xmlhttp.open("GET", "shopping_cart.php?articleId=" + article , true);
     xmlhttp.send();
 }
+
+
+
+
+
+
+function insertquantityinshoppingcart(){
+
+    var quantity=document.getElementById("quantity").value;
+    var articleId=document.getElementById("articleId").value;
+    alert(quantity);
+    alert(articleId);
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var newLocation = "shopping_cart.php?articleId="+articleId+"&quantity=" + quantity;
+            window.location = newLocation;
+            //header("location:shopping_cart.php");
+        }
+    }
+    xmlhttp.open("GET", "shopping_cart.php?quantity=" + quantity +"&articleId=" + articleId , true);
+    xmlhttp.send();
+}
+

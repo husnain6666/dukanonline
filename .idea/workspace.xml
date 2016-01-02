@@ -1,147 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="18a96a96-af33-47d8-9e06-7423516b251f" name="Default" comment="">
-=======
-    <list default="true" id="fa80ca99-a30f-4d32-aeba-39698ccf8f1a" name="Default" comment="first">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons/2co.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Descr.WD3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/blog/Descr.WD3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brands/Descr.WD3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons/Descr.WD3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/products/Descr.WD3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/aboutus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/blog-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/blog-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/blog-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/blog-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons/discover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontawesome/fontawesome-webfontba72.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontawesome/fontawesome-webfontba72.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontawesome/fontawesome-webfontba72.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontawesome/fontawesome-webfontd41d.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/blog/image1-lg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/blog/image1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/blog/image2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-bla-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-bla-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-bla-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-bla-webfontd41d.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-bol-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-bol-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-bol-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-bol-webfontd41d.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-lig-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-lig-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-lig-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-lig-webfontd41d.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-reg-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-reg-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-reg-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-reg-webfontd41d.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brands/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brands/logo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brands/logo3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons/mastercard.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/men-title.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/menu-ad.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons/moneybookers.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/blog/noimage-sm.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/blog/noimage-user.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons/paypal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/products/product1-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/products/product1-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/products/product1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/products/product2-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/products/product2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/products/product3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slide0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slide1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slide2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slider-deal1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slider-deal2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slider-deal3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/slider-deal4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons/visa.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Contact-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/about.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/animate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/banners.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/best_sellers.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog-single.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/blue-red.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap-select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/cadetblue-violetred.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cart.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/category-grid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/category-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/checkout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/color.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/darkmagenta-rosybrown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/darkorchid-seagreen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontawesome/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/fontawesome/fontawesome-webfontba72.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/footer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/gmap3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/gray.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/html5shiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/iview.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/iview.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-1.10.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.easing.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.elevatezoom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.fancybox.pack.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.mobile.custom.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-bla-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-bol-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-lig-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/lato-reg-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/less-1.5.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main_bar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main_header.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/mediumpurple-seagreen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/menu3d.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/menu3d.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/midnight-blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/mono-red.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/normalize.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/orange-steelblue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/pinegreen-purple.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/post-single.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/product.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/raphael-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/respond.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/retina-1.1.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/scripts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/selectivizr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/specials.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/steel-blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/skin/steelblue-leafgreen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/style-switch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/style-switch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/lato/stylesheet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/top_header.php" />
-      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\arslan.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\hh.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\husnain.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\test.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\test1.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\test2.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\tttest.php" afterPath="" />
->>>>>>> 14295693b05b4efdf1c8542321277fd4e37a641b
+    <list default="true" id="a03032cf-9582-4962-a465-ebd917b421d5" name="Default" comment="">
+      <change type="MOVED" beforePath="C:\Users\zain\PhpstormProjects\dukanonline\hh.php" afterPath="$PROJECT_DIR$/cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product.php" afterPath="$PROJECT_DIR$/product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/total.js" afterPath="$PROJECT_DIR$/js/total.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <ignored path="flatro.iws" />
+    <ignored path="dukanonline.iws" />
     <ignored path=".idea/workspace.xml" />
-    <ignored path=".idea/dataSources.local.xml" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,11 +24,133 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="flatro" />
+    <favorites_list name="dukanonline" />
   </component>
   <component name="FileEditorManager">
-<<<<<<< HEAD
-    <leaf />
+    <leaf>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="1686" vertical-scroll-proportion="29.615385" vertical-offset="770" max-vertical-offset="16694">
+              <folding>
+                <marker date="1451719463340" expanded="true" signature="7143:7236" placeholder="SELECT artic..article..." />
+                <marker date="1451719463340" expanded="true" signature="8033:8191" placeholder="select (sele..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="8041:8105" placeholder="select count..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="12795:12953" placeholder="select (sele..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="12803:12867" placeholder="select count..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="20058:20216" placeholder="select (sele..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="20066:20130" placeholder="select count..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="24464:24553" placeholder="SELECT artic..article..." />
+                <marker date="1451719463340" expanded="true" signature="25318:25476" placeholder="select (sele..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="25326:25390" placeholder="select count..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="29884:30042" placeholder="select (sele..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="29892:29956" placeholder="select count..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="36955:37113" placeholder="select (sele..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="36963:37027" placeholder="select count..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="41371:41469" placeholder="SELECT artic..article..." />
+                <marker date="1451719463340" expanded="true" signature="42234:42392" placeholder="select (sele..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="42242:42306" placeholder="select count..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="46800:46958" placeholder="select (sele..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="46808:46872" placeholder="select count..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="53871:54029" placeholder="select (sele..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="53879:53943" placeholder="select count..ratings..." />
+                <marker date="1451719463340" expanded="true" signature="59051:59225" placeholder="SELECT title..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="233" column="32" selection-start="13023" selection-end="13023" vertical-scroll-proportion="0.48300537" vertical-offset="3691" max-vertical-offset="13413">
+              <folding>
+                <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+                <marker date="1451728200750" expanded="true" signature="2609:2772" placeholder="SELECT speci..article..." />
+                <marker date="1451728200750" expanded="true" signature="3884:3967" placeholder="SELECT count..reviews..." />
+                <marker date="1451728200750" expanded="true" signature="4208:4366" placeholder="select (sele..ratings..." />
+                <marker date="1451728200750" expanded="true" signature="4216:4280" placeholder="select count..ratings..." />
+                <marker date="1451728200750" expanded="true" signature="7121:7279" placeholder="select (sele..ratings..." />
+                <marker date="1451728200750" expanded="true" signature="7129:7193" placeholder="select count..ratings..." />
+                <marker date="1451728200750" expanded="true" signature="15893:16051" placeholder="select (sele..ratings..." />
+                <marker date="1451728200750" expanded="true" signature="15901:15965" placeholder="select count..ratings..." />
+                <marker date="1451728200750" expanded="true" signature="17125:17455" placeholder="SELECT r.rev..reviews..." />
+                <marker date="1451728200750" expanded="true" signature="17165:17219" placeholder="SELECT first..userinfo..." />
+                <marker date="1451728200750" expanded="true" signature="17236:17289" placeholder="SELECT lastN..userinfo..." />
+                <marker date="1451728200750" expanded="true" signature="22438:22569" placeholder="SELECT artic..article..." />
+                <marker date="1451728200750" expanded="true" signature="23268:23430" placeholder="select (sele..ratings..." />
+                <marker date="1451728200750" expanded="true" signature="23276:23342" placeholder="select count..ratings..." />
+                <marker date="1451728200750" expanded="true" signature="27452:27610" placeholder="select (sele..ratings..." />
+                <marker date="1451728200750" expanded="true" signature="27460:27524" placeholder="select count..ratings..." />
+                <marker date="1451728200750" expanded="true" signature="33701:33859" placeholder="select (sele..ratings..." />
+                <marker date="1451728200750" expanded="true" signature="33709:33773" placeholder="select count..ratings..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="total.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/total.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="190" column="42" selection-start="4620" selection-end="4620" vertical-scroll-proportion="-14.64" vertical-offset="2864" max-vertical-offset="3468">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="20" selection-start="855" selection-end="855" vertical-scroll-proportion="-4.509804" vertical-offset="25" max-vertical-offset="799">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="top_header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/top_header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="37" selection-start="3698" selection-end="3698" vertical-scroll-proportion="-2.2941177" vertical-offset="1447" max-vertical-offset="2397">
+              <folding>
+                <marker date="1451719463679" expanded="true" signature="5223:5276" placeholder="select * fro..userinfo..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="34" selection-start="2218" selection-end="2218" vertical-scroll-proportion="-11.692307" vertical-offset="699" max-vertical-offset="8534">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connectdb.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/connectdb.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="2" selection-start="149" selection-end="149" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="39923" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="14229">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -170,51 +159,22 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-=======
-    <leaf>
-      <file leaf-file-name="gray.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/skin/gray.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1022444" vertical-offset="0" max-vertical-offset="28101">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
->>>>>>> 14295693b05b4efdf1c8542321277fd4e37a641b
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
+    <option name="changedFiles">
       <list>
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/khalid123.php" />
-=======
-        <option value="$PROJECT_DIR$/top_header.php" />
-        <option value="$PROJECT_DIR$/main_header.php" />
-        <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/side_bar.php" />
-        <option value="$PROJECT_DIR$/best_sellers.php" />
-        <option value="$PROJECT_DIR$/banners.php" />
-        <option value="$PROJECT_DIR$/main_bar.php" />
-        <option value="$PROJECT_DIR$/index.php" />
->>>>>>> 14295693b05b4efdf1c8542321277fd4e37a641b
+        <option value="$PROJECT_DIR$/cart.php" />
+        <option value="$PROJECT_DIR$/js/total.js" />
+        <option value="$PROJECT_DIR$/product.php" />
       </list>
     </option>
   </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP (1)" />
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Unnamed" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-7" />
+    <option name="y" value="2" />
+    <option name="width" value="1377" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -226,8 +186,11 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -239,6 +202,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,8 +211,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-<<<<<<< HEAD
-=======
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="dukanonline" />
@@ -269,50 +231,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dukanonline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dukanonline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
->>>>>>> 14295693b05b4efdf1c8542321277fd4e37a641b
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-<<<<<<< HEAD
-=======
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="FullScreen" value="false" />
->>>>>>> 14295693b05b4efdf1c8542321277fd4e37a641b
-    <property name="options.lastSelected" value="vcs.Git" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Khalid\PhpstormProjects\dukanonline" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -322,114 +250,73 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
-      <method />
-    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
-    <configuration />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-<<<<<<< HEAD
-      <changelist id="18a96a96-af33-47d8-9e06-7423516b251f" name="Default" comment="" />
-      <created>1450417764121</created>
-      <option name="number" value="Default" />
-      <updated>1450417764121</updated>
+      <changelist id="a03032cf-9582-4962-a465-ebd917b421d5" name="Default" comment="" />
+      <created>1451720124636</created>
+      <updated>1451720124636</updated>
     </task>
-    <task id="LOCAL-00001" summary="ihg">
-      <created>1450418672263</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1450418672263</updated>
+    <task id="LOCAL-00001" summary="first">
+      <created>1451720284426</created>
+      <updated>1451720284426</updated>
     </task>
-    <task id="LOCAL-00002" summary="Rejected commit: Default">
-      <created>1450418798064</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1450418798064</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Rejected commit: Default">
-      <created>1450695143023</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1450695143023</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
-=======
-      <changelist id="fa80ca99-a30f-4d32-aeba-39698ccf8f1a" name="Default" comment="" />
-      <created>1450694924942</created>
-      <option name="number" value="Default" />
-      <updated>1450694924942</updated>
-    </task>
->>>>>>> 14295693b05b4efdf1c8542321277fd4e37a641b
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-7" y="2" width="1377" height="733" extended-state="0" />
+    <editor active="true" />
     <layout>
-<<<<<<< HEAD
-=======
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
->>>>>>> 14295693b05b4efdf1c8542321277fd4e37a641b
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981631" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
->>>>>>> 14295693b05b4efdf1c8542321277fd4e37a641b
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
->>>>>>> 14295693b05b4efdf1c8542321277fd4e37a641b
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -440,30 +327,114 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-<<<<<<< HEAD
-    <MESSAGE value="ihg" />
-    <MESSAGE value="Rejected commit: Default" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rejected commit: Default" />
-=======
     <MESSAGE value="first" />
     <option name="LAST_COMMIT_MESSAGE" value="first" />
->>>>>>> 14295693b05b4efdf1c8542321277fd4e37a641b
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
-    <watches-manager />
   </component>
-<<<<<<< HEAD
-=======
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/skin/gray.css">
+    <entry file="file://$PROJECT_DIR$/cart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1022444" vertical-offset="0" max-vertical-offset="28101">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        <state line="0" column="0" selection-start="0" selection-end="39923" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="14229">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/connectdb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="2" selection-start="149" selection-end="149" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="34" selection-start="2218" selection-end="2218" vertical-scroll-proportion="-11.692307" vertical-offset="699" max-vertical-offset="8534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="1686" vertical-scroll-proportion="29.615385" vertical-offset="770" max-vertical-offset="16694">
+          <folding>
+            <marker date="1451719463340" expanded="true" signature="7143:7236" placeholder="SELECT artic..article..." />
+            <marker date="1451719463340" expanded="true" signature="8033:8191" placeholder="select (sele..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="8041:8105" placeholder="select count..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="12795:12953" placeholder="select (sele..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="12803:12867" placeholder="select count..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="20058:20216" placeholder="select (sele..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="20066:20130" placeholder="select count..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="24464:24553" placeholder="SELECT artic..article..." />
+            <marker date="1451719463340" expanded="true" signature="25318:25476" placeholder="select (sele..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="25326:25390" placeholder="select count..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="29884:30042" placeholder="select (sele..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="29892:29956" placeholder="select count..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="36955:37113" placeholder="select (sele..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="36963:37027" placeholder="select count..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="41371:41469" placeholder="SELECT artic..article..." />
+            <marker date="1451719463340" expanded="true" signature="42234:42392" placeholder="select (sele..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="42242:42306" placeholder="select count..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="46800:46958" placeholder="select (sele..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="46808:46872" placeholder="select count..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="53871:54029" placeholder="select (sele..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="53879:53943" placeholder="select count..ratings..." />
+            <marker date="1451719463340" expanded="true" signature="59051:59225" placeholder="SELECT title..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="20" selection-start="855" selection-end="855" vertical-scroll-proportion="-4.509804" vertical-offset="25" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="37" selection-start="3698" selection-end="3698" vertical-scroll-proportion="-2.2941177" vertical-offset="1447" max-vertical-offset="2397">
+          <folding>
+            <marker date="1451719463679" expanded="true" signature="5223:5276" placeholder="select * fro..userinfo..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/total.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="190" column="42" selection-start="4620" selection-end="4620" vertical-scroll-proportion="-14.64" vertical-offset="2864" max-vertical-offset="3468">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="32" selection-start="13023" selection-end="13023" vertical-scroll-proportion="0.48300537" vertical-offset="3691" max-vertical-offset="13413">
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+            <marker date="1451728200750" expanded="true" signature="2609:2772" placeholder="SELECT speci..article..." />
+            <marker date="1451728200750" expanded="true" signature="3884:3967" placeholder="SELECT count..reviews..." />
+            <marker date="1451728200750" expanded="true" signature="4208:4366" placeholder="select (sele..ratings..." />
+            <marker date="1451728200750" expanded="true" signature="4216:4280" placeholder="select count..ratings..." />
+            <marker date="1451728200750" expanded="true" signature="7121:7279" placeholder="select (sele..ratings..." />
+            <marker date="1451728200750" expanded="true" signature="7129:7193" placeholder="select count..ratings..." />
+            <marker date="1451728200750" expanded="true" signature="15893:16051" placeholder="select (sele..ratings..." />
+            <marker date="1451728200750" expanded="true" signature="15901:15965" placeholder="select count..ratings..." />
+            <marker date="1451728200750" expanded="true" signature="17125:17455" placeholder="SELECT r.rev..reviews..." />
+            <marker date="1451728200750" expanded="true" signature="17165:17219" placeholder="SELECT first..userinfo..." />
+            <marker date="1451728200750" expanded="true" signature="17236:17289" placeholder="SELECT lastN..userinfo..." />
+            <marker date="1451728200750" expanded="true" signature="22438:22569" placeholder="SELECT artic..article..." />
+            <marker date="1451728200750" expanded="true" signature="23268:23430" placeholder="select (sele..ratings..." />
+            <marker date="1451728200750" expanded="true" signature="23276:23342" placeholder="select count..ratings..." />
+            <marker date="1451728200750" expanded="true" signature="27452:27610" placeholder="select (sele..ratings..." />
+            <marker date="1451728200750" expanded="true" signature="27460:27524" placeholder="select count..ratings..." />
+            <marker date="1451728200750" expanded="true" signature="33701:33859" placeholder="select (sele..ratings..." />
+            <marker date="1451728200750" expanded="true" signature="33709:33773" placeholder="select count..ratings..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
->>>>>>> 14295693b05b4efdf1c8542321277fd4e37a641b
 </project>
+

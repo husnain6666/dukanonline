@@ -188,6 +188,7 @@
                           <!-- end: Availability, Product Code, Brand and short info -->
 
                       </div>
+
                       <div class="row">
                           <div class="short-info-opt-wr col-md-6 col-sm-6 col-xs-6">
                               <div class="short-info-opt">
@@ -195,7 +196,7 @@
                                       <div class="qty-wr">
                                           <div class="qty-text hidden-xs">Qty:</div>
                                           <div class="quantity-inp">
-                                              <input type="text" class="quantity-input" name="p_quantity" value="1">
+                                              <input type="text" class="quantity-input" name="quantity" id="quantity" value="1">
                                           </div>
                                           <div class="quantity-txt"><a href="#a" class="qty qtyminus" ><i class="fa fa-minus fa-fw"></i></a></div>
                                           <div class="quantity-txt"><a href="#a" class="qty qtyplus" ><i class="fa fa-plus fa-fw"></i></a></div>
@@ -216,16 +217,39 @@
                           <div class="price-wr col-md-4 col-sm-4 col-xs-12">
                               <div class="big-price"> <span class="price-old"><span class="sym">Rs.</span><?php echo $price?></span> <span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice?></span> </div>
                           </div>
+                          <?php
+                          if( $check!== false ) {?>
+                          ?>
                           <div class="product-btns-wr col-md-8 col-sm-8 col-xs-12">
                               <div class="product-btns">
                                   <div class="product-big-btns">
-                                      <button class="btn btn-addtocart"> <i class="fa fa-shopping-cart fa-fw"></i> Add to Cart </button>
+                                      <a href="cart.php?articleId=<?php echo $articleId; ?> " >   <button class="btn btn-addtocart" onclick="insertquantityinshoppingcart()"> <i class="fa fa-shopping-cart fa-fw"></i> Add to Cart </button></a>
                                       <button class="btn btn-compare" data-toggle="tooltip" title="Add to Compare"> <i class="fa fa-retweet fa-fw"></i> </button>
                                       <button class="btn btn-wishlist" data-toggle="tooltip" title="Add to Wishlist"> <i class="fa fa-heart fa-fw"></i> </button>
                                       <button class="btn btn-sendtofriend" data-toggle="tooltip" title="Send to Friend"> <i class="fa fa-envelope fa-fw"></i> </button>
                                   </div>
                               </div>
                           </div>
+                          <?php }
+                          else {
+                              ?>
+
+                              <div class="product-btns-wr col-md-8 col-sm-8 col-xs-12">
+                                  <div class="product-btns">
+                                      <div class="product-big-btns">
+                                          <a href="signUp.php?articleId=<?php echo $articleId; ?> " >        <button class="btn btn-addtocart" onclick="insertquantityinshoppingcart()"> > <i class="fa fa-shopping-cart fa-fw"></i> Add to Cart </button> </a>
+                                          <button class="btn btn-compare" data-toggle="tooltip" title="Add to Compare"> <i class="fa fa-retweet fa-fw"></i> </button>
+                                          <button class="btn btn-wishlist" data-toggle="tooltip" title="Add to Wishlist"> <i class="fa fa-heart fa-fw"></i> </button>
+                                          <button class="btn btn-sendtofriend" data-toggle="tooltip" title="Send to Friend"> <i class="fa fa-envelope fa-fw"></i> </button>
+                                      </div>
+                                  </div>
+                              </div>
+                          <?php
+                          }
+                          ?>
+
+
+
                       </div>
                   </div>
 
