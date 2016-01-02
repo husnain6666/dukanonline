@@ -15,7 +15,7 @@ if ($_FILES['image']['error'] > 0)
 else
 {
     move_uploaded_file($_FILES["image"]["tmp_name"],"../images/" . $_FILES["image"]["name"]);
-    $file="../images/".$_FILES["image"]["name"];
+    $file="images/".$_FILES["image"]["name"];
     $query="insert into electroshop.advertisement (title, description, picture, date) VALUES ('$title','$desc','$file','$date')";
 
     try{
