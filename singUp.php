@@ -8,6 +8,8 @@
 <div class="f-space20"></div>
 <!--  -->
 <?php include "main_header.php";?>
+<?php include "connectdb.php"?>
+
 <!-- end: Logo and Search -->
 <div class="f-space20"></div>
 <!-- Menu -->
@@ -29,7 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="breadcrumb"> <a href="index.html"> <i class="fa fa-home fa-fw"></i> Home </a> <i class="fa fa-angle-right fa-fw"></i> <a href="SignUp.php"> Sign Up </a></div>
+                <div class="breadcrumb"> <a href="index.php"> <i class="fa fa-home fa-fw"></i> Home </a> <i class="fa fa-angle-right fa-fw"></i> <a href="SignUp.php"> Sign Up </a></div>
                 <!-- Quick Help for tablets and large screens -->
                 <div class="quick-message hidden-xs">
                     <div class="quick-box">
@@ -52,7 +54,8 @@
 
 
 
-    <div class="col-lg-9">
+    <div class="col-lg-12">
+        <div class="col-lg-9">
         <div class="row clearfix f-space10"></div>
         <div class="box-heading"><span>Register</span></div>
 
@@ -149,18 +152,13 @@
                     </div>
 
                 </div>
-
-
-                <div class="col-lg-12 col-md-12 col-sm-12" id="validationfield" style="background: #f5f5f5;height: 40px" >
-                    <p id="checkForm"style="text-align: center;margin-top: 10px"></p>
+                <div class="col-lg-12 col-md-12 col-sm-12" id="validationfield" style="background: #f5f5f5;height: 40px;margin-top: 20px" >
+                    <p id="checkForm"style="text-align: center;margin-top: 10px;font: bold"></p>
                 </div>
             </form>
         </div>
-
-
-
     </div>
-    <div class="col-md-2 " style="float:left;">
+    <div class="col-md-3 " style="margin-left:-50px ;margin-top:10px ">
         <div class="container ">
             <div class="col-md-3 col-sm-12 col-xs-12 box-block page-sidebar">
                 <div class="box-heading"><span>Best Sellers</span></div>
@@ -170,29 +168,20 @@
                 </div>
                 <!-- end: Best Sellers Products -->
                 <!-- Special Product Start Products -->
-                <div class="clearfix f-space10"></div>
-                <?php include "specials.php";?>
-                <div class="clearfix f-space10"></div>
+
                 <!-- end: special product -->
-
+                <div class="clearfix f-space10"></div>
             </div>
+            <div class="clearfix f-space10"></div>
+            <?php include "specials.php";?>
         </div>
-    </div>
 
-    <div id="successModal" class="modal fade modal-success" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <div class="clearfix f-space10"></div>
 
-                <div class="modal-body" style="background:green">
-                    <h4 style="text-align: center">Enter valid Field</h4>
-                </div>
-            </div>
-
-        </div>
     </div>
 </div>
-<!-- end:row -->
 </div>
+
 <!-- end: container-->
 
 <div class="row clearfix f-space10"></div>
