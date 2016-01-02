@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+#Alternate default index page
+DirectoryIndex login.php
+AuthType Basic
+AuthName "Admin Panel"
+require valid-user
+AuthUserFile "/home2/mustaqee/.htpasswds/public_html/electroshop.pk/admin/passwd"

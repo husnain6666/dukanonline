@@ -33,9 +33,10 @@
 
     <!-- Style Switcher -->
     <link href="css/style-switch.css" rel="stylesheet" type="text/css"/>
-
     <!-- Color -->
     <link href="css/skin/color.css" id="colorstyle" rel="stylesheet">
+
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <script src="js/respond.min.js"></script> <![endif]-->
@@ -47,6 +48,7 @@
 
     <!-- Custom Scripts -->
     <script src="js/scripts.js"></script>
+    <script src="js/total.js"></script>
 
     <!-- MegaMenu -->
     <script src="js/menu3d.js" type="text/javascript"></script>
@@ -72,13 +74,7 @@
             <div class="col-md-12">
                 <div class="topheadrow">
                     <ul class="nav nav-pills pull-right">
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#a">ENG <i class="fa fa-angle-down fa-fw"></i> </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#a">ENG</a></li>
-                                <li><a href="#a">JPN</a></li>
-                                <li><a href="#a">CHI</a></li>
-                            </ul>
-                        </li>
+
                         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#a">USD <i class="fa fa-angle-down fa-fw"></i> </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="#a">USD</a></li>
@@ -88,6 +84,14 @@
                         </li>
                         <li> <a href="#a"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-xs">My Cart</span></a> </li>
                         <li> <a href="#a"> <i class="fa fa-heart fa-fw"></i> <span class="hidden-xs">Wishlist(0)</span></a> </li>
+                        <?php
+                        // check whether the user is logged in or not
+                        if(!isset( $_SESSION['loginUser'])){
+
+                        $footerUserSection=false;
+                        $checkCart=false;
+                        $check=false;
+                        ?>
                         <li class="dropdown"> <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> Login</span></a>
                             <div class="loginbox dropdown-menu"> <span class="form-header">Login</span>
                                 <form method="post" action="login.php">
@@ -102,6 +106,30 @@
                                 <button class="btn medium color1 pull-right" style="font-size: 13px;width: 210px" onClick="document.location.href='facebook.php'">Login through facebook</button>
                             </div>
                         </li>
+                        <?php
+                        }
+                        else{
+
+                        $footerUserSection=true;
+                        $checkCart=true;
+                        $userName=$_SESSION['loginUser'];
+                        $check=true;
+                        //    echo  $userName;
+                        $query_fetch="select * from userinfo where emailAddress='$userName'";
+                        $result_user=mysqli_query($connection,$query_fetch);
+                        $row = mysqli_fetch_array($result_user);
+                        $firstName =$row['firstName'];
+                        $userId=$row['userId'];
+                        //   echo $userId;
+                        ?>
+                        <li class="dropdown"> <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> <?php echo $userName;?></span></a>
+                            <div class="loginbox dropdown-menu"> <span class="form-header">Hello <?php echo $userName;?>!</span>
+                                <form>
+                                    <button class="btn medium color1 pull-right" type="submit">Logout</button>
+                                </form>
+                            </div>
+                        </li>
+                        <?php }// end of else?>
                     </ul>
                 </div>
             </div>
