@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a03032cf-9582-4962-a465-ebd917b421d5" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\zain\PhpstormProjects\dukanonline\hh.php" afterPath="$PROJECT_DIR$/cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product.php" afterPath="$PROJECT_DIR$/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/total.js" afterPath="$PROJECT_DIR$/js/total.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dukanonline.iws" />
@@ -31,31 +28,8 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="1686" vertical-scroll-proportion="29.615385" vertical-offset="770" max-vertical-offset="16694">
-              <folding>
-                <marker date="1451719463340" expanded="true" signature="7143:7236" placeholder="SELECT artic..article..." />
-                <marker date="1451719463340" expanded="true" signature="8033:8191" placeholder="select (sele..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="8041:8105" placeholder="select count..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="12795:12953" placeholder="select (sele..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="12803:12867" placeholder="select count..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="20058:20216" placeholder="select (sele..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="20066:20130" placeholder="select count..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="24464:24553" placeholder="SELECT artic..article..." />
-                <marker date="1451719463340" expanded="true" signature="25318:25476" placeholder="select (sele..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="25326:25390" placeholder="select count..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="29884:30042" placeholder="select (sele..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="29892:29956" placeholder="select count..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="36955:37113" placeholder="select (sele..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="36963:37027" placeholder="select count..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="41371:41469" placeholder="SELECT artic..article..." />
-                <marker date="1451719463340" expanded="true" signature="42234:42392" placeholder="select (sele..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="42242:42306" placeholder="select count..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="46800:46958" placeholder="select (sele..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="46808:46872" placeholder="select count..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="53871:54029" placeholder="select (sele..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="53879:53943" placeholder="select count..ratings..." />
-                <marker date="1451719463340" expanded="true" signature="59051:59225" placeholder="SELECT title..." />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="1686" vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="16694">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,25 +39,24 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="233" column="32" selection-start="13023" selection-end="13023" vertical-scroll-proportion="0.48300537" vertical-offset="3691" max-vertical-offset="13413">
               <folding>
-                <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
-                <marker date="1451728200750" expanded="true" signature="2609:2772" placeholder="SELECT speci..article..." />
-                <marker date="1451728200750" expanded="true" signature="3884:3967" placeholder="SELECT count..reviews..." />
-                <marker date="1451728200750" expanded="true" signature="4208:4366" placeholder="select (sele..ratings..." />
-                <marker date="1451728200750" expanded="true" signature="4216:4280" placeholder="select count..ratings..." />
-                <marker date="1451728200750" expanded="true" signature="7121:7279" placeholder="select (sele..ratings..." />
-                <marker date="1451728200750" expanded="true" signature="7129:7193" placeholder="select count..ratings..." />
-                <marker date="1451728200750" expanded="true" signature="15893:16051" placeholder="select (sele..ratings..." />
-                <marker date="1451728200750" expanded="true" signature="15901:15965" placeholder="select count..ratings..." />
-                <marker date="1451728200750" expanded="true" signature="17125:17455" placeholder="SELECT r.rev..reviews..." />
-                <marker date="1451728200750" expanded="true" signature="17165:17219" placeholder="SELECT first..userinfo..." />
-                <marker date="1451728200750" expanded="true" signature="17236:17289" placeholder="SELECT lastN..userinfo..." />
-                <marker date="1451728200750" expanded="true" signature="22438:22569" placeholder="SELECT artic..article..." />
-                <marker date="1451728200750" expanded="true" signature="23268:23430" placeholder="select (sele..ratings..." />
-                <marker date="1451728200750" expanded="true" signature="23276:23342" placeholder="select count..ratings..." />
-                <marker date="1451728200750" expanded="true" signature="27452:27610" placeholder="select (sele..ratings..." />
-                <marker date="1451728200750" expanded="true" signature="27460:27524" placeholder="select count..ratings..." />
-                <marker date="1451728200750" expanded="true" signature="33701:33859" placeholder="select (sele..ratings..." />
-                <marker date="1451728200750" expanded="true" signature="33709:33773" placeholder="select count..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="2609:2772" placeholder="SELECT speci..article..." />
+                <marker date="1451731485475" expanded="true" signature="3884:3967" placeholder="SELECT count..reviews..." />
+                <marker date="1451731485475" expanded="true" signature="4208:4366" placeholder="select (sele..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="4216:4280" placeholder="select count..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="7121:7279" placeholder="select (sele..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="7129:7193" placeholder="select count..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="15893:16051" placeholder="select (sele..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="15901:15965" placeholder="select count..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="17125:17455" placeholder="SELECT r.rev..reviews..." />
+                <marker date="1451731485475" expanded="true" signature="17165:17219" placeholder="SELECT first..userinfo..." />
+                <marker date="1451731485475" expanded="true" signature="17236:17289" placeholder="SELECT lastN..userinfo..." />
+                <marker date="1451731485475" expanded="true" signature="22438:22569" placeholder="SELECT artic..article..." />
+                <marker date="1451731485475" expanded="true" signature="23268:23430" placeholder="select (sele..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="23276:23342" placeholder="select count..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="27452:27610" placeholder="select (sele..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="27460:27524" placeholder="select count..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="33701:33859" placeholder="select (sele..ratings..." />
+                <marker date="1451731485475" expanded="true" signature="33709:33773" placeholder="select count..ratings..." />
               </folding>
             </state>
           </provider>
@@ -92,7 +65,7 @@
       <file leaf-file-name="total.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/total.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="42" selection-start="4620" selection-end="4620" vertical-scroll-proportion="-14.64" vertical-offset="2864" max-vertical-offset="3468">
+            <state line="190" column="42" selection-start="4620" selection-end="4620" vertical-scroll-proportion="0.0" vertical-offset="3230" max-vertical-offset="3468">
               <folding />
             </state>
           </provider>
@@ -101,7 +74,7 @@
       <file leaf-file-name="main_header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="20" selection-start="855" selection-end="855" vertical-scroll-proportion="-4.509804" vertical-offset="25" max-vertical-offset="799">
+            <state line="15" column="20" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -110,10 +83,8 @@
       <file leaf-file-name="top_header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/top_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="37" selection-start="3698" selection-end="3698" vertical-scroll-proportion="-2.2941177" vertical-offset="1447" max-vertical-offset="2397">
-              <folding>
-                <marker date="1451719463679" expanded="true" signature="5223:5276" placeholder="select * fro..userinfo..." />
-              </folding>
+            <state line="92" column="37" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.0" vertical-offset="1447" max-vertical-offset="2397">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,7 +92,7 @@
       <file leaf-file-name="cart.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="34" selection-start="2218" selection-end="2218" vertical-scroll-proportion="-11.692307" vertical-offset="699" max-vertical-offset="8534">
+            <state line="59" column="34" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0" vertical-offset="699" max-vertical-offset="8534">
               <folding />
             </state>
           </provider>
@@ -130,7 +101,7 @@
       <file leaf-file-name="connectdb.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connectdb.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="2" selection-start="149" selection-end="149" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
+            <state line="6" column="2" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204">
               <folding />
             </state>
           </provider>
@@ -139,7 +110,7 @@
       <file leaf-file-name="cart.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="39923" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="14229">
+            <state line="0" column="0" selection-start="0" selection-end="39923" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14229">
               <folding />
             </state>
           </provider>
@@ -202,7 +173,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -237,6 +207,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,21 +257,24 @@
       <created>1451720284426</created>
       <updated>1451720284426</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first">
+      <created>1451731547056</created>
+      <updated>1451731547056</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1377" height="733" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981631" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981631" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -310,6 +284,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -334,6 +309,81 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="1686" vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="16694">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="233" column="32" selection-start="13023" selection-end="13023" vertical-scroll-proportion="0.0" vertical-offset="3691" max-vertical-offset="13413">
+          <folding>
+            <marker date="1451731485475" expanded="true" signature="2609:2772" placeholder="SELECT speci..article..." />
+            <marker date="1451731485475" expanded="true" signature="3884:3967" placeholder="SELECT count..reviews..." />
+            <marker date="1451731485475" expanded="true" signature="4208:4366" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="4216:4280" placeholder="select count..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="7121:7279" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="7129:7193" placeholder="select count..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="15893:16051" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="15901:15965" placeholder="select count..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="17125:17455" placeholder="SELECT r.rev..reviews..." />
+            <marker date="1451731485475" expanded="true" signature="17165:17219" placeholder="SELECT first..userinfo..." />
+            <marker date="1451731485475" expanded="true" signature="17236:17289" placeholder="SELECT lastN..userinfo..." />
+            <marker date="1451731485475" expanded="true" signature="22438:22569" placeholder="SELECT artic..article..." />
+            <marker date="1451731485475" expanded="true" signature="23268:23430" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="23276:23342" placeholder="select count..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="27452:27610" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="27460:27524" placeholder="select count..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="33701:33859" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="33709:33773" placeholder="select count..ratings..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/total.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="190" column="42" selection-start="4620" selection-end="4620" vertical-scroll-proportion="0.0" vertical-offset="3230" max-vertical-offset="3468">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="20" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="37" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.0" vertical-offset="1447" max-vertical-offset="2397">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="34" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0" vertical-offset="699" max-vertical-offset="8534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectdb.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="2" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="39923" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14229">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="39923" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="14229">
@@ -343,67 +393,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/connectdb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="2" selection-start="149" selection-end="149" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204">
+        <state line="6" column="2" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="34" selection-start="2218" selection-end="2218" vertical-scroll-proportion="-11.692307" vertical-offset="699" max-vertical-offset="8534">
+        <state line="59" column="34" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0" vertical-offset="699" max-vertical-offset="8534">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1686" vertical-scroll-proportion="29.615385" vertical-offset="770" max-vertical-offset="16694">
-          <folding>
-            <marker date="1451719463340" expanded="true" signature="7143:7236" placeholder="SELECT artic..article..." />
-            <marker date="1451719463340" expanded="true" signature="8033:8191" placeholder="select (sele..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="8041:8105" placeholder="select count..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="12795:12953" placeholder="select (sele..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="12803:12867" placeholder="select count..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="20058:20216" placeholder="select (sele..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="20066:20130" placeholder="select count..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="24464:24553" placeholder="SELECT artic..article..." />
-            <marker date="1451719463340" expanded="true" signature="25318:25476" placeholder="select (sele..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="25326:25390" placeholder="select count..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="29884:30042" placeholder="select (sele..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="29892:29956" placeholder="select count..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="36955:37113" placeholder="select (sele..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="36963:37027" placeholder="select count..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="41371:41469" placeholder="SELECT artic..article..." />
-            <marker date="1451719463340" expanded="true" signature="42234:42392" placeholder="select (sele..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="42242:42306" placeholder="select count..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="46800:46958" placeholder="select (sele..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="46808:46872" placeholder="select count..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="53871:54029" placeholder="select (sele..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="53879:53943" placeholder="select count..ratings..." />
-            <marker date="1451719463340" expanded="true" signature="59051:59225" placeholder="SELECT title..." />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="1686" vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="16694">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="855" selection-end="855" vertical-scroll-proportion="-4.509804" vertical-offset="25" max-vertical-offset="799">
+        <state line="15" column="20" selection-start="855" selection-end="855" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="799">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/top_header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="37" selection-start="3698" selection-end="3698" vertical-scroll-proportion="-2.2941177" vertical-offset="1447" max-vertical-offset="2397">
-          <folding>
-            <marker date="1451719463679" expanded="true" signature="5223:5276" placeholder="select * fro..userinfo..." />
-          </folding>
+        <state line="92" column="37" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.0" vertical-offset="1447" max-vertical-offset="2397">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/total.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="42" selection-start="4620" selection-end="4620" vertical-scroll-proportion="-14.64" vertical-offset="2864" max-vertical-offset="3468">
+        <state line="190" column="42" selection-start="4620" selection-end="4620" vertical-scroll-proportion="0.0" vertical-offset="3230" max-vertical-offset="3468">
           <folding />
         </state>
       </provider>
@@ -412,25 +437,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="233" column="32" selection-start="13023" selection-end="13023" vertical-scroll-proportion="0.48300537" vertical-offset="3691" max-vertical-offset="13413">
           <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
-            <marker date="1451728200750" expanded="true" signature="2609:2772" placeholder="SELECT speci..article..." />
-            <marker date="1451728200750" expanded="true" signature="3884:3967" placeholder="SELECT count..reviews..." />
-            <marker date="1451728200750" expanded="true" signature="4208:4366" placeholder="select (sele..ratings..." />
-            <marker date="1451728200750" expanded="true" signature="4216:4280" placeholder="select count..ratings..." />
-            <marker date="1451728200750" expanded="true" signature="7121:7279" placeholder="select (sele..ratings..." />
-            <marker date="1451728200750" expanded="true" signature="7129:7193" placeholder="select count..ratings..." />
-            <marker date="1451728200750" expanded="true" signature="15893:16051" placeholder="select (sele..ratings..." />
-            <marker date="1451728200750" expanded="true" signature="15901:15965" placeholder="select count..ratings..." />
-            <marker date="1451728200750" expanded="true" signature="17125:17455" placeholder="SELECT r.rev..reviews..." />
-            <marker date="1451728200750" expanded="true" signature="17165:17219" placeholder="SELECT first..userinfo..." />
-            <marker date="1451728200750" expanded="true" signature="17236:17289" placeholder="SELECT lastN..userinfo..." />
-            <marker date="1451728200750" expanded="true" signature="22438:22569" placeholder="SELECT artic..article..." />
-            <marker date="1451728200750" expanded="true" signature="23268:23430" placeholder="select (sele..ratings..." />
-            <marker date="1451728200750" expanded="true" signature="23276:23342" placeholder="select count..ratings..." />
-            <marker date="1451728200750" expanded="true" signature="27452:27610" placeholder="select (sele..ratings..." />
-            <marker date="1451728200750" expanded="true" signature="27460:27524" placeholder="select count..ratings..." />
-            <marker date="1451728200750" expanded="true" signature="33701:33859" placeholder="select (sele..ratings..." />
-            <marker date="1451728200750" expanded="true" signature="33709:33773" placeholder="select count..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="2609:2772" placeholder="SELECT speci..article..." />
+            <marker date="1451731485475" expanded="true" signature="3884:3967" placeholder="SELECT count..reviews..." />
+            <marker date="1451731485475" expanded="true" signature="4208:4366" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="4216:4280" placeholder="select count..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="7121:7279" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="7129:7193" placeholder="select count..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="15893:16051" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="15901:15965" placeholder="select count..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="17125:17455" placeholder="SELECT r.rev..reviews..." />
+            <marker date="1451731485475" expanded="true" signature="17165:17219" placeholder="SELECT first..userinfo..." />
+            <marker date="1451731485475" expanded="true" signature="17236:17289" placeholder="SELECT lastN..userinfo..." />
+            <marker date="1451731485475" expanded="true" signature="22438:22569" placeholder="SELECT artic..article..." />
+            <marker date="1451731485475" expanded="true" signature="23268:23430" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="23276:23342" placeholder="select count..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="27452:27610" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="27460:27524" placeholder="select count..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="33701:33859" placeholder="select (sele..ratings..." />
+            <marker date="1451731485475" expanded="true" signature="33709:33773" placeholder="select count..ratings..." />
           </folding>
         </state>
       </provider>
