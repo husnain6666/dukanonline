@@ -28,7 +28,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="breadcrumb"> <a href="index.html"> <i class="fa fa-home fa-fw"></i> Home </a> <i class="fa fa-angle-right fa-fw"></i> <a href="product.php"> Product </a> </div>
+            <div class="breadcrumb"> <a href="index.php"> <i class="fa fa-home fa-fw"></i> Home </a> <i class="fa fa-angle-right fa-fw"></i> <a href="product.php"> Product </a> </div>
 
             <!-- Quick Help for tablets and large screens -->
             <div class="quick-message hidden-xs">
@@ -49,7 +49,181 @@
         </div>
     </div>
 </div>
-            <!-- end: Quick Help -->
+
+
+
+
+
+
+
+<?php
+
+$articleId = $_GET['articleId'];
+
+//$quantity=$_POST['quantity'];
+if(isset($_GET['quantity'])){
+$quantity=$_GET['quantity'];
+
+echo $quantity;
+
+if ($quantity==0)
+    $quantity=1;
+echo $quantity;
+}
+$userName=$_SESSION['loginUser'];
+$userId = $_SESSION['loginId'];
+
+$checkTracking1=true;
+$checkTracking=true;
+$sql = "SELECT userId FROM userinfo WHERE emailAddress = '$userName'";
+$result=mysqli_query($connection,$sql);
+$table_record=mysqli_fetch_array($result);
+$userId=$table_record['userId'];
+
+
+
+$datetimeToday=date("Y-m-d H:i:s");
+
+/*
+$sql="select quantity from userinfo where userId='$userId'";
+$result=mysqli_query($connection,$sql);
+$table_record=mysqli_fetch_array($result);
+$quantity=$table_record['quantity'];
+//echo $quantity;
+*/
+
+
+$sql="select orderdetails.trackingNo, status, orderdetails.userId from ordertracking inner join orderdetails on orderdetails.trackingNo=ordertracking.trackingNo  and status='In Progress' and userId='$userId'";
+$result=mysqli_query($connection,$sql);
+//if(($result->num_rows)>0){
+if(($result->num_rows)>0){
+    $table_record=mysqli_fetch_array($result);
+    $trackingNo=$table_record['trackingNo'];
+      echo 'ok';
+}
+else if(($result->num_rows)==0){
+    $sql = "SELECT userId FROM userinfo WHERE emailAddress = '$userName'";
+    $result=mysqli_query($connection,$sql);
+    $table_record=mysqli_fetch_array($result);
+    $userId=$table_record['userId'];
+    $trackingNo=date("Ymd").$articleId.$userId;
+
+    $sql1 = "SELECT trackingNo FROM ordertracking WHERE status = 'Confirmed'";
+    $result1=mysqli_query($connection,$sql1);
+    while($table_record1=mysqli_fetch_array($result1)){
+        $trackingCheck=$table_record1['trackingNo'];
+        $randomNumber=rand(1,1000);
+        if($trackingNo===$trackingCheck){
+
+            $trackingNo=$trackingNo.$randomNumber;
+
+                echo $trackingNo;
+            //    echo "yeah";
+        }
+
+    }
+
+    echo $trackingNo;
+    //  echo "yeah";
+
+
+}
+//else
+//  echo 'pato';
+if($articleId!=-9999){
+    $sql = "SELECT price,discount FROM article where articleId='$articleId'";
+    $result=mysqli_query($connection,$sql);
+    $table_record=mysqli_fetch_array($result);
+    $price = $table_record['price'];
+
+    $discount = $table_record['discount'];
+    $discountedPrice = ($price * $discount)/100;
+    $discountedPrice = $price - $discountedPrice;
+
+    $totalPrice=$discountedPrice*$quantity;
+
+    $sql = "SELECT orderdetails.articleId FROM orderdetails inner join userinfo on orderdetails.userId=userinfo.userId and userinfo.emailAddress = '$userName' and orderdetails.trackingNo = '$trackingNo'";
+    $result=mysqli_query($connection,$sql);
+    $check=false;
+    echo "Google";
+    error_reporting(E_ERROR | E_PARSE);
+    while($table_record=mysqli_fetch_array($result)){
+
+        if($articleId==$table_record['articleId']){
+            $check=true;
+            $query="update orderdetails set quantity='$quantity',totalPrice='$totalPrice' where trackingNo='$trackingNo' and userId='$userId' and articleId='$articleId'";
+            $result=mysqli_query($connection,$query);
+        }
+    }
+
+     echo $articleId;
+
+    echo $quantity;
+    $trackingNotemp=null;
+    $overAllprice=0;
+    if($check==false){
+
+
+
+        $sql="select ordertracking.trackingNo,status from  ordertracking inner join orderdetails on ordertracking.trackingNo=orderdetails.trackingNo and userId='$userId' and ordertracking.status='In Progress'";
+        $result=mysqli_query($connection,$sql);
+        $table_record=mysqli_fetch_array($result);
+        $status=$table_record['status'];
+        $trackingNotemp=$table_record['trackingNo'];
+        if($status=='In Progress'){
+            $checkTracking=true;
+            $trackingNo= $trackingNotemp;
+        }
+
+        else
+            $checkTracking=false;
+
+
+
+        if($checkTracking==false){
+            $sql ="INSERT INTO ordertracking (date,status,trackingNo) VALUES ( '$dateToday', 'In progress', '$trackingNo')";
+            if ($connection->query($sql) === TRUE) {
+                           echo "New record created successfullyhehehehe";
+            } else {
+                          echo "Error: " . $sql . "<br>" . $connection->error;
+            }
+
+        }
+        echo $quantity;
+        $sql ="INSERT INTO orderdetails (articleId, userId, quantity, totalPrice, trackingNo) VALUES ( '$articleId', '$userId', '$quantity', '$totalPrice', '$trackingNo')";
+        if ($connection->query($sql) === TRUE) {
+              echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $connection->error;
+        }
+
+
+
+
+
+    }
+       else
+        echo 'order already placed';
+
+
+}
+else
+{
+    $overAllprice=0;
+
+
+
+}
+
+$sql="select count(articleId) as quantityCart from orderdetails inner join ordertracking on orderdetails.trackingNo=ordertracking.trackingNo and ordertracking.status='In Progress' and userId='$userId'";
+$result=mysqli_query($connection,$sql);
+$table_record=mysqli_fetch_array($result);
+$quantityCart=$table_record['quantityCart'];
+
+?>
+
+
+
 
 
 <div class="row clearfix f-space10"></div>
@@ -57,20 +231,43 @@
     <div class="row">
         <div class="col-md-12">
             <div class="page-title">
-                <h2>Cart (3 Items)</h2>
+                <h2>Cart (<?php echo $quantityCart;?> Items)</h2>
             </div>
         </div>
     </div>
 </div>
 <div class="row clearfix f-space10"></div>
 <!-- product -->
+
+<?php
+
+
+$sql = "SELECT orderdetails.articleId,orderdetails.quantity,orderdetails.totalPrice,price,articleName,trackingNo,article.picture1,article.discount,article.Category FROM orderdetails inner join article on orderdetails.articleId=article.articleId and userId='$userId' and orderdetails.trackingNo='$trackingNo'";
+$result=mysqli_query($connection,$sql);
+
+while($table_record=mysqli_fetch_array($result)){
+$articleName = $table_record['articleName'];
+$price = $table_record['price'];
+$articleNo=$table_record['articleId'];
+$totalPrice=$table_record['totalPrice'];
+$quantity=$table_record['quantity'];
+$picture1=$table_record['picture1'];
+$discount=$table_record['discount'];
+$discountedPrice = ($price * $discount)/100;
+$discountedPrice = $price - $discountedPrice;
+$category=$table_record['Category'];
+$overAllprice += $totalPrice;
+
+?>
+
+
 <div class="container">
     <div class="row">
         <div class="product">
             <div class="col-md-2 col-sm-3 hidden-xs p-wr">
                 <div class="product-attrb-wr">
                     <div class="product-attrb">
-                        <div class="image"> <a class="img" href="product.php"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
+                        <div class="image"> <a class="img" href="product.php?articleId=<?php echo $articleId; ?>" ><img alt="product info" src="images/products/<?php echo $picture1?>" title="product title"></a> </div>
                     </div>
                 </div>
             </div>
@@ -78,27 +275,27 @@
                 <div class="product-attrb-wr">
                     <div class="product-meta">
                         <div class="name">
-                            <h3><a href="product.php">Ladies Stylish Handbag</a></h3>
+                            <h3><a href="product.php?articleId=<?php echo $articleId; ?>" ><?php echo $articleName; ?></a></h3>
                         </div>
-                        <div class="price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
-                        <a href="#a" class="btn normal color2">Edit Order</a> </div>
+                        <div class="price"> <span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice; ?></span><?php if($discountedPrice < $price){ ?> <span class="price-old"><span class="sym">Rs.</span><?php echo $price; ?></span> <?php } ?></div>
+                        <a href="product.php?articleId=<?php echo $articleId; ?>" class="btn normal color2">Edit Order</a> </div>
                 </div>
             </div>
-            <div class="col-md-2 hidden-sm hidden-xs p-wr">
+            <div class="col-md-3 hidden-sm hidden-xs p-wr">
                 <div class="product-attrb-wr">
                     <div class="product-attrb">
                         <div class="att"> <span>Color:</span> <a href="#a" data-toggle="tooltip" title="" class="color bg-teal" data-original-title="Teal"></a> </div>
                         <div class="att"> <span>Size:</span> <span class="size">XS</span> </div>
-                        <div class="att"> <span>Type:</span> <span class="size">Cotton</span> </div>
+                        <div class="att"> <span>Category:</span> <span class="size"><?php echo $category; ?></span> </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 hidden-sm hidden-xs p-wr">
+            <div class="col-md-1 hidden-sm hidden-xs p-wr">
                 <div class="product-attrb-wr">
                     <div class="product-attrb">
                         <div class="qtyinput">
                             <div class="quantity-inp">
-                                <input type="text" class="quantity-input" name="p_quantity" value="1">
+                                <input type="text" class="quantity-input" name="p_quantity" id="quantity" value="<?php echo $quantity; ?>">
                                 <div class="quantity-txt minusbtn"><a href="#a" class="qty qtyminus" ><i class="fa fa-minus fa-fw"></i></a></div>
                                 <div class="quantity-txt plusbtn"><a href="#a" class="qty qtyplus" ><i class="fa fa-plus fa-fw"></i></a></div>
                             </div>
@@ -109,7 +306,7 @@
             <div class="col-md-2 hidden-sm hidden-xs p-wr">
                 <div class="product-attrb-wr">
                     <div class="product-attrb">
-                        <div class="price"> <span class="t-price"><span class="sym">$</span>1296</span> </div>
+                        <div class="price"> <span class="t-price"><span class="sym">Rs.</span><?php echo $totalPrice ?></span> </div>
                     </div>
                 </div>
             </div>
@@ -124,134 +321,16 @@
     </div>
 </div>
 <!-- end: product -->
-<div class="row clearfix f-space30"></div>
-<!-- product -->
-<div class="container">
-    <div class="row">
-        <div class="product">
-            <div class="col-md-2 col-sm-3 hidden-xs p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-attrb">
-                        <div class="image"> <a class="img" href="product.php"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-7 col-xs-9 p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-meta">
-                        <div class="name">
-                            <h3><a href="product.php">Ladies Stylish Handbag</a></h3>
-                        </div>
-                        <div class="price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
-                        <a href="#a" class="btn normal color2">Edit Order</a> </div>
-                </div>
-            </div>
-            <div class="col-md-2 hidden-sm hidden-xs p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-attrb">
-                        <div class="att"> <span>Color:</span> <a href="#a" data-toggle="tooltip" title="" class="color bg-teal" data-original-title="Teal"></a> </div>
-                        <div class="att"> <span>Size:</span> <span class="size">XS</span> </div>
-                        <div class="att"> <span>Type:</span> <span class="size">Cotton</span> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 hidden-sm hidden-xs p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-attrb">
-                        <div class="qtyinput">
-                            <div class="quantity-inp">
-                                <input type="text" class="quantity-input" name="p_quantity" value="1">
-                                <div class="quantity-txt minusbtn"><a href="#a" class="qty qtyminus"><i class="fa fa-minus fa-fw"></i></a></div>
-                                <div class="quantity-txt plusbtn"><a href="#a" class="qty qtyplus"><i class="fa fa-plus fa-fw"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 hidden-sm hidden-xs p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-attrb">
-                        <div class="price"> <span class="t-price"><span class="sym">$</span>1296</span> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-1 col-sm-2 col-xs-3 p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-attrb">
-                        <div class="remove"> <a href="#a" class="color2" data-toggle="tooltip" data-original-title="Remove"><i class="fa fa-trash-o fa-fw color2"></i></a> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end: product -->
-<div class="row clearfix f-space30"></div>
-<!-- product -->
-<div class="container">
-    <div class="row">
-        <div class="product">
-            <div class="col-md-2 col-sm-3 hidden-xs p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-attrb">
-                        <div class="image"> <a class="img" href="product.php"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-7 col-xs-9 p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-meta">
-                        <div class="name">
-                            <h3><a href="product.php">Ladies Stylish Handbag</a></h3>
-                        </div>
-                        <div class="price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
-                        <a href="#a" class="btn normal color2">Edit Order</a> </div>
-                </div>
-            </div>
-            <div class="col-md-2 hidden-sm hidden-xs p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-attrb">
-                        <div class="att"> <span>Color:</span> <a href="#a" data-toggle="tooltip" title="" class="color bg-teal" data-original-title="Teal"></a> </div>
-                        <div class="att"> <span>Size:</span> <span class="size">XS</span> </div>
-                        <div class="att"> <span>Type:</span> <span class="size">Cotton</span> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 hidden-sm hidden-xs p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-attrb">
-                        <div class="qtyinput">
-                            <div class="quantity-inp">
-                                <input type="text" class="quantity-input" name="p_quantity" value="1">
-                                <div class="quantity-txt minusbtn"><a href="#a" class="qty qtyminus"><i class="fa fa-minus fa-fw"></i></a></div>
-                                <div class="quantity-txt plusbtn"><a href="#a" class="qty qtyplus"><i class="fa fa-plus fa-fw"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2 hidden-sm hidden-xs p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-attrb">
-                        <div class="price"> <span class="t-price"><span class="sym">$</span>1296</span> </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-1 col-sm-2 col-xs-3 p-wr">
-                <div class="product-attrb-wr">
-                    <div class="product-attrb">
-                        <div class="remove"> <a href="#a" class="color2" data-toggle="tooltip" data-original-title="Remove"><i class="fa fa-trash-o fa-fw color2"></i></a> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php } ?>
+
+
+<!--
+
 <!-- end: product -->
 <div class="row clearfix f-space30"></div>
 <div class="container">
     <div class="row">
-        <!-- 	Estimate Shipping & Taxes -->
+        <!--
         <div class="col-md-4  col-sm-4 col-xs-12 cart-box-wr">
             <div class="box-heading"><span>Estimate Shipping & Taxes</span></div>
             <div class="clearfix f-space10"></div>
@@ -266,9 +345,6 @@
             <div class="clearfix f-space30"></div>
         </div>
 
-        <!-- end: Estimate Shipping & Taxes -->
-
-        <!-- 	Discount Codes -->
 
         <div class="col-md-4  col-sm-4 col-xs-12 cart-box-wr">
             <div class="box-heading"><span>Discount Codes</span></div>
@@ -288,26 +364,26 @@
 
         <!-- 	Total amount -->
 
-        <div class="col-md-4 col-sm-4 col-xs-12 cart-box-wr">
+        <div class="col-md-12 col-sm-12 col-xs-12 cart-box-wr">
             <div class="box-content">
                 <div class="cart-box-tm">
                     <div class="tm1">Sub-Total</div>
-                    <div class="tm2">$2167.25</div>
+                    <div class="tm2">Rs.<?php echo $overAllprice; ?></div>
                 </div>
                 <div class="clearfix f-space10"></div>
                 <div class="cart-box-tm">
-                    <div class="tm1">Eco Tax (-2.00) </div>
-                    <div class="tm2">$23.60</div>
+                    <div class="tm1">Tax (Rs.0) </div>
+                    <div class="tm2"></div>
                 </div>
                 <div class="clearfix f-space10"></div>
                 <div class="cart-box-tm">
-                    <div class="tm1">VAT (18.2%) </div>
-                    <div class="tm2">$54.00</div>
+                    <div class="tm1">Free Shipping </div>
+                    <div class="tm2">Rs.0</div>
                 </div>
                 <div class="clearfix f-space10"></div>
                 <div class="cart-box-tm">
                     <div class="tm3 bgcolor2">Total </div>
-                    <div class="tm4 bgcolor2">$7854.34</div>
+                    <div class="tm4 bgcolor2">Rs.<?php echo $overAllprice;?></div>
                 </div>
                 <div class="clearfix f-space10"></div>
                 <button class="btn large color1 pull-right">Proceed to Checkout</button>
