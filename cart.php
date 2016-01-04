@@ -386,8 +386,12 @@ $overAllprice += $totalPrice;
                     <div class="tm4 bgcolor2">Rs.<?php echo $overAllprice;?></div>
                 </div>
                 <div class="clearfix f-space10"></div>
-                <button class="btn large color1 pull-right">Proceed to Checkout</button>
+
+                <form action="checkout.php?trackingNo=<?php echo $trackingNo; ?>& total=<?php echo $overAllprice; ?>  " method="post">
+
+                <button  type="submit"  name="submit" class="btn large color1 pull-right">Proceed to Checkout</button>
                 <div class="clearfix f-space30"></div>
+            </form>
             </div>
         </div>
 
