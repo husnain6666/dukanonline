@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<?php include "top_header.php";?>
+
+<?php include "top_header.php";
+      include "connectdb.php";?>
     <!-- end: Top Heading Bar -->
 
     <div class="f-space20"></div>
@@ -115,7 +117,6 @@
                         <div class="item active">
                             <div class="row box-product">
                                 <?php
-                                include "connectdb.php";
                                 $sql = "SELECT articleId,price,articleName,picture1,discount FROM article where weekDeal='1' limit 15";
                                 $result=mysqli_query($connection,$sql);
                                 $slideCount = 0;
@@ -332,19 +333,20 @@
     </div>
 </div>
 <div class="row clearfix f-space30"></div>
+
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-column box-block">
             <div class="box-heading"><span>SALE</span></div>
             <div class="box-content">
-                <div class="box-products slide" id="productc3">
-                    <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#productc3"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#productc3"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
+                <div class="box-products slide" id="productc2">
+                    <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#productc2"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#productc2"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
                     <div class="carousel-inner">
                         <!-- Items Row -->
                         <div class="item active">
                             <div class="row box-product">
                                 <?php
-                                include "connectdb.php";
+
                                 $sql = "SELECT articleId,price,articleName,picture1,discount FROM article where Sale='1' limit 16";
                                 $result=mysqli_query($connection,$sql);
                                 $slideCount = 0;
@@ -559,6 +561,7 @@
     </div>
 </div>
 <div class="row clearfix f-space30"></div>
+
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-column box-block">
@@ -571,7 +574,6 @@
                         <div class="item active">
                             <div class="row box-product">
                                 <?php
-                                include "connectdb.php";
                                 $sql = "SELECT articleId,price,articleName,picture1,discount FROM article group by articleId desc limit 16";
                                 $result=mysqli_query($connection,$sql);
                                 $slideCount = 0;
@@ -785,231 +787,7 @@
     </div>
 </div>
 <div class="row clearfix f-space30"></div>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-column box-block">
-            <div class="box-heading"><span>Featured Products</span></div>
-            <div class="box-content">
-                <div class="box-products slide" id="productc3">
-                    <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#productc3"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#productc3"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
-                    <div class="carousel-inner">
-                        <!-- Items Row -->
-                        <div class="item active">
-                            <div class="row box-product">
-                                <?php
-                                include "connectdb.php";
-                                $sql = "SELECT articleId,price,articleName,picture1,discount FROM article group by articleId desc limit 16";
-                                $result=mysqli_query($connection,$sql);
-                                $slideCount = 0;
-                                while($table_record=mysqli_fetch_array($result)) {
-                                $articleName = $table_record['articleName'];
-                                $articleId = $table_record['articleId'];
-                                $price = $table_record['price'];
-                                $picture1 = $table_record['picture1'];
-                                $discount = $table_record['discount'];
-                                $discountedPrice = ($price * $discount) / 100;
-                                $discountedPrice = $price - $discountedPrice;
 
-                                $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
-
-                                $result3 = mysqli_query($connection, $query3);
-                                $slideCount++;
-                                $table_record3 = mysqli_fetch_array($result3);
-                                $totalRatings = $table_record3['totalRating'];
-                                $ratingSum = $table_record3['sumRating'];
-                                if ($totalRatings != 0 || $ratingSum != 0) {
-                                    $avgRating = $ratingSum / $totalRatings;
-                                } else {
-                                    $avgRating = 5;
-                                }
-                                if ($slideCount%5 !== 0 ) {
-
-                                    ?>
-                                    <!-- Product -->
-                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                        <div class="product-block">
-                                            <div class="image">
-                                                <div class="product-label product-sale"><span>SALE</span></div>
-                                                <a class="img"
-                                                   href="product.php?articleId=<?php echo $articleId;?>"><img
-                                                        alt="product info"
-                                                        src="images/products/<?php echo $picture1?>"
-                                                        title="product title"></a></div>
-                                            <div class="product-meta">
-                                                <div class="name"><a
-                                                        href="product.php?articleId=<?php echo $articleId;?>"><?php echo $articleName;?></a>
-                                                </div>
-                                                <div class="big-price"><span class="price-new"><span
-                                                            class="sym">Rs.</span><?php echo $discountedPrice;?></span>
-                                                        <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
-                                                <?php if ($check !== false) { //check if user is logged in or not?>
-                                                    <div class="big-btns"><a
-                                                            class="btn btn-default btn-view pull-left"
-                                                            href="product.php?articleId=<?php echo $articleId; ?>">View</a>
-                                                        <a class="btn btn-default btn-addtocart pull-right"
-                                                           onclick="addtocart(<?php echo $articleId ?>)" href="#">BUY
-                                                            NOW!</a></div>
-                                                <?php }// end if
-                                                else {
-                                                    ?>
-                                                    <div class="big-btns"><a
-                                                            class="btn btn-default btn-view pull-left"
-                                                            href="product.php?articleId=<?php echo $articleId;?>">View</a>
-                                                        <a class="btn btn-default btn-addtocart pull-right"
-                                                           href="create_an_account.php">BUY NOW!</a></div>
-                                                <?php }// end else
-                                                ?>
-                                                <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
-                                                        <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
-                                                <?php
-                                                $ratingLimit = 0;
-                                                $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
-
-                                                $result3 = mysqli_query($connection, $query3);
-
-                                                $table_record3 = mysqli_fetch_array($result3);
-                                                $totalRatings = $table_record3['totalRating'];
-                                                $ratingSum = $table_record3['sumRating'];
-                                                if ($totalRatings != 0 || $ratingSum != 0) {
-                                                    $avgRating = $ratingSum / $totalRatings;
-                                                } else {
-                                                    $avgRating = 5;
-                                                }
-                                                ?>
-                                                <div class="rating"><?php
-                                                    while ($ratingLimit < 5) {
-                                                        if ($ratingLimit < $avgRating) {
-                                                            ?>
-                                                            <i class="fa fa-star"></i>
-                                                        <?php } else {
-                                                            ?>
-                                                            <i class="fa fa-star-o"></i>
-                                                        <?php
-                                                        }
-                                                        $ratingLimit++;
-                                                    }?>
-                                                </div>
-                                                <div class="small-btns">
-                                                    <button class="btn btn-default btn-compare pull-left"
-                                                            data-toggle="tooltip" title="Add to Compare"><i
-                                                            class="fa fa-retweet fa-fw"></i></button>
-                                                    <button class="btn btn-default btn-wishlist pull-left"
-                                                            data-toggle="tooltip" title="Add to Wishlist"><i
-                                                            class="fa fa-heart fa-fw"></i></button>
-                                                    <button class="btn btn-default btn-addtocart pull-left"
-                                                            data-toggle="tooltip" title="Add to Cart"><i
-                                                            class="fa fa-shopping-cart fa-fw"></i></button>
-                                                </div>
-                                            </div>
-                                            <div class="meta-back"></div>
-                                        </div>
-                                    </div>
-                                    <!-- end: Product -->
-                                <?php }// end if condition
-                                else
-                                {
-                                ?>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row box-product">
-                                <!-- Product -->
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                    <div class="product-block">
-                                        <div class="image">
-                                            <div class="product-label product-sale"><span>SALE</span></div>
-                                            <a class="img"
-                                               href="product.php?articleId=<?php echo $articleId;?>"><img
-                                                    alt="product info"
-                                                    src="images/products/<?php echo $picture1?>"
-                                                    title="product title"></a></div>
-                                        <div class="product-meta">
-                                            <div class="name"><a
-                                                    href="product.php?articleId=<?php echo $articleId;?>"><?php echo $articleName;?></a>
-                                            </div>
-                                            <div class="big-price"><span class="price-new"><span
-                                                        class="sym">Rs.</span><?php echo $discountedPrice;?></span>
-                                                        <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
-                                            <?php if ($check !== false) { //check if user is logged in or not?>
-                                                <div class="big-btns"><a
-                                                        class="btn btn-default btn-view pull-left"
-                                                        href="product.php?articleId=<?php echo $articleId; ?>">View</a>
-                                                    <a class="btn btn-default btn-addtocart pull-right"
-                                                       onclick="addtocart(<?php echo $articleId ?>)" href="#">BUY
-                                                        NOW!</a></div>
-                                            <?php }// end if
-                                            else {
-                                                ?>
-                                                <div class="big-btns"><a
-                                                        class="btn btn-default btn-view pull-left"
-                                                        href="product.php?articleId=<?php echo $articleId;?>">View</a>
-                                                    <a class="btn btn-default btn-addtocart pull-right"
-                                                       href="create_an_account.php">BUY NOW!</a></div>
-                                            <?php }// end else
-                                            ?>
-                                            <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
-                                                        <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
-                                            <?php
-                                            $ratingLimit = 0;
-                                            $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
-
-                                            $result3 = mysqli_query($connection, $query3);
-
-                                            $table_record3 = mysqli_fetch_array($result3);
-                                            $totalRatings = $table_record3['totalRating'];
-                                            $ratingSum = $table_record3['sumRating'];
-                                            if ($totalRatings != 0 || $ratingSum != 0) {
-                                                $avgRating = $ratingSum / $totalRatings;
-                                            } else {
-                                                $avgRating = 5;
-                                            }
-                                            ?>
-                                            <div class="rating"><?php
-                                                while ($ratingLimit < 5) {
-                                                    if ($ratingLimit < $avgRating) {
-                                                        ?>
-                                                        <i class="fa fa-star"></i>
-                                                    <?php } else {
-                                                        ?>
-                                                        <i class="fa fa-star-o"></i>
-                                                    <?php
-                                                    }
-                                                    $ratingLimit++;
-                                                }?>
-                                            </div>
-                                            <div class="small-btns">
-                                                <button class="btn btn-default btn-compare pull-left"
-                                                        data-toggle="tooltip" title="Add to Compare"><i
-                                                        class="fa fa-retweet fa-fw"></i></button>
-                                                <button class="btn btn-default btn-wishlist pull-left"
-                                                        data-toggle="tooltip" title="Add to Wishlist"><i
-                                                        class="fa fa-heart fa-fw"></i></button>
-                                                <button class="btn btn-default btn-addtocart pull-left"
-                                                        data-toggle="tooltip" title="Add to Cart"><i
-                                                        class="fa fa-shopping-cart fa-fw"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="meta-back"></div>
-                                    </div>
-                                </div>
-                                <?php
-                                }// end else
-                                }// end while loop
-                                ?>
-                            </div>
-                        </div>
-                        <!-- end: Items Row -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- end: Products -->
 <!-- Rectangle Banners -->
 <?php include "banners.php";?>
@@ -1022,25 +800,11 @@
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 box-block sidebar" style="padding: 0px">
 
             <!-- Best Sellers Products -->
-            <?php include "best_sellers.php";?>
+            <?php //include "best_sellers.php";?>
             <!-- end: Best Sellers Products -->
             <div class="row clearfix f-space10"></div>
             <!-- Get Updates Box -->
-            <div class="box-content">
-                <div class="subscribe">
-                    <div class="heading">
-                        <h3>Get updates</h3>
-                    </div>
-                    <div class="formbox">
-                        <form>
-                            <i class="fa fa-envelope fa-fw"></i>
-                            <input class="form-control" id="InputUserEmail" placeholder="Your e-mail..." type="text">
-                            <button class="btn color1 normal pull-right" type="submit">Sign
-                                up</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+
         </div>
             <!-- end: Get Updates Box -->
         <!-- end: Sidebar -->
@@ -1087,35 +851,53 @@
                 </div>
                     <!-- Best Sellers Products -->
                <div class="col-md-4 box-block sidebar">
+                   <div class="box-content">
+                       <div class="subscribe">
+                           <div class="heading">
+                               <h3>Get updates</h3>
+                           </div>
+                           <div class="formbox">
+                               <form>
+                                   <i class="fa fa-envelope fa-fw"></i>
+                                   <input class="form-control" id="InputUserEmail" placeholder="Your e-mail..." type="text">
+                                   <button class="btn color1 normal pull-right" type="submit">Sign
+                                       up</button>
+                               </form>
+                           </div>
+                       </div>
+                   </div>
 
-                </div>
+               </div>
             </div>
-            <div class="row">
-                <!-- Brands -->
-                <div class="col-md-12 main-column box-block brands-block">
-                    <div class="box-heading"><span>Our Clients</span></div>
-                    <div class="box-content">
-                        <div class="box-products box-brands slide" id="brands">
-                            <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#brands"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#brands"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
-                            <div class="carousel-inner">
-                                <div class="brands-row item active">
-                                    <div class="brand-logo"><a href="#a"><img src="images/icons/coca%20cola.jpg" alt=""></a></div>
-                                    <div class="brand-logo"><a href="#a"><img src="images/icons/butt%20sweets.jpg" alt=""></a></div>
-                                    <div class="brand-logo"><a href="#a"><img src="images/icons/mc%20donalds.jpg" alt=""></a></div>
-                                    <div class="brand-logo"><a href="#a"><img src="images/icons/techAgentx%20logo2.jpg" alt=""></a></div>
-                                </div>
-                                <div class="brands-row item">
-                                    <div class="brand-logo"><a href="#a"><img src="images/icons/fri%20chicks.jpg" alt=""></a></div>
-                                    <div class="brand-logo"><a href="#a"><img src="images/icons/Zong.jpg" alt=""></a></div>
-                                    <div class="brand-logo"><a href="#a"><img src="images/icons/unilever.jpeg" alt=""></a></div>
-                                    <div class="brand-logo"><a href="#a"><img src="images/icons/mini-slider1.jpg" alt=""></a></div>
-                                </div>
-                            </div>
+
+            <!-- end: Brands -->
+        </div>
+
+
+    </div>
+    <div class="row">
+        <!-- Brands -->
+        <div class="col-md-12 main-column box-block brands-block">
+            <div class="box-heading"><span>Our Clients</span></div>
+            <div class="box-content">
+                <div class="box-products box-brands slide" id="brands">
+                    <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#brands"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#brands"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
+                    <div class="carousel-inner">
+                        <div class="brands-row item active">
+                            <div class="brand-logo"><a href="#a"><img src="images/icons/coca%20cola.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img src="images/icons/butt%20sweets.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img src="images/icons/mc%20donalds.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img src="images/icons/techAgentx%20logo2.jpg" alt=""></a></div>
+                        </div>
+                        <div class="brands-row item">
+                            <div class="brand-logo"><a href="#a"><img src="images/icons/fri%20chicks.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img src="images/icons/Zong.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img src="images/icons/unilever.jpeg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img src="images/icons/mini-slider1.jpg" alt=""></a></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- end: Brands -->
         </div>
     </div>
 </div>
@@ -1174,17 +956,23 @@
         $('#monthly-deals').carousel({
             interval: 3000
         });
-        $('#productc4').carousel({
-            interval: 4000
-        });
-        $('#blogslide').carousel({
+        $('#productc3').carousel({
             interval: 4000
         });
         $('#productc2').carousel({
             interval: 4000
         });
-        $('#tweets').carousel({
-            interval: 5000
+        $('#blogslide').carousel({
+            interval: 4000
+        });
+        $('#productc1').carousel({
+            interval: 4000
+        });
+        $('#productc4').carousel({
+            interval: 4000
+        });
+        $('#productc5').carousel({
+            interval: 4000
         });
     })(jQuery);
 

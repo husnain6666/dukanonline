@@ -74,14 +74,6 @@
             <div class="col-md-12">
                 <div class="topheadrow">
                     <ul class="nav nav-pills pull-right">
-
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#a">USD <i class="fa fa-angle-down fa-fw"></i> </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#a">USD</a></li>
-                                <li><a href="#a">PKR</a></li>
-                                <li><a href="#a">JPY</a></li>
-                            </ul>
-                        </li>
                         <li> <a href="#a"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-xs">My Cart</span></a> </li>
                         <li> <a href="#a"> <i class="fa fa-heart fa-fw"></i> <span class="hidden-xs">Wishlist(0)</span></a> </li>
                         <?php

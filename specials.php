@@ -1,7 +1,7 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-block sidebar">
     <div class="box-heading"><span>Specials</span></div>
     <div class="box-content">
-        <div class="box-products slide carousel-fade" id="productc2">
+        <div class="box-products slide carousel-fade" id="productc4">
             <ol class="carousel-indicators">
                 <?php
                 include "connectdb.php";
@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#productc2"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#productc2"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
+        <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#productc4"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#productc4"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
         <div class="nav-bg"></div>
     </div>
 </div>
