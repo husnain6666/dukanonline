@@ -152,7 +152,7 @@
                                                     <a class="img"
                                                        href="product.php?articleId=<?php echo $articleId;?>"><img
                                                             alt="product info"
-                                                            src="images/products/<?php echo $picture1?>"
+                                                            src="images/products/<?php echo $picture1;?>"
                                                             title="product title"></a></div>
                                                 <div class="product-meta">
                                                     <div class="name"><a
@@ -167,7 +167,7 @@
                                                                 class="btn btn-default btn-view pull-left"
                                                                 href="product.php?articleId=<?php echo $articleId; ?>">View</a>
                                                             <a class="btn btn-default btn-addtocart pull-right"
-                                                               onclick="addtocart(<?php echo $articleId ?>)" href="#">BUY
+                                                               onclick="addtocart(<?php echo $articleId; ?>)" href="#">BUY
                                                                 NOW!</a></div>
                                                     <?php }// end if
                                                     else {
@@ -181,7 +181,7 @@
                                                     ?>
                                                     <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                         <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
+                                                                class="sym"></span>&nbsp;&nbsp;&nbsp;</span></div>
                                                     <?php
                                                     $ratingLimit = 0;
                                                     $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
@@ -208,7 +208,8 @@
                                                             <?php
                                                             }
                                                             $ratingLimit++;
-                                                        }?>
+                                                        }
+                                                    ?>
                                                     </div>
                                                     <div class="small-btns">
                                                         <button class="btn btn-default btn-compare pull-left"
@@ -242,7 +243,7 @@
                                             <a class="img"
                                                href="product.php?articleId=<?php echo $articleId;?>"><img
                                                     alt="product info"
-                                                    src="images/products/<?php echo $picture1?>"
+                                                    src="images/products/<?php echo $picture1;?>"
                                                     title="product title"></a></div>
                                         <div class="product-meta">
                                             <div class="name"><a
@@ -257,7 +258,7 @@
                                                         class="btn btn-default btn-view pull-left"
                                                         href="product.php?articleId=<?php echo $articleId; ?>">View</a>
                                                     <a class="btn btn-default btn-addtocart pull-right"
-                                                       onclick="addtocart(<?php echo $articleId ?>)" href="#">BUY
+                                                       onclick="addtocart(<?php echo $articleId;?>)" href="#">BUY
                                                         NOW!</a></div>
                                             <?php }// end if
                                             else {
@@ -271,7 +272,7 @@
                                             ?>
                                             <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                         <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
+                                                                class="sym"></span>&nbsp;&nbsp;&nbsp;</span></div>
                                             <?php
                                             $ratingLimit = 0;
                                             $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
@@ -325,6 +326,7 @@
 
                     </div>
                 </div>
+
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 box-block sidebar" style="padding: 0px">
@@ -382,7 +384,7 @@
                                                 <a class="img"
                                                    href="product.php?articleId=<?php echo $articleId;?>"><img
                                                         alt="product info"
-                                                        src="images/products/<?php echo $picture1?>"
+                                                        src="images/products/<?php echo $picture1;?>"
                                                         title="product title"></a></div>
                                             <div class="product-meta">
                                                 <div class="name"><a
@@ -397,7 +399,7 @@
                                                             class="btn btn-default btn-view pull-left"
                                                             href="product.php?articleId=<?php echo $articleId; ?>">View</a>
                                                         <a class="btn btn-default btn-addtocart pull-right"
-                                                           onclick="addtocart(<?php echo $articleId ?>)" href="#">BUY
+                                                           onclick="addtocart(<?php echo $articleId; ?>)" href="#">BUY
                                                             NOW!</a></div>
                                                 <?php }// end if
                                                 else {
@@ -411,7 +413,7 @@
                                                 ?>
                                                 <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                         <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
+                                                                class="sym"></span>&nbsp;&nbsp;&nbsp;</span></div>
                                                 <?php
                                                 $ratingLimit = 0;
                                                 $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
@@ -472,7 +474,7 @@
                                             <a class="img"
                                                href="product.php?articleId=<?php echo $articleId;?>"><img
                                                     alt="product info"
-                                                    src="images/products/<?php echo $picture1?>"
+                                                    src="images/products/<?php echo $picture1;?>"
                                                     title="product title"></a></div>
                                         <div class="product-meta">
                                             <div class="name"><a
@@ -487,7 +489,7 @@
                                                         class="btn btn-default btn-view pull-left"
                                                         href="product.php?articleId=<?php echo $articleId; ?>">View</a>
                                                     <a class="btn btn-default btn-addtocart pull-right"
-                                                       onclick="addtocart(<?php echo $articleId ?>)" href="#">BUY
+                                                       onclick="addtocart(<?php echo $articleId; ?>)" href="#">BUY
                                                         NOW!</a></div>
                                             <?php }// end if
                                             else {
@@ -501,7 +503,7 @@
                                             ?>
                                             <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                         <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
+                                                                class="sym"></span>&nbsp;&nbsp;&nbsp;</span></div>
                                             <?php
                                             $ratingLimit = 0;
                                             $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
@@ -528,7 +530,8 @@
                                                     <?php
                                                     }
                                                     $ratingLimit++;
-                                                }?>
+                                                }
+                                            ?>
                                             </div>
                                             <div class="small-btns">
                                                 <button class="btn btn-default btn-compare pull-left"
@@ -598,7 +601,7 @@
                                 } else {
                                     $avgRating = 5;
                                 }
-                                if ($slideCount%5 !== 0 ) {
+                                if ($slideCount%5 !== 0) {
 
                                     ?>
                                     <!-- Product -->
@@ -609,7 +612,7 @@
                                                 <a class="img"
                                                    href="product.php?articleId=<?php echo $articleId;?>"><img
                                                         alt="product info"
-                                                        src="images/products/<?php echo $picture1?>"
+                                                        src="images/products/<?php echo $picture1;?>"
                                                         title="product title"></a></div>
                                             <div class="product-meta">
                                                 <div class="name"><a
@@ -624,7 +627,7 @@
                                                             class="btn btn-default btn-view pull-left"
                                                             href="product.php?articleId=<?php echo $articleId; ?>">View</a>
                                                         <a class="btn btn-default btn-addtocart pull-right"
-                                                           onclick="addtocart(<?php echo $articleId ?>)" href="#">BUY
+                                                           onclick="addtocart(<?php echo $articleId; ?>)" href="#">BUY
                                                             NOW!</a></div>
                                                 <?php }// end if
                                                 else {
@@ -638,8 +641,8 @@
                                                 ?>
                                                 <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                         <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
-                                                <?php
+                                                                class="sym"></span>&nbsp;&nbsp;&nbsp;</span></div>
+                                                <?php /*
                                                 $ratingLimit = 0;
                                                 $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
 
@@ -657,16 +660,16 @@
                                                 <div class="rating"><?php
                                                     while ($ratingLimit < 5) {
                                                         if ($ratingLimit < $avgRating) {
-                                                            ?>
-                                                            <i class="fa fa-star"></i>
+                                                           ?>
+                                                           <i class="fa fa-star"></i>
                                                         <?php } else {
                                                             ?>
                                                             <i class="fa fa-star-o"></i>
                                                         <?php
                                                         }
                                                         $ratingLimit++;
-                                                    }?>
-                                                </div>
+                                                    } */?>
+                                                <!--</div>-->
                                                 <div class="small-btns">
                                                     <button class="btn btn-default btn-compare pull-left"
                                                             data-toggle="tooltip" title="Add to Compare"><i
@@ -699,7 +702,7 @@
                                             <a class="img"
                                                href="product.php?articleId=<?php echo $articleId;?>"><img
                                                     alt="product info"
-                                                    src="images/products/<?php echo $picture1?>"
+                                                    src="images/products/<?php echo $picture1;?>"
                                                     title="product title"></a></div>
                                         <div class="product-meta">
                                             <div class="name"><a
@@ -714,7 +717,7 @@
                                                         class="btn btn-default btn-view pull-left"
                                                         href="product.php?articleId=<?php echo $articleId; ?>">View</a>
                                                     <a class="btn btn-default btn-addtocart pull-right"
-                                                       onclick="addtocart(<?php echo $articleId ?>)" href="#">BUY
+                                                       onclick="addtocart(<?php echo $articleId; ?>)" href="#">BUY
                                                         NOW!</a></div>
                                             <?php }// end if
                                             else {
@@ -728,8 +731,8 @@
                                             ?>
                                             <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                         <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
-                                            <?php
+                                                                class="sym"></span>&nbsp;&nbsp;&nbsp;</span></div>
+                                            <?php /*
                                             $ratingLimit = 0;
                                             $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
 
@@ -755,8 +758,8 @@
                                                     <?php
                                                     }
                                                     $ratingLimit++;
-                                                }?>
-                                            </div>
+                                                }*/ ?>
+                                            <!--</div>-->
                                             <div class="small-btns">
                                                 <button class="btn btn-default btn-compare pull-left"
                                                         data-toggle="tooltip" title="Add to Compare"><i
@@ -800,7 +803,7 @@
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 box-block sidebar" style="padding: 0px">
 
             <!-- Best Sellers Products -->
-            <?php //include "best_sellers.php";?>
+            <?php include "best_sellers.php";?>
             <!-- end: Best Sellers Products -->
             <div class="row clearfix f-space10"></div>
             <!-- Get Updates Box -->
@@ -838,7 +841,7 @@
                   Latest Offers</span> <img height="317px" class="ani-image" src="<?php echo $picture;?>" alt="image info"> </div>
                                 <div class="entry-row">
                                     <div class="date col-xs-12"><span><?php echo $day;?></span><span><?php echo $month." ".$year;?></span></div>
-                                    <div class="blog-text"> <span><?php echo $title?></span> <span><?php echo $desc;?>...</span> <span> <a href="#a"> </a> </span> </div>
+                                    <div class="blog-text"> <span><?php echo $title;?></span> <span><?php echo $desc;?>...</span> <span> <a href="#a"> </a> </span> </div>
                                 </div>
                             </div>
                             <?php }// end of while loop?>
@@ -851,18 +854,44 @@
                 </div>
                     <!-- Best Sellers Products -->
                <div class="col-md-4 box-block sidebar">
-                   <div class="box-content">
-                       <div class="subscribe">
-                           <div class="heading">
-                               <h3>Get updates</h3>
+                   <div class="row">
+                       <div class="col-lg-12 col-md-12 col-sm-12">
+                       <div class="box-content">
+                           <div class="subscribe">
+                               <div class="heading">
+                                   <h3>Get updates</h3>
+                               </div>
+                               <div class="formbox">
+                                   <form>
+                                       <i class="fa fa-envelope fa-fw"></i>
+                                       <input class="form-control" id="InputUserEmail" placeholder="Your e-mail..." type="text">
+                                       <button class="btn color1 normal pull-right" type="submit">Sign
+                                           up</button>
+                                   </form>
+                               </div>
                            </div>
-                           <div class="formbox">
-                               <form>
-                                   <i class="fa fa-envelope fa-fw"></i>
-                                   <input class="form-control" id="InputUserEmail" placeholder="Your e-mail..." type="text">
-                                   <button class="btn color1 normal pull-right" type="submit">Sign
-                                       up</button>
-                               </form>
+                           <div class="f-space10"></div>
+                       </div>
+                           </div>
+                   </div>
+
+                   <div class="row">
+                       <!-- Brands -->
+                       <div class="col-md-12 main-column box-block brands-block">
+                           <div class="box-heading"><span>Certificates</span></div>
+                           <div class="box-content">
+                               <div class="box-products box-brands slide" id="dealership">
+                                   <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#dealership"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#dealership"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
+                                   <div class="carousel-inner">
+                                           <div class="brands-row item active">
+                                               <div class=""><a href="#a"><img src="images/ns.jpg" height="213px" alt=""></a></div>
+                                           </div>
+                                       <div class="brands-row item">
+                                           <div class=""><a href="#a"><img src="images/sven_vert.jpg" height="213px" alt=""></a></div>
+                                       </div>
+                                       </div>
+                                   </div>
+                               </div>
                            </div>
                        </div>
                    </div>
@@ -874,7 +903,6 @@
         </div>
 
 
-    </div>
     <div class="row">
         <!-- Brands -->
         <div class="col-md-12 main-column box-block brands-block">
@@ -884,16 +912,16 @@
                     <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#brands"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#brands"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
                     <div class="carousel-inner">
                         <div class="brands-row item active">
-                            <div class="brand-logo"><a href="#a"><img src="images/icons/coca%20cola.jpg" alt=""></a></div>
-                            <div class="brand-logo"><a href="#a"><img src="images/icons/butt%20sweets.jpg" alt=""></a></div>
-                            <div class="brand-logo"><a href="#a"><img src="images/icons/mc%20donalds.jpg" alt=""></a></div>
-                            <div class="brand-logo"><a href="#a"><img src="images/icons/techAgentx%20logo2.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img height="130px" src="images/icons/coca%20cola.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img height="130px" src="images/icons/butt%20sweets.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img height="130px" src="images/icons/mc%20donalds.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img height="130px" src="images/icons/techAgentx%20logo2.jpg" alt=""></a></div>
                         </div>
                         <div class="brands-row item">
-                            <div class="brand-logo"><a href="#a"><img src="images/icons/fri%20chicks.jpg" alt=""></a></div>
-                            <div class="brand-logo"><a href="#a"><img src="images/icons/Zong.jpg" alt=""></a></div>
-                            <div class="brand-logo"><a href="#a"><img src="images/icons/unilever.jpeg" alt=""></a></div>
-                            <div class="brand-logo"><a href="#a"><img src="images/icons/mini-slider1.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img height="130px" src="images/icons/fri%20chicks.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img height="130px" src="images/icons/Zong.jpg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img height="130px" src="images/icons/unilever.jpeg" alt=""></a></div>
+                            <div class="brand-logo"><a href="#a"><img height="130px" src="images/icons/mini-slider1.jpg" alt=""></a></div>
                         </div>
                     </div>
                 </div>
@@ -959,6 +987,9 @@
         $('#productc3').carousel({
             interval: 4000
         });
+        $('#brands').carousel({
+            interval: 4000
+        });
         $('#productc2').carousel({
             interval: 4000
         });
@@ -968,8 +999,8 @@
         $('#productc1').carousel({
             interval: 4000
         });
-        $('#productc4').carousel({
-            interval: 4000
+        $('#dealership').carousel({
+            interval: 2000
         });
         $('#productc5').carousel({
             interval: 4000

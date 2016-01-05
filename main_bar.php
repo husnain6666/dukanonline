@@ -1,7 +1,13 @@
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 menu-col">
-            <div class="menu-heading menuHeadingdropdown"> <span> <i class="fa fa-bars"></i> Categories</span> </div>
+            <div class="menu-heading <?php
+            if($_SERVER['REQUEST_URI'] !== "/dukanonline/index.php")
+                echo "menuHeadingdropdown";
+            ?>" <span> <i class="fa fa-bars"></i> Categories</span> </div>
             <!-- Mega Menu -->
-            <div class="menu3dmega vertical menuMegasub" id="menuMega">
+            <div class="menu3dmega vertical <?php
+            if($_SERVER['REQUEST_URI'] !== "/dukanonline/index.php")
+                echo "menuMegasub";
+            ?>" id="menuMega">
                 <ul>
                     <!-- Menu Item Links for Mobiles Only -->
                     <li class="visible-xs"> <a href="index.html"> <i class="fa fa-home"></i> <span>Home</span> <i class="fa fa-angle-right"></i> </a>
