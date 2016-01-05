@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<script>
+    //$document.getElementById("").removeClass("");
+</script>
+
 <?php include "top_header.php";?>
     <!-- end: Top Heading Bar -->
 
@@ -38,7 +42,7 @@
     <div id="iview">
         <!-- Slide 1 -->
         <div data-iview:image="images/slide0.jpg" data-iview:pausetime="60000">
-            <div class="iview-caption metro-box1 orange" data-transition="wipeUp" data-x="95" data-y="209"> <a href="about.html">
+            <div class="iview-caption metro-box1 orange" data-transition="wipeUp" data-x="95" data-y="209"> <a href="about.php">
                     <div class="box-hover"></div>
                     <i class="fa fa-comment-o fa-fw"></i> <span>About us</span></a> </div>
             <div class="iview-caption metro-box1 blue" data-transition="wipeUp" data-x="266" data-y="209"> <a href="#a">
@@ -118,9 +122,9 @@
                                     <div class="product-block">
                                         <div class="image">
                                             <div class="product-label product-sale"><span>SALE</span></div>
-                                            <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                                            <a class="img" href="product.php"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                                            <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -139,9 +143,9 @@
                                 <!-- Product -->
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                     <div class="product-block">
-                                        <div class="image"> <a class="img" href="product.html"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
+                                        <div class="image"> <a class="img" href="product.php"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Female Strips Handbag</a></div>
+                                            <div class="name"><a href="product.php">Female Strips Handbag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>520</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -162,9 +166,9 @@
                                     <div class="product-block">
                                         <div class="image">
                                             <div class="product-label product-new"><span>NEW</span></div>
-                                            <a class="img" href="product.html"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
+                                            <a class="img" href="product.php"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Blue Fashion Bag</a></div>
+                                            <div class="name"><a href="product.php">Blue Fashion Bag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>320</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -189,9 +193,9 @@
                                 <!-- Product -->
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                     <div class="product-block">
-                                        <div class="image"> <a class="img" href="product.html"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
+                                        <div class="image"> <a class="img" href="product.php"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Female Strips Handbag</a></div>
+                                            <div class="name"><a href="product.php">Female Strips Handbag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>520</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -212,9 +216,9 @@
                                     <div class="product-block">
                                         <div class="image">
                                             <div class="product-label product-new"><span>NEW</span></div>
-                                            <a class="img" href="product.html"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
+                                            <a class="img" href="product.php"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Blue Fashion Bag</a></div>
+                                            <div class="name"><a href="product.php">Blue Fashion Bag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>320</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -235,9 +239,9 @@
                                     <div class="product-block">
                                         <div class="image">
                                             <div class="product-label product-sale"><span>SALE</span></div>
-                                            <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                                            <a class="img" href="product.php"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                                            <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -280,9 +284,9 @@
                                     <div class="product-block">
                                         <div class="image">
                                             <div class="product-label product-sale"><span>SALE</span></div>
-                                            <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                                            <a class="img" href="product.php"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                                            <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -301,9 +305,9 @@
                                 <!-- Product -->
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                     <div class="product-block">
-                                        <div class="image"> <a class="img" href="product.html"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
+                                        <div class="image"> <a class="img" href="product.php"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Female Strips Handbag</a></div>
+                                            <div class="name"><a href="product.php">Female Strips Handbag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>520</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -324,9 +328,9 @@
                                     <div class="product-block">
                                         <div class="image">
                                             <div class="product-label product-new"><span>NEW</span></div>
-                                            <a class="img" href="product.html"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
+                                            <a class="img" href="product.php"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Blue Fashion Bag</a></div>
+                                            <div class="name"><a href="product.php">Blue Fashion Bag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>320</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -347,9 +351,9 @@
                                     <div class="product-block">
                                         <div class="image">
                                             <div class="product-label product-sale"><span>SALE</span></div>
-                                            <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                                            <a class="img" href="product.php"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                                            <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -374,9 +378,9 @@
                                 <!-- Product -->
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                     <div class="product-block">
-                                        <div class="image"> <a class="img" href="product.html"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
+                                        <div class="image"> <a class="img" href="product.php"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Female Strips Handbag</a></div>
+                                            <div class="name"><a href="product.php">Female Strips Handbag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>520</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -397,9 +401,9 @@
                                     <div class="product-block">
                                         <div class="image">
                                             <div class="product-label product-new"><span>NEW</span></div>
-                                            <a class="img" href="product.html"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
+                                            <a class="img" href="product.php"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Blue Fashion Bag</a></div>
+                                            <div class="name"><a href="product.php">Blue Fashion Bag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>320</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -420,9 +424,9 @@
                                     <div class="product-block">
                                         <div class="image">
                                             <div class="product-label product-sale"><span>SALE</span></div>
-                                            <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                                            <a class="img" href="product.php"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                                            <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
@@ -443,9 +447,9 @@
                                     <div class="product-block">
                                         <div class="image">
                                             <div class="product-label product-sale"><span>SALE</span></div>
-                                            <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                                            <a class="img" href="product.php"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
                                         <div class="product-meta">
-                                            <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
+                                            <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
                                             <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
                                             <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
                                                     Cart</a> </div>
