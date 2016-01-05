@@ -1,7 +1,10 @@
-<!DOCTYPE html>
-<?php include "top_header.php";?>
+<?php
+include('session.php');
+include('connectdb.php');
+include "top_header.php";
+?>
 <!-- end: Top Heading Bar -->
-
+<!DOCTYPE html>
 <div class="f-space20"></div>
 <!-- Logo and Search -->
 <?php include "main_header.php";?>

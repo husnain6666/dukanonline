@@ -80,13 +80,7 @@ include('connectdb.php');
                 <div class="topheadrow">
                     <ul class="nav nav-pills pull-right">
 
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#a">USD <i class="fa fa-angle-down fa-fw"></i> </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#a">USD</a></li>
-                                <li><a href="#a">PKR</a></li>
-                                <li><a href="#a">JPY</a></li>
-                            </ul>
-                        </li>
+
                         <li> <a href="#a"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-xs">My Cart</span></a> </li>
                         <li> <a href="#a"> <i class="fa fa-heart fa-fw"></i> <span class="hidden-xs">Wishlist(0)</span></a> </li>
                         <?php
@@ -97,8 +91,9 @@ include('connectdb.php');
                         $checkCart=false;
                         $check=false;
                         ?>
+                            <li> <a href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs">Signout</span></a> </li>
                         <li class="dropdown"> <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> Login</span></a>
-                            <div class="loginbox dropdown-menu" style="height: 350px;width: 350px;"> <span class="form-header">Login</span>
+                            <div class="loginbox dropdown-menu" style="height: 380px;width: 350px;"> <span class="form-header">Login</span>
                                 <form method="post" action="login.php">
                                     <div class="form-group"> <i class="fa fa-user fa-fw"></i>
                                         <input class="form-control" name="emailAddress" id="InputUserName" placeholder="Username" type="text" data-validation="required">
@@ -108,13 +103,15 @@ include('connectdb.php');
                                     </div>
                                     <button class="btn medium color1 pull-right" name="submit" type="submit">Login</button>
                                 </form>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                <button class="btn medium color1 pull-right" style="font-size: 13px;width: 200px" onClick="document.location.href='facebook.php'">Login through facebook</button>
-                                </div>
-                                    <div class="col-md-6">
-                                        <button class="btn medium color1 pull-left" style="font-size: 13px;width: 90px" onClick="document.location.href='facebook.php'">Forget password</button>
-                                    </div>
+                                <form action="facebook.php">
+                                    <button type="submit" class="btn medium color1 pull-left" type="submit" style="margin-top: -20px; width: 180px;margin-left: -10px">Signup</button>
+                                </form>
+                                    <form action="facebook.php">
+                                        <button type="submit" class="btn medium color1 pull-right" type="submit" style="margin-top: 5px; width: 300px">Forget password</button>
+                                    </form>
+                                <form action="facebook.php">
+                                    <button type="submit" class="btn medium color1 pull-right" type="submit" style="margin-top: 5px; width: 300px;background: #3b5998">Login through facebook</button>
+                                </form>
                                 </div>
                         </li>
                         <?php
