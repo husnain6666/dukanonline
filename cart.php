@@ -330,39 +330,7 @@ $overAllprice += $totalPrice;
 <div class="row clearfix f-space30"></div>
 <div class="container">
     <div class="row">
-        <!--
-        <div class="col-md-4  col-sm-4 col-xs-12 cart-box-wr">
-            <div class="box-heading"><span>Estimate Shipping & Taxes</span></div>
-            <div class="clearfix f-space10"></div>
-            <div class="box-content cart-box">
-                <p>Enter your destination to get a shipping estimate.</p>
-                <form>
-                    <input type="text" value="" placeholder="Country" class="input4" />
-                    <input type="text" value="" placeholder="Region/State" class="input4" />
-                    <button class="btn large color2 pull-right">Submit</button>
-                </form>
-            </div>
-            <div class="clearfix f-space30"></div>
-        </div>
 
-
-        <div class="col-md-4  col-sm-4 col-xs-12 cart-box-wr">
-            <div class="box-heading"><span>Discount Codes</span></div>
-            <div class="clearfix f-space10"></div>
-            <div class="box-content cart-box">
-                <p>Enter your coupon code if you have one.</p>
-                <form>
-                    <input type="text" value="" placeholder="Country" class="input4" />
-                    <input type="text" value="" placeholder="Region/State" class="input4" />
-                    <button class="btn large color2 pull-right">Submit</button>
-                </form>
-            </div>
-            <div class="clearfix f-space30"></div>
-        </div>
-
-        <!-- end: Discount Codes -->
-
-        <!-- 	Total amount -->
 
         <div class="col-md-12 col-sm-12 col-xs-12 cart-box-wr">
             <div class="box-content">
@@ -458,82 +426,11 @@ $overAllprice += $totalPrice;
 
 <div class="row clearfix f-space30"></div>
 <!-- footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3 col-xs-12 shopinfo">
-                <h4 class="title">FLATSHOP</h4>
-                <p> This Efficiently negotiate robust communities with extensible systems.
-                    Appropriately productize top-line leadership skills rather than team
-                    building applications.</p>
-                <p> Phosfluorescently extend highly efficient schemas with intermandated. </p>
-            </div>
-            <div class="col-sm-3 col-xs-12 footermenu">
-                <h4 class="title">Information</h4>
-                <ul>
-                    <li class="item"> <a href="#">Delivery Info</a></li>
-                    <li class="item"> <a href="#">FAQs</a></li>
-                    <li class="item"> <a href="#">Payment Instructions</a></li>
-                    <li class="item"> <a href="#">Request Product</a></li>
-                    <li class="item"> <a href="#">Vendor Registration</a></li>
-                    <li class="item"> <a href="#">Affiliates</a></li>
-                    <li class="item"> <a href="#">Gift Vouchers</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-3 col-xs-12 footermenu">
-                <h4 class="title">My account</h4>
-                <ul>
-                    <li class="item"> <a href="#">My Account</a></li>
-                    <li class="item"> <a href="#">Order History</a></li>
-                    <li class="item"> <a href="#">Wish List</a></li>
-                    <li class="item"> <a href="#">Newsletter</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-3 col-xs-12 getintouch">
-                <h4 class="title">get in touch</h4>
-                <ul>
-                    <li>
-                        <div class="icon"><i class="fa fa-map-marker fa-fw"></i></div>
-                        <div class="c-info"> <span>3rd Avenue, NY, US<br>
-              <a href="#">Find us on map</a></span></div>
-                    </li>
-                    <li>
-                        <div class="icon"><i class="fa fa-envelope-o fa-fw"></i></div>
-                        <div class="c-info"> <span>Email Us At:<br>
-              <a href="#">support@domain.com</a></span></div>
-                    </li>
-                    <li>
-                        <div class="icon"><i class="fa fa-phone fa-fw"></i></div>
-                        <div class="c-info"> <span>24/7 Phone Support:<br>
-              <a href="#">+1 (888) 888 8888</a></span></div>
-                    </li>
-                    <li>
-                        <div class="icon"> <i class="fa fa-skype fa-fw"></i></div>
-                        <div class="c-info"> <span>Talk to Us:<br>
-              <a href="#">skypeid</a></span></div>
-                    </li>
-                </ul>
-                <div class="social-icons">
-                    <ul>
-                        <li class="icon google-plus"><a href="#"><i class="fa fa-google-plus fa-fw"></i></a></li>
-                        <li class="icon linkedin"><a href="#"><i class="fa fa-linkedin fa-fw"></i></a></li>
-                        <li class="icon twitter"><a href="#"><i class="fa fa-twitter fa-fw"></i></a></li>
-                        <li class="icon facebook"><a href="#"><i class="fa fa-facebook fa-fw"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="copyrights">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-sm-8 col-xs-12"> <span class="copytxt">&copy; Copyright 2013 by <a href="#">Flatro</a> -  All rights reserved</span> <span class="btmlinks"><a href="#">Return Policy</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></span> </div>
-                <div class="col-lg-4 col-sm-4 col-xs-12 payment-icons"> <a href="#"> <img src="images/icons/discover.png" alt="discover"> </a> <a href="#"> <img src="images/icons/2co.png" alt="2co"> </a> <a href="#"> <img src="images/icons/paypal.png" alt="paypal"> </a> <a href="#"> <img src="images/icons/mastercard.png" alt="master card"> </a> <a href="#"> <img src="images/icons/visa.png" alt="visa card"> </a> <a href="#"> <img src="images/icons/moneybookers.png" alt="moneybookers"> </a> </div>
-            </div>
-        </div>
-    </div>
-</footer>
+<div class="row clearfix f-space30"></div>
+<!-- footer -->
+<?php include "footer.php";?>
 <!-- end: footer -->
+
 <!-- Style Switcher JS -->
 <script src="js/style-switch.js" type="text/javascript"></script>
 <section id="style-switch" class="bgcolor3">
@@ -557,20 +454,41 @@ $overAllprice += $totalPrice;
     </div>
     <div id="reset" class="inner"><a href="#" class="btn normal color2 ">Reset</a></div>
 </section>
-
 <script>
 
     (function($) {
         "use strict";
-        //Mega Menu
         $('#menuMega').menu3d();
+        $('#iview').iView({
+            pauseTime: 10000,
+            pauseOnHover: true,
+            directionNavHoverOpacity: 0.6,
+            timer: "360Bar",
+            timerBg: '#2da5da',
+            timerColor: '#fff',
+            timerOpacity: 0.9,
+            timerDiameter: 20,
+            timerPadding: 1,
+            touchNav: true,
+            timerStroke: 2,
+            timerBarStrokeColor: '#fff'
+        });
 
-        //Help/Contact Number/Quick Message
         $('.quickbox').carousel({
             interval: 10000
         });
-
+        $('#monthly-deals').carousel({
+            interval: 3000
+        });
+        $('#productc2').carousel({
+            interval: 4000
+        });
+        $('#tweets').carousel({
+            interval: 5000
+        });
     })(jQuery);
+
+
 
 </script>
 </body>

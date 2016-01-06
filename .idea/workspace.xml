@@ -2,172 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a03032cf-9582-4962-a465-ebd917b421d5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/HttpClients/composer.phar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/images/phpmailer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/images/phpmailer_mini.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/wrapping.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/.scrutinizer.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/Entities/AccessToken.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/docs/Callback_function_notes.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/docs/DomainKeys_notes.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/extras/EasyPeasyICS.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookAuthorizationException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookCanvasLoginHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookClientException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/HttpClients/FacebookCurl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/HttpClients/FacebookCurlHttpClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/HttpClients/FacebookGuzzleHttpClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/HttpClients/FacebookHttpable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookJavaScriptLoginHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookOtherException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookPageTabHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookPermissionException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookRedirectLoginHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookRequestException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookResponse.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookSDKException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookServerException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookSession.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookSignedRequestFromInputHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/HttpClients/FacebookStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/HttpClients/FacebookStreamHttpClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/FacebookThrottleException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/GraphAlbum.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/GraphLocation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/GraphObject.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/GraphPage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/GraphSessionInfo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/GraphUser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/GraphUserPage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/docs/Note_for_SMTP_debugging.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailerAutoload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/PHPMailerAutoload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/extras/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/Entities/SignedRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/VERSION" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/scripts/XRegExp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/test/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/changelog.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/class.phpmailer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/class.phpmaileroauth.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/class.phpmaileroauthgoogle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/class.pop3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/class.smtp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/code_generator.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/composer.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/contents.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/contentsutf8.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/exceptions.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/docs/extending.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/test/fakepopserver.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/test/fakesendmail.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/docs/faq.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/Facebook/HttpClients/fb_ca_chain_bundle.crt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/docs/generatedocs.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/get_oauth_token.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/gmail.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/gmail_xoauth.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/extras/htmlfilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/insertincart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/mail.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/mailing_list.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/extras/ntlm_sasl_client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/phpMail.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-am.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-ar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-az.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-be.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-bg.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-br.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-ca.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-ch.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-cz.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-de.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-dk.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-el.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-eo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-es.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-et.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-fa.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-fi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-fo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-fr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-gl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-he.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-hr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-hu.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-id.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-it.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-ja.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-ka.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-ko.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-lt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-lv.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-ms.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-nl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-no.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-pl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-pt.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-ro.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-ru.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-se.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-sk.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-sl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-sr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-tr.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-uk.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-vi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-zh.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/language/phpmailer.lang-zh_cn.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/test/phpmailerLangTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/test/phpmailerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/docs/pop3_article.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/pop_before_smtp.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/test/runfakepopserver.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/send_file_upload.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/sendmail.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/scripts/shAutoloader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/scripts/shBrushPhp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shCore.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/scripts/shCore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shCoreDefault.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shCoreDjango.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shCoreEclipse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shCoreEmacs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shCoreFadeToGrey.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shCoreMDUltra.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shCoreMidnight.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shCoreRDark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/scripts/shLegacy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shThemeAppleScript.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shThemeDefault.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shThemeDjango.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shThemeEclipse.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shThemeEmacs.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shThemeFadeToGrey.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shThemeMDUltra.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shThemeMidnight.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shThemeRDark.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/styles/shThemeVisualStudio.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/signed-mail.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/smtp.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/smtp_check.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/smtp_no_auth.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/examples/ssl_options.phps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/test/test_callback.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/test/testbootstrap-dist.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PHPMailer-master/travis.phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index___.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/listorders.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newindex.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/orderinfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sidebarcart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/best_sellers.php" afterPath="$PROJECT_DIR$/best_sellers.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cart.php" afterPath="$PROJECT_DIR$/cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout.html" afterPath="$PROJECT_DIR$/checkout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectdb.php" afterPath="$PROJECT_DIR$/connectdb.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dukanonline.iml" afterPath="$PROJECT_DIR$/.idea/dukanonline.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/insertincart.php" afterPath="$PROJECT_DIR$/insertincart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specials.php" afterPath="$PROJECT_DIR$/specials.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/top_header.php" afterPath="$PROJECT_DIR$/top_header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -176,6 +23,7 @@
     </list>
     <ignored path="dukanonline.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="$PROJECT_DIR$/checkout.php" ignored="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,45 +43,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="orderinfo.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/orderinfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="28" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.32903227" vertical-offset="765" max-vertical-offset="16694">
+            <state line="436" column="0" selection-start="19304" selection-end="19304" vertical-scroll-proportion="-5.627451" vertical-offset="7125" max-vertical-offset="8806">
               <folding>
-                <marker date="1451732710336" expanded="true" signature="7143:7236" placeholder="SELECT artic..article..." />
-                <marker date="1451732710336" expanded="true" signature="8033:8191" placeholder="select (sele..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="8041:8105" placeholder="select count..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="12795:12953" placeholder="select (sele..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="12803:12867" placeholder="select count..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="20058:20216" placeholder="select (sele..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="20066:20130" placeholder="select count..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="24464:24553" placeholder="SELECT artic..article..." />
-                <marker date="1451732710336" expanded="true" signature="25318:25476" placeholder="select (sele..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="25326:25390" placeholder="select count..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="29884:30042" placeholder="select (sele..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="29892:29956" placeholder="select count..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="36955:37113" placeholder="select (sele..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="36963:37027" placeholder="select count..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="41371:41469" placeholder="SELECT artic..article..." />
-                <marker date="1451732710336" expanded="true" signature="42234:42392" placeholder="select (sele..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="42242:42306" placeholder="select count..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="46800:46958" placeholder="select (sele..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="46808:46872" placeholder="select count..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="53871:54029" placeholder="select (sele..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="53879:53943" placeholder="select count..ratings..." />
-                <marker date="1451732710336" expanded="true" signature="59051:59225" placeholder="SELECT title..." />
+                <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#5;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#4;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+                <marker date="1452105270184" expanded="true" signature="3674:3806" placeholder="select order..ordertracking..." />
+                <marker date="1452105270184" expanded="true" signature="7149:7261" placeholder="SELECT shipp..shippingadress..." />
+                <marker date="1452105270184" expanded="true" signature="10302:10601" placeholder="SELECT order..orderdetails..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="top_header.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/top_header.php">
+      <file leaf-file-name="product.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="26" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="2703">
-              <folding>
-                <marker date="1451807052421" expanded="true" signature="6044:6097" placeholder="select * fro..userinfo..." />
-              </folding>
+            <state line="234" column="27" selection-start="13051" selection-end="13051" vertical-scroll-proportion="0.53846157" vertical-offset="3691" max-vertical-offset="13413">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -241,21 +76,32 @@
       <file leaf-file-name="cart.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="389" column="42" selection-start="14467" selection-end="14467" vertical-scroll-proportion="0.0" vertical-offset="6613" max-vertical-offset="9894">
+            <state line="352" column="17" selection-start="12739" selection-end="12863" vertical-scroll-proportion="-11.769231" vertical-offset="5678" max-vertical-offset="8500">
               <folding>
-                <marker date="1451815504514" expanded="true" signature="2314:2374" placeholder="SELECT userI..userinfo..." />
-                <marker date="1451815504514" expanded="true" signature="2746:2947" placeholder="select order..ordertracking..." />
-                <marker date="1451815504514" expanded="true" signature="3202:3262" placeholder="SELECT userI..userinfo..." />
-                <marker date="1451815504514" expanded="true" signature="3455:3518" placeholder="SELECT track..ordertracking..." />
-                <marker date="1451815504514" expanded="true" signature="3996:4059" placeholder="SELECT price..article..." />
-                <marker date="1451815504514" expanded="true" signature="4391:4581" placeholder="SELECT order..orderdetails..." />
-                <marker date="1451815504514" expanded="true" signature="4857:5005" placeholder="update order..." />
-                <marker date="1451815504514" expanded="true" signature="5209:5403" placeholder="select order..ordertracking..." />
-                <marker date="1451815504514" expanded="true" signature="5825:5928" placeholder="INSERT INTO ..." />
-                <marker date="1451815504514" expanded="true" signature="6223:6378" placeholder="INSERT INTO ..." />
-                <marker date="1451815504514" expanded="true" signature="6651:6845" placeholder="select count..orderdetails..." />
-                <marker date="1451815504514" expanded="true" signature="7079:7288" placeholder="..." />
-                <marker date="1451815504514" expanded="true" signature="7367:7666" placeholder="SELECT order..orderdetails..." />
+                <marker date="1452103406620" expanded="true" signature="2314:2374" placeholder="SELECT userI..userinfo..." />
+                <marker date="1452103406620" expanded="true" signature="2746:2947" placeholder="select order..ordertracking..." />
+                <marker date="1452103406620" expanded="true" signature="3202:3262" placeholder="SELECT userI..userinfo..." />
+                <marker date="1452103406620" expanded="true" signature="3455:3518" placeholder="SELECT track..ordertracking..." />
+                <marker date="1452103406620" expanded="true" signature="3996:4059" placeholder="SELECT price..article..." />
+                <marker date="1452103406620" expanded="true" signature="4391:4581" placeholder="SELECT order..orderdetails..." />
+                <marker date="1452103406620" expanded="true" signature="4857:5005" placeholder="update order..." />
+                <marker date="1452103406620" expanded="true" signature="5209:5403" placeholder="select order..ordertracking..." />
+                <marker date="1452103406620" expanded="true" signature="5825:5928" placeholder="INSERT INTO ..." />
+                <marker date="1452103406620" expanded="true" signature="6223:6378" placeholder="INSERT INTO ..." />
+                <marker date="1452103406620" expanded="true" signature="6680:6874" placeholder="select count..orderdetails..." />
+                <marker date="1452103406620" expanded="true" signature="7367:7666" placeholder="SELECT order..orderdetails..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="best_sellers.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/best_sellers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="44" selection-start="2644" selection-end="2644" vertical-scroll-proportion="-25.076923" vertical-offset="79" max-vertical-offset="1071">
+              <folding>
+                <marker date="1451935552294" expanded="true" signature="253:321" placeholder="select count..." />
+                <marker date="1451935552294" expanded="true" signature="899:1008" placeholder="SELECT artic..article..." />
               </folding>
             </state>
           </provider>
@@ -264,47 +110,25 @@
       <file leaf-file-name="checkout.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/checkout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="14331">
+            <state line="590" column="6" selection-start="26665" selection-end="28267" vertical-scroll-proportion="-13.961538" vertical-offset="9667" max-vertical-offset="12376">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insertincart.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/insertincart.php">
+      <file leaf-file-name="cart.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="240" column="57" selection-start="11094" selection-end="11094" vertical-scroll-proportion="0.0" vertical-offset="3935" max-vertical-offset="4845">
-              <folding>
-                <marker date="1451819411666" expanded="true" signature="2297:2490" placeholder="INSERT INTO ..." />
-                <marker date="1451819411666" expanded="true" signature="2602:2798" placeholder="update order..." />
-                <marker date="1451819411666" expanded="true" signature="2866:2975" placeholder="INSERT INTO ..." />
-                <marker date="1451819411666" expanded="true" signature="5597:5729" placeholder="select order..ordertracking..." />
-                <marker date="1451819411666" expanded="true" signature="6350:6482" placeholder="select order..ordertracking..." />
-                <marker date="1451819411666" expanded="true" signature="7297:7408" placeholder="select addre..shippingadress..." />
-                <marker date="1451819411666" expanded="false" signature="8519:8532" placeholder="..." />
-                <marker date="1451819411666" expanded="false" signature="8615:8627" placeholder="..." />
-                <marker date="1451819411666" expanded="false" signature="8674:8686" placeholder="..." />
-                <marker date="1451819411666" expanded="false" signature="8734:8746" placeholder="..." />
-                <marker date="1451819411666" expanded="false" signature="8790:8802" placeholder="..." />
-                <marker date="1451819411666" expanded="true" signature="8867:9132" placeholder="SELECT order..orderdetails..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="faq.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHPMailer-master/docs/faq.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+            <state line="121" column="55" selection-start="4915" selection-end="4915" vertical-scroll-proportion="7.1923075" vertical-offset="2244" max-vertical-offset="14229">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PHPMailerAutoload.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHPMailerAutoload.php">
+      <file leaf-file-name="checkout.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/checkout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="16" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="935">
+            <state line="404" column="66" selection-start="20873" selection-end="20894" vertical-scroll-proportion="-3.6470587" vertical-offset="6682" max-vertical-offset="19822">
               <folding />
             </state>
           </provider>
@@ -331,9 +155,19 @@
         <option value="$PROJECT_DIR$/js/total.js" />
         <option value="$PROJECT_DIR$/product.php" />
         <option value="$PROJECT_DIR$/top_header.php" />
-        <option value="$PROJECT_DIR$/checkout.php" />
-        <option value="$PROJECT_DIR$/cart.php" />
+        <option value="$PROJECT_DIR$/specials.php" />
+        <option value="$PROJECT_DIR$/connectdb.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/newindex.php" />
+        <option value="$PROJECT_DIR$/best_sellers.php" />
+        <option value="$PROJECT_DIR$/index___.php" />
+        <option value="$PROJECT_DIR$/listorders.php" />
+        <option value="$PROJECT_DIR$/checkout.html" />
         <option value="$PROJECT_DIR$/insertincart.php" />
+        <option value="$PROJECT_DIR$/sidebarcart.php" />
+        <option value="$PROJECT_DIR$/cart.php" />
+        <option value="$PROJECT_DIR$/checkout.php" />
+        <option value="$PROJECT_DIR$/orderinfo.php" />
       </list>
     </option>
   </component>
@@ -370,6 +204,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -385,18 +220,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dukanonline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dukanonline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dukanonline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dukanonline" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/electroshop" />
+    <property name="options.lastSelected" value="preferences.general" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -472,7 +325,11 @@
       <created>1451731727392</created>
       <updated>1451731727392</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="commit">
+      <created>1451922754116</created>
+      <updated>1451922754117</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -508,14 +365,14 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24889868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39903846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39903846" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39903846" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -547,167 +404,14 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="389" column="42" selection-start="14467" selection-end="14467" vertical-scroll-proportion="0.0" vertical-offset="6613" max-vertical-offset="9894">
-          <folding>
-            <marker date="1451815504514" expanded="true" signature="2314:2374" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="2746:2947" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3202:3262" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="3455:3518" placeholder="SELECT track..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3996:4059" placeholder="SELECT price..article..." />
-            <marker date="1451815504514" expanded="true" signature="4391:4581" placeholder="SELECT order..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="4857:5005" placeholder="update order..." />
-            <marker date="1451815504514" expanded="true" signature="5209:5403" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="5825:5928" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6223:6378" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6651:6845" placeholder="select count..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="7079:7288" placeholder="..." />
-            <marker date="1451815504514" expanded="true" signature="7367:7666" placeholder="SELECT order..orderdetails..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="14331">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/insertincart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="244" column="19" selection-start="11276" selection-end="11276" vertical-scroll-proportion="0.0" vertical-offset="3935" max-vertical-offset="4845">
-          <folding>
-            <marker date="1451819411666" expanded="true" signature="2297:2490" placeholder="INSERT INTO ..." />
-            <marker date="1451819411666" expanded="true" signature="2602:2798" placeholder="update order..." />
-            <marker date="1451819411666" expanded="true" signature="2866:2975" placeholder="INSERT INTO ..." />
-            <marker date="1451819411666" expanded="true" signature="5597:5729" placeholder="select order..ordertracking..." />
-            <marker date="1451819411666" expanded="true" signature="6350:6482" placeholder="select order..ordertracking..." />
-            <marker date="1451819411666" expanded="true" signature="7297:7408" placeholder="select addre..shippingadress..." />
-            <marker date="1451819411666" expanded="false" signature="8519:8532" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8615:8627" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8674:8686" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8734:8746" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8790:8802" placeholder="..." />
-            <marker date="1451819411666" expanded="true" signature="8867:9132" placeholder="SELECT order..orderdetails..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHPMailer-master/docs/faq.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHPMailerAutoload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="16" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="106" selection-start="3676" selection-end="3676" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="16694">
-          <folding>
-            <marker date="1451732710336" expanded="true" signature="7143:7236" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="8033:8191" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="8041:8105" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="12795:12953" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="12803:12867" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="20058:20216" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="20066:20130" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="24464:24553" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="25318:25476" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="25326:25390" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="29884:30042" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="29892:29956" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="36955:37113" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="36963:37027" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="41371:41469" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="42234:42392" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="42242:42306" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="46800:46958" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="46808:46872" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="53871:54029" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="53879:53943" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="59051:59225" placeholder="SELECT title..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="26" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="2703">
-          <folding>
-            <marker date="1451807052421" expanded="true" signature="6044:6097" placeholder="select * fro..userinfo..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="389" column="42" selection-start="14467" selection-end="14467" vertical-scroll-proportion="0.0" vertical-offset="6613" max-vertical-offset="9894">
-          <folding>
-            <marker date="1451815504514" expanded="true" signature="2314:2374" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="2746:2947" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3202:3262" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="3455:3518" placeholder="SELECT track..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3996:4059" placeholder="SELECT price..article..." />
-            <marker date="1451815504514" expanded="true" signature="4391:4581" placeholder="SELECT order..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="4857:5005" placeholder="update order..." />
-            <marker date="1451815504514" expanded="true" signature="5209:5403" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="5825:5928" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6223:6378" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6651:6845" placeholder="select count..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="7079:7288" placeholder="..." />
-            <marker date="1451815504514" expanded="true" signature="7367:7666" placeholder="SELECT order..orderdetails..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14331">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/insertincart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="244" column="50" selection-start="11296" selection-end="11307" vertical-scroll-proportion="0.0" vertical-offset="3935" max-vertical-offset="4845">
-          <folding>
-            <marker date="1451819411666" expanded="true" signature="2297:2490" placeholder="INSERT INTO ..." />
-            <marker date="1451819411666" expanded="true" signature="2602:2798" placeholder="update order..." />
-            <marker date="1451819411666" expanded="true" signature="2866:2975" placeholder="INSERT INTO ..." />
-            <marker date="1451819411666" expanded="true" signature="5597:5729" placeholder="select order..ordertracking..." />
-            <marker date="1451819411666" expanded="true" signature="6350:6482" placeholder="select order..ordertracking..." />
-            <marker date="1451819411666" expanded="true" signature="7297:7408" placeholder="select addre..shippingadress..." />
-            <marker date="1451819411666" expanded="false" signature="8519:8532" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8615:8627" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8674:8686" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8734:8746" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8790:8802" placeholder="..." />
-            <marker date="1451819411666" expanded="true" signature="8867:9132" placeholder="SELECT order..orderdetails..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHPMailer-master/docs/faq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHPMailerAutoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="16" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="935">
-          <folding />
-        </state>
+        <state line="34" column="16" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/product.php">
@@ -727,39 +431,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/top_header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="26" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="2703">
-          <folding>
-            <marker date="1451807052421" expanded="true" signature="6044:6097" placeholder="select * fro..userinfo..." />
-          </folding>
-        </state>
+        <state line="93" column="26" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="2703" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1986" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9826">
-          <folding>
-            <marker date="1451815504514" expanded="true" signature="2314:2374" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="2746:2947" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3202:3262" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="3455:3518" placeholder="SELECT track..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3996:4059" placeholder="SELECT price..article..." />
-            <marker date="1451815504514" expanded="true" signature="4391:4581" placeholder="SELECT order..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="4857:5005" placeholder="update order..." />
-            <marker date="1451815504514" expanded="true" signature="5209:5403" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="5825:5928" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6223:6378" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6651:6845" placeholder="select count..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="7079:7288" placeholder="..." />
-            <marker date="1451815504514" expanded="true" signature="7367:7666" placeholder="SELECT order..orderdetails..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="1986" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9826" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/checkout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="50" selection-start="9309" selection-end="9309" vertical-scroll-proportion="0.0" vertical-offset="3221" max-vertical-offset="14110">
-          <folding />
-        </state>
+        <state line="203" column="50" selection-start="9309" selection-end="9309" vertical-scroll-proportion="0.0" vertical-offset="3221" max-vertical-offset="14110" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
@@ -774,32 +456,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1686" vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="16694">
-          <folding>
-            <marker date="1451732710336" expanded="true" signature="7143:7236" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="8033:8191" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="8041:8105" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="12795:12953" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="12803:12867" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="20058:20216" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="20066:20130" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="24464:24553" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="25318:25476" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="25326:25390" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="29884:30042" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="29892:29956" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="36955:37113" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="36963:37027" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="41371:41469" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="42234:42392" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="42242:42306" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="46800:46958" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="46808:46872" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="53871:54029" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="53879:53943" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="59051:59225" placeholder="SELECT title..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="1686" vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="16694" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/product.php">
@@ -819,32 +476,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/top_header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="37" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.0" vertical-offset="1447" max-vertical-offset="2397">
-          <folding>
-            <marker date="1451807052421" expanded="true" signature="6044:6097" placeholder="select * fro..userinfo..." />
-          </folding>
-        </state>
+        <state line="92" column="37" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.0" vertical-offset="1447" max-vertical-offset="2397" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="34" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0" vertical-offset="699" max-vertical-offset="8534">
-          <folding>
-            <marker date="1451815504514" expanded="true" signature="2314:2374" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="2746:2947" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3202:3262" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="3455:3518" placeholder="SELECT track..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3996:4059" placeholder="SELECT price..article..." />
-            <marker date="1451815504514" expanded="true" signature="4391:4581" placeholder="SELECT order..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="4857:5005" placeholder="update order..." />
-            <marker date="1451815504514" expanded="true" signature="5209:5403" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="5825:5928" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6223:6378" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6651:6845" placeholder="select count..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="7079:7288" placeholder="..." />
-            <marker date="1451815504514" expanded="true" signature="7367:7666" placeholder="SELECT order..orderdetails..." />
-          </folding>
-        </state>
+        <state line="59" column="34" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0" vertical-offset="699" max-vertical-offset="8534" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/connectdb.php">
@@ -859,32 +496,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1686" vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="16694">
-          <folding>
-            <marker date="1451732710336" expanded="true" signature="7143:7236" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="8033:8191" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="8041:8105" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="12795:12953" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="12803:12867" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="20058:20216" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="20066:20130" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="24464:24553" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="25318:25476" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="25326:25390" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="29884:30042" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="29892:29956" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="36955:37113" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="36963:37027" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="41371:41469" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="42234:42392" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="42242:42306" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="46800:46958" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="46808:46872" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="53871:54029" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="53879:53943" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="59051:59225" placeholder="SELECT title..." />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="1686" vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="16694" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/product.php">
@@ -904,32 +516,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/top_header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="37" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.0" vertical-offset="1447" max-vertical-offset="2397">
-          <folding>
-            <marker date="1451807052421" expanded="true" signature="6044:6097" placeholder="select * fro..userinfo..." />
-          </folding>
-        </state>
+        <state line="92" column="37" selection-start="3698" selection-end="3698" vertical-scroll-proportion="0.0" vertical-offset="1447" max-vertical-offset="2397" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="34" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0" vertical-offset="699" max-vertical-offset="8534">
-          <folding>
-            <marker date="1451815504514" expanded="true" signature="2314:2374" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="2746:2947" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3202:3262" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="3455:3518" placeholder="SELECT track..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3996:4059" placeholder="SELECT price..article..." />
-            <marker date="1451815504514" expanded="true" signature="4391:4581" placeholder="SELECT order..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="4857:5005" placeholder="update order..." />
-            <marker date="1451815504514" expanded="true" signature="5209:5403" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="5825:5928" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6223:6378" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6651:6845" placeholder="select count..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="7079:7288" placeholder="..." />
-            <marker date="1451815504514" expanded="true" signature="7367:7666" placeholder="SELECT order..orderdetails..." />
-          </folding>
-        </state>
+        <state line="59" column="34" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0" vertical-offset="699" max-vertical-offset="8534" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/connectdb.php">
@@ -942,19 +534,9 @@
         <state line="0" column="0" selection-start="0" selection-end="39923" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="14229" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="39923" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="14229" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="970" selection-end="970" vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="1054" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectdb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="2" selection-start="149" selection-end="149" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/category-grid.html">
@@ -962,124 +544,195 @@
         <state line="17" column="57" selection-start="711" selection-end="711" vertical-scroll-proportion="0.52641165" vertical-offset="0" max-vertical-offset="16898" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="18" selection-start="0" selection-end="62069" vertical-scroll-proportion="0.47719297" vertical-offset="0" max-vertical-offset="19805" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="30" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.19473684" vertical-offset="229" max-vertical-offset="799" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/total.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="190" column="42" selection-start="4620" selection-end="4620" vertical-scroll-proportion="0.6091954" vertical-offset="2859" max-vertical-offset="3468" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="31" selection-start="11824" selection-end="11824" vertical-scroll-proportion="0.056140352" vertical-offset="3691" max-vertical-offset="13413" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="26" selection-start="3593" selection-end="3593" vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="2703">
-          <folding>
-            <marker date="1451807052421" expanded="true" signature="6044:6097" placeholder="select * fro..userinfo..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="389" column="42" selection-start="14467" selection-end="14467" vertical-scroll-proportion="0.0" vertical-offset="6613" max-vertical-offset="9894">
-          <folding>
-            <marker date="1451815504514" expanded="true" signature="2314:2374" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="2746:2947" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3202:3262" placeholder="SELECT userI..userinfo..." />
-            <marker date="1451815504514" expanded="true" signature="3455:3518" placeholder="SELECT track..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="3996:4059" placeholder="SELECT price..article..." />
-            <marker date="1451815504514" expanded="true" signature="4391:4581" placeholder="SELECT order..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="4857:5005" placeholder="update order..." />
-            <marker date="1451815504514" expanded="true" signature="5209:5403" placeholder="select order..ordertracking..." />
-            <marker date="1451815504514" expanded="true" signature="5825:5928" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6223:6378" placeholder="INSERT INTO ..." />
-            <marker date="1451815504514" expanded="true" signature="6651:6845" placeholder="select count..orderdetails..." />
-            <marker date="1451815504514" expanded="true" signature="7079:7288" placeholder="..." />
-            <marker date="1451815504514" expanded="true" signature="7367:7666" placeholder="SELECT order..orderdetails..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHPMailer-master/docs/faq.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHPMailerAutoload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="16" selection-start="1277" selection-end="1277" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="935">
+        <state line="34" column="16" selection-start="1277" selection-end="1277" vertical-scroll-proportion="-8.269231" vertical-offset="91" max-vertical-offset="663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10234" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="14" selection-start="7741" selection-end="7741" vertical-scroll-proportion="0.0" vertical-offset="2195" max-vertical-offset="2703" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/banners.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="6" selection-start="2052" selection-end="2052" vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="986" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/index_2.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="28" selection-start="0" selection-end="57032" vertical-scroll-proportion="0.2007874" vertical-offset="1173" max-vertical-offset="11815" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newindex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="6807" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2618" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="312" column="9" selection-start="13147" selection-end="13147" vertical-scroll-proportion="0.69793624" vertical-offset="4932" max-vertical-offset="20825" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specials.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="29" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/checkout.php">
+    <entry file="file://$PROJECT_DIR$/connectdb.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="14331">
+        <state line="5" column="39" selection-start="82" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="71" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index___.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1419" column="0" selection-start="90204" selection-end="93826" vertical-scroll-proportion="0.0" vertical-offset="23800" max-vertical-offset="25347">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="404" column="66" selection-start="20873" selection-end="20894" vertical-scroll-proportion="-3.6470587" vertical-offset="6682" max-vertical-offset="19822">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="55" selection-start="4915" selection-end="4915" vertical-scroll-proportion="7.1923075" vertical-offset="2244" max-vertical-offset="14229">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/insertincart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="57" selection-start="11094" selection-end="11094" vertical-scroll-proportion="0.0" vertical-offset="3935" max-vertical-offset="4845">
+        <state line="273" column="31" selection-start="11714" selection-end="11714" vertical-scroll-proportion="-12.653846" vertical-offset="4312" max-vertical-offset="4845">
           <folding>
-            <marker date="1451819411666" expanded="true" signature="2297:2490" placeholder="INSERT INTO ..." />
-            <marker date="1451819411666" expanded="true" signature="2602:2798" placeholder="update order..." />
-            <marker date="1451819411666" expanded="true" signature="2866:2975" placeholder="INSERT INTO ..." />
-            <marker date="1451819411666" expanded="true" signature="5597:5729" placeholder="select order..ordertracking..." />
-            <marker date="1451819411666" expanded="true" signature="6350:6482" placeholder="select order..ordertracking..." />
-            <marker date="1451819411666" expanded="true" signature="7297:7408" placeholder="select addre..shippingadress..." />
-            <marker date="1451819411666" expanded="false" signature="8519:8532" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8615:8627" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8674:8686" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8734:8746" placeholder="..." />
-            <marker date="1451819411666" expanded="false" signature="8790:8802" placeholder="..." />
-            <marker date="1451819411666" expanded="true" signature="8867:9132" placeholder="SELECT order..orderdetails..." />
+            <marker date="1452100891223" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1452100891223" expanded="true" signature="-1:-1" placeholder="update order..." />
+            <marker date="1452100891223" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1452100891223" expanded="true" signature="-1:-1" placeholder="select order..ordertracking..." />
+            <marker date="1452100891223" expanded="true" signature="-1:-1" placeholder="select order..ordertracking..." />
+            <marker date="1452100891223" expanded="true" signature="-1:-1" placeholder="select addre..shippingadress..." />
+            <marker date="1452100891223" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1452100891223" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1452100891223" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1452100891223" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1452100891223" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1452100891223" expanded="true" signature="-1:-1" placeholder="SELECT order..orderdetails..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/sidebarcart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="28" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.32903227" vertical-offset="765" max-vertical-offset="16694">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listorders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="7" selection-start="4281" selection-end="7904" vertical-scroll-proportion="3.998124" vertical-offset="997" max-vertical-offset="3230">
           <folding>
-            <marker date="1451732710336" expanded="true" signature="7143:7236" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="8033:8191" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="8041:8105" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="12795:12953" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="12803:12867" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="20058:20216" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="20066:20130" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="24464:24553" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="25318:25476" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="25326:25390" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="29884:30042" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="29892:29956" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="36955:37113" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="36963:37027" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="41371:41469" placeholder="SELECT artic..article..." />
-            <marker date="1451732710336" expanded="true" signature="42234:42392" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="42242:42306" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="46800:46958" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="46808:46872" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="53871:54029" placeholder="select (sele..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="53879:53943" placeholder="select count..ratings..." />
-            <marker date="1451732710336" expanded="true" signature="59051:59225" placeholder="SELECT title..." />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#6;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#6;n#!!top" expanded="true" />
+            <marker date="1452013608262" expanded="true" signature="-1:-1" placeholder="select DISTI..ordertracking..." />
+            <marker date="1452013608262" expanded="true" signature="-1:-1" placeholder="select DISTI..ordertracking..." />
+            <marker date="1452013608262" expanded="true" signature="-1:-1" placeholder="select DISTI..ordertracking..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="352" column="17" selection-start="12739" selection-end="12863" vertical-scroll-proportion="-11.769231" vertical-offset="5678" max-vertical-offset="8500">
+          <folding>
+            <marker date="1452103406620" expanded="true" signature="2314:2374" placeholder="SELECT userI..userinfo..." />
+            <marker date="1452103406620" expanded="true" signature="2746:2947" placeholder="select order..ordertracking..." />
+            <marker date="1452103406620" expanded="true" signature="3202:3262" placeholder="SELECT userI..userinfo..." />
+            <marker date="1452103406620" expanded="true" signature="3455:3518" placeholder="SELECT track..ordertracking..." />
+            <marker date="1452103406620" expanded="true" signature="3996:4059" placeholder="SELECT price..article..." />
+            <marker date="1452103406620" expanded="true" signature="4391:4581" placeholder="SELECT order..orderdetails..." />
+            <marker date="1452103406620" expanded="true" signature="4857:5005" placeholder="update order..." />
+            <marker date="1452103406620" expanded="true" signature="5209:5403" placeholder="select order..ordertracking..." />
+            <marker date="1452103406620" expanded="true" signature="5825:5928" placeholder="INSERT INTO ..." />
+            <marker date="1452103406620" expanded="true" signature="6223:6378" placeholder="INSERT INTO ..." />
+            <marker date="1452103406620" expanded="true" signature="6680:6874" placeholder="select count..orderdetails..." />
+            <marker date="1452103406620" expanded="true" signature="7367:7666" placeholder="SELECT order..orderdetails..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/best_sellers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="44" selection-start="2644" selection-end="2644" vertical-scroll-proportion="-25.076923" vertical-offset="79" max-vertical-offset="1071">
+          <folding>
+            <marker date="1451935552294" expanded="true" signature="253:321" placeholder="select count..." />
+            <marker date="1451935552294" expanded="true" signature="899:1008" placeholder="SELECT artic..article..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="590" column="6" selection-start="26665" selection-end="28267" vertical-scroll-proportion="-13.961538" vertical-offset="9667" max-vertical-offset="12376">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orderinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="436" column="0" selection-start="19304" selection-end="19304" vertical-scroll-proportion="-5.627451" vertical-offset="7125" max-vertical-offset="8806">
+          <folding>
+            <element signature="n#style#0;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#5;n#table#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#4;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
+            <marker date="1452105270184" expanded="true" signature="3674:3806" placeholder="select order..ordertracking..." />
+            <marker date="1452105270184" expanded="true" signature="7149:7261" placeholder="SELECT shipp..shippingadress..." />
+            <marker date="1452105270184" expanded="true" signature="10302:10601" placeholder="SELECT order..orderdetails..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="234" column="27" selection-start="13051" selection-end="13051" vertical-scroll-proportion="0.53846157" vertical-offset="3691" max-vertical-offset="13413">
+          <folding />
         </state>
       </provider>
     </entry>

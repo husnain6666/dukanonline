@@ -2,15 +2,18 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
+    <content url="file://C:/xampp/htdocs/electroshop" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
           <root url="phar://$MODULE_DIR$/lib/Facebook/HttpClients/composer.phar" />
+          <root url="phar://C:/xampp/htdocs/electroshop/lib/Facebook/HttpClients/composer.phar" />
         </CLASSES>
         <SOURCES>
           <root url="phar://$MODULE_DIR$/lib/Facebook/HttpClients/composer.phar" />
+          <root url="phar://C:/xampp/htdocs/electroshop/lib/Facebook/HttpClients/composer.phar" />
         </SOURCES>
       </library>
     </orderEntry>

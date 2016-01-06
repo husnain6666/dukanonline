@@ -138,7 +138,7 @@ include('connectdb.php');
                                 <form action="myaccount.php">
                                     <button type="submit" class="btn medium color1 pull-right" type="submit" style="margin-top: -35px; width: 200px">My Account</button>
                                 </form>
-                                <form action="listorder.php">
+                                <form action="listorders.php">
                                     <button type="submit" class="btn medium color1 pull-right" type="submit" style="margin-top: 0px; width: 200px">Order History</button>
                                 </form>
                                 <form action="logout.php">

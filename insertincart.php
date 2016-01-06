@@ -271,7 +271,7 @@ $result = mysqli_query($connection, $query);
 
 
 
-        header("location: order_info.php");
+        header("location: orderinfo.php");
     }
 
 }
