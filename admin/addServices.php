@@ -1,9 +1,25 @@
-<style type="text/css">
+<style type="text/css" xmlns="http://www.w3.org/1999/html">
     #idalert {
         visibility: hidden;
         margin-bottom: 0;
     }
 </style>
+<script type="text/javascript">
+    function formatTextArea(textArea) {
+        textArea.value = textArea.value.replace(/(^|\r\n|\n)([^• ]|$)/g, "$1• $2");
+    }
+
+    window.onload = function() {
+        var textArea = document.getElementById("todolist");
+        textArea.onkeyup = function(evt) {
+            evt = evt || window.event;
+
+            if (evt.keyCode == 13) {
+                formatTextArea(this);
+            }
+        };
+    };
+</script>
 <?php
 include_once('session.php');
 ?>
@@ -30,7 +46,7 @@ include_once('session.php');
         }
     </script>
     <meta charset="UTF-8">
-    <title>Add Category</title>
+    <title>Add Services</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.4 -->
@@ -99,8 +115,6 @@ include_once('session.php');
                                     }
                                 }
                             }
-
-
                             echo "<span class='label label-danger'>$count</span>";
                             ?>
                         </a>
@@ -109,7 +123,6 @@ include_once('session.php');
                             <li>
                                 <!-- inner menu: contains the actual data -->
                                 <ul class="menu">
-
                                     <?php
                                     include("dbConnect.php");
                                     $query = "SELECT * FROM `notifications` GROUP BY trackingId ORDER BY notificationDate DESC";
@@ -132,8 +145,6 @@ include_once('session.php');
                                         }
                                     }
                                     ?>
-
-
                                 </ul>
                             </li>
                             <li class="footer">
@@ -232,8 +243,8 @@ include_once('session.php');
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Add Category
-                <small>Add New Category Name</small>
+                Add Services
+                <small>Add New Services</small>
             </h1>
 
         </section>
@@ -242,46 +253,36 @@ include_once('session.php');
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">
-
-                    <div id="successModal" class="modal fade modal-success" role="dialog">
-                        <div class="modal-dialog">
-
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Success</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <h4>Action Successful&nbsp;<i class="glyphicon glyphicon-ok"></i></h4>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
                     <!-- Horizontal Form -->
                     <div class="box box-info" id="form">
                         <div class="alert alert-success" role="alert" id="idalert">Action successful</div>
-
                         <div class="box-header with-border">
-                            <h3 class="box-title">Add New Category Form</h3>
+                            <h3 class="box-title">Add New Services Form</h3>
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
-                        <form class="form-horizontal" action="AddCategoryForm.php" id='insertform'
+                        <form class="form-horizontal" action="postServices.php" id='insertform'
                               enctype="multipart/form-data" method="Post">
                             <div class=" box-body">
                                 <div class=" col-md-offset-1 form-group">
-                                    <label for="name" class="col-sm-2 control-label">Category Name*</label>
+                                    <label for="name" class="col-sm-2 control-label">Title*</label>
                                     <p class="help-block text-danger"></p>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="article_name1" name="article_name"
+                                        <input type="text" class="form-control" id="title" name="title"
                                                placeholder="" required>
                                         <span class="error"><font
-                                                color="red"> <?php if (isset($errors['article_name'])) echo $errors['article_name']; ?></font></span>
+                                                color="red"> <?php if (isset($errors['title'])) echo $errors['title']; ?></font></span>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="specification" class="col-sm-2 control-label">Specification*</label>
+
+                                    <div class="col-sm-9">
+                                        <textarea rows="5" cols="50" type="text" class="form-control" id="todolist" name="specification" required></textarea>
+                          <span class="error"><font
+                                  color="red"> <?php if (isset($errors['specification'])) echo $errors['specification']; ?></font></span>
+                                    </div>
+
                                 </div>
                                 <div class=" form-group">
                                     <label for="qty" class="col-sm-2 control-label" align="left">Choose
@@ -297,38 +298,38 @@ include_once('session.php');
                             </div>
                     </div>
                 </div>
+
                 <!-- /.box-body -->
                 <div class='errorabcd' style='display:none'>Event Created</div>
                 <div class="box-footer">
                     <button name="submit1"
-                    " data-toggle="tooltip" data-original-title='Submits' id="submit1"class="btn btn-info pull-right"
-                    >Submit</button>
+                    " data-toggle="tooltip" data-original-title='Submits' id="submit1"class="btn btn-info pull-right">Submit</button>
                 </div>
                 <!-- /.box-footer -->
 
-
                 </form>
+
                 <div class="box-body">
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <th>Category Name</th>
+                            <th>Services Name</th>
                             <th></th>
                         </tr>
                         </thead>
                         <tbody id="userData">
                         <?php
-                        $query = "SELECT * FROM category";
+                        $query = "SELECT * FROM services";
                         $result = mysqli_query($CONNECTION, $query);
                         if ($result) {
                             if ($result->num_rows > 0) {
                                 while ($member = mysqli_fetch_assoc($result)) {
-                                    $category = $member['categoryName'];
+                                    $category = $member['title'];
                                     echo "<tr>" .
 
-                                        "<td> {$member['categoryName']} </td>" .
+                                        "<td> {$member['title']} </td>" .
                                         "<td align='center'>" .
-                                        "<button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)'  data-original-title='{$member['categoryName']}' data-user-id={$member['categoryName']}><i class='fa fa-refresh'></i></button>&nbsp;" .
+                                        "<button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)'  data-original-title='{$member['title']}' data-user-id={$member['title']}><i class='fa fa-refresh'></i></button>&nbsp;" .
                                         "</td>" .
                                         "</tr>";
                                 }
@@ -338,7 +339,7 @@ include_once('session.php');
                         </tbody>
                         <tfoot>
                         <tr>
-                            <th>Category Name</th>
+                            <th>Services Name</th>
                             <th></th>
                         </tr>
                         </tfoot>

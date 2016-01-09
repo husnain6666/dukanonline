@@ -32,7 +32,7 @@ if(isset($_POST['submit']))
                 "Electroshop Pakistan".'<br>'."<img src='photo/electroshop logo'  /><br/>";
 
             mailsend($subjects, $user_name, $body, $firstName, $lastName);
-          //  header("location: index.php");
+            header("location: index.php");
             mysqli_close($connection); // Closing Connection
 
 
