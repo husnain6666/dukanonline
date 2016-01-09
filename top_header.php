@@ -34,10 +34,8 @@
     <!-- Style Switcher -->
     <link href="css/style-switch.css" rel="stylesheet" type="text/css"/>
     <!-- Color -->
-    <link href="css/skin/color.css" id="colorstyle" rel="stylesheet">
 
-
-
+    <link href="css/skin/mono-red.css" id="colorstyle" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <script src="js/respond.min.js"></script> <![endif]-->
 

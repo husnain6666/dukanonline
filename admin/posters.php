@@ -9,7 +9,7 @@ include_once('session.php');
 <head>
 
     <meta charset="UTF-8">
-    <title>Add Poster</title>
+    <title>All Posters</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.4 -->
@@ -47,8 +47,8 @@ include_once('session.php');
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Add Posters
-                <small>New Posters</small>
+                View/Update Posters
+                <small>Posters</small>
             </h1>
 
         </section>
@@ -64,9 +64,9 @@ include_once('session.php');
                         <div class="panel panel-success" id="idalert">
                             <div class="panel-heading"><?php echo $_GET['message'];?></div>
                         </div>
-                    <script>setTimeout(function() {
-                            $('#idalert').fadeOut('fast');
-                        }, 2000);</script>
+                        <script>setTimeout(function() {
+                                $('#idalert').fadeOut('fast');
+                            }, 2000);</script>
                     <?php
                     }
                     ?>
@@ -129,71 +129,55 @@ include_once('session.php');
                         </div>
                     </div>
 
-
-
-                    <!-- Horizontal Form -->
-
-                    <!-- Horizontal Form -->
-                    <div class="box box-info" id="form" >
+                <div class="box box-info" id="form" >
                         <div class="box-header with-border">
-                            <h3 class="box-title">Add your Posters here</h3>
+                            <h3 class="box-title">View/Update your Posters here</h3>
                         </div><!-- /.box-header -->
-                        <!-- form start -->
-                        <form action="insertAdd.php" class="form-horizontal"  method="Post" enctype=multipart/form-data>
-                            <div class=" box-body" >
 
-                                <div class="form-group" >
-                                    <label class="col-sm-2 control-label" >Title</label>
+                    <!-- Horizontal Form -->
 
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="article_name1" name="title" placeholder="Enter your title here..." required>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">Description</label>
-
-                                    <div class="col-sm-8">
-                                        <textarea id="linkArea" rows="8" cols="20" type="text" class="form-control" name="desc" placeholder="Describe your add here..." required></textarea>
-                                        <span class="error"></span>
-                                    </div>
-
-                                    <a class="btn btn-default" id="link" class="form-control" name="link" onclick="addlink();"><i class="fa fa-plus"></i> Add link</a>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" align="left">Date</label>
-
-                                    <div class="col-sm-3">
-                                        <input type="date" id="datepicker" class="form-control" name="date" required>
-                                    </div>
-
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" align="left">Notify on</label>
-
-                                    <div class="col-sm-3">
-                                        <input type="date" id="notify" class="form-control" name="notify" required>
-                                    </div>
-
-                                </div>
-
-                                <div class=" form-group">
-                                    <label for="qty" class="col-sm-2 control-label" align="left">Choose Picture</label>
-
-                                    <div class="col-sm-offset-2">
-                                        <input type="file" name="image" accept="image/jpeg"/>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="box-footer">
-                                <button class="btn btn-info pull-right">Submit</button>
-                            </div><!-- /.box-footer -->
-
-                        </form>
+                    <!-- Horizontal Form -->
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th class="col-md-1">ID</th>
+                                <th class="col-md-2">Title</th>
+                                <th class="col-md-2">Description</th>
+                                <th class="col-md-3">Picture</th>
+                                <th class="col-md-2">Date</th>
+                                <th class="col-md-1">Notification date</th>
+                                <th class="col-md-3"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            $query = "SELECT * FROM advertisement";
+                            $result = mysqli_query($CONNECTION, $query);
+                            if ($result) {
+                                if ($result->num_rows > 0) {
+                                    while ($add = mysqli_fetch_assoc($result)) {
+                                        echo "<tr>" .
+                                            "<td class='col-md-1'> {$add['addId']} </td>" .
+                                            "<td class='col-md-2'> {$add['title']} </td>" .
+                                            "<td class='col-md-2'> {$add['description']} </td>" .
+                                            "<td class='col-md-3'> {$add['picture']} </td>" .
+                                            "<td class='col-md-2'> {$add['date']} </td>" .
+                                            "<td class='col-md-1'> {$add['notification']} </td>" .
+                                            "<td align='center' class='col-md-3'>" .
+                                            "<a  href='../index.php' target='_blank'><button  class='btn btn-primary btn-xs' data-toggle='modal' data-target='' title='' onclick=''><i class='fa fa-eye'></i></button></a>&nbsp;<a href='updatePoster.php?Id={$add['addId']}' target='_blank'><button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)' data-original-title='Reset Password'><i class='fa fa-refresh'></i></button>&nbsp;" .
+                                            "</td>" .
+                                            "</tr>";
+                                    }
+                                }
+                            }
+                            ?>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <br/>
                     </div>
+                </div>
 
                 </div><!-- /.col -->
         </section><!-- /.content -->
@@ -232,6 +216,10 @@ include_once('session.php');
         var link = document.getElementById("linkArea");
         link.value += " <a style=color:#000000 href=YOUR_PAGE_LINK.php?articleId=YOUR_ARTICLE_ID>View</a>";
     }
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 </script>
 
 <!-- page script -->

@@ -13,10 +13,22 @@
 <div class="container">
 
     <div class="row clearfix">
-        <?php include "main_bar.php";?>
+        <?php include "main_bar.php";
+            $new_sql = "SELECT SUBSTRING(articleName,1,12) as articleName, articleId FROM article order by articleId desc limit 5";
+            $new_result = mysqli_query($connection,$new_sql);
+            $articleCollection;
+            $articleIdCollection;
+            $arrayIndex = 0;
+            while($new_table_record=mysqli_fetch_array($new_result)) {
+                $articleCollection[$arrayIndex] = $new_table_record['articleName'];
+                $articleIdCollection[$arrayIndex] = $new_table_record['articleId'];
+                $arrayIndex++;
+            }
+        ?>
+
 <!-- Top Searches for tablets and large screens -->
 <div class="top-searchs hidden-xs"><span class="title">Top
-          Searches</span> <span class="links"> <a href="#a">Air Jordan Shoes 2010</a> | <a href="#a">Liz Claiborne</a> | <a href="#a">Tommy</a> | <a href="#a">J Crew ST Wedding</a> | <a href="#a">HTC One</a> | <a href="#a">Bridal</a></span> </div>
+          Searches</span> <span class="links"> <a href="product.php?articleId=<?php echo $articleIdCollection[0];?>"><?php echo $articleCollection[0];?> |</a> <a href="product.php?articleId=<?php echo $articleIdCollection[1];?>"><?php echo $articleCollection[1];?> |</a> <a href="product.php?articleId=<?php echo $articleIdCollection[2];?>"><?php echo $articleCollection[2];?> |</a> <a href="product.php?articleId=<?php echo $articleIdCollection[3];?>"><?php echo $articleCollection[3];?> |</a> <a href="product.php?articleId=<?php echo $articleIdCollection[4];?>"><?php echo $articleCollection[4];?></a> |</span> </div>
 <!-- end: Top Searches -->
 
 <!-- Quick Help for tablets and large screens -->
@@ -819,7 +831,7 @@
                         <div class="carousel-inner">
                             <?php
                             $itemCount = 0;
-                            $sql = "SELECT title,description,Date_FORMAT(date, '%d') as day,Date_FORMAT(date, '%b') as month,Date_FORMAT(date, '%Y') as year,picture FROM advertisement ORDER BY date DESC limit 5";
+                            $sql = "SELECT title,description,Date_FORMAT(date, '%d') as day,Date_FORMAT(date, '%b') as month,Date_FORMAT(date, '%Y') as year,picture FROM advertisement WHERE active = 1 ORDER BY date DESC limit 5";
                             $result=mysqli_query($connection,$sql);
                             while($table_record=mysqli_fetch_array($result)) {
                             $title = $table_record['title'];
@@ -889,6 +901,9 @@
                                        <div class="brands-row item">
                                            <div class=""><a href="#a"><img src="images/sven_vert.jpg" height="213px" alt=""></a></div>
                                        </div>
+                                       <div class="brands-row item">
+                                           <div class=""><a href="#a"><img src="images/sven_vert.jpg" height="213px" alt=""></a></div>
+                                       </div>
                                        </div>
                                    </div>
                                </div>
@@ -937,29 +952,7 @@
 
 <!-- Style Switcher JS -->
 <script src="js/style-switch.js" type="text/javascript"></script>
-<section id="style-switch" class="bgcolor3">
-    <h2>Style Switch <a href="#" class="btn color2"><i class="fa fa-cog "></i></a></h2>
-    <div class="inner">
-        <h3>Predefined Styles</h3>
-        <ul class="colors list-unstyled" id="color1">
-            <li><a href="#" class="blue-red" data-toggle="tooltip" title="Blue Red" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-            <li><a href="#" class="midnight-blue" data-toggle="tooltip" title="Midnight Blue" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-            <li><a href="#" class="mono-red" data-toggle="tooltip" title="Mono Red" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-            <li><a href="#" class="pinegreen-purple" data-toggle="tooltip" title="PineGreen Purple" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-            <li><a href="#" class="darkmagenta-rosybrown" data-toggle="tooltip" title="DarkMagenta RosyBrown" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-            <li><a href="#" class="darkorchid-seagreen" data-toggle="tooltip" title="DarkOrchid SeaGreen" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-            <li><a href="#" class="steel-blue" data-toggle="tooltip" title="Steel Blue" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-            <li><a href="#" class="cadetblue-violetred" data-toggle="tooltip" title="CadetBlue VioletRed" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-            <li><a href="#" class="mediumpurple-seagreen" data-toggle="tooltip" title="MediumPurple SeaGreen" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-            <li><a href="#" class="steelblue-leafgreen" data-toggle="tooltip" title="SteelBlue LeafGreen" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-            <li><a href="#" class="orange-steelblue" data-toggle="tooltip" title="Orange SteelBlue" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-            <li><a href="#" class="gray" data-toggle="tooltip" title="Gray" > <i class="fa fa-cog fa-stop one"></i><i class="fa fa-cog fa-stop two"></i></a></li>
-        </ul>
-    </div>
-    <div id="reset" class="inner"><a href="#" class="btn normal color2 ">Reset</a></div>
-</section>
 <script>
-
     (function($) {
         "use strict";
         $('#menuMega').menu3d();
