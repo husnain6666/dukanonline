@@ -2,7 +2,7 @@
 <?php include "top_header.php";?>
 <!-- end: Top Heading Bar -->
 
-<div class="f-space20"></div>
+<div class="f-space20" xmlns="http://www.w3.org/1999/html"></div>
 <!-- Logo and Search -->
 <?php include "main_header.php";?>
 <!-- end: search -->
@@ -23,6 +23,11 @@
 
 </header>
 <!-- end: Header -->
+<?php
+$overAllprice=$_GET['total'];
+$trackingNo=$_GET['trackingNo'];
+?>
+
 
 <div class="row clearfix"></div>
 <div class="container">
@@ -182,8 +187,8 @@
     <div class="panel-collapse collapse" id="op3">
         <div class="panel-body">
             <div class="row co-row">
-                <form>
-                    <!--
+                <form action="insertincart.php?trackingNo=<?php echo $trackingNo?>& overallprice=<?php echo $overAllprice; ?>" method="post" onsubmit="return validation_billing_shipping();" >
+                <!--
                     <div class="col-md-6 col-xs-12">
                         <div class="box-content form-box">
                             <h4>Your Personal Details</h4>
@@ -201,7 +206,7 @@
                     <div class="col-md-12 col-xs-12">
                         <div class="box-content form-box">
                             <h4>Where you want your order to be delivered!</h4>
-                            <input type="text" name="addressship" placeholder="Enter Address *"  class="form-control input4" id="nameship" onblur="validation_billing_shipping()" onkeyup="validation_billing_shipping()" required="">
+                            <input type="text" name="addressship" placeholder="Enter Address *"  class="form-control input4" id="address" onblur="validation_billing_shipping()" onkeyup="validation_billing_shipping()" required="">
                             <input type="text" name="Emailship" placeholder="Email *" class="form-control input4" id="Emailship" onblur="validation_billing_shipping()" onkeyup="validation_billing_shipping()" required="">
                             <input type="text" name="Cityship" placeholder="City *" class="form-control input4" id="City" onblur="validation_billing_shipping()" onchange="validation_billing_shipping()" onkeyup="validation_billing_shipping()" required="">
                             <input type="text" name="Countryship" placeholder="Country *" class="form-control input4" id="Country" onblur="validation_billing_shipping()" onchange="validation_billing_shipping()" onkeyup="validation_billing_shipping()" required="">
@@ -210,7 +215,6 @@
                             <button class="btn medium color2 pull-right">Continue</button>
                         </div>
                     </div>
-                </form>
                 <!-- end: Register -->
 
             </div>
@@ -234,22 +238,24 @@
                 <div class="col-md-12 col-xs-12">
                     <div class="box-content form-box">
                         <h4>Please select the preferred shipping method to use on this order.</h4>
-                        <label class="radio" for="radio1">
-                            <input type="radio" value="" id="radio1" data-toggle="radio"  name="shippingmethod" checked="checked" class="pull-left">
-                            <span class="pull-left color1 provider">Standard International Postage</span> - <span class="color2 price">Free</span><br/>
-                            <em>Delivered to your letterbox within <br/>
-                                7-14 working days</em> </label>
+                        <label class="radio" for="radio1" >
+                            <input type="radio"   data-toggle="radio" checked="checked" class="pull-left" id="shipmentradio1" name="shipment-radio" value="freeshipping" onchange="validation_billing_shipping()" onclick="validation_billing_shipping() " required="">
+                            <span class="pull-left color1 provider">Free Shipping</span> - <span class="color2 price">Free</span><br/>
+                            <em>Delivered to your Door Step within the Lahore City <br/>
+                                2-7 working days</em> </label>
                         <label class="radio" for="radio2">
-                            <input type="radio" value="" id="radio2" data-toggle="radio"  name="shippingmethod" class="pull-left">
-                            <span class="pull-left color1 provider">DHL Standard Postage</span> - <span class="color2 price">$2.99</span><br/>
+                            <input type="radio"   data-toggle="radio"  class="pull-left" id="shipmentradio2" name="shipment-radio" value="freeshipping" onchange="validation_billing_shipping()" onclick="validation_billing_shipping()" required="">
+                            <span class="pull-left color1 provider">Per Item Shipping Rate </span> - <span class="color2 price">Rs.0</span><br/>
                             <em>Delivered to your letterbox within <br/>
                                 2-5 working days</em> </label>
                         <label class="radio" for="radio3">
-                            <input type="radio" value="" id="radio3" data-toggle="radio" name="shippingmethod" class="pull-left">
+                         <!--   <input type="radio" value="" id="radio3" data-toggle="radio" name="shippingmethod" class="pull-left">
                             <span class="pull-left color1 provider">FEDEX QUICK DELIVERY</span> - <span class="color2 price">$6.40</span><br/>
                             <em>Delivered to your letterbox within <br/>
                                 1-3 working days</em> </label>
-                        <button class="btn medium color2 pull-right">Continue</button>
+
+                            <button class="btn medium color2 pull-right">Continue</button>
+                    -->
                     </div>
                 </div>
                 <!-- end: Shipping methods -->
@@ -275,21 +281,24 @@
                 <div class="col-md-12 col-xs-12">
                     <div class="box-content form-box">
                         <h4>Please select the preferred Payment method to use on this order.</h4>
-                        <label class="radio" for="radio4">
-                            <input type="radio" value="" id="radio4" data-toggle="radio"  name="paymentmethod" class="pull-left">
-                            <span class="pull-left color1 provider">Direct Bank Transfer</span><br/>
-                            <em>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order wont be shipped until the funds have cleared in our account.</em> </label>
+
                         <label class="radio" for="radio5">
-                            <input type="radio" value="" id="radio5" data-toggle="radio"  name="paymentmethod" checked="checked" class="pull-left">
-                            <span class="pull-left color1 provider">Monybookers</span><br/>
-                            <em>Moneybookers(Skrill) makes it easy for developers to accept credit cards on the web.</em> </label>
+                            <input type="radio" id="paymentradio1" checked="checked" class="pull-left" required="" onchange="validation_billing_shipping()" onclick="validation_billing_shipping()" name="payment-radio" value="COD"><label class="radio-label"  for="paymentradio2"></label>
+                            <span class="pull-left color1 provider">Cash On Delivery</span><br/>
+                            <em>We make it convenient for our users to Pay when they got their parcel on door step.</em> </label>
+                        <label class="radio" for="radio4">
+                            <input type="radio" class="pull-left" id="paymentradio2" name="payment-radio" required="" value="BT"><label class="radio-label" for="paymentradio2" onchange="validation_billing_shipping()" onclick="validation_billing_shipping()" ></label>
+                            <span class="pull-left color1 provider">Direct Bank Transfer</span><br/>
+                            <em>Make your payment directly into our bank account mention below. Your order wont be shipped until the funds have cleared in our account.</em> </label>
                         <label class="radio" for="radio6">
-                            <input type="radio" value="" id="radio6" data-toggle="radio"  name="paymentmethod" class="pull-left">
+                            <input type="radio" id="paymentradio3" class="pull-left" name="payment-radio" value="PP" required=""><label class="radio-label" for="paymentradio3" onchange="validation_billing_shipping()" onclick="validation_billing_shipping()" >Paypal</label>
                             <span class="pull-left color1 provider">Paypal</span><br/>
-                            <em>Appropriately seize value-added quality vectors via fully researched process improvements. </em> </label>
-                        <textarea name="comments" id="comments" cols="10" rows="8" class="input4" placeholder="Comments/messsage"></textarea>
-                        <button class="btn medium color2 pull-right">Continue</button>
-                    </div>
+                            <em>We provide our overseas customers to pay us via Paypal. For more details, call on this number:</em> </label>
+                        <textarea name="importantMsg" id="comments" cols="10" rows="8" class="input4" placeholder="Comments/messsage"></textarea>
+
+
+                        <!-- <button class="btn medium color2 pull-right">Continue</button>
+                    --></div>
                 </div>
                 <!-- end: Payment methods -->
 
@@ -371,6 +380,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 <!-- end: product -->
 
@@ -499,25 +511,23 @@
 <div class="box-content cart-box-wr pull-right">
     <div class="cart-box-tm">
         <div class="tm1">Sub-Total</div>
-        <div class="tm2">$2167.25</div>
+        <div class="tm2">Rs.<?php echo $overAllprice; ?></div>
     </div>
     <div class="cart-box-tm">
-        <div class="tm1">Eco Tax (-2.00) </div>
-        <div class="tm2">$23.60</div>
+        <div class="tm1">Tax (Rs.0) </div>
+        <div class="tm2"></div>
     </div>
-    <div class="cart-box-tm">
-        <div class="tm1">VAT (18.2%) </div>
-        <div class="tm2">$54.00</div>
-    </div>
+
     <div class="cart-box-tm">
         <div class="tm3 bgcolor2">Total </div>
-        <div class="tm4 bgcolor2">$7854.34</div>
+        <div class="tm4 bgcolor2">Rs.<?php echo $overAllprice;?></div>
     </div>
 </div>
 <div class="clearfix f-space20"></div>
 <!--  <textarea name="comments" id="comments" cols="5" rows="5" class="input4" placeholder="Comments/messsage"></textarea> -->
 
-<button class="btn large color1 pull-right">Create Order</button>
+<button class="btn large color1 pull-right" name="submit">Confirm Order</button>
+</form>
 </div>
 </div>
 </div>
@@ -539,19 +549,16 @@
     <div class="box-content cart-box-wr">
         <div class="cart-box-tm">
             <div class="tm1">Sub-Total</div>
-            <div class="tm2">$2167.25</div>
+            <div class="tm2">Rs.<?php echo $overAllprice; ?></div>
         </div>
         <div class="cart-box-tm">
-            <div class="tm1">Eco Tax (-2.00) </div>
-            <div class="tm2">$23.60</div>
+            <div class="tm1">Tax (Rs.0) </div>
+            <div class="tm2"></div>
         </div>
-        <div class="cart-box-tm">
-            <div class="tm1">VAT (18.2%) </div>
-            <div class="tm2">$54.00</div>
-        </div>
+
         <div class="cart-box-tm">
             <div class="tm3 bgcolor2">Total </div>
-            <div class="tm4 bgcolor2">$7854.34</div>
+            <div class="tm4 bgcolor2">Rs.<?php echo $overAllprice;?></div>
         </div>
     </div>
 
@@ -560,63 +567,7 @@
     <div class="clearfix f-space30"></div>
     <div class="box-heading"><span>Best Sellers</span></div>
     <!-- Best Sellers Products -->
-    <div class="box-content">
-        <div class="box-products slide carousel-fade" id="productc4">
-            <ol class="carousel-indicators">
-                <li class="active" data-slide-to="0" data-target="#productc4"></li>
-                <li class="" data-slide-to="1" data-target="#productc4"></li>
-                <li class="" data-slide-to="2" data-target="#productc4"></li>
-            </ol>
-            <div class="carousel-inner">
-                <!-- item -->
-                <div class="item active">
-                    <div class="product-block">
-                        <div class="image">
-                            <div class="product-label product-hot"><span>HOT</span></div>
-                            <a class="img" href="product.php"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
-                        <div class="product-meta">
-                            <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
-                            <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> </div>
-                            <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
-                                    Cart</a> </div>
-                        </div>
-                        <div class="meta-back"></div>
-                    </div>
-                </div>
-                <!-- end: item -->
-                <!-- item -->
-                <div class="item">
-                    <div class="product-block">
-                        <div class="image"> <a class="img" href="product.php"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
-                        <div class="product-meta">
-                            <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
-                            <div class="big-price"> <span class="price-new"><span class="sym">$</span>654.87</span> </div>
-                            <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
-                                    Cart</a> </div>
-                        </div>
-                        <div class="meta-back"></div>
-                    </div>
-                </div>
-                <!-- end: item -->
-                <!-- item -->
-                <div class="item">
-                    <div class="product-block">
-                        <div class="image"> <a class="img" href="product.php"><img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
-                        <div class="product-meta">
-                            <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
-                            <div class="big-price"> <span class="price-new"><span class="sym">$</span>1600</span> </div>
-                            <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
-                                    Cart</a> </div>
-                        </div>
-                        <div class="meta-back"></div>
-                    </div>
-                </div>
-                <!-- end: item -->
-            </div>
-        </div>
-        <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#productc4"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#productc4"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
-        <div class="nav-bg"></div>
-    </div>
+  <?php include ("best_sellers.php"); ?>
     <!-- end: Best Sellers Products -->
     <div class="clearfix f-space30"></div>
     <!-- Get Updates Box -->
@@ -703,84 +654,9 @@
 <!-- end: Rectangle Banners -->
 
 <div class="row clearfix f-space30"></div>
+
 <!-- footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3 col-xs-12 shopinfo">
-                <h4 class="title">FLATSHOP</h4>
-                <p> This Efficiently negotiate robust communities with extensible systems.
-                    Appropriately productize top-line leadership skills rather than team
-                    building applications.</p>
-                <p> Phosfluorescently extend highly efficient schemas with intermandated. </p>
-            </div>
-            <div class="col-sm-3 col-xs-12 footermenu">
-                <h4 class="title">Information</h4>
-                <ul>
-                    <li class="item"> <a href="#a">Delivery Info</a></li>
-                    <li class="item"> <a href="#a">FAQs</a></li>
-                    <li class="item"> <a href="#a">Payment Instructions</a></li>
-                    <li class="item"> <a href="#a">Request Product</a></li>
-                    <li class="item"> <a href="#a">Vendor Registration</a></li>
-                    <li class="item"> <a href="#a">Affiliates</a></li>
-                    <li class="item"> <a href="#a">Gift Vouchers</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-3 col-xs-12 footermenu">
-                <h4 class="title">My
-                    account</h4>
-                <ul>
-                    <li class="item"> <a href="#a">My Account</a></li>
-                    <li class="item"> <a href="#a">Order History</a></li>
-                    <li class="item"> <a href="#a">Wish List</a></li>
-                    <li class="item"> <a href="#a">Newsletter</a></li>
-                </ul>
-            </div>
-            <div class="col-sm-3 col-xs-12 getintouch">
-                <h4 class="title">get in
-                    touch</h4>
-                <ul>
-                    <li>
-                        <div class="icon"> <i class="fa fa-map-marker fa-fw"></i> </div>
-                        <div class="c-info"> <span>3rd Avenue, NY, US<br>
-              <a href="#a">Find us on map</a></span> </div>
-                    </li>
-                    <li>
-                        <div class="icon"> <i class="fa fa-envelope-o fa-fw"></i> </div>
-                        <div class="c-info"> <span>Email Us At:<br>
-              <a href="#a">support@domain.com</a></span> </div>
-                    </li>
-                    <li>
-                        <div class="icon"> <i class="fa fa-phone fa-fw"></i> </div>
-                        <div class="c-info"> <span>24/7 Phone Support:<br>
-              <a href="#a">+1 (888) 888 8888</a></span> </div>
-                    </li>
-                    <li>
-                        <div class="icon"> <i class="fa fa-skype fa-fw"></i> </div>
-                        <div class="c-info"> <span>Talk to Us:<br>
-              <a href="#a">skypeid</a></span> </div>
-                    </li>
-                </ul>
-                <div class="social-icons">
-                    <ul>
-                        <li class="icon google-plus"> <a href="#a"> <i class="fa fa-google-plus fa-fw"></i> </a> </li>
-                        <li class="icon linkedin"> <a href="#a"> <i class="fa fa-linkedin fa-fw"></i> </a> </li>
-                        <li class="icon twitter"> <a href="#a"> <i class="fa fa-twitter fa-fw"></i> </a> </li>
-                        <li class="icon facebook"> <a href="#a"> <i class="fa fa-facebook fa-fw"></i> </a> </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="copyrights">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-sm-8 col-xs-12"> <span class="copytxt">&copy; Copyright 2013 by <a href="#a">Flatro</a> - All rights reserved</span> <span class="btmlinks"><a href="#a">Return Policy</a> | <a href="#a">Privacy Policy</a> | <a href="#a">Terms of Use</a></span> </div>
-                <div class="col-lg-4 col-sm-4 col-xs-12 payment-icons"> <a href="#a"> <img alt="discover" src="images/icons/discover.png"> </a> <a href="#a"> <img alt="2co" src="images/icons/2co.png"> </a> <a href="#a"> <img alt="paypal" src="images/icons/paypal.png"> </a> <a href="#a"> <img alt="master card" src="images/icons/mastercard.png"> </a> <a href="#a"> <img alt="visa card" src="images/icons/visa.png"> </a> <a href="#a"> <img alt="moneybookers" src="images/icons/moneybookers.png"> </a> </div>
-            </div>
-        </div>
-    </div>
-</footer>
+<?php include "footer.php";?>
 <!-- end: footer -->
 
 <!-- Style Switcher JS -->
@@ -810,15 +686,37 @@
 
     (function($) {
         "use strict";
-        //Mega Menu
         $('#menuMega').menu3d();
+        $('#iview').iView({
+            pauseTime: 10000,
+            pauseOnHover: true,
+            directionNavHoverOpacity: 0.6,
+            timer: "360Bar",
+            timerBg: '#2da5da',
+            timerColor: '#fff',
+            timerOpacity: 0.9,
+            timerDiameter: 20,
+            timerPadding: 1,
+            touchNav: true,
+            timerStroke: 2,
+            timerBarStrokeColor: '#fff'
+        });
 
-        //Help/Contact Number/Quick Message
         $('.quickbox').carousel({
             interval: 10000
         });
-
+        $('#monthly-deals').carousel({
+            interval: 3000
+        });
+        $('#productc2').carousel({
+            interval: 4000
+        });
+        $('#tweets').carousel({
+            interval: 5000
+        });
     })(jQuery);
+
+
 
 </script>
 </body>

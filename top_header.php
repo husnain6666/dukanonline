@@ -54,7 +54,7 @@ include('connectdb.php');
     <!-- Custom Scripts -->
     <script src="js/scripts.js"></script>
     <script src="js/total.js"></script>
-
+<script src="js/validation.js"></script>
     <!-- MegaMenu -->
     <script src="js/menu3d.js" type="text/javascript"></script>
 
