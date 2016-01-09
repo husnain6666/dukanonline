@@ -262,29 +262,6 @@ if(isset($_POST['submit1']))
                                     <input type="text"   class="form-control" id="article_name1" name="article_name" value='<?php echo $q;?>' placeholder="" required >
                                     <span class="error"><font color="red"> <?php if(isset($errors['article_name'])) echo $errors['article_name'];?></font></span>
                                 </div>
-
-                                <div class=" col-md-offset-1 form-group" >
-                                    <label for="name"    class="col-sm-2 control-label" >description</label>
-                                    <p class="help-block text-danger"></p>
-
-
-                                    <div class="col-sm-9">
-                                        <input type="textbox"   class="form-control" id="description1" name="description" value='<?php echo $q;?>' placeholder="" style="height: 100px" >
-                                        <span class="error"><font color="red"> <?php if(isset($errors['description'])) echo $errors['description'];?></font></span>
-                                    </div>
-                                </div>
-                                <div class=" col-md-offset-1 form-group" >
-                                    <label for="qty" class="col-sm-2 control-label" align="left">Choose Picture</label>
-
-                                    <div class="col-sm-offset-2">
-                                        <input type="file" class="col-sm-8 control-label" name="pic1" id="pic1" >
-                          <span class="error"><font
-                                  color="red"> <?php if (isset($errors['pic1'])) echo $errors['pic1']; ?></font></span>
-                                    </div>
-                                </div>
-
-                            </div>
-
                             </div>
 
 

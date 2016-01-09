@@ -1,9 +1,5 @@
 <?php
-/**
- * User: Shehroz
- * Date: 9/18/2015
- * Time: 12:33
- */
+
 
 $USING_SERVER = "localhost";
 $USERNAME = "root";

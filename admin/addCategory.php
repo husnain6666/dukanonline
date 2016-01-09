@@ -71,7 +71,7 @@ if(isset($_POST['submit1'])) {
 
     if(empty($errors)){
         include_once('dbConnect.php');
-        $sql = "INSERT INTO `category`(categoryName,pic,description) VALUES('$article_name','$pic1','$description')";
+        $sql = "INSERT INTO `mastercategory`(masterCategory,pic,description) VALUES('$article_name','$pic1','$description')";
         $result = mysqli_query($CONNECTION, $sql);
 /*        echo '<style type="text/css">
                 #idalert {
@@ -115,7 +115,7 @@ if(isset($_POST['submit1'])) {
         }
     </script>
     <meta charset="UTF-8">
-    <title>Add Category</title>
+    <title>Add Master Category</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.4 -->
@@ -151,8 +151,7 @@ if(isset($_POST['submit1'])) {
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Add  Category
-            <small>Add New Category Name</small>
+            Add  Master Category
         </h1>
 
     </section>
@@ -230,14 +229,15 @@ if(isset($_POST['submit1'])) {
                     <div class="alert alert-success" role="alert" id="idalert" >Action successful</div>
 
                     <div class="box-header with-border">
-                        <h3 class="box-title">Add New Category Form</h3>
+                        <h3 class="box-title">Add New Master Category Form</h3>
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     <form class="form-horizontal" id='insertform' enctype="multipart/form-data"  method="Post">
                         <div class=" box-body" >
 
+
                             <div class=" col-md-offset-1 form-group" >
-                                <label for="name"    class="col-sm-2 control-label" >Category Name*</label>
+                                <label for="name"    class="col-sm-2 control-label" >Master Category Name*</label>
                                 <p class="help-block text-danger"></p>
 
 
@@ -247,7 +247,7 @@ if(isset($_POST['submit1'])) {
                                 </div>
                             </div>
                             <div class=" col-md-offset-1 form-group" >
-                                <label for="name"    class="col-sm-2 control-label" >description</label>
+                                <label for="name"    class="col-sm-2 control-label" >description*</label>
                                 <p class="help-block text-danger"></p>
 
 
@@ -288,18 +288,26 @@ if(isset($_POST['submit1'])) {
                     </thead>
                     <tbody id="userData">
                     <?php
-                    $query = "SELECT * FROM category";
+                    $query = "SELECT * FROM mastercategory";
                     $result = mysqli_query($CONNECTION, $query);
                     if($result) {
                         if($result->num_rows > 0) {
                             while ($member = mysqli_fetch_assoc($result)) {
-                                $category=$member['categoryName'];
+                                $category=$member['masterCategory'];
+                                $status=$member['status'];
+                                if($status)
+                                    $stat="<span class='label label-info'>active</span>";
+                                    else
+                                        $stat="<span class='label label-danger'>inactive</span>";
+
                                 echo "<tr>".
 
-                                    "<td> {$member['categoryName']} </td>".
-                                    "<td align='center'>".
-                                    "<button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)'  data-original-title='{$member['categoryName']}' data-user-id={$member['categoryName']}><i class='fa fa-refresh'></i></button>&nbsp;".
+                                    "<td> {$member['masterCategory']} </td>".
+                                    "<td align='right'>".
+                                    "<button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)'  data-original-title='{$member['masterCategory']}' data-user-id={$member['masterCategory']}><i class='fa fa-refresh'></i></button>&nbsp;".
+                                    "<button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newcat(this)'  data-original-title='{$member['masterCategory']}' data-user-id={$member['masterCategory']}><i class='fa fa-plus'></i></button>&nbsp;".
                                     "</td>".
+                                    "<td> $stat </td>".
                                     "</tr>";
                             }
                         }
@@ -362,8 +370,18 @@ if(isset($_POST['submit1'])) {
     function newtab(id){
         userid=$(id).data("original-title");
 
+
         // document.getElementById("article_name1").value = userid;
         url='updateCategory.php?q='+userid;
+        window.open (url,'_self',false)
+    }
+
+    function newcat(id){
+        userid=$(id).data("original-title");
+
+
+        // document.getElementById("article_name1").value = userid;
+        url='addsubcat.php?q='+userid;
         window.open (url,'_self',false)
     }
 
