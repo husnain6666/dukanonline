@@ -896,15 +896,27 @@
                                    <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#dealership"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#dealership"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
                                    <div class="carousel-inner">
                                            <div class="brands-row item active">
-                                               <div class=""><a href="#a"><img src="images/ns.jpg" height="213px" alt=""></a></div>
+                                               <div class=""><a href="#a"><img src="images/certficate%201.jpg" height="213px" alt=""></a></div>
                                            </div>
                                        <div class="brands-row item">
-                                           <div class=""><a href="#a"><img src="images/sven_vert.jpg" height="213px" alt=""></a></div>
+                                           <div class=""><a href="#a"><img src="images/certficate%202.jpg" height="213px" alt=""></a></div>
                                        </div>
                                        <div class="brands-row item">
-                                           <div class=""><a href="#a"><img src="images/sven_vert.jpg" height="213px" alt=""></a></div>
+                                           <div class=""><a href="#a"><img src="images/certficate%203.jpg" height="213px" alt=""></a></div>
                                        </div>
+                                       <div class="brands-row item">
+                                           <div class=""><a href="#a"><img src="images/certficate%204.jpg" height="213px" alt=""></a></div>
                                        </div>
+                                       <div class="brands-row item">
+                                           <div class=""><a href="#a"><img src="images/certficate%205.jpg" height="213px" alt=""></a></div>
+                                       </div>
+                                       <div class="brands-row item">
+                                           <div class=""><a href="#a"><img src="images/certficate%206.jpg" height="213px" alt=""></a></div>
+                                       </div>
+                                       <div class="brands-row item">
+                                           <div class=""><a href="#a"><img src="images/certficate%207.jpg" height="213px" alt=""></a></div>
+                                       </div>
+                                   </div>
                                    </div>
                                </div>
                            </div>
