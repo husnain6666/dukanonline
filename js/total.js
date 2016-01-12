@@ -1,7 +1,6 @@
 /**
  * Created by zain on 9/30/15.
  */
-
 function Total(str,articleId){
 //alert("hello");
 /*var quantity=document.getElementById(quantity1).value;
@@ -51,6 +50,7 @@ function addWishSale(str){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             notie.alert(3, 'Wish Added!', 1);
 
+
         }
     }
 
@@ -69,6 +69,7 @@ function addWishNewCollection(str){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             notie.alert(3, 'Wish Added!', 1);
 
+
         }
     }
 
@@ -85,6 +86,7 @@ function addWishFeatured(str){
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             notie.alert(3, 'Wish Added!', 1);
+
 
         }
     }
@@ -115,6 +117,7 @@ function removewish(str){
 
 
 function addtocart(article){
+
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -164,38 +167,33 @@ function addtocartNewfeatured(article){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            notie.alert(3, 'Added!', 1);
+            document.getElementById("wishaddedFeatured").innerHTML = "Added to cart!";
         }
     }
     xmlhttp.open("GET", "shopping_cart.php?articleId=" + article , true);
     xmlhttp.send();
 }
 
-function removeitem(userId,articleNo,trackingNo){
 
 
+
+
+
+function insertquantityinshoppingcart(){
+
+    var quantity=document.getElementById("quantity").value;
+    var articleId=document.getElementById("articleId").value;
+    alert(quantity);
+    alert(articleId);
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var newLocation = "shopping_cart.php?articleId=-9999";
+            var newLocation = "shopping_cart.php?articleId="+articleId+"&quantity=" + quantity;
             window.location = newLocation;
             //header("location:shopping_cart.php");
         }
     }
-    xmlhttp.open("GET", "removeitemcart.php?userId=" + userId + "&articleNo=" +  articleNo + "&trackingNo=" +trackingNo , true);
+    xmlhttp.open("GET", "shopping_cart.php?quantity=" + quantity +"&articleId=" + articleId , true);
     xmlhttp.send();
 }
 
-
-function changequantity(quantity,userId,articleNo,trackingNo,price){
-
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var newLocation = "shopping_cart.php?articleId=-9999";
-            window.location = newLocation;
-        }
-    }
-    xmlhttp.open("GET", "changequantity.php?userId=" + userId + "&articleNo=" +  articleNo + "&trackingNo=" +trackingNo + "&quantity=" +quantity + "&price=" +price, true);
-    xmlhttp.send();
-}

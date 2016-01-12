@@ -2,7 +2,18 @@
 <?php
 include('session.php');
 include('connectdb.php');
-include "top_header.php";?>
+include "top_header.php";
+$per_page = 1;
+if (isset($_GET["page"])) {
+    $page = $_GET["page"];
+} else {
+    $page = 1;
+
+}
+$start_from = ($page - 1) * $per_page;
+$cat1 = "";
+$total_records=2;
+?>
 <!-- end: Top Heading Bar -->
 
 <div class="f-space20"></div>
@@ -127,7 +138,15 @@ include "top_header.php";?>
         </div>
         <!-- end:sidebar -->
         <div class="col-md-9 col-sm-12 col-xs-12 box-block">
-            <div class="box-heading category-heading"><span>Showing 1-9 of 240 products</span>
+            <?php
+            $query = "SELECT * from wishlist where userId='$userId'" ;
+
+            $result = mysqli_query($connection, $query);
+
+            // Count the total records
+            $total_records = mysqli_num_rows($result);
+            ?>
+            <div class="box-heading category-heading"><span>Showing <?php echo $start_from + 1 ?>-<?php if (($start_from + 1) == $total_records) echo $total_records; else if ($start_from + $per_page >= $total_records) echo $total_records; else echo $start_from + $per_page ?> of <?php echo $total_records ?><?php?>products</span>
                 <ul class="nav nav-pills pull-right">
                     <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#a"> 9 per page <i class="fa fa-sort fa-fw"></i> </a>
                         <ul class="dropdown-menu" role="menu">
@@ -165,14 +184,13 @@ include "top_header.php";?>
                     {
                         $userId = $_SESSION['loginId'];
                     }
-                    $sql = "SELECT wishId,articleId from wishlist where userId='$userId' " ;
+                    $sql = "SELECT wishId,articleId from wishlist where userId='$userId' LIMIT $start_from, $per_page" ;
                     $result=mysqli_query($connection,$sql);
                     while($table_record=mysqli_fetch_array($result)){
                     $articleId = $table_record['articleId'];
                     $wishId = $table_record['wishId'];
 
-
-                    $sql1 = "SELECT discount,articleName,Category,picture1,price,brand,quantity FROM article where articleId='$articleId' and active = 1";
+                    $sql1 = "SELECT discount,articleName,Category,picture1,price,brand,quantity FROM article where articleId='$articleId' and active = 1 ";
                     $result1=mysqli_query($connection,$sql1);
                     $table_record=mysqli_fetch_array($result1);
 
@@ -187,7 +205,7 @@ include "top_header.php";?>
                         $discountedPrice = ($price * $discount)/100;
                         $discountedPrice = $price - $discountedPrice;
 
-                    $query2="SELECT count(articleId) as totalReviews FROM reviews WHERE articleId = '$articleId'";
+                    $query2="SELECT count(articleId) as totalReviews FROM reviews WHERE articleId = '$articleId' ";
                     $result2=mysqli_query($connection,$query2);
 
                     $table_record2=mysqli_fetch_array($result2);
@@ -202,7 +220,7 @@ include "top_header.php";?>
                         <!-- Image -->
                         <div class="col-md-4 col-sm-12 col-xs-12 product-image">
                             <div class="image">
-                                <a class="img" href="#"><img alt="product info" src="photo/<?php echo $picture1 ?>" title=<?php echo $articleName; ?> class="ani-image" ></a> </div>
+                                <a class="img" href="#"><img height="273px" alt="product info" src="photo/<?php echo $picture1 ?>" title=<?php echo $articleName; ?> class="ani-image" ></a> </div>
                         </div>
                         <!-- end: Image -->
 
@@ -214,7 +232,7 @@ include "top_header.php";?>
 
                             <?php
                             $ratingLimit = 0;
-                            $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
+                            $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId' LIMIT $start_from, $per_page";
 
                             $result3 = mysqli_query($connection, $query3);
 
@@ -272,16 +290,51 @@ include "top_header.php";?>
 
                 </div>
             </div>
+            <?php
+            $query = "SELECT * from wishlist where userId='$userId'" ;
+
+            $result = mysqli_query($connection, $query);
+
+            // Count the total records
+            $total_records = mysqli_num_rows($result);
+            //Using ceil function to divide the total records on per page
+            $total_pages = ceil($total_records / $per_page);
+            $i = 1;
+            ?>
             <div class="clearfix f-space30"></div>
-            <span class="pull-left">Showing 1-9 of 240 products</span>
+            <span class="pull-left">Showing <?php echo $start_from + 1 ?>-<?php if (($start_from + 1) == $total_records) echo $total_records; else if ($start_from + $per_page >= $total_records) echo $total_records; else echo $start_from + $per_page ?> of <?php echo $total_records ?> products</span>
             <div class="pull-right">
                 <ul class="pagination pagination-lg">
-                    <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                    <li  class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                   <?php /* echo " <li><a href='wishlist.php?page=1'>&laquo;</a></li> ";
+                   $currentPage = 1;
+                   if(isset($_GET['page']))
+                   {
+                       $currentPage = $_GET['page'];
+                   }
+                    for (; $i <= $total_pages; $i++) {
+                    echo "<li '<?php if ($i == $currentPage) {echo 'class=active';}?>' ><a href='wishlist.php?page=" .$i ."'>" . $i . "</a></li> ";
+
+                    };
+                    // Going to last page
+                    echo " <li><a href='wishlist.php?page=". ($total_pages)."'>&raquo;</a></li> ";
+                    */?>
+                    <?php
+                    $currentPage = 1;
+                    if(isset($_GET['page']))
+                    {
+                        $currentPage = $_GET['page'];
+                    }
+                    echo " <li><a onclick='pageNo(1)'>&laquo;</a></li> ";
+
+                    for (; $i<=$total_pages; $i++) { ?>
+                        <li <?php if ($i == $currentPage) {echo "class='active'";}?>>
+                            <a onclick="pageNo(<?=$i?>)"><?=$i?></a>
+                        </li>
+                    <?php
+                    }
+                    echo "<li><a onclick='pageNo($total_pages)'>&raquo;</a></li>";
+                    ?>
+
                 </ul>
             </div>
         </div>
@@ -433,7 +486,28 @@ include "top_header.php";?>
 
 
     })(jQuery);
-
+    var currentURL=window.location.href;
+    function pageNo(x)
+    {
+        if(currentURL.search('page=') == -1) {
+            if(currentURL.search('[?]') == -1) {
+                window.location = currentURL + "?page=" + x;
+            }
+            else {
+                window.location = currentURL + "&page=" + x;
+            }
+        }
+        else {
+            var pageRegex = /page[=][0-9]+/;
+            var results = pageRegex.exec( currentURL );
+            if( results != null )
+            {
+                currentURL = currentURL.replace(pageRegex, "page=" + x);
+                window.location.href = currentURL;
+            }
+            else alert("Not Found!");
+        }
+    }
 </script>
 
 </body>
