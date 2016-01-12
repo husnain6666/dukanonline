@@ -1,6 +1,7 @@
 <div class="box-content">
     <div class="box-products slide carousel-fade" id="productc5">
         <ol class="carousel-indicators">
+
             <?php
             $carouselCount = 0;
             $limit = 0;

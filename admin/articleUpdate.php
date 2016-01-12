@@ -4,6 +4,23 @@
         margin-bottom: 0;
     }
 </style>
+<script type="text/javascript">
+    function formatTextArea(textArea) {
+        textArea.value = textArea.value.replace(/(^|\r\n|\n)([^\u21D2 ]|$)/g, "$1\u21D2 bullet $2");
+    }
+
+    window.onload = function() {
+        var textArea = document.getElementById("todolist");
+        textArea.onkeyup = function(evt) {
+            evt = evt || window.event;
+
+            if (evt.keyCode == 13) {
+                formatTextArea(this);
+            }
+        };
+    };
+</script>
+
 <?php
 include_once('dbConnect.php');
 //include_once('session.php');
