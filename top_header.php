@@ -54,7 +54,7 @@ include('connectdb.php');
     <!-- Custom Scripts -->
     <script src="js/scripts.js"></script>
     <script src="js/total.js"></script>
-<script src="js/validation.js"></script>
+
     <!-- MegaMenu -->
     <script src="js/menu3d.js" type="text/javascript"></script>
 
@@ -67,6 +67,8 @@ include('connectdb.php');
     <!--[if IE 8]>
     <script type="text/javascript" src="js/selectivizr.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 
 </head>
 
