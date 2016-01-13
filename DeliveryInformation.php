@@ -149,7 +149,7 @@
                         <li>If at the time of delivery you have changed your mind, a delivery cost will be charged. (Depending on the order and the distance calculated), so be sure before confirming your orders.</li>
                         <li>If after delivery you get any trouble or issues in your electric product, you can use the warranty card attached. (Depending on warranty items and parts warranted by company)</li>
                         <li>For customer service centers you can call us and take a guide to the route.</li>
-                        <li>Electroshop provides online shopping in Pakistan with Lahore Cash On Delivery.</li>
+                        <li>Storeonline provides online shopping in Pakistan with Lahore Cash On Delivery.</li>
                         <li>We have a 7 day return policy on selected products (Returns should be notified and should be returned with complete packaging, parts and no breakage, otherwise the return policy would be considered void)</li>
                         <p>Provision of such services is becoming more and more important, as we know the concept of online shopping is gaining popularity with each passing day. Even though online shopping is gaining popularity but that still doesn’t mean that Pakistan has completely accepted the online buying and selling trend.For details , please contact below numbers :
                         </p>

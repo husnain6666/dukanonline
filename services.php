@@ -44,7 +44,7 @@
         <div class="row ">
             <?php
 
-            $sql = "SELECT * FROM services";
+            $sql = "SELECT * FROM services where active='1'";
             $result=mysqli_query($connection,$sql);
             $i=1;
             while($table_record=mysqli_fetch_array($result)) {
@@ -52,19 +52,22 @@
                 $pic1 = $table_record['pic'];
                 $specification = $table_record['specification'];
                 $path = "images/services/";
-                $iparr = split("-",$specification);
+                $iparr = split("⇒",$specification);
                 ?>
                 <div class="col-lg-3 col-md-3 col-sm-3" style="margin-bottom: 20px">
                     <div class="box" style="width: 250px;height:400px;background: #f5f5f5 ">
                         <div class="boxInner" style="width: 250px;background: #f5f5f5;">
                             <img src='<?php echo $path . $pic1 ?>'/>
                         </div>
-                        <div style="margin-left: 6px;margin-top: 10px; ">
-                            <h4 style="color: lightseagreen"><?php echo $title ?></h4>
+                        <div style="margin-left: 6px;margin-top: 10px;word-wrap: break-word;   overflow-wrap: break-word;     /* Renamed property in CSS3 draft spec */
+    width: 90%; height: 100% ">
+                            <h5 style="color: lightseagreen"><?php echo $title ?></h5>
                             <?php foreach ($iparr as $index=> $id) {
                                 if($index>0)
+                                    $id="⇒".$id;
+
                                 {?>
-                                    <strong style="color: purple">-<?php echo $id ?></strong>
+                                    <strong style="color: purple"><?php echo $id ?></strong>
                                     <br>
                                 <?php
                                 }

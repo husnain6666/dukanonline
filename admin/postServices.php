@@ -51,22 +51,17 @@ if (isset($_POST['submit1'])) {
             $actual_image_name = time() . substr(str_replace(" ", "_", $txt), 5) . "." . $ext;
             $tmp = $_FILES['pic1']['tmp_name'];
             if (move_uploaded_file($tmp, $path . $actual_image_name)) {
-                if (file_exists($path . $actual_image_name)) {
-                    rename($path . $actual_image_name, $path . $pic1);
-                }
-                if (empty($errors)) {
+
+
                     include_once('dbConnect.php');
                     $sql = "INSERT INTO `services`(title,pic,specification) VALUES('$title','$pic1','$specification')";
-                    echo $sql;
-
                     $result = mysqli_query($CONNECTION, $sql);
                     ?>
                     <script>
-                        alert("save")
+                        alert("save");
                         window.location.replace("addServices.php");
                     </script><?php }
-            } else
-                $errors['pic1'] = "Upload Failed";
+
 
         } else
             $errors['pic1'] = "Invalid File Format";

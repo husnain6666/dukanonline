@@ -9,9 +9,9 @@
         textArea.value = textArea.value.replace(/(^|\r\n|\n)([^\u21D2  ]|$)/g, "$1\u21D2  $2");
     }
 
-    window.onload = function() {
+    window.onload = function () {
         var textArea = document.getElementById("todolist");
-        textArea.onkeyup = function(evt) {
+        textArea.onkeyup = function (evt) {
             evt = evt || window.event;
 
             if (evt.keyCode == 13) {
@@ -19,10 +19,143 @@
             }
         };
     };
+
 </script>
 <?php
 include_once('session.php');
+$pic1="";
+$pic11="";
+$pass= randomPassword();
+$active ="";
+$picture1="#";
+$path = "../images/services/";
+
+function randomPassword() {
+    $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+    $pass = array(); //remember to declare $pass as an array
+    $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
+    for ($i = 0; $i < 8; $i++) {
+        $n = rand(0, $alphaLength);
+        $pass[] = $alphabet[$n];
+    }
+    return implode($pass); //turn the array into a string
+}
+if (!empty($_GET['q'])) {
+    include("dbConnect.php");
+    $q = $_GET['q'];
+    $query = "SELECT  * from services WHERE  title='$q'";
+    $result = mysqli_query($CONNECTION, $query);
+    if ($result) {
+        if ($result->num_rows > 0) {
+            while ($notify = mysqli_fetch_assoc($result)) {
+
+                $title = $notify['title'];
+                $picture1 = $path.$notify['pic'];
+                $active = $notify['active'];
+                $specification = $notify['specification'];
+                $active = '';
+                if ($notify['active']) {
+                    $active = 'checked="checked"';
+                }
+            }
+        }
+    }
+}
+$valid_formats = array("jpeg", "jpg", "png", "gif", "bmp","JPEG", "JPG", "PNG", "GIF", "BMP");
+
+if (isset($_POST['submit1'])) {
+
+    if (empty($_POST["title"])) {
+        $errors['article_name'] = "Please Fill This Field!";
+
+    } else {
+        $title = $_POST["title"];
+        $article_name = $_POST["title"];
+    }
+    if (empty($_POST["specification"]))
+    {
+        $errors['specification'] = "Please Fill This Field!";
+
+    } else
+    {
+        $description3 = $_POST["specification"];
+    }
+    $active =0;
+
+
+    if (isset($_POST['active'])) {
+        $active = 1;
+    }
+    $art_name = $_POST['title'];
+    $name = $_FILES['pic1']['name'];
+    $size = $_FILES['pic1']['size'];
+if($name!="") {
+    if (strlen($name)) {
+        list($txt, $ext) = explode(".", $name);
+        if (in_array($ext, $valid_formats)) {
+            $pic1 = $art_name . "_" . $pass . "_" . "_pic1_" . "." . $ext;
+            $pic11 = $art_name . "_" . $pass . "_" . "_pic1_" . "." . $ext;
+            $actual_image_name = time() . substr(str_replace(" ", "_", $txt), 5) . "." . $ext;
+            $tmp = $_FILES['pic1']['tmp_name'];
+            if (move_uploaded_file($tmp, $path .$actual_image_name)) {
+                if(file_exists ( $path.$actual_image_name ))
+                {
+                    rename($path.$actual_image_name,$path.$pic1);
+
+                    if (file_exists($picture1)) {
+                        unlink($picture1);
+                    }
+                }
+
+        } else
+            $errors['pic1'] = "Invalid File Format";
+    } else
+        $errors['pic1'] = "Please Select Image File";
+
+}
+}
+    $p1="";
+    if($pic1!=""){
+        $p1=",pic='".$pic1."'";;
+    }else{
+        $p1="";
+    }
+
+
+    if (empty($error)) {
+        //  $sql = "UPDATE `article` SET `articleName`='$article_name' ,`Category`='$category' ,`brand`='$bN' ,`specification`='$description' ,`weekDeal`='$hotdeal',bestSeller='$bestsale' ,Sale='$sale',`price`='$ppp' ,`quantity`='$quantity',`discount`='$tp'  ,`date`='$date' ,`color`='$color' $p1 $p2 $p3  WHERE articleId='$ar_id'";
+        $sql = "UPDATE `services` SET `title`='$title',active='$active' ,`specification`='$description3' $p1  WHERE title='$q'";
+
+        $result = mysqli_query($CONNECTION, $sql);
+?><style type="text/css" xmlns="http://www.w3.org/1999/html">
+            #idalert {
+                visibility:visible;
+                margin-bottom: 0;
+            }
+        </style>
+
+        <div class="panel panel-success " style="background: green" id="idalert">
+            <div class="panel-heading">Acttion Succuss</div>
+        </div>
+        <script>setTimeout(function() {
+                $('#idalert').fadeOut('fast');
+            }, 2000);
+            setTimeout(function() {
+                ;
+            }, 2000)
+
+            window.location = "addServices.php";
+
+        </script>
+         <?php
+
+
+
+
+    }
+}
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -46,7 +179,7 @@ include_once('session.php');
         }
     </script>
     <meta charset="UTF-8">
-    <title>Add Services</title>
+    <title>Update Services</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.4 -->
@@ -243,8 +376,8 @@ include_once('session.php');
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Add Services
-                <small>Add New Services</small>
+                Update Services
+                <small>Update Services</small>
             </h1>
 
         </section>
@@ -253,22 +386,24 @@ include_once('session.php');
         <section class="content">
             <div class="row">
                 <div class="col-xs-12">
+
                     <!-- Horizontal Form -->
                     <div class="box box-info" id="form">
-                        <div class="alert alert-success" role="alert" id="idalert">Action successful</div>
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Add New Services Form</h3>
+                                        <div class="box-header with-border">
+                            <h3 class="box-title">Update Services Form</h3>
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
-                        <form class="form-horizontal" action="postServices.php" id='insertform'
+                        <form class="form-horizontal" action="" id='insertform'
                               enctype="multipart/form-data" method="Post">
                             <div class=" box-body">
                                 <div class=" col-md-offset-1 form-group">
                                     <label for="name" class="col-sm-2 control-label">Title*</label>
+
                                     <p class="help-block text-danger"></p>
+
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="title" name="title"
+                                        <input type="text" class="form-control" id="title" name="title" value='<?php echo $q;?>'
                                                placeholder="" required>
                                         <span class="error"><font
                                                 color="red"> <?php if (isset($errors['title'])) echo $errors['title']; ?></font></span>
@@ -278,7 +413,8 @@ include_once('session.php');
                                     <label for="specification" class="col-sm-2 control-label">Specification*</label>
 
                                     <div class="col-sm-9">
-                                        <textarea rows="5" cols="50" type="text" class="form-control" id="todolist" name="specification" required></textarea>
+                                        <textarea rows="5" cols="5" type="text" WRAP=SOFT class="form-control" id="todolist"
+                                                  name="specification" required><?php echo $specification;?></textarea>
                           <span class="error"><font
                                   color="red"> <?php if (isset($errors['specification'])) echo $errors['specification']; ?></font></span>
                                     </div>
@@ -289,13 +425,21 @@ include_once('session.php');
                                         Picture1*</label>
 
                                     <div class="col-sm-offset-2">
-                                        <input type="file" class="col-sm-8 control-label" name="pic1" id="pic1">
+                                        <input type="file" class="col-sm-8 control-label" name="pic1" id="pic1" >
                           <span class="error"><font
                                   color="red"> <?php if (isset($errors['pic1'])) echo $errors['pic1']; ?></font></span>
                                     </div>
                                 </div>
-
-
+                                <div class=" form-group">
+                                    <div class="col-md-offset-3">
+                                        <img src='<?php echo $picture1;?>'width="20%" height="20%" border="1" />
+                                    </div>
+                                    </div>
+                                        <div class="form-group">
+                                    <label for="small" class="col-sm-3 control-label">Active</label>
+                                    <div class="col-sm-1 ">
+                                        <input type="checkbox" class=" checkbox" id="active" name="active" <?php echo $active;?>  >
+                                    </div>
                             </div>
                     </div>
                 </div>
@@ -304,48 +448,13 @@ include_once('session.php');
                 <div class='errorabcd' style='display:none'>Event Created</div>
                 <div class="box-footer">
                     <button name="submit1"
-                    " data-toggle="tooltip" data-original-title='Submits' id="submit1"class="btn btn-info pull-right">Submit</button>
+                    " data-toggle="tooltip" data-original-title='Submits' id="submit1"class="btn btn-info
+                    pull-right">Submit</button>
                 </div>
                 <!-- /.box-footer -->
 
                 </form>
 
-                <div class="box-body">
-                    <table id="example1" class="table table-bordered table-striped">
-                        <thead>
-                        <tr>
-                            <th>Services Name</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody id="userData">
-                        <?php
-                        $query = "SELECT * FROM services";
-                        $result = mysqli_query($CONNECTION, $query);
-                        if ($result) {
-                            if ($result->num_rows > 0) {
-                                while ($member = mysqli_fetch_assoc($result)) {
-                                    $category = $member['title'];
-                                    echo "<tr>" .
-
-                                        "<td> {$member['title']} </td>" .
-                                        "<td align='center'>" .
-                                        "<button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)'  data-original-title='{$member['title']}' data-user-id={$member['title']}><i class='fa fa-refresh'></i></button>&nbsp;" .
-                                        "</td>" .
-                                        "</tr>";
-                                }
-                            }
-                        }
-                        ?>
-                        </tbody>
-                        <tfoot>
-                        <tr>
-                            <th>Services Name</th>
-                            <th></th>
-                        </tr>
-                        </tfoot>
-                    </table>
-                </div>
                 <!-- /.box-body -->
             </div>
             <!-- /.box -->
@@ -383,7 +492,6 @@ include_once('session.php');
 <script src="plugins/colorpicker/bootstrap-colorpicker.min.js" type="text/javascript"></script>
 
 <link href="plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css"/>
-
 <!-- page script -->
 <script type="text/javascript">
 
@@ -393,7 +501,7 @@ include_once('session.php');
         userid = $(id).data("original-title");
 
         // document.getElementById("article_name1").value = userid;
-        url = 'updateService.php?q=' + userid;
+        url = 'updateCategory.php?q=' + userid;
         window.open(url, '_self', false)
     }
 
