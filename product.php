@@ -28,30 +28,7 @@ include "top_header.php";
 <!-- end: Header -->
 
 <div class="row clearfix"></div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="breadcrumb"> <a href="index.html"> <i class="fa fa-home fa-fw"></i> Home </a> <i class="fa fa-angle-right fa-fw"></i> <a href="product.php"> Product </a> </div>
-
-            <!-- Quick Help for tablets and large screens -->
-            <div class="quick-message hidden-xs">
-                <div class="quick-box">
-                    <div class="quick-slide"> <span class="title">Help</span>
-                        <div class="quickbox slide" id="quickbox">
-                            <div class="carousel-inner">
-                                <div class="item active"> <a href="#"> <i class="fa fa-envelope fa-fw"></i> Quick Message</a> </div>
-                                <div class="item"> <a href="#"> <i class="fa fa-question-circle fa-fw"></i> FAQ</a> </div>
-                                <div class="item"> <a href="#"> <i class="fa fa-phone fa-fw"></i> (92)3009712255</a> </div>
-                            </div>
-                        </div>
-                        <a class="left carousel-control" data-slide="prev" href="#quickbox"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="right carousel-control" data-slide="next" href="#quickbox"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
-                </div>
-            </div>
-            <!-- end: Quick Help -->
-
-        </div>
-    </div>
-</div>
+<?php include "breadCrumbs.php";?>
 
 <div class="row clearfix f-space10"></div>
 <div class="container">
@@ -71,9 +48,8 @@ include "top_header.php";
                   $specifications = "No Product Found";
                   if(isset($_GET['articleId']))
                   {
-                      $articleId = $_GET['articleId'];
-                  }
-                  $sql = "SELECT specification,category,price,articleName, brand, articleId, quantity, discount, picture1, picture2, picture3,color FROM article WHERE articleId='$articleId'";
+                  $articleId = $_GET['articleId'];
+                  $sql = "SELECT specification,category,price,articleName, brand, articleId, quantity, discount, picture1, picture2, picture3, category FROM article WHERE articleId='$articleId'";
                   $result = mysqli_query($connection, $sql);
                   //if($result->num_rows > 0)
                   //{
@@ -91,6 +67,7 @@ include "top_header.php";
                       $articleId = $table_record['articleId'];
                       $quantity = $table_record['quantity'];
                       $discount = $table_record['discount'];
+                      $category = $table_record['category'];
                       $discountedPrice = ($price * $discount)/100;
                       $discountedPrice = $price - $discountedPrice;
 
@@ -99,19 +76,6 @@ include "top_header.php";
 
                       $table_record2=mysqli_fetch_array($result2);
                       $totalReviews = $table_record2['totalReviews'];
-
-                      $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
-
-                      $result3 = mysqli_query($connection, $query3);
-
-                      $table_record3 = mysqli_fetch_array($result3);
-                      $totalRatings = $table_record3['totalRating'];
-                      $ratingSum = $table_record3['sumRating'];
-                      if ($totalRatings != 0 || $ratingSum != 0) {
-                          $avgRating = $ratingSum / $totalRatings;
-                      } else {
-                          $avgRating = 5;
-                      }
                   }
                   catch (Exception $e){
                       $e->getMessage();
@@ -125,8 +89,22 @@ include "top_header.php";
                           <div class="thumbs col-md-3 col-sm-3 col-xs-3"  id="thumbs">
                               <ul>
                                   <li class=""><a href="#a" data-image="images/products/<?php echo $picture1?>" data-zoom-image="images/products/<?php echo $picture1?>" class="elevatezoom-gallery active" ><img src="images/products/<?php echo $picture1?>" alt="small image" /></a></li>
+                                  <?php
+                                  if($picture2 != "")
+                                  {
+                                  ?>
                                   <li class=""> <a href="#a" data-image="images/products/<?php echo $picture2?>" data-zoom-image="images/products/<?php echo $picture2?>"  class="elevatezoom-gallery" > <img src="images/products/<?php echo $picture2?>" alt="small image" /></a></li>
+                                  <?php
+                                  }
+                                  ?>
+                                  <?php
+                                  if($picture3 != "")
+                                  {
+                                  ?>
                                   <li class=""> <a href="#a" data-image="images/products/<?php echo $picture3?>" data-zoom-image="images/products/<?php echo $picture3?>" class="elevatezoom-gallery"><img src="images/products/<?php echo $picture3?>" alt="small image" /></a></li>
+                                  <?php
+                                  }
+                                  ?>
                               </ul>
                           </div>
                           <!-- end: Small Images -->
@@ -180,9 +158,21 @@ include "top_header.php";
                           <!-- Availability, Product Code, Brand and short info -->
                           <div class="short-info-wr col-md-12 col-sm-12 col-xs-12">
                               <div class="short-info">
-                                  <div class="product-attr-text">Availability: <span class="available">In Stock</span></div>
-                                  <div class="product-attr-text">Product Code: <span><?php echo $articleId?></span></div>
-                                  <div class="product-attr-text">Brand: <span><?php echo $brand?></span></div>
+                                  <div class="row">
+                                      <div class="col-md-5">
+                                        <div class="product-attr-text">Availability: <span class="available">In Stock</span></div>
+                                        <div class="product-attr-text">Product Code: <span><?php echo $articleId?></span></div>
+                                          <div class="product-attr-text">Brand: <span><?php echo $brand?></span></div>
+                                      </div>
+                                      <div class="col-md-7">
+                                          <div class="short-info-opt">
+                                              <!-- AddThis Button BEGIN -->
+                                              <div class="social-share">
+                                                  <div class="fb-like" data-href="https://www.facebook.com/www.electroshop.pk/?fref=ts" data-width="250" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
                                   <p class="short-info-p"> <?php
                                       $pieces = explode("0_0", $specifications);
                                       ?><?php echo $pieces[1];?></p>
@@ -193,7 +183,7 @@ include "top_header.php";
                       </div>
 
                       <div class="row">
-                          <div class="short-info-opt-wr col-md-6 col-sm-6 col-xs-6">
+                          <div class="short-info-opt-wr col-md-12 col-sm-12 col-xs-12">
                               <div class="short-info-opt">
                                   <div class="att-row">
                                       <div class="qty-wr">
@@ -204,14 +194,56 @@ include "top_header.php";
                                           <div class="quantity-txt"><a href="#a" class="qty qtyminus" ><i class="fa fa-minus fa-fw"></i></a></div>
                                           <div class="quantity-txt"><a href="#a" class="qty qtyplus" ><i class="fa fa-plus fa-fw"></i></a></div>
                                       </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="short-info-share-wr col-md-6 col-sm-6 col-xs-6">
-                              <div class="short-info-opt">
-                                  <!-- AddThis Button BEGIN -->
-                                  <div class="social-share">
-                                      <div class="fb-like" data-href="https://www.facebook.com/www.electroshop.pk/?fref=ts" data-width="250" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                                      <?php
+                                      if($category == "Clothing") {
+                                          ?>
+                                          <div class="color-wr">
+                                              <div class="color-options">
+                                                  <ul class="pull-left">
+                                                      <li class="input-prepend dropdown" data-select="true"> <a class="add-on dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <span class="dropdown-display">Color</span> <i class="fa fa-sort fa-fw"></i> </a>
+                                                          <!-- this hidden field is used to contain the selected option from the dropdown -->
+                                                          <input class="dropdown-field" type="hidden" value="">
+                                                          <ul class="dropdown-menu" role="menu">
+                                                          <?php
+                                                              $col_query = "select c.color from color c inner join article a on a.articleId=c.articleId where c.articleId = '$articleId'";
+                                                              $col_result = mysqli_query($connection, $col_query);
+                                                              while($table_record5 = mysqli_fetch_array($col_result)){
+                                                              $color = $table_record5['color'];
+                                                          ?>
+                                                              <li><a href="#a" data-value="<?php echo $color;?>" class="border-<?php echo $color;?>"><?php echo $color;?></a></li>
+                                                          <?php }// end while loop
+                                                          ?>
+                                                          </ul>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div>
+                                            <div class="size-wr">
+                                                <div class="size-options">
+                                                    <ul class="pull-left">
+                                                        <li class="input-prepend dropdown" data-select="true"><a
+                                                                class="add-on dropdown-toggle" data-hover="dropdown"
+                                                                data-toggle="dropdown" href="#a"> <span
+                                                                    class="dropdown-display">Size</span> <i
+                                                                    class="fa fa-sort fa-fw"></i> </a>
+                                                            <!-- this hidden field is used to contain the selected option from the dropdown -->
+                                                            <input class="dropdown-field" type="hidden" value="">
+                                                            <ul class="dropdown-menu" role="menu">
+                                                                <li><a href="#a" data-value="XS">XS</a></li>
+                                                                <li><a href="#a" data-value="S">S</a></li>
+                                                                <li><a href="#a" data-value="M">M</a></li>
+                                                                <li><a href="#a" data-value="N">N</a></li>
+                                                                <li><a href="#a" data-value="L">L</a></li>
+                                                                <li><a href="#a" data-value="XL">XL</a></li>
+                                                                <li><a href="#a" data-value="XXL">XXL</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        <?php
+                                        }// end if
+                                      ?>
                                   </div>
                               </div>
                           </div>
@@ -284,17 +316,30 @@ include "top_header.php";
       <!-- Details Info/Reviews/Tags -->
       <!-- Nav tabs -->
       <ul class="nav nav-tabs blog-tabs nav-justified">
-        <li class="active"><a href="#details-info" data-toggle="tab"><i class="fa  fa-th-list fa-fw"></i> Details Info</a></li>
+        <li class=""><a href="#details-info" data-toggle="tab"><i class="fa  fa-th-list fa-fw"></i> Details Info</a></li>
         <li><a href="#reviews" data-toggle="tab"><i class="fa fa-comments fa-fw"></i> Reviews</a></li>
       </ul>
       <!-- Tab panes -->
       <div class="tab-content">
-        <div class="tab-pane active col-lg-12 col-md-12 col-sm-12" id="details-info">
+        <div class="tab-pane col-lg-12 col-md-12 col-sm-12" id="details-info">
           <p><?php
               $pieces = explode("0_0", $specifications);
-              ?> <h4>INTRODUCTION</h4><br><?php echo $pieces[0];?>
-            <h4><br>DETAILS</h4><br><?php echo $pieces[1];?>
-            <h4><br>SPECIFICATIONS</h4><br><?php echo $pieces[2];?></p>
+              ?> <h4>INTRODUCTION</h4><?php echo $pieces[0];?>
+            <h4><br>DETAILS</h4><?php echo $pieces[1];?>
+            <?php
+            $iparr = split("=>",$pieces[2]);
+            ?>
+            <h4><br>SPECIFICATIONS</h4>
+            <?php foreach ($iparr as $index=> $id) {
+                if($index>0)
+                {?>
+                    ⇒<?php echo $id;?>
+                    <br>
+                <?php
+                }
+            }
+            ?>
+            </p>
         </div>
         <div class="tab-pane col-lg-12 col-md-12 col-sm-12" id="reviews">
           <div class="heading"> <span><strong>"<?php echo $articleName;?>"</strong> has <?php echo $totalReviews;?> review(s)</span>
@@ -410,8 +455,10 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
     <!-- end: tabs -->
 </div>
     <!-- sidebar -->
-    <?php include "specials.php";?>
-
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 main-column box-block product-details-tabs" style="padding: 0px">
+            <?php include "specials.php";?>
+          <div class="clearfix f-space30"></div>
+      </div>
     <!-- end: sidebar -->
 
   </div>
@@ -656,6 +703,13 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
   </div>
 </div>
 
+<?php }
+        else
+        { ?>
+        <label style="color: red; margin-left:100px ;">No Product Found!</label>
+<?php   }
+?>
+
 <!-- end: Related products -->
 
 <!-- Rectangle Banners -->
@@ -667,7 +721,6 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
 
 <!-- footer -->
 <?php include "footer.php";?>
-<!-- end: footer -->
 <!-- Style Switcher JS -->
 <script src="js/style-switch.js" type="text/javascript"></script>
 <section id="style-switch" class="bgcolor3">

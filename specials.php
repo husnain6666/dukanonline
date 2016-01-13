@@ -1,4 +1,4 @@
-<div class=" box-block sidebar">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-block sidebar">
     <div class="box-heading"><span>Specials</span></div>
     <div class="box-content">
         <div class="box-products slide carousel-fade" id="productc4">

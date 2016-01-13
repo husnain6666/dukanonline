@@ -39,10 +39,8 @@ include('connectdb.php');
     <!-- Style Switcher -->
     <link href="css/style-switch.css" rel="stylesheet" type="text/css"/>
     <!-- Color -->
-    <link href="css/skin/color.css" id="colorstyle" rel="stylesheet">
 
-
-
+    <link href="css/skin/mono-red.css" id="colorstyle" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <script src="js/respond.min.js"></script> <![endif]-->
 
@@ -79,14 +77,6 @@ include('connectdb.php');
             <div class="col-md-12">
                 <div class="topheadrow">
                     <ul class="nav nav-pills pull-right">
-
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#a">USD <i class="fa fa-angle-down fa-fw"></i> </a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#a">USD</a></li>
-                                <li><a href="#a">PKR</a></li>
-                                <li><a href="#a">JPY</a></li>
-                            </ul>
-                        </li>
                         <li> <a href="#a"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-xs">My Cart</span></a> </li>
                         <li> <a href="#a"> <i class="fa fa-heart fa-fw"></i> <span class="hidden-xs">Wishlist(0)</span></a> </li>
                         <?php

@@ -7,6 +7,21 @@ if(isset($_SESSION['USERNAME'])){
 else{
 header("location: login.php");
 }*/
+
+$notf_query = "SELECT title FROM `advertisement` WHERE notification >= CURDATE();";
+$notf_result = mysqli_query($CONNECTION, $notf_query);
+    if ($notf_result->num_rows > 0) {
+        $member = mysqli_fetch_assoc($notf_result);
+        $add_title = $member['title'];
+        ?>
+        <script>
+            var answer = confirm("Advertisement notification date reached. Do you want to see adds?")
+            if (answer){
+                window.location.href = "posters.php";
+            }
+            </script>
+    <?php
+    }// end if
 ?>
 <!DOCTYPE html>
 <html>
