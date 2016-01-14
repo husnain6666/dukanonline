@@ -18,13 +18,19 @@
                             <!-- this hidden field is used to contain the selected option from the dropdown -->
                             <input class="dropdown-field" type="hidden" value="All Categories"/>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#a" data-value="Men Wear">Men Wear</a></li>
-                                <li><a href="#a" data-value="Women Wear">Women Wear</a></li>
-                                <li><a href="#a" data-value="Music">Music</a></li>
-                                <li><a href="#a" data-value="Mobile Phones">Mobile Phones</a></li>
-                                <li><a href="#a" data-value="Computers">Computers</a></li>
-                                <li><a href="#a" data-value="Gaming">Gaming</a></li>
-                                <li><a href="#a" data-value="Gift Ideas">Gift Ideas</a></li>
+                                <?php
+                                    include_once("connectdb.php");
+                                    $query = "SELECT * FROM mastercategory";
+                                    $result = mysqli_query($connection, $query);
+                                    if($result)
+                                    {
+                                        while($row = mysqli_fetch_assoc($result))
+                                        {
+                                            $masterCategory = $row['masterCategory'];
+                                            echo "<li><a href='category-grid.php?category=$masterCategory' data-value='$masterCategory'>$masterCategory</a></li>";
+                                        }
+                                    }
+                                ?>
                                 <li><a href="#a" data-value="All Categories">All Categories</a></li>
                             </ul>
                         </li>

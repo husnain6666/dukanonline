@@ -35,263 +35,191 @@
                         </div>
                     </li>
                     <!-- end: Menu Item -->
+
+
+<!--#################################Adding dynamic categories############################################-->
                     <!-- Menu Item for Tablets and Computers Only-->
-                    <li class="hidden-xs"> <a href="#a"> <i class="fa fa-magic"></i> <span>Appliences</span> <i class="fa fa-angle-right"></i> </a>
+                    <?php
+                    include("connectdb.php");
+                    $arrow_count = 0;
+                    $totalMasterCategory = 0;
+                    $totalSubCategory = 0;
+                    $totalSubSubCategory = 0;
+                    $subsubCatItemCount = 0;
+                    $iterationCounter = 0;
+
+                    $query0 = "SELECT COUNT(masterCategory) as totalMasterCategory FROM mastercategory WHERE status = '1'";
+                    $result0 = mysqli_query($connection, $query0);
+                    if($result0)
+                    {
+                        while($row0 = mysqli_fetch_assoc($result0))
+                        {
+                            $totalMasterCategory = $row0['totalMasterCategory'];
+                        }
+                    }
+
+                    $query1 = "SELECT * FROM mastercategory WHERE status = '1' LIMIT 8";
+                    $result1 = mysqli_query($connection, $query1);
+                    if($result1)
+                    {
+                        while($row1 = mysqli_fetch_assoc($result1))
+                        {
+                            $masterCategory = $row1['masterCategory'];
+                            $masterCatPic = $row1['pic'];
+                    ?>
+
+                    <li class="hidden-xs">
+                        <a href="category-grid.php?category=<?=$masterCategory?>"> <i class="fa fa-files-o"></i> <span><?=$masterCategory?></span> <i class="fa fa-angle-right"></i> </a>
                         <div class="dropdown-menu flyout-menu">
                             <!-- Sub Menu -->
                             <ul>
-                                <li> <a href="#a"><span>Air Conditioners</span> <i class="fa fa-caret-right"></i> </a>
-                                    <ul class="dropdown-menu sub flyout-menu">
-                                        <li><a href="category-grid.php?category=Inverter Split&Brand=All&searchQuery=">Inverter Split</a></li>
-                                        <li><a href="category-grid.php?category=Split Wall mount&Brand=All&searchQuery=">Split Wall mount</a></li>
-                                        <li><a href="category-grid.php?category=Air Curtain&Brand=All&searchQuery=">Air Curtain</a> </li>
-                                        <li><a href="#">Standing Unit</a> </li>
-                                    </ul>
-                                </li>
-                                <li> <a href="#a"><span>LED</span> <i class="fa fa-caret-right"></i> </a>
-                                    <ul class="dropdown-menu sub flyout-menu">
-                                        <li><a href="category-grid.php?category=Simple LED&Brand=All&searchQuery=">Simple LED</a></li>
-                                        <li><a href="category-grid.php?category=Smart LED&Brand=All&searchQuery=">Smart LED</a></li>
-                                        <li><a href="category-grid.php?category=Smart & 3D LED&Brand=All&searchQuery=">Smart & 3D LED</a></li>
-                                    </ul>
-                                </li>
-                                <li> <a href="#a"><span>Refrigerator</span> <i class="fa fa-caret-right"></i> </a>
-                                    <ul class="dropdown-menu sub flyout-menu">
-                                        <li><a href="category-grid.php?category=Top Mount&Brand=All&searchQuery=">Top Mount</a></li>
-                                        <li><a href="category-grid.php?category=Side by Side&Brand=All&searchQuery=">Side by side</a></li>
-                                        <li><a href="category-grid.php?category=Bottom Mount&Brand=All&searchQuery=">Bottom Mount</a></li>
-                                        <li><a href="category-grid.php?category=French Door&Brand=All&searchQuery=">French Door</a></li>
-                                        <li><a href="category-grid.php?category=Built in Refrigerators&Brand=All&searchQuery=">Built in Refrigerators</a></li>
-                                    </ul>
-                                </li>
-                                <li> <a href="#a"><span>Kitchen</span> <i class="fa fa-caret-right"></i> </a>
-                                    <ul class="dropdown-menu sub">
-                                        <!-- Sub Menu -->
-                                        <div class="content">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <ul>
-                                                        <li><a href="category-grid.php?category=Bedroom Refrigerator&Brand=All&searchQuery=">Bedroom Refrigerator</a></li>
-                                                        <li><a href="category-grid.php?category=Cooking Appliances&Brand=All&searchQuery=">Commercial Cooking</a></li>
-                                                        <li><a href="category-grid.php?category=Microwave Oven&Brand=All&searchQuery=">Microwave Oven</a></li>
-                                                        <li><a href="category-grid.php?category=Built in Oven&Brand=All&searchQuery=">Built in Oven</a></li>
-                                                        <li><a href="category-grid.php?category=Water Dispenser&Brand=All&searchQuery=">Water Dispenser</a></li>
-                                                        <li><a href="category-grid.php?category=Dish Washer&Brand=All&searchQuery=">Dish Washer</a></li>
-                                                        <li><a href="category-grid.php?category=Deep Freezer&Brand=All&searchQuery=">Deep Freezer</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <ul>
-                                                        <li><a href="category-grid.php?category=Kitchen Hob&Brand=All&searchQuery=">Kitchen Hob</a></li>
-                                                        <li><a href="category-grid.php?category=Kitchen Hood&Brand=All&searchQuery=">Kitchen Hood</a></li>
-                                                        <li><a href="category-grid.php?category=Grill&Brand=All&searchQuery=">Grill</a></li>
-                                                        <li><a href="category-grid.php?category=Induction Cooker&Brand=All&searchQuery=">Induction Cooker</a></li>
-                                                        <li><a href="category-grid.php?category=Kitchen Oven&Brand=All&searchQuery=">Kitchen Oven</a></li>
-                                                        <li><a href="category-grid.php?category=Roti Maker&Brand=All&searchQuery=">Roti Maker</a></li>
-                                                        <li><a href="category-grid.php?category=Cooking Range&Brand=All&searchQuery=">Cooking Range</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <ul>
-                                                        <li><a href="category-grid.php?category=Food Choppper&Brand=All&searchQuery=">Food Chopper</a></li>
-                                                        <li><a href="category-grid.php?category=Food Processor&Brand=All&searchQuery=">Food Processor</a></li>
-                                                        <li><a href="category-grid.php?category=Hand Blender&Brand=All&searchQuery=">Hand blender</a></li>
-                                                        <li><a href="category-grid.php?category=Hand Mixer&Brand=All&searchQuery=">Hand Mixer</a></li>
-                                                        <li><a href="category-grid.php?category=Meat Mincer&Brand=All&searchQuery=">Meat Mincer</a></li>
-                                                        <li><a href="category-grid.php?category=Blender & Grinder&Brand=All&searchQuery=">Blender & Grinder</a></li>
-                                                        <li><a href="category-grid.php?category=Non-Electric Appliances&Brand=All&searchQuery=">Non-Electric Appliances</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end: Sub Menu -->
-                                    </ul>
-                                </li>
+                                <?php
+                                $query2 = "SELECT count(subcategory.subCategory) as totalSubCategory FROM subcategory INNER JOIN masterrsub ON subcategory.subCategory = masterrsub.subCategory INNER JOIN masterCategory ON mastercategory.masterCategory = masterrsub.masterCategory WHERE masterrsub.masterCategory = '$masterCategory' AND subcategory.status = '1'";
+                                $result2 = mysqli_query($connection, $query2);
+                                if($result2)
+                                {
+                                    while($row2 = mysqli_fetch_assoc($result2))
+                                    {
+                                        $totalSubCategory = $row2['totalSubCategory'];
+                                    }
+                                }
 
-                                <li> <a href="#a"><span>Small Appliences</span> <i class="fa fa-caret-right"></i> </a>
-                                    <ul class="dropdown-menu sub">
-                                        <!-- Sub Menu -->
-                                        <div class="content">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <ul>
-                                                        <li><a href="category-grid.php?category=Air Fryer&Brand=All&searchQuery=">Air Fryer</a></li>
-                                                        <li><a href="category-grid.php?category=BBQ Grill&Brand=All&searchQuery=">BBQ Grill</a></li>
-                                                        <li><a href="category-grid.php?category=Coffee Maker&Brand=All&searchQuery=">Coffee Maker</a></li>
-                                                        <li><a href="category-grid.php?category=Juice Extractor&Brand=All&searchQuery=">Juice Extractor</a></li>
-                                                        <li><a href="category-grid.php?category=Kettle&Brand=All&searchQuery=">Kettle</a></li>
-                                                        <li><a href="category-grid.php?category=Sandwich Maker&Brand=All&searchQuery=">Sandwich Maker</a></li>
-                                                        <li><a href="category-grid.php?category=Toaster&Brand=All&searchQuery=">Toaster</a></li>
-                                                        <li><a href="category-grid.php?category=Special Kitchen Items&Brand=All&searchQuery=">Special Kitchen Items</a></li>
+                                $query3 = "SELECT subcategory.subCategory FROM subcategory INNER JOIN masterrsub ON subcategory.subCategory = masterrsub.subCategory INNER JOIN masterCategory ON mastercategory.masterCategory = masterrsub.masterCategory WHERE masterrsub.masterCategory = '$masterCategory' AND subcategory.status = '1' LIMIT 8";
+                                $result3 = mysqli_query($connection, $query3);
+                                if($result3)
+                                {
+                                    while($row3 = mysqli_fetch_assoc($result3))
+                                    {
+                                        $subCategory = $row3['subCategory'];
+                                        $arrow_sign = 'arrow_sign'.$arrow_count;
+                                ?>
+                                <li> <a href="category-grid.php?subCategory=<?=$subCategory?>"><span><?=$subCategory?></span> <span id="<?=$arrow_sign?>" hidden><i class="fa fa-caret-right" style="margin-top: -20px"></i></span> </a>
+
+
+                                        <?php
+                                        $query4 = "SELECT count(category.categoryName) as totalSubSubCategory FROM category INNER JOIN subbcategory ON category.categoryName = subbcategory.categoryName INNER JOIN subcategory ON subbcategory.subCategory = subcategory.subCategory WHERE subcategory.subCategory = '$subCategory' AND category.status = '1'";
+                                        $result4 = mysqli_query($connection, $query4);
+                                        if($result4)
+                                        {
+                                        while($row4 = mysqli_fetch_assoc($result4))
+                                        {
+                                            $totalSubSubCategory = $row4["totalSubSubCategory"];
+                                        }
+                                        }
+
+                                        $countsub = 0;
+                                        $query5 = "SELECT category.categoryName FROM category INNER JOIN subbcategory ON category.categoryName = subbcategory.categoryName INNER JOIN subcategory ON subbcategory.subCategory = subcategory.subCategory WHERE subcategory.subCategory = '$subCategory' AND category.status = '1' LIMIT 21";
+                                        $result5 = mysqli_query($connection, $query5);
+                                        if($result5)
+                                        {
+                                            while($row5 = mysqli_fetch_assoc($result5))
+                                            {
+                                                $categoryName = $row5['categoryName'];
+                                                if($totalSubSubCategory < 8)
+                                                {
+
+                                                    if($countsub == 0)
+                                                    {
+                                                        echo "<ul class='dropdown-menu sub flyout-menu'>";
+                                                    }
+                                                    $countsub++;
+                                                    ?>
+                                                        <li><a href='category-grid.php?subsubCategory=<?= $categoryName ?>'><?= $categoryName ?></a></li>
+                                                    <?php
+                                                    if($countsub == $totalSubSubCategory)
+                                                    {
+                                                        echo "</ul>";
+                                                        $countsub = 0;
+                                                    }
+                                                    ?>
+                                                <?php
+                                                }
+                                                else
+                                                {
+                                                    if($subsubCatItemCount == 0)
+                                                    {?>
+                                                    <ul class="dropdown-menu sub">
+                                                        <!-- Sub Menu -->
+                                                        <div class="content">
+                                                            <div class="row">
+                                                    <?php
+                                                    $subsubCatItemCount++;
+                                                    }
+                                                    if($totalSubSubCategory < 15)
+                                                    {?>
+                                                        <style>
+
+                                                        </style>
+                                                    <?php
+                                                        if( $iterationCounter == 0 || $iterationCounter == 7 )
+                                                        {?>
+                                                            <div class="col-md-4">
+                                                                <ul>
+                                                        <?php
+                                                        }?>
+                                                                    <li><a href="category-grid.php?searchQuery="><?php if(strlen($categoryName)>20){echo substr("$categoryName", 0, 20)."...";} else echo $categoryName?></a></li>
+                                                        <?php
+                                                        if( $iterationCounter == 6 || $iterationCounter == 13 )
+                                                        {?>
+                                                                </ul>
+                                                            </div>
+                                                        <?php
+                                                        }
+                                                        $iterationCounter++;
+                                                    }
+
+                                                    if($totalSubSubCategory < 22 && $totalSubSubCategory > 14)
+                                                    {
+                                                        if( $iterationCounter == 0 || $iterationCounter == 7 ||$iterationCounter == 14 )
+                                                        {?>
+                                                            <div class="col-md-4">
+                                                                <ul>
+                                                        <?php
+                                                        }?>
+                                                                    <li><a href="category-grid.php?searchQuery="><?php if(strlen($categoryName)>20){echo substr("$categoryName", 0, 20)."...";} else echo $categoryName?></a></li>
+                                                        <?php
+                                                        if( $iterationCounter == 6 || $iterationCounter == 13 )
+                                                        {?>
+                                                                </ul>
+                                                            </div>
+                                                        <?php
+                                                        }
+                                                        $iterationCounter++;
+                                                    }
+                                                    ?>
+
+                                                    <?php if($iterationCounter == $totalSubSubCategory)
+                                                    {?>
+                                                                  </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </ul>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <ul>
-                                                        <li><a href="category-grid.php?category=Electric&Brand=All&searchQuery=">Electric</a></li>
-                                                        <li><a href="category-grid.php?category=Gas Geyser&Brand=All&searchQuery=">Gas Geyser</a></li>
-                                                        <li><a href="category-grid.php?category=Instant Geyser&Brand=All&searchQuery=">Instant Geyser</a></li>
-                                                        <li><a href="category-grid.php?category=Gas Water Heater&Brand=All&searchQuery=">Gas Water Heater</a></li>
-                                                        <li><a href="category-grid.php?category=Gas & Electric (Twin)&Brand=All&searchQuery=">Gas & Electric (Twin)</a></li>
-                                                        <li><a href="category-grid.php?category=Electric & Gas Water Heater&Brand=All&searchQuery=">Water Heater</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <ul>
-                                                        <li><a href="category-grid.php?category=Fan Heater&Brand=All&searchQuery=">Fan Heater</a></li>
-                                                        <li><a href="category-grid.php?category=Gas Heater&Brand=All&searchQuery=">Gas Heater</a></li>
-                                                        <li><a href="category-grid.php?category=Halogen Heater&Brand=All&searchQuery=">Halogen Heater</a></li>
-                                                        <li><a href="category-grid.php?category=Lawn Heater&Brand=All&searchQuery=">Lawn Heater</a></li>
-                                                        <li><a href="category-grid.php?category=Oil Heater&Brand=All&searchQuery=">Oil Heater</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
+                                                    <?php
+                                                    }
+                                                }?>
+                                        <script>
+                                            document.getElementById("<?=$arrow_sign?>").style.display = 'block';
+                                        </script>
+                                        <?php }
+                                        }
+                                        ?>
                                 </li>
-                                <!-- end: Sub Menu -->
-                                <li> <a href="#a"><span>Washing Machines</span> <i class="fa fa-caret-right"></i> </a>
-                                    <ul class="dropdown-menu sub flyout-menu">
-                                        <li>
-                                            <ul>
-                                                <li><a href="category-grid.php?category=Semi-Automatic&Brand=All&searchQuery=">Semi-Automatic</a></li>
-                                                <li><a href="category-grid.php?category=Automatic&Brand=All&searchQuery=">Automatic</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <?php
+                                        $arrow_count++;
+                                    }
+                                } ?>
+
                             </ul>
                             <!-- end: Sub Menu -->
                         </div>
                     </li>
+                    <?php
+                        } //end of while loop
+                    } //end of if condition
+                    ?>
                     <!-- end: Menu Item -->
-
-
-
-                    <!-- Menu Item -->
-                    <li> <a href="#a"> <i class="fa fa-male"></i> <span>Men Wear</span> <i class="fa fa-angle-right"></i> </a>
-                        <div class="dropdown-menu">
-                            <!-- Sub Menu -->
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-md-4"> <a class="menu-title" href="#a">Fashion</a>
-                                        <ul>
-                                            <li><a href="#a">Clothing</a></li>
-                                            <li><a href="#a">Shoes</a></li>
-                                            <li><a href="#a">Handbags</a></li>
-                                            <li><a href="#a">Accessories</a></li>
-                                            <li><a href="#a">Luggage</a></li>
-                                            <li><a href="#a">Jewelry</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4"> <a class="menu-title" href="#a">Shirts</a>
-                                        <ul>
-                                            <li><a href="#a">Reguler Shirts</a></li>
-                                            <li><a href="#a">Slim Shirts</a></li>
-                                            <li><a href="#a">Fashion Shirts</a></li>
-                                            <li><a href="#a">Black Shirts</a></li>
-                                            <li><a href="#a">White Shirts</a></li>
-                                            <li><a href="#a">Gray Shirts</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4"> <a class="menu-title" href="#a">Jeans</a>
-                                        <ul>
-                                            <li><a href="#a">Reguler Jeans</a></li>
-                                            <li><a href="#a">Slim-fit Jeans</a></li>
-                                            <li><a href="#a">Loose Jeans</a></li>
-                                            <li><a href="#a">Top Jeans</a></li>
-                                            <li><a href="#a">New Jeans</a></li>
-                                            <li><a href="#a">Color Jeans</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p> <a href="#a"><img alt="" src="images/menu-ad.jpg"></a> </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end: Sub Menu -->
-                        </div>
-                    </li>
-                    <!-- end: Menu Item -->
-                    <!-- Menu Item -->
-                    <li> <a href="#a"> <i class="fa fa-female"></i> <span>Women Wear</span> <i class="fa fa-angle-right"></i> </a>
-                        <div class="dropdown-menu">
-                            <!-- Sub Menu -->
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-md-5"> <a class="menu-title" href="#a">Fashion</a>
-                                        <ul>
-                                            <li><a href="#a">Clothing</a></li>
-                                            <li><a href="#a">Shoes</a></li>
-                                            <li><a href="#a">Handbags</a></li>
-                                            <li><a href="#a">Accessories</a></li>
-                                            <li><a href="#a">Luggage</a></li>
-                                            <li><a href="#a">Jewelry</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="product-block">
-                                            <div class="image">
-                                                <div class="product-label product-sale"><span>SALE</span></div>
-                                                <a class="img" href="product.php"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
-                                            <div class="product-meta">
-                                                <div class="name"><a href="product.php">Ladies Stylish Handbag</a></div>
-                                                <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
-                                                <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
-                                                        Cart</a> </div>
-                                                <div class="small-price"> <span class="price-new"><span class="sym">$</span>96</span> <span class="price-old"><span class="sym">$</span>119.50</span> </div>
-                                                <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i> <i class="fa fa-star-o"></i> </div>
-                                                <div class="small-btns">
-                                                    <button class="btn btn-default btn-compare pull-left" data-toggle="tooltip" title="Add to Compare"> <i class="fa fa-retweet fa-fw"></i> </button>
-                                                    <button class="btn btn-default btn-wishlist pull-left" data-toggle="tooltip" title="Add to Wishlist"> <i class="fa fa-heart fa-fw"></i> </button>
-                                                    <button class="btn btn-default btn-addtocart pull-left" data-toggle="tooltip" title="Add to Cart"> <i class="fa fa-shopping-cart fa-fw"></i> </button>
-                                                </div>
-                                            </div>
-                                            <div class="meta-back"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end: Sub Menu -->
-                        </div>
-                    </li>
-                    <!-- end: Menu Item -->
-                    <!-- Menu Item -->
-                    <li> <a href="category-grid.php?category=Parts And Services&Brand=All&searchQuery="> <i class="fa fa-gear"></i> <span>Services & Parts</span></a> </li>
-                    <!-- end: Menu Item -->
-                    <!-- Menu Item -->
-                    <li> <a href="#"> <i class="fa fa-mobile"></i> <span>Personal Electronics</span> <i class="fa fa-angle-right"></i> </a>
-                        <div class="dropdown-menu flyout-menu">
-                            <!-- Sub Menu -->
-                            <ul>
-                                <li> <a href="category-grid.php?category=Mobiles&Brand=All&searchQuery="><span>Mobiles</span></a> </li>
-                                <li> <a href="category-grid.php?category=Tablets&Brand=All&searchQuery="><span>Tablets</span></a> </li>
-                                <li> <a href="category-grid.php?category=Laptops&Brand=All&searchQuery="><span>Laptops</span></a> </li>
-                                <li> <a href="category-grid.php?category=Desktops&Brand=All&searchQuery="><span>Desktops</span></a> </li>
-                                <li> <a href="category-grid.php?category=Oil Accessories&Brand=All&searchQuery="><span>Accessories</span></a> </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- end: Menu Item -->
-                    <!-- Menu Item -->
-                    <li> <a href="#a"> <i class="fa fa-anchor"></i> <span>Furniture</span> <i class="fa fa-angle-right"></i> </a>
-                        <div class="dropdown-menu flyout-menu">
-                            <!-- Sub Menu -->
-                            <ul>
-                                <li> <a href="category-grid.php?category=Home&Brand=All&searchQuery="><span>Home</span></a> </li>
-                                <li> <a href="category-grid.php?category=Office&Brand=All&searchQuery="><span>Office</span></a> </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!-- end: Menu Item -->
-                    <!-- Menu Item -->
-                    <li> <a href="category-grid.php?category=Health&Brand=All&searchQuery="> <i class="fa fa-plus-square"></i> <span>Health & Fitness</span></a> </li>
-                    <!-- end: Menu Item -->
-                    <!-- Menu Item -->
-                    <li> <a href="category-grid.php?category=Kids Corner&Brand=All&searchQuery="> <i class="fa fa-gift"></i> <span>Toys / Kids Corner</span></a> </li>
-                    <!-- end: Menu Item -->
+<!--##############################END: dynamic categories#################################-->
                 </ul>
             </div>
             <!-- end: Mega Menu -->

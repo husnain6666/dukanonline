@@ -5,6 +5,13 @@ include "top_header.php";
 $check = false; //REMOVE IT AFTER IMPLEMENTING SESSION
 $userId = 1; //REMOVE IT AFTER IMPLEMENTING SESSION
 $counter = 0;
+if(isset($_GET["category"])){
+    $masterCategory = $_GET["category"];
+}
+else
+{
+    $masterCategory = null;
+}
 
 if(isset($_GET["minPrice"])) {
     $minPrice = $_GET["minPrice"];
@@ -29,15 +36,14 @@ else if($sortBy == 'h_price') {
     $orderBy = 'price';
     $orderByValue = 'DESC';
 }
-else if($sortBy == 'rating') {
-    $orderBy = 'rating';
-    $orderByValue = 'ASC';
-}
 else if($sortBy == 'recent') {
     $orderBy = 'date';
     $orderByValue = 'DESC';
 }
-
+else if($sortBy == 'rating') {
+    $orderBy = 'rating';
+    $orderByValue = 'DESC';
+}
 if (isset($_GET["page"])) {
     $page = $_GET["page"];
 }
@@ -59,16 +65,37 @@ $start_from = ($page-1) * $per_page;
           {
               if(isset($_GET["color"]) && $color != 'null')
               {
-                  $sql = "SELECT a.articleId FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color'";
+                  if(isset($_GET["category"]))
+                  {
+                      $sql = "SELECT a.articleId FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND a.Category = '$masterCategory'";
+                  }
+                  else
+                  {
+                      $sql = "SELECT a.articleId FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color'";
+                  }
               }
               else
               {
-                  $sql = "SELECT articleId FROM article where price <= '$maxPrice' AND price >= '$minPrice'";
+                  if(isset($_GET["category"]))
+                  {
+                      $sql = "SELECT articleId FROM article where price <= '$maxPrice' AND price >= '$minPrice' AND Category = '$masterCategory'";
+                  }
+                  else
+                  {
+                      $sql = "SELECT articleId FROM article where price <= '$maxPrice' AND price >= '$minPrice'";
+                  }
               }
           }
           else
           {
-              $sql = "SELECT articleId FROM article";
+              if(isset($_GET["category"]))
+              {
+                  $sql = "SELECT articleId FROM article WHERE Category = '$masterCategory'";
+              }
+              else
+              {
+                  $sql = "SELECT articleId FROM article";
+              }
           }
 
           $result3 = mysqli_query($connection, $sql);
@@ -319,9 +346,35 @@ $start_from = ($page-1) * $per_page;
 
       <?php
       }
-      else {
-
+      else
+      {
+          if($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET["category"]))
+          {
+              $masterCategory = $_GET["category"];
+              $masterCatPicture = null;
+              $masterDescription = null;
+              $query1 = "SELECT * FROM mastercategory WHERE masterCategory = '$masterCategory'";
+              $result1 = mysqli_query($connection, $query1);
+              if($result1)
+              {
+                  if ($row1 = mysqli_fetch_assoc($result1))
+                  {
+                      $masterCatPic = $row1['pic'];
+                      $masterDescription = $row1['description'];
+                  }
+              }
       ?>
+              <div class="row">
+                  <div class="col-md-12">
+                      <img src="images/<?=$masterCatPic?>" width="100%"/>
+                      <div style="width: 100%; height: 100px; background-color: black; opacity: 0.8; color:white; font-size: 18px; margin-top: -100px; text-align: center; padding: 10px">
+                          <p><?=$masterDescription?></p>
+                      </div>
+                  </div>
+              </div>
+              <div class="row" style="margin-top: 12px"></div>
+              <?php
+          }?>
 
       <div class="box-heading category-heading"><span>Showing <?php echo $start_from+1?>-<?php if(($start_from+1)==$total_records)echo $total_records; else if($start_from+$per_page>=$total_records)echo $total_records ;else echo $start_from+$per_page ?> of <?php echo $total_records?> products</span>
         <ul class="nav nav-pills pull-right">
@@ -359,16 +412,38 @@ $start_from = ($page-1) * $per_page;
               {
                   if(isset($_GET["color"]) && $color != 'null')
                   {
-                      $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      if(isset($_GET["category"]))
+                      {
+                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND a.Category = '$masterCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      }
+                      else
+                      {
+                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      }
+
                   }
                   else
                   {
-                      $sql = "SELECT articleId,price,articleName,picture1,discount FROM article where price <= '$maxPrice' AND price >= '$minPrice' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      if (isset($_GET["category"]))
+                      {
+                          $sql = "SELECT articleId,price,articleName,picture1,discount FROM article where price <= '$maxPrice' AND price >= '$minPrice' AND Category = '$masterCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      }
+                      else
+                      {
+                          $sql = "SELECT articleId,price,articleName,picture1,discount FROM article where price <= '$maxPrice' AND price >= '$minPrice' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      }
                   }
               }
               else
               {
-                  $sql = "SELECT articleId,price,articleName,picture1,discount FROM article ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                  if (isset($_GET["category"]))
+                  {
+                      $sql = "SELECT articleId, price, articleName, picture1, discount FROM article WHERE Category = '$masterCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                  }
+                  else
+                  {
+                      $sql = "SELECT articleId, price, articleName, picture1, discount FROM article ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                  }
               }
 
               $result=mysqli_query($connection,$sql);
@@ -381,7 +456,6 @@ $start_from = ($page-1) * $per_page;
                   $discount = $table_record['discount'];
                   $discountedPrice = ($price * $discount) / 100;
                   $discountedPrice = $price - $discountedPrice;
-
 
                   $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
 
@@ -491,13 +565,13 @@ $start_from = ($page-1) * $per_page;
 </span>
       <div class="pull-right">
         <ul class="pagination pagination-lg">
-            <?php //echo " <li><a href='category_v1.php?category=".$catforpage."&Brand=".$brandNameValue."&searchQuery=".$search1."&page=1'>&laquo;</a></li> ";
+            <?php
             $currentPage = 1;
             if(isset($_GET['page']))
             {
                 $currentPage = $_GET['page'];
             }
-            echo " <li><a href='category-grid.php?page=1'>&laquo;</a></li> ";
+            echo " <li><a onclick='pageNo(1)'>&laquo;</a></li> ";
 
             for (; $i<=$total_pages; $i++) { ?>
                 <li <?php if ($i == $currentPage) {echo "class='active'";}?>>
@@ -506,7 +580,7 @@ $start_from = ($page-1) * $per_page;
             <?php
             }
             // Going to last page
-            echo "<li><a href='category-grid.php?page=$total_pages'>&raquo;</a></li>";
+            echo "<li><a onclick='pageNo($total_pages)'>&raquo;</a></li>";
             ?>
         </ul>
       </div>
@@ -518,44 +592,6 @@ $start_from = ($page-1) * $per_page;
 
     <!-- side bar -->
     <div class="col-md-3 col-sm-12 col-xs-12 box-block page-sidebar">
-      <div class="box-heading" id="shopby"><span>Shop by</span></div>
-      <!-- Filter by -->
-      <div class="box-content" id="shopbyHeading">
-        <div class="shopby"> <span>Color</span>
-            <div class="colors">
-                <?php
-                    $getColorQuery = "SELECT * FROM color GROUP BY color";
-                    $result = mysqli_query($connection, $getColorQuery);
-
-                    while($row = mysqli_fetch_array($result))
-                    {
-                        $colors = $row["color"];
-                        echo "<a data-toggle='tooltip' title='$colors' onclick='selectedColor(<?=$colors?>)' class='color bg-$colors'></a>";
-
-                    }
-
-                ?>
-
-            </div>
-            <hr>
-
-          <!-- Price Range -->
-          <span>Price range</span>
-          <div class="pricerange">
-            <input type="text" id="price-range" name="price-range"
-                   data-from="<?php if(isset($_GET['minPrice'])){echo $_GET['minPrice'];} else echo '10';?>"
-                   data-to="<?php if(isset($_GET['maxPrice'])){echo $_GET['maxPrice'];} else echo '100000';?>"
-                   data-type="double" data-step="100" data-hasgrid="true"
-                   data-hideminmax="true" data-hidefromto="true" data-prettify="false"
-            />
-
-            <button class="btn color1 normal" onclick="clearShopBy()">Clear</button>
-            <button class="btn color1 normal pull-right" onclick="shopBy()">Search</button>
-          </div>
-          <!--end: Price Range -->
-        </div>
-      </div>
-      <!-- end: Filter by -->
 
     <!-- Not showing shopBy sidebar while comparing items -->
     <?php
@@ -567,94 +603,168 @@ $start_from = ($page-1) * $per_page;
 
         <div class="clearfix f-space30" style="margin-top: 20px"></div>
     <?php }
-    else { ?>
-      <div class="clearfix f-space30"></div>
-    <?php } ?>
-
-      <div class="box-heading"><span>Categories</span></div>
+    ?>
+      <div class="box-heading" id="subCatHeading"><span>Sub Categories</span></div>
       <!-- Categories -->
       <div class="box-content">
         <div class="panel-group" id="blogcategories">
-          <div class="panel panel-default">
-            <div class="panel-heading closed" data-parent="#blogcategories" data-target="#collapseOne" data-toggle="collapse">
-              <h4 class="panel-title"> <a href="#a"> <span class="fa fa-plus"></span> Men Wear </a><span class="categorycount">14</span> </h4>
-            </div>
-            <div class="panel-collapse collapse" id="collapseOne">
-              <div class="panel-body">
-                <ul>
-                  <li class="item"> <a href="#a">Jeans</a></li>
-                  <li class="item"> <a href="#a">Shirts</a></li>
-                  <li class="item"> <a href="#a">Shoes</a></li>
-                  <li class="item"> <a href="#a">Sports Wear</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading closed" data-parent="#blogcategories" data-target="#collapseTwo" data-toggle="collapse">
-              <h4 class="panel-title"> <a href="#a"> <span class="fa fa-plus"></span> Women Wear </a> <span class="categorycount">10</span></h4>
-            </div>
-            <div class="panel-collapse collapse" id="collapseTwo">
-              <div class="panel-body">
-                <ul>
-                  <li class="item"> <a href="#a">Jeans</a></li>
-                  <li class="item"> <a href="#a">Shirts</a></li>
-                  <li class="item"> <a href="#a">Shoes</a></li>
-                  <li class="item"> <a href="#a">Sports Wear</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading closed" data-parent="#blogcategories" data-target="#collapseThree" data-toggle="collapse">
-              <h4 class="panel-title"> <a href="#a"> <span class="fa fa-plus"></span> Fragrance </a> <span class="categorycount">23</span></h4>
-            </div>
-            <div class="panel-collapse collapse" id="collapseThree">
-              <div class="panel-body">
-                <ul>
-                  <li class="item"> <a href="#a">Jeans</a></li>
-                  <li class="item"> <a href="#a">Shirts</a></li>
-                  <li class="item"> <a href="#a">Shoes</a></li>
-                  <li class="item"> <a href="#a">Sports Wear</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading closed" data-parent="#blogcategories" data-target="#collapseFour" data-toggle="collapse">
-              <h4 class="panel-title"> <a href="#a"> <span class="fa fa-plus"></span> Music </a><span class="categorycount">06</span> </h4>
-            </div>
-            <div class="panel-collapse collapse" id="collapseFour">
-              <div class="panel-body">
-                <ul>
-                  <li class="item"> <a href="#a">Jeans</a></li>
-                  <li class="item"> <a href="#a">Shirts</a></li>
-                  <li class="item"> <a href="#a">Shoes</a></li>
-                  <li class="item"> <a href="#a">Sports Wear</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="panel panel-default">
-            <div class="panel-heading closed" data-parent="#blogcategories" data-target="#collapseFive" data-toggle="collapse">
-              <h4 class="panel-title"> <a href="#a"> <span class="fa fa-plus"></span> Games </a><span class="categorycount">80</span> </h4>
-            </div>
-            <div class="panel-collapse collapse" id="collapseFive">
-              <div class="panel-body">
-                <ul>
-                  <li class="item"> <a href="#a">Jeans</a></li>
-                  <li class="item"> <a href="#a">Shirts</a></li>
-                  <li class="item"> <a href="#a">Shoes</a></li>
-                  <li class="item"> <a href="#a">Sports Wear</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+
+            <?php
+            $totalSubSubCategory = 0;
+            $subsubCatItemCount = 0;
+            $iterationCounter = 0;
+            $x = 0;
+
+            if(isset($_GET['subsubCategory']))
+            {?>
+                <script>
+                    document.getElementById("subCatHeading").style.display = 'none';
+                    document.getElementById("subCatHeadingTopMargin").style.display = 'none';
+                </script>
+            <?php
+            }
+            else if(isset($_GET['subCategory']))
+            {
+                $subcat = $_GET['subCategory'];
+                $query5 = "SELECT category.categoryName FROM category INNER JOIN subbcategory ON category.categoryName = subbcategory.categoryName INNER JOIN subcategory ON subbcategory.subCategory = subcategory.subCategory WHERE subcategory.subCategory = '$subcat' AND category.status = '1' LIMIT 21";
+                $result5 = mysqli_query($connection, $query5);
+                if($result5) {
+                    while ($row5 = mysqli_fetch_assoc($result5))
+                    {
+                        $categoryName = $row5['categoryName'];
+                        ?>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading closed" data-parent="#blogcategories" data-toggle="collapse">
+                                <h4 class="panel-title"><a href="category-grid.php?subsubCategory=<?=$categoryName?>"> <?=$categoryName?> </a></h4>
+                            </div>
+                        </div>
+                    <?php
+                    }
+                }
+            }
+
+            else {
+
+
+            if(isset($_GET['category']))
+            {
+                $query3 = "SELECT subcategory.subCategory FROM subcategory INNER JOIN masterrsub ON subcategory.subCategory = masterrsub.subCategory INNER JOIN masterCategory ON mastercategory.masterCategory = masterrsub.masterCategory WHERE masterrsub.masterCategory = '$masterCategory' AND subcategory.status = '1' LIMIT 8";
+            }
+            else
+            {
+                $query3 = "SELECT subcategory.subCategory FROM subcategory INNER JOIN masterrsub ON subcategory.subCategory = masterrsub.subCategory INNER JOIN masterCategory ON mastercategory.masterCategory = masterrsub.masterCategory WHERE subcategory.status = '1' LIMIT 8";
+            }
+            $result3 = mysqli_query($connection, $query3);
+            if($result3)
+            {
+                while($row3 = mysqli_fetch_assoc($result3))
+                {
+                    $subCategory = $row3['subCategory'];
+                    $x++;
+
+                    $query4 = "SELECT count(category.categoryName) as totalSubSubCategory FROM category INNER JOIN subbcategory ON category.categoryName = subbcategory.categoryName INNER JOIN subcategory ON subbcategory.subCategory = subcategory.subCategory WHERE subcategory.subCategory = '$subCategory' AND category.status = '1'";
+                    $result4 = mysqli_query($connection, $query4);
+                    if($result4)
+                    {
+                        while($row4 = mysqli_fetch_assoc($result4))
+                        {
+                            $totalSubSubCategory = $row4["totalSubSubCategory"];
+                        }
+                    }
+                    ?>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading closed" data-parent="#blogcategories" data-target="#collapse<?=$x?>"
+                             data-toggle="collapse">
+                            <h4 class="panel-title"><a href="#a"> <span class="fa fa-plus"></span> <?=$subCategory?> </a> <span
+                                    class="categorycount"><?=$totalSubSubCategory?></span></h4>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapse<?=$x?>">
+                            <div class="panel-body">
+                                <ul>
+
+                                    <?php
+                                    $query5 = "SELECT category.categoryName FROM category INNER JOIN subbcategory ON category.categoryName = subbcategory.categoryName INNER JOIN subcategory ON subbcategory.subCategory = subcategory.subCategory WHERE subcategory.subCategory = '$subCategory' AND category.status = '1' LIMIT 21";
+                                    $result5 = mysqli_query($connection, $query5);
+                                    if($result5) {
+                                        while ($row5 = mysqli_fetch_assoc($result5))
+                                        {
+                                            $categoryName = $row5['categoryName'];
+                                        ?>
+                                        <li class="item"><a href="#a"><?=$categoryName?></a></li>
+                                        <?php
+                                        }
+                                    }?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+            <?php
+                }
+            }
+            }
+          ?>
+
         </div>
       </div>
       <!-- end: Blog Categories -->
 
-      <div class="clearfix f-space30"></div>
+      <div class="clearfix f-space20" id="subCatHeadingTopMargin" ></div>
+        <?php
+        if(isset($_GET['subsubCategory']))
+        {?>
+            <script>
+                document.getElementById("subCatHeadingTopMargin").style.display = 'none';
+            </script>
+        <?php
+        }
+
+        ?>
+
+        <!-- Filter by -->
+        <div class="box-heading" id="shopby"><span>Shop by</span></div>
+        <div class="box-content" id="shopbyHeading">
+            <div class="shopby"> <span>Color</span>
+                <div class="colors">
+                    <?php
+                    $getColorQuery = "SELECT * FROM color GROUP BY color";
+                    $result = mysqli_query($connection, $getColorQuery);
+
+                    while($row = mysqli_fetch_array($result))
+                    {
+                        $colors = $row["color"];
+                        echo "<a data-toggle='tooltip' title='$colors' onclick='selectedColor(\"$colors\")' class='color bg-$colors'></a>";
+
+                    }
+
+                    ?>
+
+                </div>
+                <hr>
+
+                <!-- Price Range -->
+                <span>Price range</span>
+                <div class="pricerange">
+                    <input type="text" id="price-range" name="price-range"
+                           data-from="<?php if(isset($_GET['minPrice'])){echo $_GET['minPrice'];} else echo '10';?>"
+                           data-to="<?php if(isset($_GET['maxPrice'])){echo $_GET['maxPrice'];} else echo '100000';?>"
+                           data-type="double" data-step="100" data-hasgrid="true"
+                           data-hideminmax="true" data-hidefromto="true" data-prettify="false"
+                        />
+
+                    <button class="btn color1 normal" onclick="clearShopBy()">Clear</button>
+                    <button class="btn color1 normal pull-right" onclick="shopBy()">Search</button>
+                </div>
+                <!--end: Price Range -->
+            </div>
+        </div>
+        <!-- end: Filter by -->
+
+
+        <div class="clearfix f-space20"></div>
+
       <div class="box-heading"><span>Compare</span></div>
       <!-- Compare -->
       <div class="box-content">
@@ -732,6 +842,7 @@ $start_from = ($page-1) * $per_page;
       <!-- end: Get Updates Box -->
 
     </div>
+        </div>
     <!-- end:sidebar -->
   </div>
   <!-- end:row -->
@@ -943,6 +1054,42 @@ $start_from = ($page-1) * $per_page;
             else alert("Not Found!");
         }
     }
+
+
+    (function($) {
+        "use strict";
+        //Mega Menu
+        $('#menuMega').menu3d();
+
+        //Help/Contact Number/Quick Message
+        $('.quickbox').carousel({
+            interval: 10000
+        });
+
+
+        //Filter by Price Slider
+        $("#price-range").ionRangeSlider({
+            min: 10,                        // min value
+            max: 100000,                       // max valuec
+            type: "double",                 // slider type
+            step: 50,                       // slider step
+            postfix: "",             		// postfix text
+            hasGrid: false,                  // enable grid
+            hideMinMax: false,               // hide Min and Max fields
+            hideFromTo: false,               // hide From and To fields
+            prettify: false,                 // separate large numbers with space, eg. 10 000
+            onChange: function(obj){        // function-callback, is called on every change
+                console.log(obj);
+            },
+            onFinish: function(obj){        // function-callback, is called once, after slider finished it's work
+                console.log(obj);
+            }
+        });
+
+
+
+    })(jQuery);
+
 </script>
 
 <!-- Style Switcher JS -->
@@ -968,44 +1115,6 @@ $start_from = ($page-1) * $per_page;
   </div>
   <div id="reset" class="inner"><a href="#" class="btn normal color2 ">Reset</a></div>
 </section>
-
-<script>
-
-(function($) {
-  "use strict";
-  //Mega Menu
- $('#menuMega').menu3d();
-
-              //Help/Contact Number/Quick Message
-			$('.quickbox').carousel({
-				interval: 10000
-			});
-
-
-			//Filter by Price Slider
-$("#price-range").ionRangeSlider({
-    min: 10,                        // min value
-    max: 100000,                       // max valuec
-    type: "double",                 // slider type
-    step: 50,                       // slider step
-    postfix: "",             		// postfix text
-    hasGrid: false,                  // enable grid
-    hideMinMax: false,               // hide Min and Max fields
-    hideFromTo: false,               // hide From and To fields
-    prettify: false,                 // separate large numbers with space, eg. 10 000
-    onChange: function(obj){        // function-callback, is called on every change
-        console.log(obj);
-    },
-    onFinish: function(obj){        // function-callback, is called once, after slider finished it's work
-        console.log(obj);
-    }
-});
-
-
-
-})(jQuery);
-
- </script>
 
 </body>
 </html>
