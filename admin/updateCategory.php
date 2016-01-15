@@ -4,9 +4,10 @@
         margin-bottom: 0;
     }
 </style>
+<script src="notie.js"></script>
 <?php
 include_once('dbConnect.php');
-$pic1;
+$pic11="";
 $pic2;
 $pic3;
 $pic11;
@@ -17,6 +18,15 @@ $q;
 $actual_image_name;
 $errors = array();
 $q=$_GET['q'];
+$query3 = "select * from mastercategory  where masterCategory='$q'";
+
+$result3 = mysqli_query($CONNECTION, $query3);
+$table_record3 = mysqli_fetch_array($result3);
+$categoryName = $table_record3['masterCategory'];
+$status = $table_record3['status'];
+$pic = $table_record3['pic'];
+$description = $table_record3['description'];
+
 $pass= randomPassword();
 function randomPassword() {
     $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
@@ -29,27 +39,86 @@ function randomPassword() {
     return implode($pass); //turn the array into a string
 }
 
-if(isset($_POST['submit1']))
-{ echo "<script type='text/javascript'>$('#submit1').click(function(event){event.preventDefault(); }); </script>";
+if(isset($_POST['submit1'])) {
+    echo "<script type='text/javascript'>$('#submit1').click(function(event){event.preventDefault(); }); </script>";
 
     if (empty($_POST["article_name"])) {
-        $errors['article_name']="Please Fill This Field!";
+        $errors['article_name'] = "Please Fill This Field!";
 
     } else {
-        $article_name=$_POST["article_name"];
+        $article_name = $_POST["article_name"];
     }
-    if(empty($errors)){
-            include_once('dbConnect.php');
-            $sql = "update  `category` SET categoryName='$article_name' where categoryName='$q'";
-            $result = mysqli_query($CONNECTION, $sql);
+
+    if (empty($_POST["description"])) {
+        $errors['description'] = "Please Fill This Field!";
+
+    } else {
+        $description = $_POST["description"];
+    }
+    $afterStatus = 0;
+    if (isset($_POST['status'])) {
+        $afterStatus = 1;
+    }
+
+    $valid_formats = array("jpeg", "jpg", "png", "gif", "bmp", "JPEG", "JPG", "PNG", "GIF", "BMP");
+
+    $path1 = "../photo/";
+    $art_name = $_POST['article_name'];
+    $name = $_FILES['pic1']['name'];
+    echo $name;
+   $size = $_FILES['pic1']['size'];
+if($name!="") {
+    if (strlen($name)) {
+        list($txt, $ext) = explode(".", $name);
+        if (in_array($ext, $valid_formats)) {
+            if ($size < (345 * 777)) {
+
+                $pic1 = $art_name . "_" . $pass . "_" . "_pic1_" . "." . $ext;
+                $pic11 = $art_name . "_" . $pass . "_" . "_pic1_" . "." . $ext;
+                $actual_image_name = time() . substr(str_replace(" ", "_", $txt), 5) . "." . $ext;
+                $tmp = $_FILES['pic1']['tmp_name'];
+                if (move_uploaded_file($tmp, $path1 . $actual_image_name)) {
+                    if (file_exists($path1 . $actual_image_name)) {
+                        rename($path1 . $actual_image_name, $path1 . $pic1);
+                    }
+                    if (empty($errors)) {
+                        include_once('dbConnect.php');
+                        $sql = "update  `mastercategory` SET masterCategory='$article_name',pic='$pic1',description='$description',status='$afterStatus' where masterCategory='$q'";
+                        $result = mysqli_query($CONNECTION, $sql);
+                        echo'<style type="text/css">
+                #idalert {
+                    visibility: visible;
+                }
+            </style>';         echo "<script> window.open ('addCategory.php','_self',false);</script>";
+
+
+                    }
+
+                } else
+                    $errors['pic1'] = "Upload Failed";
+            } else
+                $errors['pic1'] = "Image size grater than 1MB";
+        } else
+            $errors['pic1'] = "Invalid File Format";
+    } else
+        $errors['pic1'] = "Please Select Image File";
+}else{
+
+
+    if (empty($errors)) {
+        include_once('dbConnect.php');
+        $sql = "update  `mastercategory` SET masterCategory='$article_name',description='$description',status='$afterStatus' where masterCategory='$q'";
+        $result = mysqli_query($CONNECTION, $sql);
         echo'<style type="text/css">
                 #idalert {
                     visibility: visible;
                 }
             </style>';         echo "<script> window.open ('addCategory.php','_self',false);</script>";
 
-        }
+
+
 }
+}}
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +144,7 @@ if(isset($_POST['submit1']))
         }
     </script>
     <meta charset="UTF-8">
-    <title>Update Category Name</title>
+    <title>Update Master Category Name</title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -112,8 +181,7 @@ if(isset($_POST['submit1']))
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Update Category
-            <small>Update Category Name</small>
+            Update Master Category
         </h1>
 
     </section>
@@ -187,7 +255,7 @@ if(isset($_POST['submit1']))
                 <!-- Horizontal Form -->
                 <div class="box box-info" id="form" >
                     <div class="box-header with-border">
-                        <h3 class="box-title">Update Category Form</h3>
+                        <h3 class="box-title">Update Master Category Form</h3>
                         <div class="alert alert-success" role="alert" id="idalert" >Action successful</div>
 
                     </div><!-- /.box-header -->
@@ -196,7 +264,7 @@ if(isset($_POST['submit1']))
                         <div class=" box-body" >
 
                             <div class=" col-md-offset-1 form-group" >
-                                <label for="name"    class="col-sm-2 control-label" >Color Name*</label>
+                                <label for="name"    class="col-sm-2 control-label" >Master Category Name*</label>
                                 <p class="help-block text-danger"></p>
 
 
@@ -205,6 +273,40 @@ if(isset($_POST['submit1']))
                                     <span class="error"><font color="red"> <?php if(isset($errors['article_name'])) echo $errors['article_name'];?></font></span>
                                 </div>
                             </div>
+
+                            <div class=" col-md-offset-1 form-group" >
+                                <label for="name"    class="col-sm-2 control-label" >description*</label>
+                                <p class="help-block text-danger"></p>
+
+
+                                <div class="col-sm-9">
+                                    <input type="textbox"   class="form-control" id="description1" name="description" value='<?php echo $description; ?>' placeholder="" style="height: 100px" >
+                                    <span class="error"><font color="red"> <?php if(isset($errors['description'])) echo $errors['description'];?></font></span>
+                                </div>
+                            </div>
+
+                            <div class=" col-md-offset-1 form-group" >
+                                <label for="small" class="col-sm-3 control-label">Active</label>
+
+                                <div class="col-sm-1 ">
+                                    <input type="checkbox" class=" checkbox" id="status" name="status" <?php if($status) { ?>checked=<?php echo $status; } ?>  >
+                                </div>
+                            </div>
+
+                            <div class=" form-group">
+                                <div class="col-md-12">
+                                    <input type="file"  name="pic1" id="pic1"  />
+                                    <span class="error"><font color="red"> </font></span>
+                                </div>
+                                </div>
+
+                            <div class=" form-group">
+                                <div class="col-md-12">
+                                    <img src='<?php echo "../photo/".$pic; ?>'width="50%" height="20%" border="1" />
+
+                                </div>
+                                </div>
+
 
 
 

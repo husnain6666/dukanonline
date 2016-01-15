@@ -32,7 +32,7 @@ function addWish(str){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("wishadded").innerHTML = xmlhttp.responseText;
+            notie.alert(3, 'Wish Added!', 1);
 
 
         }
@@ -48,7 +48,7 @@ function addWishSale(str){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("wishaddedSale").innerHTML = xmlhttp.responseText;
+            notie.alert(3, 'Wish Added!', 1);
 
 
         }
@@ -67,7 +67,7 @@ function addWishNewCollection(str){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("wishaddedNewCollection").innerHTML = xmlhttp.responseText;
+            notie.alert(3, 'Wish Added!', 1);
 
 
         }
@@ -85,7 +85,7 @@ function addWishFeatured(str){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("wishaddedFeatured").innerHTML = xmlhttp.responseText;
+            notie.alert(3, 'Wish Added!', 1);
 
 
         }
@@ -98,13 +98,14 @@ function addWishFeatured(str){
 
 
 
-function removewish(str,rowid){
+function removewish(str){
 
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            header("Refresh:0; url=wishlist.php");
+            var newLocation = "wishlist.php";
+            window.location = newLocation;
         }
     }
 
@@ -121,7 +122,7 @@ function addtocart(article){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("wishadded").innerHTML = "Added to cart!";
+            notie.alert(3, 'Added to Cart!', 1);
         }
     }
     xmlhttp.open("GET", "shopping_cart.php?articleId=" + article , true);
@@ -135,7 +136,7 @@ function addtocartSale(article){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("wishaddedSale").innerHTML = "Added to cart!";
+            notie.alert(3, 'Added to Cart!', 1);
         }
     }
     xmlhttp.open("GET", "shopping_cart.php?articleId=" + article , true);
@@ -152,7 +153,7 @@ function addtocartNew(article){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("wishaddedNewCollection").innerHTML = "Added to cart!";
+            notie.alert(3, 'Added to Cart!', 1);
         }
     }
     xmlhttp.open("GET", "shopping_cart.php?articleId=" + article , true);
@@ -172,3 +173,27 @@ function addtocartNewfeatured(article){
     xmlhttp.open("GET", "shopping_cart.php?articleId=" + article , true);
     xmlhttp.send();
 }
+
+
+
+
+
+
+function insertquantityinshoppingcart(){
+
+    var quantity=document.getElementById("quantity").value;
+    var articleId=document.getElementById("articleId").value;
+    alert(quantity);
+    alert(articleId);
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var newLocation = "shopping_cart.php?articleId="+articleId+"&quantity=" + quantity;
+            window.location = newLocation;
+            //header("location:shopping_cart.php");
+        }
+    }
+    xmlhttp.open("GET", "shopping_cart.php?quantity=" + quantity +"&articleId=" + articleId , true);
+    xmlhttp.send();
+}
+

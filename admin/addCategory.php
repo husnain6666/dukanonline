@@ -1,11 +1,9 @@
 <?php
 include_once('dbConnect.php');
-$errors = array();
-$pass= randomPassword();
 
 
-
-function randomPassword() {
+function randomPassword()
+{
     $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
     $pass = array(); //remember to declare $pass as an array
     $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
@@ -16,19 +14,64 @@ function randomPassword() {
     return implode($pass); //turn the array into a string
 }
 
-if(isset($_POST['submit1']))
-{
+$errors = array();
 
-   // echo "<script type='text/javascript'>$('#submit1').click(function(event){event.preventDefault(); }); </script>";
+$pass = randomPassword();
+
+
+
+if(isset($_POST['submit1'])) {
+    $pic1;
+
+
+
+    $valid_formats = array("jpeg", "jpg", "png", "gif", "bmp", "JPEG", "JPG", "PNG", "GIF", "BMP");
+    // echo "<script type='text/javascript'>$('#submit1').click(function(event){event.preventDefault(); }); </script>";
 
     if (empty($_POST["article_name"])) {
-        $errors['article_name']="Please Fill This Field!";
+        $errors['article_name'] = "Please Fill This Field!";
     } else {
-        $article_name=$_POST["article_name"];
+        $article_name = $_POST["article_name"];
     }
+    if (empty($_POST["description"])) {
+        $errors['description'] = "Please Fill This Field!";
+    } else {
+        $description = $_POST["description"];
+    }
+    $path = "../photo/";
+    $art_name = $_POST['article_name'];
+    $name = $_FILES['pic1']['name'];
+    $size = $_FILES['pic1']['size'];
+
+    if (strlen($name)) {
+        list($txt, $ext) = explode(".", $name);
+        if (in_array($ext, $valid_formats)) {
+            //	if($size<(345*777))
+            //		{
+            $pic1 = $art_name . "_" . $pass . "_" . "_pic1_" . "." . $ext;
+            $pic11 = $art_name . "_" . $pass . "_" . "_pic1_" . "." . $ext;
+            $actual_image_name = time() . substr(str_replace(" ", "_", $txt), 5) . "." . $ext;
+            $tmp = $_FILES['pic1']['tmp_name'];
+            if (move_uploaded_file($tmp, $path . $actual_image_name)) {
+                if (file_exists($path . $actual_image_name)) {
+                    rename($path . $actual_image_name, $path . $pic1);
+                }
+            } else
+                $errors['pic1'] = "Upload Failed";
+            //	}
+            //	else
+            //	$errors['pic1']="Image size grater than 1MB";
+        } else
+            $errors['pic1'] = "Invalid File Format";
+    } else {
+        $errors['pic1'] = "Please Select Image File";
+    }
+
+
+
     if(empty($errors)){
         include_once('dbConnect.php');
-        $sql = "INSERT INTO `category`(categoryName) VALUES('$article_name')";
+        $sql = "INSERT INTO `mastercategory`(masterCategory,pic,description) VALUES('$article_name','$pic1','$description')";
         $result = mysqli_query($CONNECTION, $sql);
 /*        echo '<style type="text/css">
                 #idalert {
@@ -72,7 +115,7 @@ if(isset($_POST['submit1']))
         }
     </script>
     <meta charset="UTF-8">
-    <title>Add Category</title>
+    <title>Add Master Category</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.4 -->
@@ -108,8 +151,7 @@ if(isset($_POST['submit1']))
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Add  Category
-            <small>Add New Category Name</small>
+            Add  Master Category
         </h1>
 
     </section>
@@ -187,20 +229,40 @@ if(isset($_POST['submit1']))
                     <div class="alert alert-success" role="alert" id="idalert" >Action successful</div>
 
                     <div class="box-header with-border">
-                        <h3 class="box-title">Add New Category Form</h3>
+                        <h3 class="box-title">Add New Master Category Form</h3>
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     <form class="form-horizontal" id='insertform' enctype="multipart/form-data"  method="Post">
                         <div class=" box-body" >
 
+
                             <div class=" col-md-offset-1 form-group" >
-                                <label for="name"    class="col-sm-2 control-label" >Category Name*</label>
+                                <label for="name"    class="col-sm-2 control-label" >Master Category Name*</label>
                                 <p class="help-block text-danger"></p>
 
 
                                 <div class="col-sm-9">
                                     <input type="text"   class="form-control" id="article_name1" name="article_name" placeholder="" required >
                                     <span class="error"><font color="red"> <?php if(isset($errors['article_name'])) echo $errors['article_name'];?></font></span>
+                                </div>
+                            </div>
+                            <div class=" col-md-offset-1 form-group" >
+                                <label for="name"    class="col-sm-2 control-label" >description*</label>
+                                <p class="help-block text-danger"></p>
+
+
+                                <div class="col-sm-9">
+                                    <input type="textbox"   class="form-control" id="description1" name="description" placeholder="" style="height: 100px" >
+                                    <span class="error"><font color="red"> <?php if(isset($errors['description'])) echo $errors['description'];?></font></span>
+                                </div>
+                        </div>
+                            <div class=" col-md-offset-1 form-group" >
+                                <label for="qty" class="col-sm-2 control-label" align="left">Choose Picture</label>
+
+                                <div class="col-sm-offset-2">
+                                    <input type="file" class="col-sm-8 control-label" name="pic1" id="pic1" >
+                          <span class="error"><font
+                                  color="red"> <?php if (isset($errors['pic1'])) echo $errors['pic1']; ?></font></span>
                                 </div>
                             </div>
 
@@ -226,18 +288,26 @@ if(isset($_POST['submit1']))
                     </thead>
                     <tbody id="userData">
                     <?php
-                    $query = "SELECT * FROM category";
+                    $query = "SELECT * FROM mastercategory";
                     $result = mysqli_query($CONNECTION, $query);
                     if($result) {
                         if($result->num_rows > 0) {
                             while ($member = mysqli_fetch_assoc($result)) {
-                                $category=$member['categoryName'];
+                                $category=$member['masterCategory'];
+                                $status=$member['status'];
+                                if($status)
+                                    $stat="<span class='label label-info'>active</span>";
+                                    else
+                                        $stat="<span class='label label-danger'>inactive</span>";
+
                                 echo "<tr>".
 
-                                    "<td> {$member['categoryName']} </td>".
-                                    "<td align='center'>".
-                                    "<button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)'  data-original-title='{$member['categoryName']}' data-user-id={$member['categoryName']}><i class='fa fa-refresh'></i></button>&nbsp;".
+                                    "<td> {$member['masterCategory']} </td>".
+                                    "<td align='right'>".
+                                    "<button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)'  data-original-title='{$member['masterCategory']}' data-user-id={$member['masterCategory']}><i class='fa fa-refresh'></i></button>&nbsp;".
+                                    "<button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newcat(this)'  data-original-title='{$member['masterCategory']}' data-user-id={$member['masterCategory']}><i class='fa fa-plus'></i></button>&nbsp;".
                                     "</td>".
+                                    "<td> $stat </td>".
                                     "</tr>";
                             }
                         }
@@ -300,8 +370,18 @@ if(isset($_POST['submit1']))
     function newtab(id){
         userid=$(id).data("original-title");
 
+
         // document.getElementById("article_name1").value = userid;
         url='updateCategory.php?q='+userid;
+        window.open (url,'_self',false)
+    }
+
+    function newcat(id){
+        userid=$(id).data("original-title");
+
+
+        // document.getElementById("article_name1").value = userid;
+        url='addsubcat.php?q='+userid;
         window.open (url,'_self',false)
     }
 

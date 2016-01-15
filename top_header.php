@@ -1,3 +1,8 @@
+<?php
+include('session.php');
+include('connectdb.php');
+?>
+
 <!--[if IE 7 ]><html class="ie ie7 lte9 lte8 lte7" lang="en-US"><![endif]-->
 <!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en-US">	<![endif]-->
 <!--[if IE 9]><html class="ie ie9 lte9" lang="en-US"><![endif]-->
@@ -47,7 +52,7 @@
     <!-- Custom Scripts -->
     <script src="js/scripts.js"></script>
     <script src="js/total.js"></script>
-
+<script src="js/validation.js"></script>
     <!-- MegaMenu -->
     <script src="js/menu3d.js" type="text/javascript"></script>
 
@@ -82,22 +87,32 @@
                         $checkCart=false;
                         $check=false;
                         ?>
+                            <li> <a href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs">Signout</span></a> </li>
                         <li class="dropdown"> <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> Login</span></a>
-                            <div class="loginbox dropdown-menu"> <span class="form-header">Login</span>
-                                <form>
+                            <div class="loginbox dropdown-menu" style="height: 380px;width: 350px;"> <span class="form-header">Login</span>
+                                <form method="post" action="login.php">
                                     <div class="form-group"> <i class="fa fa-user fa-fw"></i>
-                                        <input class="form-control" id="InputUserName" placeholder="Username" type="text" data-validation="required">
+                                        <input class="form-control" name="emailAddress" id="InputUserName" placeholder="Username" type="text" data-validation="required">
                                     </div>
                                     <div class="form-group"> <i class="fa fa-lock fa-fw"></i>
-                                        <input class="form-control" id="InputPassword" placeholder="Password" type="password" data-validation="required">
+                                        <input class="form-control" name="password" id="InputPassword" placeholder="Password" type="password" data-validation="required">
                                     </div>
-                                    <button class="btn medium color1 pull-right" type="submit">Login</button>
+                                    <button class="btn medium color1 pull-right" name="submit" type="submit">Login</button>
                                 </form>
-                            </div>
+                                <form action="facebook.php">
+                                    <button type="submit" class="btn medium color1 pull-left" type="submit" style="margin-top: -20px; width: 180px;margin-left: -10px">Signup</button>
+                                </form>
+                                    <form action="facebook.php">
+                                        <button type="submit" class="btn medium color1 pull-right" type="submit" style="margin-top: 5px; width: 300px">Forget password</button>
+                                    </form>
+                                <form action="facebook.php">
+                                    <button type="submit" class="btn medium color1 pull-right" type="submit" style="margin-top: 5px; width: 300px;background: #3b5998">Login through facebook</button>
+                                </form>
+                                </div>
                         </li>
                         <?php
                         }
-                        else{
+                        else {
 
                         $footerUserSection=true;
                         $checkCart=true;
@@ -111,10 +126,16 @@
                         $userId=$row['userId'];
                         //   echo $userId;
                         ?>
-                        <li class="dropdown"> <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> <?php echo $userName;?></span></a>
-                            <div class="loginbox dropdown-menu"> <span class="form-header">Hello <?php echo $userName;?>!</span>
-                                <form>
-                                    <button class="btn medium color1 pull-right" type="submit">Logout</button>
+                        <li class="dropdown" > <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> <?php echo $firstName;?></span></a>
+                            <div class="loginbox dropdown-menu" style="height: 200px;width: 265px;">
+                                <form action="myaccount.php">
+                                    <button type="submit" class="btn medium color1 pull-right" type="submit" style="margin-top: -35px; width: 200px">My Account</button>
+                                </form>
+                                <form action="listorder.php">
+                                    <button type="submit" class="btn medium color1 pull-right" type="submit" style="margin-top: 0px; width: 200px">Order History</button>
+                                </form>
+                                <form action="logout.php">
+                                    <button type="submit" class="btn medium color1 pull-right" type="submit" style="margin-top: 5px; width: 200px">Logout</button>
                                 </form>
                             </div>
                         </li>
