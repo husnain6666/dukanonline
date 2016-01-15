@@ -36,12 +36,12 @@
 
                     <li>
                         <a href="addArticle.php">
-                            <i class="fa fa-plus"></i> <i class="fa fa-star-o"></i>&nbsp;&nbsp;&nbsp;<span>Add New Article</span> <i class=""></i>
+                            <i class="fa fa-plus"></i> <span>Add New Article</span> <i class=""></i>
                         </a>
                     </li>
                     <li>
                         <a href="articles.php">
-                            &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-star"></i>&nbsp;&nbsp;&nbsp;<span>View Articles</span> <i class=""></i>
+                            <i class="fa fa-star"></i> <span>View Articles</span> <i class=""></i>
                         </a>
                     </li>
 
@@ -68,12 +68,12 @@
                 <ul id="demo3" class="collapse">
                     <li>
                         <a href="addPoster.php">
-                            <i class="fa fa-plus"></i> <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;<span>Add Poster</span> <i class=""></i>
+                            <i class="fa fa-plus"></i> <span>Add Poster</span> <i class=""></i>
                         </a>
                     </li>
                     <li>
                         <a href="posters.php">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-file-text"></i> &nbsp;&nbsp;&nbsp;<span>View Posters</span> <i class=""></i>
+                            <i class="fa fa-file-text"></i> <span>View Posters</span> <i class=""></i>
                         </a>
                     </li>
 

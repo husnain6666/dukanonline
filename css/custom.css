@@ -1171,7 +1171,7 @@ a.color3:hover {
 .product-block .product-meta .big-price {
 	-moz-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
-	font-size: 35px;
+	font-size: 30px;
 	font-weight: 900;
 	opacity: 0;
 	overflow: hidden;

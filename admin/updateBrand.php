@@ -5,7 +5,7 @@ $pic2;
 $pic3;
 $pic11;
 $pic22;
-$path1 ="http://www.electroshop.pk/photo/";
+$path1 ="http://www.storeonline.pk/images/brands";
 
 $pic33;
 $picture;
@@ -55,7 +55,7 @@ if(isset($_POST['submit1']))
     }
 
 
-    $path ="../photo/";
+    $path ="../images/brands";
     $art_name=$_POST['article_name'];
     $name = $_FILES['pic1']['name'];
     $size = $_FILES['pic1']['size'];

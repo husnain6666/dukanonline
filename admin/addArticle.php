@@ -77,17 +77,15 @@ function randomPassword() {
             Add Articles
             <small>Add New Article Form</small>
           </h1>
-          
         </section>
 
         <!-- Main content -->
         <section class="content">
           <div class="row">
+
             <div class="col-xs-12">
-
-
-                
                   <div id="myModal" class="modal fade modal-default" role="dialog">
+
                       <div class="modal-dialog">
 
                           <!-- Modal content-->
@@ -136,6 +134,7 @@ function randomPassword() {
                   <div class="box-header with-border">
                       <h3 class="box-title">Add New Article Form</h3>
                   </div>
+
                   <!-- /.box-header -->
                   <!-- form start -->
                   <form class="form-horizontal" action="articleadd.php" enctype="multipart/form-data"  method="Post">
@@ -234,13 +233,13 @@ function randomPassword() {
 
 
                   <div class="form-group">
-                      <label for="small" class="col-sm-3 control-label">Week Deal</label>
+                      <label for="small" class="col-sm-3 control-label">Hot Deal</label>
 
                       <div class="col-sm-1 ">
                           <input type="checkbox" class=" checkbox" id="hotdeal" name="hot_deal">
                       </div>
 
-                      <label for="Medium" class="col-sm-2 control-label">Best Seller</label>
+                      <label for="Medium" class="col-sm-2 control-label">Featured</label>
 
                       <div class="col-sm-1">
                           <input type="checkbox" class=" checkbox" id="bestseller" name="bestseller">
@@ -254,6 +253,21 @@ function randomPassword() {
 
 
                   </div>
+
+
+                      <div class="form-group">
+                          <label for="specification" class="col-sm-2 control-label">Picture Tag</label>
+
+                          <div class="col-sm-4">
+                              <select class="form-control col-sm-9" name="picTag">
+                                  <option></option>
+                                  <option>HOT</option>
+                                  <option>SALE</option>
+                                  <option>NEW</option>
+                                  <option>FEATURED</option>
+                              </select>
+                          </div>
+                      </div>
 
 
                   <!--	<div class="form-group">
@@ -294,51 +308,31 @@ function randomPassword() {
                           <span class="error"><font
                                   color="red"> <?php if (isset($errors['date'])) echo $errors['date']; ?></font></span>
                       </div>
-
-                  </div>
-
-
-                  <!--
+                      </div>
 
                   <div class="form-group">
-                      <label for="category" class="col-sm-2 control-label">Chose Color*</label>
-                      <div class="col-sm-4">
-                              <select class="form-control col-sm-9" id="ChoseColors">
-                              <?php
-                  /*        include("dbConnect.php");
-                          $query ="SELECT * FROM `color`";
-                          $result = mysqli_query($CONNECTION, $query);
-                          if($result) {
-                              if($result->num_rows > 0) {
-                                  while ($notify = mysqli_fetch_assoc($result)) {
-                                      $categoryName=$notify['colorName'];
-                                      echo  "<span class='label label-danger'>$count</span>";
-                                      ?>
-                                      <option><?php echo $categoryName; ?></option>
-                                  <?php } }}
-                  */
-                  ?>
-
-                        </select>
+                      <label for="category" class="col-sm-2 control-label">Choose Color*</label>
+                      <div class="col-sm-2">
+                      <select class="form-control col-sm-9" id="ChoseColors">
+                          <option>red</option>
+                          <option>green</option>
+                          <option>black</option>
+                          <option>blue</option>
+                          <option>yellow</option>
+                          <option>orange</option>
+                          <option>purple</option>
+                      </select>
                       </div>
-                  </div>
 
-                   <div class="form-group">
-                      <label for="TIME IN" class="col-sm-2 control-label"  align="right">Color*</label>
-                      <div class="col-sm-9">
-
-                        <span class="col-sm-5"><input readonly type="text" align="left"id="colorid" name="colors" class="form-control" required />
+                      <label for="TIME IN" class="col-sm-1 control-label"  align="right">Color*</label>
+                      <span class="col-sm-5"><input readonly type="text" align="left"id="colorid" name="colors" class="form-control" />
                           </span>
-							<span class="error" ><font color="red"> <?php //if(isset($errors['color'])) echo $errors['color'];?></font></span>
-                            <a href="#"><img src="bootstrap/css/plus.png" width="30" onclick='f1()'></a>
-                          <a href="#"><img src="bootstrap/css/close.png" width="30" onclick='f2()'></a>
-
-                      </div>
+                      <span class="error" ><font color="red"> <?php //if(isset($errors['color'])) echo $errors['color'];?></font></span>
+                      <a class="btn btn-primary" onclick='f1()'><i class="fa fa-plus"></i></a>
+                      <a class="btn btn-danger" onclick='f2()'><i class="fa fa-minus"></i></a>
                     </div>
                       
-                      
 
-                      -->
 
                   <div class=" form-group">
                       <label for="qty" class="col-sm-2 control-label" align="left">Choose Picture1*</label>
@@ -361,7 +355,7 @@ function randomPassword() {
                       </div>
                   </div>
                   <div class=" form-group">
-                      <label for="qty" class="col-sm-2 control-label" align="left">Choos Picture3</label>
+                      <label for="qty" class="col-sm-2 control-label" align="left">Choose Picture3</label>
 
                       <div class="col-sm-offset-2">
                           <input type="file" class="col-sm-8 control-label" name="pic3" id="pic3"
@@ -407,13 +401,10 @@ function randomPassword() {
               </div><!-- /.box -->
 
       </div><!-- /.col -->
-          </div><!-- /.row -->
+          <!-- /.row -->
         </section><!-- /.content -->
-      </div><!-- /.content-wrapper -->
-
-
+    </div>
       <div class="control-sidebar-bg"></div>
-    </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
     <script src="plugins/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
@@ -484,6 +475,88 @@ function randomPassword() {
   </script>
   
   <script>
+
+      function f1()
+      {
+          var com=-1;
+          var sel=document.getElementById("ChoseColors");
+          var sv = sel.options[sel.selectedIndex].value;
+          var color=document.getElementById("colorid").value;
+          if(color=="")
+          {
+              document.getElementById("colorid").value=sv;
+          }
+          else
+          {
+              var res = color.split(",");
+              for(var i = 0; i < res.length; i++)
+              {
+                  if(res[i]==sv){
+                      com=0;
+                  }
+
+              }
+              if(com==-1)
+              {
+                  document.getElementById("colorid").value=color+","+sv;
+              }
+              else
+              {
+                  alert("Color already Exist");
+              }
+          }
+      }
+
+      function f2()
+      {
+          var com;
+          var text="s";
+          var sel=document.getElementById("ChoseColors");
+          var sv = sel.options[sel.selectedIndex].value;
+          var color=document.getElementById("colorid").value;
+          if(color=="")
+          {
+          }
+          else
+          {
+              var res = color.split(",");
+              for(var i = 0; i < res.length; i++)
+              {
+                  var n = res[i].localeCompare(sv);
+                  if(n==0)
+                  {
+                      com=i;
+                      break;
+                  }
+
+              }
+              for(var i = 0; i < res.length; i++)
+              {
+                  if(res[com]==res[i]){
+
+                  }else{
+                      if(text=="s")
+                      {
+                          text=res[i];
+                      }
+                      else
+                      {
+                          text=text+","+res[i];
+                      }
+                  }
+
+
+              }
+              if(text=="s"){
+                  text="";
+              }
+              document.getElementById("colorid").value=text;
+
+          }
+
+
+      }
+
       function count_total(action){
 
               var s=document.getElementById('small').value;

@@ -6,14 +6,14 @@
 <?php
 include_once('dbConnect.php');
 $pic1;
-$path1 ="http://www.electroshop.pk/photo/";
+$path1 ="http://www.storeonline.pk/images/brands";
 
 $pic2;
 $pic3;
 $pic11;
 $pic22;
 $pic33;
-$path ="../photo/";
+$path ="../images/brands";
 $errors = array();
 $pass= randomPassword();
 

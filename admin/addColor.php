@@ -30,7 +30,7 @@ if(isset($_POST['submit1']))
 
     if(empty($errors)){
         include_once('dbConnect.php');
-        $sql = "INSERT INTO `color`(colorName) VALUES('$article_name')";
+        $sql = "INSERT INTO `color`(color) VALUES('$article_name')";
         $result = mysqli_query($CONNECTION, $sql);
         echo "<script>alert('Action Successfull');</script>";
     }
