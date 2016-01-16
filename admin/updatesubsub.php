@@ -63,7 +63,7 @@ if(isset($_POST['submit1'])) {
 
     $valid_formats = array("jpeg", "jpg", "png", "gif", "bmp", "JPEG", "JPG", "PNG", "GIF", "BMP");
 
-    $path1 = "../photo/";
+    $path1 = "../images/category/";
     $art_name = $_POST['article_name'];
     $name = $_FILES['pic1']['name'];
     echo $name;
@@ -81,6 +81,9 @@ if(isset($_POST['submit1'])) {
                     if (move_uploaded_file($tmp, $path1 . $actual_image_name)) {
                         if (file_exists($path1 . $actual_image_name)) {
                             rename($path1 . $actual_image_name, $path1 . $pic1);
+                            if(file_exists($path1.$pic)){
+                                unlink($path1.$pic) ;
+                            }
                         }
                         if (empty($errors)) {
                             include_once('dbConnect.php');
@@ -303,7 +306,7 @@ if(isset($_POST['submit1'])) {
 
                                 <div class=" form-group">
                                     <div class="col-md-12">
-                                        <img src='<?php echo "../photo/".$pic; ?>'width="50%" height="20%" border="1" />
+                                        <img src='<?php echo "../images/category/".$pic; ?>'width="50%" height="20%" border="1" />
 
                                     </div>
                                 </div>

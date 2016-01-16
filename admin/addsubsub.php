@@ -40,7 +40,7 @@ if(isset($_POST['submit1'])) {
     } else {
         $description = $_POST["description"];
     }
-    $path = "../photo/";
+    $path = "../images/category/";
     $art_name = $_POST['article_name'];
     $name = $_FILES['pic1']['name'];
     $size = $_FILES['pic1']['size'];

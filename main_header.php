@@ -19,17 +19,17 @@
                             <input class="dropdown-field" type="hidden" value="All Categories"/>
                             <ul class="dropdown-menu" role="menu">
                                 <?php
-                                    include_once("connectdb.php");
-                                    $query = "SELECT * FROM mastercategory";
-                                    $result = mysqli_query($connection, $query);
-                                    if($result)
+                                include_once("connectdb.php");
+                                $query = "SELECT * FROM mastercategory";
+                                $result = mysqli_query($connection, $query);
+                                if($result)
+                                {
+                                    while($row = mysqli_fetch_assoc($result))
                                     {
-                                        while($row = mysqli_fetch_assoc($result))
-                                        {
-                                            $masterCategory = $row['masterCategory'];
-                                            echo "<li><a href='category-grid.php?category=$masterCategory' data-value='$masterCategory'>$masterCategory</a></li>";
-                                        }
+                                        $masterCategory = $row['masterCategory'];
+                                        echo "<li><a href='category-grid.php?category=$masterCategory' data-value='$masterCategory'>$masterCategory</a></li>";
                                     }
+                                }
                                 ?>
                                 <li><a href="#a" data-value="All Categories">All Categories</a></li>
                             </ul>
