@@ -131,11 +131,11 @@
 
             <div class="page-content" style="margin-left: 50px">
                 <ul style="list-style-type:disc">
-                <li>Free Shipping on products is currently only available in Lahore and surrounding areas. Or otherwise mentioned specifically at the time of order confirmation by Electroshop.pk</li>
+                <li>Free Shipping on products is currently only available in Lahore and surrounding areas. Or otherwise mentioned specifically at the time of order confirmation by Storeonline.pk</li>
 
-                <li>We electroshop.pk (electroshop Pakistan) do not have any account on Kaymu or Daraz or any other such external 3rd Party website. Some websites have used our name to promote products on their website. We advise you to be careful and not associate yourself in transaction with such entities</li>
+                <li>We Storeonline.pk (Storeonline Pakistan) do not have any account on Kaymu or Daraz or any other such external 3rd Party website. Some websites have used our name to promote products on their website. We advise you to be careful and not associate yourself in transaction with such entities</li>
 
-                <li>Products may vary from the image provided by the manufacturer, electroshop.pk is a retailer and takes no responsibility of the variation in details of images provided by the manufacturer. </li>
+                <li>Products may vary from the image provided by the manufacturer, Storeonline.pk is a retailer and takes no responsibility of the variation in details of images provided by the manufacturer. </li>
 
                 <li>For details of Warranties and Claims from Manufacturers you can call us.</li>
                 <li>    For Details: +92 322 4859990</li>

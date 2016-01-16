@@ -140,7 +140,7 @@
                         when leaving your shared computer.</li>
 
 
-                    <strong>    For Details: 0314-1577767  </strong>
+                    <strong>    For Details: +92 322 4859990  </strong>
                 </ul>
             </div>
         </div>

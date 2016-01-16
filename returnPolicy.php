@@ -133,11 +133,11 @@
                 <ul style="list-style-type:disc">
 
                         <li>We only return if any product has manufacturing fault, broken or scratched, only at the time of purchase.</li>
-                        <li>You have to inform us if you cannot bring back the product with in next 12 hours. Email at info@electroshop.pk OR contact For Details: 0314-1577767 along with your invoice number and item description.</li>
+                        <li>You have to inform us if you cannot bring back the product with in next 12 hours. Email at info@storeonline.pk OR contact For Details: 0314-1577767 along with your invoice number and item description.</li>
                         <li>Original box and all accessories should be returned as well without any sort of damage.</li>
                         <li>If dispatched item is out of Lahore then we will provide the exchange but the shipping cost will be charged to the customer.</li>
                         <li>If you receive a product that is not what we have described in our catalog (replica, specs and image)  you are not bound to keep that product, we will return your money. Please inform us within 12 hours of receiving the product. </li>
-                        <strong>    For Details: 0314-1577767  </strong>
+                        <strong>    For Details: +92 322 4859990  </strong>
                 </ul>
             </div>
         </div>

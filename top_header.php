@@ -68,6 +68,24 @@ include('connectdb.php');
 
 </head>
 
+<?php
+if(isset( $_SESSION['loginUser'])) {
+    $userName = $_SESSION['loginUser'];
+
+    $query1 = "SELECT userId from userinfo where emailAddress='$userName'";
+    $result1 = mysqli_query($connection, $query1);
+    $row1 = mysqli_fetch_array($result1);
+    $userId =$row1['userId'];
+
+    $query = "SELECT count(userId) as wishno from wishlist where userId='$userId'";
+    $result = mysqli_query($connection, $query);
+    $row = mysqli_fetch_array($result);
+    $wishno =$row['wishno'];
+}else{
+$wishno='Wishlist(0)';
+}
+?>
+
 <body>
 <!-- Header -->
 <header>
@@ -77,8 +95,6 @@ include('connectdb.php');
             <div class="col-md-12">
                 <div class="topheadrow">
                     <ul class="nav nav-pills pull-right">
-                        <li> <a href="#a"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-xs">My Cart</span></a> </li>
-                        <li> <a href="#a"> <i class="fa fa-heart fa-fw"></i> <span class="hidden-xs">Wishlist(0)</span></a> </li>
                         <?php
                         // check whether the user is logged in or not
                         if(!isset( $_SESSION['loginUser'])){
@@ -87,8 +103,9 @@ include('connectdb.php');
                         $checkCart=false;
                         $check=false;
                         ?>
-                            <li> <a href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs">Signout</span></a> </li>
-                        <li class="dropdown"> <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> Login</span></a>
+                            <li> <a href="signUp.php"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-xs">My Cart</span></a> </li>
+                            <li> <a href="signUp.php" id="wishno"> <i class="fa fa-heart fa-fw"></i> <span class="hidden-xs"><?php echo $wishno; ?></span></a> </li>
+                            <li class="dropdown"> <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> Login</span></a>
                             <div class="loginbox dropdown-menu" style="height: 380px;width: 350px;"> <span class="form-header">Login</span>
                                 <form method="post" action="login.php">
                                     <div class="form-group"> <i class="fa fa-user fa-fw"></i>
@@ -126,7 +143,9 @@ include('connectdb.php');
                         $userId=$row['userId'];
                         //   echo $userId;
                         ?>
-                        <li class="dropdown" > <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> <?php echo $firstName;?></span></a>
+                            <li> <a href="cart.php?articleId=-9999"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-xs">My Cart</span></a> </li>
+                            <li> <a href="wishlist.php" id="wishno"> <i class="fa fa-heart fa-fw"></i> <span class="hidden-xs"><?php echo $wishno; ?></span></a> </li>
+                            <li class="dropdown" > <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> <?php echo $firstName;?></span></a>
                             <div class="loginbox dropdown-menu" style="height: 200px;width: 265px;">
                                 <form action="myaccount.php">
                                     <button type="submit" class="btn medium color1 pull-right" type="submit" style="margin-top: -35px; width: 200px">My Account</button>

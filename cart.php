@@ -64,17 +64,14 @@ $articleId = $_GET['articleId'];
 if(isset($_GET['quantity'])){
 $quantity=$_GET['quantity'];
 
-echo $quantity;
 
 if ($quantity==0)
     $quantity=1;
-echo $quantity;
 }
 
 if(isset($_GET['color'])){
     $color=$_GET['color'];
 
-    echo $color;
 
 }
 
@@ -82,7 +79,6 @@ if(isset($_GET['color'])){
 if(isset($_GET['size'])){
     $size=$_GET['size'];
 
-    echo $size;
 }
 
 
@@ -101,22 +97,12 @@ $userId=$table_record['userId'];
 
 $datetimeToday=date("Y-m-d H:i:s");
 
-/*
-$sql="select quantity from userinfo where userId='$userId'";
-$result=mysqli_query($connection,$sql);
-$table_record=mysqli_fetch_array($result);
-$quantity=$table_record['quantity'];
-//echo $quantity;
-*/
-
 
 $sql="select orderdetails.trackingNo, status, orderdetails.userId from ordertracking inner join orderdetails on orderdetails.trackingNo=ordertracking.trackingNo  and status='In Progress' and userId='$userId'";
 $result=mysqli_query($connection,$sql);
-//if(($result->num_rows)>0){
 if(($result->num_rows)>0){
     $table_record=mysqli_fetch_array($result);
     $trackingNo=$table_record['trackingNo'];
-      echo 'ok';
 }
 else if(($result->num_rows)==0){
     $sql = "SELECT userId FROM userinfo WHERE emailAddress = '$userName'";
@@ -134,19 +120,14 @@ else if(($result->num_rows)==0){
 
             $trackingNo=$trackingNo.$randomNumber;
 
-                echo $trackingNo;
-            //    echo "yeah";
         }
 
     }
 
-    echo $trackingNo;
-    //  echo "yeah";
 
 
 }
-//else
-//  echo 'pato';
+
 if($articleId!=-9999){
     $sql = "SELECT price,discount FROM article where articleId='$articleId'";
     $result=mysqli_query($connection,$sql);
@@ -162,7 +143,6 @@ if($articleId!=-9999){
     $sql = "SELECT orderdetails.articleId FROM orderdetails inner join userinfo on orderdetails.userId=userinfo.userId and userinfo.emailAddress = '$userName' and orderdetails.trackingNo = '$trackingNo'";
     $result=mysqli_query($connection,$sql);
     $check=false;
-    echo "Google";
     error_reporting(E_ERROR | E_PARSE);
     while($table_record=mysqli_fetch_array($result)){
 
@@ -173,9 +153,7 @@ if($articleId!=-9999){
         }
     }
 
-     echo $articleId;
 
-    echo $quantity;
     $trackingNotemp=null;
     $overAllprice=0;
     if($check==false){
@@ -200,16 +178,13 @@ if($articleId!=-9999){
         if($checkTracking==false){
             $sql ="INSERT INTO ordertracking (date,status,trackingNo) VALUES ( '$dateToday', 'In progress', '$trackingNo')";
             if ($connection->query($sql) === TRUE) {
-                           echo "New record created successfullyhehehehe";
             } else {
                           echo "Error: " . $sql . "<br>" . $connection->error;
             }
 
         }
-        echo $quantity;
-        $sql ="INSERT INTO orderdetails (articleId, userId, quantity, totalPrice,color,size trackingNo) VALUES ( '$articleId', '$userId', '$quantity', '$totalPrice','$color','$size' '$trackingNo')";
+        $sql ="INSERT INTO orderdetails (articleId, userId, quantity, totalPrice,color,size,trackingNo) VALUES ( '$articleId', '$userId', '$quantity', '$totalPrice','$color','$size','$trackingNo')";
         if ($connection->query($sql) === TRUE) {
-              echo "New record created successfully";
         } else {
             echo "Error: " . $sql . "<br>" . $connection->error;
         }
@@ -219,8 +194,7 @@ if($articleId!=-9999){
 
 
     }
-       else
-        echo 'order already placed';
+
 
 
 }

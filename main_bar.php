@@ -178,8 +178,8 @@
             <!-- Navigation Buttons/Quick Cart for Tablets and Desktop Only -->
             <div class="menu-links hidden-xs">
                 <ul class="nav nav-pills nav-justified">
-                    <li> <a href="index.html"> <i class="fa fa-home fa-fw"></i> <span class="hidden-sm">Home</span></a> </li>
-                    <li> <a href="about.html"> <i class="fa fa-info-circle fa-fw"></i> <span class="hidden-sm">About</span></a> </li>
+                    <li> <a href="index.php"> <i class="fa fa-home fa-fw"></i> <span class="hidden-sm">Home</span></a> </li>
+                    <li> <a href="about.php"> <i class="fa fa-info-circle fa-fw"></i> <span class="hidden-sm">About</span></a> </li>
                     <li> <a href="blog.html"> <i class="icons"><span><img src="images/icons/jug.png" width="15" height="20"></span></i> <span class="hidden-sm">Appliances</span></a> </li>
                     <li> <a href="contact.php"> <i class="fa"><img src="images/icons/kitchen.png" width="20" height="20"></i> <span class="hidden-sm ">Kitchen</span></a> </li>
                     <li class="dropdown"> <a href="cart.html"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-sm"> 5 items | $4530.00</span></a>

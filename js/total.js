@@ -28,11 +28,19 @@ document.getElementById("price").innerHTML=quantity1;
 
 function addWish(str){
 
-
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            notie.alert(3, 'Wish Added!', 1);
+
+            var t=xmlhttp.responseText;
+            notie.alert(3, t , 1);
+            if(t==="Your wish has been added!"){
+                var h=document.getElementById("wishno").innerText;
+                var p = parseInt(h, 10);
+                p++;
+                f=p.toString()
+                document.getElementById("wishno").innerHTML='<i class="fa fa-heart fa-fw"></i>  '+f;
+            }
 
 
         }
@@ -41,6 +49,7 @@ function addWish(str){
     xmlhttp.open("GET", "addWish.php?a=" + str , true);
     xmlhttp.send();
 }
+
 
 function addWishSale(str){
 
@@ -115,6 +124,21 @@ function removewish(str){
 
 
 
+function removeitem(userId,articleNo,trackingNo){
+
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var newLocation = " cart.php?articleId=-9999";
+            window.location = newLocation;
+            //header("location:shopping_cart.php");
+        }
+    }
+    xmlhttp.open("GET", "removeitemcart.php?userId=" + userId + "&articleNo=" +  articleNo + "&trackingNo=" +trackingNo , true);
+    xmlhttp.send();
+}
+
 
 function addtocart(article){
 
@@ -126,6 +150,42 @@ function addtocart(article){
         }
     }
     xmlhttp.open("GET", "shopping_cart.php?articleId=" + article , true);
+    xmlhttp.send();
+}
+
+
+function changequantity(quantity,userId,articleNo,trackingNo,price){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var newLocation = "cart.php?articleId=-9999";
+            window.location = newLocation;
+        }
+    }
+    xmlhttp.open("GET", "changequantity.php?userId=" + userId + "&articleNo=" +  articleNo + "&trackingNo=" +trackingNo + "&quantity=" +quantity + "&price=" +price, true);
+    xmlhttp.send();
+}
+
+
+function insertquantityinshoppingcart(){
+
+    var quantity=document.getElementById("quantity").value;
+    var articleId=document.getElementById("articleId").value;
+    var color=document.getElementById("color").value;
+    var size=document.getElementById("size").value;
+    alert(quantity);
+    alert(articleId);
+    alert(size);
+    alert(color);
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var newLocation = "cart.php?articleId="+articleId+"&quantity=" + quantity+"&color="+ color +"&size="+ size ;
+            window.location = newLocation;
+            //header("location:shopping_cart.php");
+        }
+    }
+    xmlhttp.open("GET", "cart.php?quantity=" + quantity +"&articleId=" + articleId +"&color="+ color +"&size="+ size , true);
     xmlhttp.send();
 }
 
@@ -156,7 +216,7 @@ function addtocartNew(article){
             notie.alert(3, 'Added to Cart!', 1);
         }
     }
-    xmlhttp.open("GET", "shopping_cart.php?articleId=" + article , true);
+    xmlhttp.open("GET", "cart.php?articleId=" + article , true);
     xmlhttp.send();
 }
 
@@ -170,7 +230,7 @@ function addtocartNewfeatured(article){
             document.getElementById("wishaddedFeatured").innerHTML = "Added to cart!";
         }
     }
-    xmlhttp.open("GET", "shopping_cart.php?articleId=" + article , true);
+    xmlhttp.open("GET", "cart.php?articleId=" + article , true);
     xmlhttp.send();
 }
 
@@ -188,12 +248,12 @@ function insertquantityinshoppingcart(){
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var newLocation = "shopping_cart.php?articleId="+articleId+"&quantity=" + quantity;
+            var newLocation = "cart.php?articleId="+articleId+"&quantity=" + quantity;
             window.location = newLocation;
             //header("location:shopping_cart.php");
         }
     }
-    xmlhttp.open("GET", "shopping_cart.php?quantity=" + quantity +"&articleId=" + articleId , true);
+    xmlhttp.open("GET", "cart.php?quantity=" + quantity +"&articleId=" + articleId , true);
     xmlhttp.send();
 }
 

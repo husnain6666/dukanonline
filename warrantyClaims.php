@@ -131,10 +131,10 @@
             <div class="page-content">
                 <ol>
                     <li>For details of Warranties and Claims from Manufacturers you can call us.</li>
-                    <li>Electroshop.pk is a retailer or reseller , we are not manufacturers so we will provide all OFFICIAL WARRANTIES with your product purchase which will be claimable at the manufactures end.
+                    <li>Storeonline.pk is a retailer or reseller , we are not manufacturers so we will provide all OFFICIAL WARRANTIES with your product purchase which will be claimable at the manufactures end.
                     </li>
 
-                    <strong>    For Details: 0314-1577767  </strong>
+                    <strong>    For Details: +92 322 4859990  </strong>
             </div>
         </div>
     </div>

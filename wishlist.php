@@ -3,7 +3,7 @@
 include('session.php');
 include('connectdb.php');
 include "top_header.php";
-$per_page = 1;
+$per_page = 3;
 if (isset($_GET["page"])) {
     $page = $_GET["page"];
 } else {
@@ -147,31 +147,7 @@ $total_records=2;
             $total_records = mysqli_num_rows($result);
             ?>
             <div class="box-heading category-heading"><span>Showing <?php echo $start_from + 1 ?>-<?php if (($start_from + 1) == $total_records) echo $total_records; else if ($start_from + $per_page >= $total_records) echo $total_records; else echo $start_from + $per_page ?> of <?php echo $total_records ?><?php?>products</span>
-                <ul class="nav nav-pills pull-right">
-                    <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#a"> 9 per page <i class="fa fa-sort fa-fw"></i> </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#a">12 per page</a></li>
-                            <li><a href="#a">15 per page</a></li>
-                            <li><a href="#a">18 per page</a></li>
-                            <li><a href="#a">21 per page</a></li>
-                            <li><a href="#a">100 per page</a></li>
-                            <li><a href="#a">Show all</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#a"> Sort by <i class="fa fa-sort fa-fw"></i> </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#a">Name (A-Z)</a></li>
-                            <li><a href="#a">Name (Z-A)</a></li>
-                            <li><a href="#a">Price (Low-High)</a></li>
-                            <li><a href="#a">Price (High-Low)</a></li>
-                            <li><a href="#a">Rating Highest</a></li>
-                            <li><a href="#a">Rating Lowest</a></li>
-                            <li><a href="#a">Recent</a></li>
-                        </ul>
-                    </li>
-                    <li class="view-list active"> <a href="category-list.html"> <i class="fa fa-list-ul fa-fw"></i></a> </li>
-                    <li class="view-grid"> <a href="category-grid.html"> <i class="fa fa-th-large fa-fw"></i></a> </li>
-                </ul>
+
             </div>
             <div class="row clearfix f-space20"></div>
             <div class="box-content">
