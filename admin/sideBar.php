@@ -79,6 +79,18 @@
 
                 </ul>
             </li>
+            <li class="<?php if($_SERVER['REQUEST_URI'] == "/dukanonline/admin/add_clients.php")
+                echo "active ";?>treeview">
+                <a href="add_clients.php">
+                    <i class="fa fa-male"></i> <span>Add/Update Clients</span> <i class=""></i>
+                </a>
+            </li>
+            <li class="<?php if($_SERVER['REQUEST_URI'] == "/dukanonline/admin/addDealer.php")
+                echo "active ";?>treeview">
+                <a href="addDealer.php">
+                    <i class="fa fa-clipboard"></i> <span>Add/Update Dealership</span> <i class=""></i>
+                </a>
+            </li>
             <li class="<?php if($_SERVER['REQUEST_URI'] == "/dukanonline/admin/phpMail.php")
                 echo "active ";?>treeview">
                 <a href="phpMail.php">

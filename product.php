@@ -223,8 +223,14 @@ include "top_header.php";
                                               </div>
                                           </div>
                                         <?php
-                                        }// end if
-                                      if($category == "Clothing"){
+                                        }
+                                      // Search size in table. If size is present than show size
+                                          $size_present = "select size from size where articleId = $articleId";
+                                          $size_result = mysqli_query($connection, $size_present);
+                                          $table_record9 = mysqli_fetch_array($size_result);
+                                          $size_is_present = $table_record9['size'];
+                                      if($size_is_present != "") {
+                                          // end if
                                       ?>
                                       <div class="size-wr">
                                           <div class="size-options">
@@ -237,13 +243,15 @@ include "top_header.php";
                                                       <!-- this hidden field is used to contain the selected option from the dropdown -->
                                                       <input class="dropdown-field" type="hidden" value="">
                                                       <ul class="dropdown-menu" role="menu">
-                                                          <li><a href="#a" data-value="XS">XS</a></li>
-                                                          <li><a href="#a" data-value="S">S</a></li>
-                                                          <li><a href="#a" data-value="M">M</a></li>
-                                                          <li><a href="#a" data-value="N">N</a></li>
-                                                          <li><a href="#a" data-value="L">L</a></li>
-                                                          <li><a href="#a" data-value="XL">XL</a></li>
-                                                          <li><a href="#a" data-value="XXL">XXL</a></li>
+                                                          <?php
+                                                          $size_query = "select c.size from size c inner join article a on a.articleId=c.articleId where c.articleId = '$articleId'";
+                                                          $size_result = mysqli_query($connection, $size_query);
+                                                          while($table_record10 = mysqli_fetch_array($size_result)){
+                                                              $size = $table_record10['size'];
+                                                              ?>
+                                                              <li><a href="#a" data-value="<?php echo $size;?>"><?php echo $size;?></a></li>
+                                                          <?php }// end while loop
+                                                          ?>
                                                       </ul>
                                                   </li>
                                               </ul>

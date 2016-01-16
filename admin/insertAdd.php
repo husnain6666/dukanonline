@@ -17,28 +17,25 @@ else
 {
     move_uploaded_file($_FILES["image"]["tmp_name"],"../images/" . $_FILES["image"]["name"]);
     $file="images/".$_FILES["image"]["name"];
-    $query="insert into electroshop.advertisement (title, description, picture, date) VALUES ('$title','$desc','$file','$date')";
+    $query="insert into advertisement (title, description, picture, date) VALUES ('$title','$desc','$file','$date')";
 
     try{
         $result=mysqli_query($CONNECTION,$query);
         if($result)
         {
             mysqli_close($CONNECTION);
-            echo "yo";
-            echo " ".$desc;
         }
         else
         {
             mysqli_close($CONNECTION);
-            //header("location: addPoster.php?message=Could not save add!");
+            header("location: addPoster.php?message=Could not save add!");
             throw new Exception("Problem in Query");
-            echo "no";
         }
     }
 
     catch (Exception $e){
         $e->getMessage($e);
     }
-    //header("location: addPoster.php?message=Add Saved!");
+    header("location: addPoster.php?message=Add Saved!");
 }
 ?>

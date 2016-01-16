@@ -311,7 +311,7 @@ function randomPassword() {
                       </div>
 
                   <div class="form-group">
-                      <label for="category" class="col-sm-2 control-label">Choose Color*</label>
+                      <label for="category" class="col-sm-2 control-label">Choose Color</label>
                       <div class="col-sm-2">
                       <select class="form-control col-sm-9" id="ChoseColors">
                           <option>red</option>
@@ -324,15 +324,35 @@ function randomPassword() {
                       </select>
                       </div>
 
-                      <label for="TIME IN" class="col-sm-1 control-label"  align="right">Color*</label>
+                      <label for="TIME IN" class="col-sm-1 control-label"  align="right">Color</label>
                       <span class="col-sm-5"><input readonly type="text" align="left"id="colorid" name="colors" class="form-control" />
                           </span>
                       <span class="error" ><font color="red"> <?php //if(isset($errors['color'])) echo $errors['color'];?></font></span>
                       <a class="btn btn-primary" onclick='f1()'><i class="fa fa-plus"></i></a>
                       <a class="btn btn-danger" onclick='f2()'><i class="fa fa-minus"></i></a>
                     </div>
-                      
 
+                      <div class="form-group">
+                          <label for="category" class="col-sm-2 control-label">Choose Size</label>
+                          <div class="col-sm-2">
+                              <select class="form-control col-sm-9" id="ChooseSize">
+                                  <option>XS</option>
+                                  <option>S</option>
+                                  <option>M</option>
+                                  <option>N</option>
+                                  <option>L</option>
+                                  <option>XL</option>
+                                  <option>XXL</option>
+                              </select>
+                          </div>
+
+                          <label for="TIME IN" class="col-sm-1 control-label"  align="right">Size</label>
+                      <span class="col-sm-5"><input readonly type="text" align="left"id="sizeid" name="size" class="form-control" />
+                          </span>
+                          <span class="error" ><font color="red"> <?php //if(isset($errors['color'])) echo $errors['color'];?></font></span>
+                          <a class="btn btn-primary" onclick='f3()'><i class="fa fa-plus"></i></a>
+                          <a class="btn btn-danger" onclick='f4()'><i class="fa fa-minus"></i></a>
+                      </div>
 
                   <div class=" form-group">
                       <label for="qty" class="col-sm-2 control-label" align="left">Choose Picture1*</label>
@@ -502,7 +522,7 @@ function randomPassword() {
               }
               else
               {
-                  alert("Color already Exist");
+                  alert("Color already Exists!");
               }
           }
       }
@@ -551,6 +571,87 @@ function randomPassword() {
                   text="";
               }
               document.getElementById("colorid").value=text;
+
+          }
+
+
+      }
+
+      function f3()
+      {
+          var com=-1;
+          var sel=document.getElementById("ChooseSize");
+          var sv = sel.options[sel.selectedIndex].value;
+          var color=document.getElementById("sizeid").value;
+          if(color=="")
+          {
+              document.getElementById("sizeid").value=sv;
+          }
+          else
+          {
+              var res = color.split(",");
+              for(var i = 0; i < res.length; i++)
+              {
+                  if(res[i]==sv){
+                      com=0;
+                  }
+
+              }
+              if(com==-1)
+              {
+                  document.getElementById("sizeid").value=color+","+sv;
+              }
+              else
+              {
+                  alert("Size already Exists!");
+              }
+          }
+      }
+
+      function f4()
+      {
+          var com;
+          var text="s";
+          var sel=document.getElementById("ChooseSize");
+          var sv = sel.options[sel.selectedIndex].value;
+          var color=document.getElementById("sizeid").value;
+          if(color=="")
+          {
+          }
+          else
+          {
+              var res = color.split(",");
+              for(var i = 0; i < res.length; i++)
+              {
+                  var n = res[i].localeCompare(sv);
+                  if(n==0)
+                  {
+                      com=i;
+                      break;
+                  }
+
+              }
+              for(var i = 0; i < res.length; i++)
+              {
+                  if(res[com]==res[i]){
+
+                  }else{
+                      if(text=="s")
+                      {
+                          text=res[i];
+                      }
+                      else
+                      {
+                          text=text+","+res[i];
+                      }
+                  }
+
+
+              }
+              if(text=="s"){
+                  text="";
+              }
+              document.getElementById("sizeid").value=text;
 
           }
 
