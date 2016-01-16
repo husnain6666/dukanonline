@@ -2,20 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="159fda90-2f6d-4009-8ab1-614885ddbaf3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DeliveryInformation.php" afterPath="$PROJECT_DIR$/DeliveryInformation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cart.php" afterPath="$PROJECT_DIR$/cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dukanonline.iml" afterPath="$PROJECT_DIR$/.idea/dukanonline.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/facebook.php" afterPath="$PROJECT_DIR$/facebook.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_bar.php" afterPath="$PROJECT_DIR$/main_bar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/privacyPolicy.php" afterPath="$PROJECT_DIR$/privacyPolicy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product.php" afterPath="$PROJECT_DIR$/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/returnPolicy.php" afterPath="$PROJECT_DIR$/returnPolicy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/termsAndConditions.php" afterPath="$PROJECT_DIR$/termsAndConditions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/top_header.php" afterPath="$PROJECT_DIR$/top_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/total.js" afterPath="$PROJECT_DIR$/js/total.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warrantyClaims.php" afterPath="$PROJECT_DIR$/warrantyClaims.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wishlist.php" afterPath="$PROJECT_DIR$/wishlist.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dukanonline.iws" />
@@ -44,8 +30,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.7917414" vertical-offset="2040" max-vertical-offset="19074">
-              <caret line="277" column="96" selection-start-line="277" selection-start-column="96" selection-end-line="277" selection-end-column="96" />
+            <state vertical-scroll-proportion="0.18312387" vertical-offset="2040" max-vertical-offset="19074">
+              <caret line="126" column="37" selection-start-line="126" selection-start-column="37" selection-end-line="126" selection-end-column="37" />
               <folding>
                 <marker date="1452843011709" expanded="true" signature="419:524" placeholder="SELECT SUBST..article..." />
                 <marker date="1452843011709" expanded="true" signature="8171:8264" placeholder="SELECT artic..article..." />
@@ -213,6 +199,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -280,7 +267,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452929622649</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Merge branches 'husnain' and 'zain' of https://github.com/husnain6666/dukanonline into zaingohar&#10;&#10;# Conflicts:&#10;#&#9;.idea/dukanonline.iml&#10;#&#9;.idea/workspace.xml&#10;#&#9;index.php&#10;#&#9;specials.php&#10;#&#9;top_header.php&#10;">
+      <created>1452929688490</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1452929688490</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -294,7 +287,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19236417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19236417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -721,8 +714,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.7917414" vertical-offset="2040" max-vertical-offset="19074">
-          <caret line="277" column="96" selection-start-line="277" selection-start-column="96" selection-end-line="277" selection-end-column="96" />
+        <state vertical-scroll-proportion="0.18312387" vertical-offset="2040" max-vertical-offset="19074">
+          <caret line="126" column="37" selection-start-line="126" selection-start-column="37" selection-end-line="126" selection-end-column="37" />
           <folding>
             <marker date="1452843011709" expanded="true" signature="419:524" placeholder="SELECT SUBST..article..." />
             <marker date="1452843011709" expanded="true" signature="8171:8264" placeholder="SELECT artic..article..." />
