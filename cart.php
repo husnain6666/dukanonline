@@ -70,6 +70,23 @@ if ($quantity==0)
     $quantity=1;
 echo $quantity;
 }
+
+if(isset($_GET['color'])){
+    $color=$_GET['color'];
+
+    echo $color;
+
+}
+
+
+if(isset($_GET['size'])){
+    $size=$_GET['size'];
+
+    echo $size;
+}
+
+
+
 $userName=$_SESSION['loginUser'];
 $userId = $_SESSION['loginId'];
 
@@ -151,7 +168,7 @@ if($articleId!=-9999){
 
         if($articleId==$table_record['articleId']){
             $check=true;
-            $query="update orderdetails set quantity='$quantity',totalPrice='$totalPrice' where trackingNo='$trackingNo' and userId='$userId' and articleId='$articleId'";
+            $query="update orderdetails set quantity='$quantity',totalPrice='$totalPrice',color='$color',size='$size' where trackingNo='$trackingNo' and userId='$userId' and articleId='$articleId'";
             $result=mysqli_query($connection,$query);
         }
     }
@@ -190,7 +207,7 @@ if($articleId!=-9999){
 
         }
         echo $quantity;
-        $sql ="INSERT INTO orderdetails (articleId, userId, quantity, totalPrice, trackingNo) VALUES ( '$articleId', '$userId', '$quantity', '$totalPrice', '$trackingNo')";
+        $sql ="INSERT INTO orderdetails (articleId, userId, quantity, totalPrice,color,size trackingNo) VALUES ( '$articleId', '$userId', '$quantity', '$totalPrice','$color','$size' '$trackingNo')";
         if ($connection->query($sql) === TRUE) {
               echo "New record created successfully";
         } else {
@@ -242,7 +259,7 @@ $quantityCart=$table_record['quantityCart'];
 <?php
 
 
-$sql = "SELECT orderdetails.articleId,orderdetails.quantity,orderdetails.totalPrice,price,articleName,trackingNo,article.picture1,article.discount,article.Category FROM orderdetails inner join article on orderdetails.articleId=article.articleId and userId='$userId' and orderdetails.trackingNo='$trackingNo'";
+$sql = "SELECT orderdetails.articleId,orderdetails.quantity,orderdetails.totalPrice,orderdetails.color,orderdetails.size,price,articleName,trackingNo,article.picture1,article.discount,article.Category FROM orderdetails inner join article on orderdetails.articleId=article.articleId and userId='$userId' and orderdetails.trackingNo='$trackingNo'";
 $result=mysqli_query($connection,$sql);
 
 while($table_record=mysqli_fetch_array($result)){
@@ -253,6 +270,8 @@ $totalPrice=$table_record['totalPrice'];
 $quantity=$table_record['quantity'];
 $picture1=$table_record['picture1'];
 $discount=$table_record['discount'];
+$color=$table_record['color'];
+$size=$table_record['size'];
 $discountedPrice = ($price * $discount)/100;
 $discountedPrice = $price - $discountedPrice;
 $category=$table_record['Category'];
@@ -284,9 +303,9 @@ $overAllprice += $totalPrice;
             <div class="col-md-3 hidden-sm hidden-xs p-wr">
                 <div class="product-attrb-wr">
                     <div class="product-attrb">
-                        <div class="att"> <span>Color:</span> <a href="#a" data-toggle="tooltip" title="" class="color bg-teal" data-original-title="Teal"></a> </div>
-                        <div class="att"> <span>Size:</span> <span class="size">XS</span> </div>
-                        <div class="att"> <span>Category:</span> <span class="size"><?php echo $category; ?></span> </div>
+                   <?php if($color!==""){   ?>  <div class="att"> <span>Color:</span> <a href="#a" data-toggle="tooltip" title="" class="color bg-<?php echo $color ?>" data-original-title="<?php echo $color ?>"></a> </div>
+                   <div class="att"> <span>Size:</span> <span class="size"><?php echo $size ?></span> </div>
+                   <?php  }  ?>         <div class="att"> <span>Category:</span> <span class="size"><?php echo $category; ?></span> </div>
                     </div>
                 </div>
             </div>
@@ -295,9 +314,11 @@ $overAllprice += $totalPrice;
                     <div class="product-attrb">
                         <div class="qtyinput">
                             <div class="quantity-inp">
-                                <input type="text" class="quantity-input" name="p_quantity" id="quantity" value="<?php echo $quantity; ?>">
-                                <div class="quantity-txt minusbtn"><a href="#a" class="qty qtyminus" ><i class="fa fa-minus fa-fw"></i></a></div>
-                                <div class="quantity-txt plusbtn"><a href="#a" class="qty qtyplus" ><i class="fa fa-plus fa-fw"></i></a></div>
+                                <div class="numeric-input">
+
+                                    <input type="number" min="1" max=""  value="<?php echo $quantity; ?>"  class="form-control" id="q" onchange="changequantity(this.value,<?php echo $userId ?>,<?php echo $articleNo ?>,<?php echo $trackingNo ?>,<?php echo $totalPrice; ?>)">
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -313,7 +334,7 @@ $overAllprice += $totalPrice;
             <div class="col-md-1 col-sm-2 col-xs-3 p-wr">
                 <div class="product-attrb-wr">
                     <div class="product-attrb">
-                        <div class="remove"> <a href="#a" class="color2" data-toggle="tooltip" data-original-title="Remove"><i class="fa fa-trash-o fa-fw color2"></i></a> </div>
+                        <div class="remove"  onclick="removeitem(<?php echo $userId ?>,<?php echo $articleNo ?>,<?php echo $trackingNo ?>)"> <a href="#a" class="color2" data-toggle="tooltip" data-original-title="Remove"><i class="fa fa-trash-o fa-fw color2"></i></a> </div>
                     </div>
                 </div>
             </div>
