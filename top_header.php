@@ -36,6 +36,14 @@
     <!-- Color -->
     <link href="css/skin/color.css" id="colorstyle" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <!--[if IE 8]>
+    <script type="text/javascript" src="js/selectivizr.js"></script>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -59,8 +67,7 @@
     <script src="js/iview.js" type="text/javascript"></script>
     <script src="js/retina-1.1.0.min.js" type="text/javascript"></script>
 
-    <!--[if IE 8]>
-    <script type="text/javascript" src="js/selectivizr.js"></script>
+
     <![endif]-->
 
 </head>

@@ -68,6 +68,7 @@
                     <i class="fa fa-plus"></i> <span>Add Poster</span> <i class=""></i>
                 </a>
             </li>
+
         </ul>
     </section>
     <!-- /.sidebar -->
