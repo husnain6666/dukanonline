@@ -1201,7 +1201,7 @@ a.color3:hover {
 	font-weight: 900;
 	height: auto;
 	opacity: 1;
-	overflow: visable;
+	overflow: visible;
 	width: auto;
 	transition: all 0.7s ease-in-out;
 	-moz-transition: all 0.7s ease-in-out;
@@ -3315,7 +3315,7 @@ h2 {
 }
 .product-details .price-new {
 	display: block;
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: 900;
 	padding-top: 10px;
 }
@@ -4579,7 +4579,7 @@ line-height: 20px;
 .product-block-nt .product-meta .big-price {
     height: auto;
     opacity: 1;
-    overflow: visable;
+    overflow: visible;
 }
 .product-block-nt .product-meta .small-price {
     height: 0px;

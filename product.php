@@ -1,5 +1,4 @@
 <?php
-include('session.php');
 include('connectdb.php');
 include "top_header.php";
 ?>
@@ -266,7 +265,7 @@ include "top_header.php";
                       </div>
                       <div class="row">
                           <div class="price-wr col-md-4 col-sm-4 col-xs-12">
-                              <div class="big-price"> <span class="price-old"><span class="sym">Rs.</span><?php echo $price?></span> <span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice?></span> </div>
+                              <div class="big-price"> <span class="price-old" ><span class="sym">Rs.</span><?php echo $price?></span> <span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice?></span> </div>
                           </div>
                           <?php
                           if( $check!== false ) {?>

@@ -597,17 +597,6 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12">
-
-            <div class="carousel-heading">
-                <h4>Featured Products</h4>
-                <div class="carousel-arrows">
-                    <i class="icons icon-left-dir"></i>
-                    <i class="icons icon-right-dir"></i>
-                </div>
-            </div>
-
-        </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main-column box-block">
             <div class="box-heading"><span>Recent Products</span></div>

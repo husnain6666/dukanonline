@@ -139,7 +139,7 @@ function randomPassword() {
     }
 </script>
 <?php
-$path ="http://www.electroshop.pk/photo/";
+$path ="../images/products/";
 $pic11="";
 $pic22="";
 $pic33="";
@@ -329,7 +329,7 @@ if (isset($_POST['submit1'])) {
         $sale = true;
     }
 
-$path1="../images/products";
+$path1="../images/products/";
     $art_name=$_POST['article_name'];
     $name = $_FILES['pic1']['name'];
     $size = $_FILES['pic1']['size'];

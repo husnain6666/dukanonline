@@ -6,14 +6,14 @@
 <?php
 include_once('dbConnect.php');
 $pic1;
-$path1 ="http://www.storeonline.pk/images/brands";
+$path1 ="../images/brands/";
 
 $pic2;
 $pic3;
 $pic11;
 $pic22;
 $pic33;
-$path ="../images/brands";
+$path ="../images/brands/";
 $errors = array();
 $pass= randomPassword();
 
@@ -259,7 +259,7 @@ if(isset($_POST['submit1']))
                     </div><!-- /.box-body -->
                     <div class='errorabcd' style='display:none'>Event Created</div>
                     <div class="box-footer">
-                        <button  name="submit1" " data-toggle="tooltip" data-original-title='Submits'  id="submit1"class="btn btn-info pull-right" >Submit</button>
+                        <button  name="submit1" class="btn btn-info pull-right" >Submit</button>
                     </div><!-- /.box-footer -->
                     <div class="alert alert-success" role="alert" id="idalert" >Action successful</div>
 
@@ -363,6 +363,7 @@ if(isset($_POST['submit1']))
     $("submit1").click(function(){
         $("panel").show(1000);
     });
+
     var userName;
     $(function () {
         $("#example1").DataTable({

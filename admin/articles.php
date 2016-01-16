@@ -170,7 +170,7 @@ header("location: login.php");
                                             //"<td> {$member['quantity']} </td>" .
                                             "<td> {$member['price']} </td>" .
                                             "<td align='center'>" .
-                                            "<a href='http://www.storeonline.pk/products.php?articleId={$member['articleId']}' target='_blank'><button  class='btn btn-primary btn-xs' data-toggle='modal' data-target='' title='' onclick=''  data-user-id='$userId'><i class='fa fa-eye'></i></button></a>&nbsp;<a href='articleUpdate.php?q={$member['articleId']}' target='_blank'><button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)' data-original-title='Reset Password' data-user-id='$userId'><i class='fa fa-refresh'></i></button>&nbsp;" .
+                                            "<a href='../product.php?articleId={$member['articleId']}' target='_blank'><button  class='btn btn-primary btn-xs' data-toggle='modal' data-target='' title='' onclick=''  data-user-id='$userId'><i class='fa fa-eye'></i></button></a>&nbsp;<a href='articleUpdate.php?q={$member['articleId']}' target='_blank'><button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)' data-original-title='Reset Password' data-user-id='$userId'><i class='fa fa-refresh'></i></button>&nbsp;" .
                                             "</td>" .
                                            "</tr>";
                                     }

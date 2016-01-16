@@ -2,18 +2,269 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="159fda90-2f6d-4009-8ab1-614885ddbaf3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/addDealer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/add_clients.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/clientUpdate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dealerUpdate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/insertClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/updateClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/updateDealer.php" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\110.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\1450195176_whatsapp.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\1450198211_whatsapp.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\1450688366723_1507616316218595_5774264740446214375_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\1450688371723_1507616316218595_5774264740446214375_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\1450688524723_1507616316218595_5774264740446214375_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\1450688531723_1507616316218595_5774264740446214375_n.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Alpha_cz9Nbsgx__pic1_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\BISMILLAH.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Dawlance Refrigertor 9175wbm_Za8e0Rtp__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Dawlance Refrigertor 9175wbm_Za8e0Rtp__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Dawlance microwave oven_jOxrjFVo__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Dawlance microwave oven_jOxrjFVo__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Dawlance_9ta7qQej__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Dawlance_LCOJmjoX__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Dawlance_N1tsTc40__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Eco Star_5AJehysd__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Esquire Hand Dryer_VEECuf3C__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Esquire Hand Dryer_VEECuf3C__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Esquire Hand Dryer_VEECuf3C__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Esquire Hand Dryer_qRoalPgH__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Esquire Hand Dryer_qRoalPgH__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gn_xRCZeBII__pic1_.PNG" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_4cswZXGJ__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_4cswZXGJ__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_4cswZXGJ__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_KL1hyuB8__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_Pxtw7lGT__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_Svp64Y7X__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_SxnRZQ8l__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_SxnRZQ8l__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_dvnN5X1q__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_eSuLDsqb__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_gC6lllIN__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_gC6lllIN__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_gT6HWFKO__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_hIWJyXtB__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_ioNUg8Nv__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_puzp7uZh__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_qvqTbgdR__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_qvqTbgdR__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_qvqTbgdR__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_rooqmi38__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_rthVWr7J__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_wSUKFNtj__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_wUQb43Nt__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree AC split 1.5 ton_x0vJ4fwF__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree Air Conditioner 1.5 ton_tSXjtPlX__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree Air Conditioner 1.5 ton_tSXjtPlX__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree Air Conditioner 1.5 ton_tSXjtPlX__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Gree_N7zieuRa__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Haier Air Conditioner_3HSfEy87__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Haier Air conditioner 1.5 ton_H9nMmjBz__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Haier Air conditioner 1.5 ton_NZZ0UmQe__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Haier Air conditioner 1.5 ton_NZZ0UmQe__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Haier Air conditioner 1.5 ton_XY59wpqd__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Haier Air conditioner 1.5 ton_XY59wpqd__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Haier_FeeqJrMg__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Haier_pA7GRhLe__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Huawei.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Karcher Vacuum Cleaner DS 5.800_tkr7Ak8g__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Karcher Vacuum Cleaner DS 5.800_tkr7Ak8g__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Karcher Vacuum Cleaner DS 5.800_tkr7Ak8g__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Refrigerator_CtchNk40__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Refrigerator_CtchNk40__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Refrigerator_CtchNk40__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Samung LED 32j4100_P3g0SkXh__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Siemens Hand dryer_jOr1eX5A__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Siemens Hand dryer_jOr1eX5A__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Sonashi Vacuum Cleaner SVC 9007D_x72VvEVT__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Sonashi Vacuum Cleaner SVC 9007D_x72VvEVT__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Sonashi Vacuum Cleaner SVC 9007D_x72VvEVT__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Sonashi Vacuum Cleaner SVC 9008D_z1TK03vf__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Sonashi Vacuum Cleaner SVC 9008D_z1TK03vf__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Sonashi Vacuum Cleaner SVC 9008D_z1TK03vf__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Sonashi Vacuum Cleaner SVC 9011_UaAjTG88__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Sonashi Vacuum Cleaner SVC 9011_UaAjTG88__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Sonashi Vacuum Cleaner SVC 9011_UaAjTG88__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Super Asia_JS7dvAjJ__pic1_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Test_GmQvSQkq__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Test_xDLVqmOd__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Washing Machine Super Asia_Ojs6c1fc__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Washing Machine eco_0mHj2JBa__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Washing Machine eco_0mHj2JBa__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Washing Machine eco_0mHj2JBa__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Washing Machine eco_ZVii8UMc__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Washing Machine eco_ZVii8UMc__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Washing Machine eco_ZVii8UMc__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Washing Machine eco_coJLyp16__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Washing Machine eco_yC5t0kl8__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\Zong.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\ac.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\appliances.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\arsalan_AZfjzyHT__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\auricular6.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\bahria-logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\butt sweets.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\call.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\certficate 1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\certficate 2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\certficate 3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\certficate 4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\certficate 5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\certficate 6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\certficate 7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\cht.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\chughtais-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\coca cola.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\cooking range.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\dfdd_qmyvKoXS__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\dfdf_5A8kLPgD__pic1_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\dfdf_X0bz3NE3__pic1_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\dfdf_v19lgany__pic1_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\electroshop logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\electroshop-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\electroshop_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\esquire_rXQ9WRl0__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\fan heater _kzySzGlG__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\fan heater _kzySzGlG__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\fan heater _kzySzGlG__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\fan heater _uptItqCU__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\fd_E7McDLC4__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\fd_XYTlPQqZ__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\fdfdf_SpRUMyNk__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\ff_UBW8GPd7__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\ffff_oPvsfZTl__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\fri chicks.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\fthfth_3xCUHhkK__pic1_.PNG" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\gas_geysers.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\geyser1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\gg_WkAQM65X__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\gggggg_22aXPVXH__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\gh_bv1PoZNh__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\green_valley.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hair ac gree 2016_ygTQ9K5B__pic1_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hair ac gree 2016_ygTQ9K5B__pic2_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hair ac gree 2016_ygTQ9K5B__pic3_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hair ac gree 2016_ypWRNIES__pic1_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hair ac gree 2016_ypWRNIES__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hair ac gree 2016_ypWRNIES__pic3_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hh_wGmYC7u4__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hhh_Hdo8R2GN__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hhh_zPcZrUq4__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hhs_ARuCW8te__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hhuh_zZYSxVaU__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\home services.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\home.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\htc mobile _6MOLpLxC__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\htc mobile _6MOLpLxC__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\htc mobile _6MOLpLxC__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_4unCwis7__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_5y83dLNy__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_6fWnvY7f__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_7ybnxZZ6__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_9FpqUrgO__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_9nbiHIlK__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_KX3DnPxg__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_NdP0tCEY__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_SujZQ89Y__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_ZCbEgaLE__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_gx5QX5Wc__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_j14HAY4q__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hu_sBmPJRAF__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\hus_rWJTjcFm__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\husnain_0WDx70bR__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\husnain_LRYaYf8R__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\husnain_TZmLOsJq__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\husnain_ic61RMBP__pic1_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\husnain_ic61RMBP__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\husnain_ic61RMBP__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\instant geyser.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\jhj_rz4BWq3N__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\jjjjjjjjjj_1oY69AMK__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\jjjjjjjjjj_dC98ejSH__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\jk_HnapFPVX__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\jk_jRu2fbc4__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\jug.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\khalid_E0onGyhJ__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\khalid_So59BZla__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\kitchen.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\kk_4WBeg4wN__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\kk_uiMgF9AS__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\kkk_avjnXApL__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\kkk_buuSYQOo__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\ku_Hj0DZeZp__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\kuku_BguxO7aZ__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\led.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\ledbracket.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\logo_circle.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\ltc.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\malees-cafe-lahore.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\malmo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\mc donalds.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\mcb-logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\microwave.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\millat-logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\millat.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\mini-slider1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\mini-slider2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\mini-slider3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\moaz_ohWErKlP__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaaz_DzQF0LjH__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaaz_DzQF0LjH__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaaz_b1znjpq7__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaaz_eIGgZ27e__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaaz_f10k7FuP__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaaz_f10k7FuP__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaaz_fNE5h5jZ__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaaz_gzeyEtdN__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaaz_gzeyEtdN__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaaz_lP50qUyg__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaz1_L9OAptJO__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaz2_2HCofkto__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaz2_vFaALx8E__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\muaz_vRR1Sw8h__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\new product_BBNuKCEA__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\new product_U117vr77__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\new test_VMM1u1Pl__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\refrigerator.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\remote.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\samsung_F3eccnw2__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\samsung_YN7WX8Na__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\services.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\skans-logo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\slider1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\slider2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\slider3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\slider4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\split ac.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\subhusnain_86xATd0O__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\techAgentx logo2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\testing_iGoKH87L__pic1_.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\testing_iGoKH87L__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\toolkit.JPG" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\trg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\unilever.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\washing machine dawlance_vhcf1Z1P__pic1_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\washing machine dawlance_vhcf1Z1P__pic2_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\washing machine dawlance_vhcf1Z1P__pic3_.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\washing machine.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Khalid\PhpstormProjects\dukanonline\photo\washingMachine.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/addArticle.php" afterPath="$PROJECT_DIR$/admin/addArticle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/articleadd.php" afterPath="$PROJECT_DIR$/admin/articleadd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/insertAdd.php" afterPath="$PROJECT_DIR$/admin/insertAdd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/addBrand.php" afterPath="$PROJECT_DIR$/admin/addBrand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/articleUpdate.php" afterPath="$PROJECT_DIR$/admin/articleUpdate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/articles.php" afterPath="$PROJECT_DIR$/admin/articles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.css" afterPath="$PROJECT_DIR$/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product.php" afterPath="$PROJECT_DIR$/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/sideBar.php" afterPath="$PROJECT_DIR$/admin/sideBar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/updateBrand.php" afterPath="$PROJECT_DIR$/admin/updateBrand.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dukanonline.iws" />
@@ -28,7 +279,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="C:\Users\Khalid\PhpstormProjects\dukanonline" />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -39,56 +290,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="product.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64468867" vertical-offset="1637" max-vertical-offset="14637">
-              <caret line="117" column="42" selection-start-line="117" selection-start-column="42" selection-end-line="117" selection-end-column="42" />
+            <state vertical-scroll-proportion="-4.480769" vertical-offset="4306" max-vertical-offset="14620">
+              <caret line="267" column="156" selection-start-line="267" selection-start-column="156" selection-end-line="267" selection-end-column="156" />
               <folding>
-                <marker date="1452926470471" expanded="true" signature="1234:1391" placeholder="SELECT speci..article..." />
-                <marker date="1452926470471" expanded="true" signature="2503:2586" placeholder="SELECT count..reviews..." />
-                <marker date="1452926470471" expanded="true" signature="5601:5759" placeholder="select (sele..ratings..." />
-                <marker date="1452926470471" expanded="true" signature="5609:5673" placeholder="select count..ratings..." />
-                <marker date="1452926470471" expanded="true" signature="10236:10290" placeholder="select color..color..." />
-                <marker date="1452926470471" expanded="true" signature="11666:11774" placeholder="select c.col..color..." />
-                <marker date="1452926470471" expanded="true" signature="13017:13057" placeholder="select size ..." />
-                <marker date="1452926470471" expanded="true" signature="13017:13067" placeholder="select size ..." />
-                <marker date="1452926470471" expanded="true" signature="14696:14802" placeholder="select c.siz..size..." />
-                <marker date="1452926470471" expanded="true" signature="20785:20943" placeholder="select (sele..ratings..." />
-                <marker date="1452926470471" expanded="true" signature="20793:20857" placeholder="select count..ratings..." />
-                <marker date="1452926470471" expanded="true" signature="22017:22347" placeholder="SELECT r.rev..reviews..." />
-                <marker date="1452926470471" expanded="true" signature="22057:22111" placeholder="SELECT first..userinfo..." />
-                <marker date="1452926470471" expanded="true" signature="22128:22181" placeholder="SELECT lastN..userinfo..." />
-                <marker date="1452926470471" expanded="true" signature="27519:27650" placeholder="SELECT artic..article..." />
-                <marker date="1452926470471" expanded="true" signature="28349:28511" placeholder="select (sele..ratings..." />
-                <marker date="1452926470471" expanded="true" signature="28357:28423" placeholder="select count..ratings..." />
-                <marker date="1452926470471" expanded="true" signature="32533:32691" placeholder="select (sele..ratings..." />
-                <marker date="1452926470471" expanded="true" signature="32541:32605" placeholder="select count..ratings..." />
-                <marker date="1452926470471" expanded="true" signature="38782:38940" placeholder="select (sele..ratings..." />
-                <marker date="1452926470471" expanded="true" signature="38790:38854" placeholder="select count..ratings..." />
+                <marker date="1452931806886" expanded="true" signature="1210:1367" placeholder="SELECT speci..article..." />
+                <marker date="1452931806886" expanded="true" signature="2479:2562" placeholder="SELECT count..reviews..." />
+                <marker date="1452931806886" expanded="true" signature="5577:5735" placeholder="select (sele..ratings..." />
+                <marker date="1452931806886" expanded="true" signature="5585:5649" placeholder="select count..ratings..." />
+                <marker date="1452931806886" expanded="true" signature="10212:10266" placeholder="select color..color..." />
+                <marker date="1452931806886" expanded="true" signature="11642:11750" placeholder="select c.col..color..." />
+                <marker date="1452931806886" expanded="true" signature="12993:13033" placeholder="select size ..." />
+                <marker date="1452931806886" expanded="true" signature="12993:13043" placeholder="select size ..." />
+                <marker date="1452931806886" expanded="true" signature="14672:14778" placeholder="select c.siz..size..." />
+                <marker date="1452931806886" expanded="true" signature="20762:20920" placeholder="select (sele..ratings..." />
+                <marker date="1452931806886" expanded="true" signature="20770:20834" placeholder="select count..ratings..." />
+                <marker date="1452931806886" expanded="true" signature="21994:22324" placeholder="SELECT r.rev..reviews..." />
+                <marker date="1452931806886" expanded="true" signature="22034:22088" placeholder="SELECT first..userinfo..." />
+                <marker date="1452931806886" expanded="true" signature="22105:22158" placeholder="SELECT lastN..userinfo..." />
+                <marker date="1452931806886" expanded="true" signature="27496:27627" placeholder="SELECT artic..article..." />
+                <marker date="1452931806886" expanded="true" signature="28326:28488" placeholder="select (sele..ratings..." />
+                <marker date="1452931806886" expanded="true" signature="28334:28400" placeholder="select count..ratings..." />
+                <marker date="1452931806886" expanded="true" signature="32510:32668" placeholder="select (sele..ratings..." />
+                <marker date="1452931806886" expanded="true" signature="32518:32582" placeholder="select count..ratings..." />
+                <marker date="1452931806886" expanded="true" signature="38759:38917" placeholder="select (sele..ratings..." />
+                <marker date="1452931806886" expanded="true" signature="38767:38831" placeholder="select count..ratings..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sideBar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/sideBar.php">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.6153846" vertical-offset="1230" max-vertical-offset="1836">
-              <caret line="84" column="40" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+            <state vertical-scroll-proportion="-8.615385" vertical-offset="56165" max-vertical-offset="78370">
+              <caret line="3317" column="17" selection-start-line="3317" selection-start-column="17" selection-end-line="3317" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addArticle.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/addArticle.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.1153846" vertical-offset="5836" max-vertical-offset="12070">
-              <caret line="362" column="119" selection-start-line="362" selection-start-column="119" selection-end-line="362" selection-end-column="119" />
+            <state vertical-scroll-proportion="0.23992674" vertical-offset="10035" max-vertical-offset="17884">
+              <caret line="598" column="21" selection-start-line="598" selection-start-column="21" selection-end-line="598" selection-end-column="21" />
               <folding>
-                <marker date="1452923754945" expanded="true" signature="6860:6884" placeholder="SELECT * FRO..." />
-                <marker date="1452923754945" expanded="true" signature="8089:8116" placeholder="SELECT brand..brand..." />
+                <marker date="1452932030775" expanded="true" signature="419:524" placeholder="SELECT SUBST..article..." />
+                <marker date="1452932030775" expanded="true" signature="8074:8179" placeholder="SELECT artic..article..." />
+                <marker date="1452932030775" expanded="true" signature="9051:9209" placeholder="select (sele..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="9059:9123" placeholder="select count..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="14070:14228" placeholder="select (sele..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="14078:14142" placeholder="select count..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="21622:21780" placeholder="select (sele..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="21630:21694" placeholder="select count..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="26092:26192" placeholder="SELECT artic..article..." />
+                <marker date="1452932030775" expanded="true" signature="27030:27188" placeholder="select (sele..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="27038:27102" placeholder="select count..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="31849:32007" placeholder="select (sele..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="31857:31921" placeholder="select count..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="39157:39315" placeholder="select (sele..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="39165:39229" placeholder="select count..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="43564:43673" placeholder="SELECT artic..article..." />
+                <marker date="1452932030775" expanded="true" signature="44509:44667" placeholder="select (sele..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="44517:44581" placeholder="select count..ratings..." />
+                <marker date="1452932030775" expanded="true" signature="61216:61407" placeholder="SELECT title..." />
               </folding>
             </state>
           </provider>
@@ -132,9 +400,15 @@
         <option value="$PROJECT_DIR$/admin/updateDealer.php" />
         <option value="$PROJECT_DIR$/admin/add_clients.php" />
         <option value="$PROJECT_DIR$/admin/sideBar.php" />
-        <option value="$PROJECT_DIR$/admin/addArticle.php" />
         <option value="$PROJECT_DIR$/admin/articleadd.php" />
+        <option value="$PROJECT_DIR$/admin/articles.php" />
+        <option value="$PROJECT_DIR$/admin/articleUpdate.php" />
+        <option value="$PROJECT_DIR$/admin/addArticle.php" />
+        <option value="$PROJECT_DIR$/admin/addBrand.php" />
+        <option value="$PROJECT_DIR$/admin/updateBrand.php" />
         <option value="$PROJECT_DIR$/product.php" />
+        <option value="$PROJECT_DIR$/css/custom.css" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -221,7 +495,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="products" />
+              <option name="myItemId" value="brands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dukanonline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dukanonline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,12 +582,20 @@
       <option name="number" value="Default" />
       <updated>1452108334111</updated>
     </task>
+    <task id="LOCAL-00001" summary="changed add article, added size in article add. Changed products page, now size is also shown for articles who have size">
+      <created>1452927043467</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1452927043467</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -337,48 +633,14 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="changed add article, added size in article add. Changed products page, now size is also shown for articles who have size" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed add article, added size in article add. Changed products page, now size is also shown for articles who have size" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/checkout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12376">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sidebarcart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkPassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="527">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8500">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/updateAccountinfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="833">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12376">
@@ -568,13 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.115385" vertical-offset="697" max-vertical-offset="18071">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/posters.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.0" vertical-offset="2601" max-vertical-offset="3961">
@@ -582,17 +837,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/addBrand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769" vertical-offset="4539" max-vertical-offset="6902">
-          <caret line="288" column="118" selection-start-line="288" selection-start-column="50" selection-end-line="288" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/insertAdd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53504276" vertical-offset="197" max-vertical-offset="782">
           <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -614,6 +863,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7846154" vertical-offset="0" max-vertical-offset="585">
           <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -621,6 +871,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="561">
           <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -628,6 +879,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58566433" vertical-offset="2470" max-vertical-offset="4046">
           <caret line="165" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="232" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -635,6 +887,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8146853" vertical-offset="2067" max-vertical-offset="4046">
           <caret line="149" column="62" selection-start-line="149" selection-start-column="62" selection-end-line="149" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -642,6 +895,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.993007" vertical-offset="2594" max-vertical-offset="4216">
           <caret line="186" column="249" selection-start-line="186" selection-start-column="249" selection-end-line="186" selection-end-column="249" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -649,6 +903,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75555557" vertical-offset="51" max-vertical-offset="765">
           <caret line="29" column="75" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -656,6 +911,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="2572" max-vertical-offset="4216">
           <caret line="162" column="74" selection-start-line="162" selection-start-column="74" selection-end-line="162" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -670,29 +926,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/sideBar.php">
+    <entry file="file://D:/Documents/Projects/Tech Agentx/buyonline.pk/flatro/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6153846" vertical-offset="1230" max-vertical-offset="1836">
-          <caret line="84" column="40" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="10613" max-vertical-offset="11815">
+          <caret line="635" column="43" selection-start-line="635" selection-start-column="40" selection-end-line="635" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/products/new product size and color_ntXdqxsD__pic1_.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/articleUpdate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.873627" vertical-offset="14340" max-vertical-offset="17068">
+          <caret line="141" column="27" selection-start-line="141" selection-start-column="27" selection-end-line="141" selection-end-column="27" />
+          <folding>
+            <marker date="1452928666972" expanded="true" signature="-1:-1" placeholder="SELECT * fro..article..." />
+            <marker date="1452928666972" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1452928666972" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1452928666972" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1452928666972" expanded="true" signature="-1:-1" placeholder="SELECT brand..brand..." />
+            <marker date="1452928666972" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/articles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42673993" vertical-offset="2691" max-vertical-offset="5168">
+          <caret line="172" column="57" selection-start-line="172" selection-start-column="57" selection-end-line="172" selection-end-column="57" />
+          <folding>
+            <marker date="1452928490068" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..article..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/addBrand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46703297" vertical-offset="0" max-vertical-offset="6919">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <marker date="1452929731684" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1452929731684" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1452929731684" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1452929731684" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..brand..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/updateBrand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="787" max-vertical-offset="6545">
+          <caret line="57" column="9" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="9" />
+          <folding>
+            <marker date="1452929731761" expanded="true" signature="-1:-1" placeholder="SELECT * fro..brand..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/addArticle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.1153846" vertical-offset="5836" max-vertical-offset="12070">
-          <caret line="362" column="119" selection-start-line="362" selection-start-column="119" selection-end-line="362" selection-end-column="119" />
+        <state vertical-scroll-proportion="0.37728938" vertical-offset="5404" max-vertical-offset="12342">
+          <caret line="330" column="129" selection-start-line="330" selection-start-column="129" selection-end-line="330" selection-end-column="129" />
           <folding>
-            <marker date="1452923754945" expanded="true" signature="6860:6884" placeholder="SELECT * FRO..." />
-            <marker date="1452923754945" expanded="true" signature="8089:8116" placeholder="SELECT brand..brand..." />
+            <marker date="1452929567074" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..." />
+            <marker date="1452929567074" expanded="true" signature="-1:-1" placeholder="SELECT brand..brand..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Documents/Projects/Tech Agentx/buyonline.pk/flatro/index.php">
+    <entry file="file://$PROJECT_DIR$/admin/sideBar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="10613" max-vertical-offset="11815">
-          <caret line="635" column="43" selection-start-line="635" selection-start-column="40" selection-end-line="635" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.34615386" vertical-offset="1230" max-vertical-offset="1836">
+          <caret line="84" column="40" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -712,30 +1021,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64468867" vertical-offset="1637" max-vertical-offset="14637">
-          <caret line="117" column="42" selection-start-line="117" selection-start-column="42" selection-end-line="117" selection-end-column="42" />
+        <state vertical-scroll-proportion="-4.480769" vertical-offset="4306" max-vertical-offset="14620">
+          <caret line="267" column="156" selection-start-line="267" selection-start-column="156" selection-end-line="267" selection-end-column="156" />
           <folding>
-            <marker date="1452926470471" expanded="true" signature="1234:1391" placeholder="SELECT speci..article..." />
-            <marker date="1452926470471" expanded="true" signature="2503:2586" placeholder="SELECT count..reviews..." />
-            <marker date="1452926470471" expanded="true" signature="5601:5759" placeholder="select (sele..ratings..." />
-            <marker date="1452926470471" expanded="true" signature="5609:5673" placeholder="select count..ratings..." />
-            <marker date="1452926470471" expanded="true" signature="10236:10290" placeholder="select color..color..." />
-            <marker date="1452926470471" expanded="true" signature="11666:11774" placeholder="select c.col..color..." />
-            <marker date="1452926470471" expanded="true" signature="13017:13057" placeholder="select size ..." />
-            <marker date="1452926470471" expanded="true" signature="13017:13067" placeholder="select size ..." />
-            <marker date="1452926470471" expanded="true" signature="14696:14802" placeholder="select c.siz..size..." />
-            <marker date="1452926470471" expanded="true" signature="20785:20943" placeholder="select (sele..ratings..." />
-            <marker date="1452926470471" expanded="true" signature="20793:20857" placeholder="select count..ratings..." />
-            <marker date="1452926470471" expanded="true" signature="22017:22347" placeholder="SELECT r.rev..reviews..." />
-            <marker date="1452926470471" expanded="true" signature="22057:22111" placeholder="SELECT first..userinfo..." />
-            <marker date="1452926470471" expanded="true" signature="22128:22181" placeholder="SELECT lastN..userinfo..." />
-            <marker date="1452926470471" expanded="true" signature="27519:27650" placeholder="SELECT artic..article..." />
-            <marker date="1452926470471" expanded="true" signature="28349:28511" placeholder="select (sele..ratings..." />
-            <marker date="1452926470471" expanded="true" signature="28357:28423" placeholder="select count..ratings..." />
-            <marker date="1452926470471" expanded="true" signature="32533:32691" placeholder="select (sele..ratings..." />
-            <marker date="1452926470471" expanded="true" signature="32541:32605" placeholder="select count..ratings..." />
-            <marker date="1452926470471" expanded="true" signature="38782:38940" placeholder="select (sele..ratings..." />
-            <marker date="1452926470471" expanded="true" signature="38790:38854" placeholder="select count..ratings..." />
+            <marker date="1452931806886" expanded="true" signature="1210:1367" placeholder="SELECT speci..article..." />
+            <marker date="1452931806886" expanded="true" signature="2479:2562" placeholder="SELECT count..reviews..." />
+            <marker date="1452931806886" expanded="true" signature="5577:5735" placeholder="select (sele..ratings..." />
+            <marker date="1452931806886" expanded="true" signature="5585:5649" placeholder="select count..ratings..." />
+            <marker date="1452931806886" expanded="true" signature="10212:10266" placeholder="select color..color..." />
+            <marker date="1452931806886" expanded="true" signature="11642:11750" placeholder="select c.col..color..." />
+            <marker date="1452931806886" expanded="true" signature="12993:13033" placeholder="select size ..." />
+            <marker date="1452931806886" expanded="true" signature="12993:13043" placeholder="select size ..." />
+            <marker date="1452931806886" expanded="true" signature="14672:14778" placeholder="select c.siz..size..." />
+            <marker date="1452931806886" expanded="true" signature="20762:20920" placeholder="select (sele..ratings..." />
+            <marker date="1452931806886" expanded="true" signature="20770:20834" placeholder="select count..ratings..." />
+            <marker date="1452931806886" expanded="true" signature="21994:22324" placeholder="SELECT r.rev..reviews..." />
+            <marker date="1452931806886" expanded="true" signature="22034:22088" placeholder="SELECT first..userinfo..." />
+            <marker date="1452931806886" expanded="true" signature="22105:22158" placeholder="SELECT lastN..userinfo..." />
+            <marker date="1452931806886" expanded="true" signature="27496:27627" placeholder="SELECT artic..article..." />
+            <marker date="1452931806886" expanded="true" signature="28326:28488" placeholder="select (sele..ratings..." />
+            <marker date="1452931806886" expanded="true" signature="28334:28400" placeholder="select count..ratings..." />
+            <marker date="1452931806886" expanded="true" signature="32510:32668" placeholder="select (sele..ratings..." />
+            <marker date="1452931806886" expanded="true" signature="32518:32582" placeholder="select count..ratings..." />
+            <marker date="1452931806886" expanded="true" signature="38759:38917" placeholder="select (sele..ratings..." />
+            <marker date="1452931806886" expanded="true" signature="38767:38831" placeholder="select count..ratings..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.615385" vertical-offset="56165" max-vertical-offset="78370">
+          <caret line="3317" column="17" selection-start-line="3317" selection-start-column="17" selection-end-line="3317" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23992674" vertical-offset="10035" max-vertical-offset="17884">
+          <caret line="598" column="21" selection-start-line="598" selection-start-column="21" selection-end-line="598" selection-end-column="21" />
+          <folding>
+            <marker date="1452932030775" expanded="true" signature="419:524" placeholder="SELECT SUBST..article..." />
+            <marker date="1452932030775" expanded="true" signature="8074:8179" placeholder="SELECT artic..article..." />
+            <marker date="1452932030775" expanded="true" signature="9051:9209" placeholder="select (sele..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="9059:9123" placeholder="select count..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="14070:14228" placeholder="select (sele..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="14078:14142" placeholder="select count..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="21622:21780" placeholder="select (sele..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="21630:21694" placeholder="select count..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="26092:26192" placeholder="SELECT artic..article..." />
+            <marker date="1452932030775" expanded="true" signature="27030:27188" placeholder="select (sele..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="27038:27102" placeholder="select count..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="31849:32007" placeholder="select (sele..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="31857:31921" placeholder="select count..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="39157:39315" placeholder="select (sele..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="39165:39229" placeholder="select count..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="43564:43673" placeholder="SELECT artic..article..." />
+            <marker date="1452932030775" expanded="true" signature="44509:44667" placeholder="select (sele..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="44517:44581" placeholder="select count..ratings..." />
+            <marker date="1452932030775" expanded="true" signature="61216:61407" placeholder="SELECT title..." />
           </folding>
         </state>
       </provider>

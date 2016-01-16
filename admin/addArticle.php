@@ -328,8 +328,8 @@ function randomPassword() {
                       <span class="col-sm-5"><input readonly type="text" align="left"id="colorid" name="colors" class="form-control" />
                           </span>
                       <span class="error" ><font color="red"> <?php //if(isset($errors['color'])) echo $errors['color'];?></font></span>
-                      <a class="btn btn-primary" onclick='f1()'><i class="fa fa-plus"></i></a>
-                      <a class="btn btn-danger" onclick='f2()'><i class="fa fa-minus"></i></a>
+                      <a class="btn btn-primary" onclick='f1()' data-toggle="tooltip" data-original-title='Add Color'  id="colorp"><i class="fa fa-plus"></i></a>
+                      <a class="btn btn-danger" onclick='f2()' data-toggle="tooltip" data-original-title='Remove Color'  id="color-"><i class="fa fa-minus"></i></a>
                     </div>
 
                       <div class="form-group">
@@ -350,8 +350,8 @@ function randomPassword() {
                       <span class="col-sm-5"><input readonly type="text" align="left"id="sizeid" name="size" class="form-control" />
                           </span>
                           <span class="error" ><font color="red"> <?php //if(isset($errors['color'])) echo $errors['color'];?></font></span>
-                          <a class="btn btn-primary" onclick='f3()'><i class="fa fa-plus"></i></a>
-                          <a class="btn btn-danger" onclick='f4()'><i class="fa fa-minus"></i></a>
+                          <a class="btn btn-primary" onclick='f3()' data-toggle="tooltip" data-original-title='Add Size'  id="sizep"><i class="fa fa-plus"></i></a>
+                          <a class="btn btn-danger" onclick='f4()' data-toggle="tooltip" data-original-title='Remove Size'  id="size-"><i class="fa fa-minus"></i></a>
                       </div>
 
                   <div class=" form-group">
@@ -699,6 +699,22 @@ function randomPassword() {
           if(total < 0)
              document.getElementById('tp').value = '0';
       }
+
+      $("sizep").click(function(){
+          $("panel").show(1000);
+      });
+
+      $("size-").click(function(){
+          $("panel").show(1000);
+      });
+
+      $("colorp").click(function(){
+          $("panel").show(1000);
+      });
+
+      $("color-").click(function(){
+          $("panel").show(1000);
+      });
 
 </script>
 </body>
