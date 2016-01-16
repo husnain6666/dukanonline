@@ -5,12 +5,23 @@ include "top_header.php";
 $check = false; //REMOVE IT AFTER IMPLEMENTING SESSION
 $userId = 1; //REMOVE IT AFTER IMPLEMENTING SESSION
 $counter = 0;
+
 if(isset($_GET["category"])){
     $masterCategory = $_GET["category"];
-}
-else
-{
+} else {
     $masterCategory = null;
+}
+
+if(isset($_GET["subCategory"])){
+    $subCategory = $_GET["subCategory"];
+} else {
+    $subCategory = null;
+}
+
+if(isset($_GET["subsubCategory"])){
+    $subsubCategory = $_GET["subsubCategory"];
+} else {
+    $subsubCategory = null;
 }
 
 if(isset($_GET["minPrice"])) {
@@ -65,10 +76,21 @@ $start_from = ($page-1) * $per_page;
           {
               if(isset($_GET["color"]) && $color != 'null')
               {
-                  if(isset($_GET["category"]))
-                  {
-                      $sql = "SELECT a.articleId FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND a.Category = '$masterCategory'";
+                  if(isset($_GET["category"])){
+                      $thisCategory = $_GET["category"];
+                      $sql = "SELECT a.articleId FROM article as a INNER JOIN color as c ON a.articleId = c.articleId INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory WHERE masterrsub.masterCategory = '$thisCategory' AND a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color'";
                   }
+
+                  else if(isset($_GET["subCategory"])){
+                      $thisCategory = $_GET["subCategory"];
+                      $sql = "SELECT a.articleId FROM article as a INNER JOIN color as c ON a.articleId = c.articleId INNER JOIN subbcategory ON a.category = subbcategory.categoryName WHERE subbcategory.subCategory = '$thisCategory' AND a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color'";
+                  }
+
+                  else if(isset($_GET["subsubCategory"])){
+                      $thisCategory = $_GET["subsubCategory"];
+                      $sql = "SELECT a.articleId FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.category = '$thisCategory' AND a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color'";
+                  }
+
                   else
                   {
                       $sql = "SELECT a.articleId FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color'";
@@ -76,9 +98,20 @@ $start_from = ($page-1) * $per_page;
               }
               else
               {
-                  if(isset($_GET["category"]))
+                  if(isset($_GET["category"])){
+                      $thisCategory = $_GET["category"];
+                      $sql = "SELECT a.articleId FROM article as a INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory WHERE masterrsub.masterCategory = '$thisCategory' AND a.price <= '$maxPrice' AND a.price >= '$minPrice'";
+                  }
+
+                  else if(isset($_GET["subCategory"])){
+                      $thisCategory = $_GET["subCategory"];
+                      $sql = "SELECT a.articleId FROM article as a INNER JOIN subbcategory ON a.category = subbcategory.categoryName WHERE subbcategory.subCategory = '$thisCategory' AND a.price <= '$maxPrice' AND a.price >= '$minPrice'";
+                  }
+
+                  else if(isset($_GET["subsubCategory"]))
                   {
-                      $sql = "SELECT articleId FROM article where price <= '$maxPrice' AND price >= '$minPrice' AND Category = '$masterCategory'";
+                      $thisCategory = $_GET["subsubCategory"];
+                      $sql = "SELECT articleId FROM article where price <= '$maxPrice' AND price >= '$minPrice' AND Category = '$thisCategory'";
                   }
                   else
                   {
@@ -88,10 +121,22 @@ $start_from = ($page-1) * $per_page;
           }
           else
           {
-              if(isset($_GET["category"]))
-              {
-                  $sql = "SELECT articleId FROM article WHERE Category = '$masterCategory'";
+              if(isset($_GET["category"])){
+                  $thisCategory = $_GET["category"];
+                  $sql = "SELECT a.articleId FROM article as a INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory WHERE masterrsub.masterCategory = '$thisCategory'";
               }
+
+              else if(isset($_GET["subCategory"])){
+                  $thisCategory = $_GET["subCategory"];
+                  $sql = "SELECT a.articleId FROM article as a INNER JOIN subbcategory ON a.category = subbcategory.categoryName WHERE subbcategory.subCategory = '$thisCategory'";
+              }
+
+              else if(isset($_GET["subsubCategory"]))
+              {
+                  $thisCategory = $_GET["subsubCategory"];
+                  $sql = "SELECT articleId FROM article WHERE Category = '$thisCategory'";
+              }
+
               else
               {
                   $sql = "SELECT articleId FROM article";
@@ -348,21 +393,37 @@ $start_from = ($page-1) * $per_page;
       }
       else
       {
-          if($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET["category"]))
+          if($_SERVER['REQUEST_METHOD'] === "GET" && (isset($_GET["category"]) || isset($_GET["subCategory"]) || isset($_GET["subsubCategory"]) ))
           {
-              $masterCategory = $_GET["category"];
+              $thisCategory = null;
               $masterCatPicture = null;
               $masterDescription = null;
-              $query1 = "SELECT * FROM mastercategory WHERE masterCategory = '$masterCategory'";
+
+              if(isset($_GET["category"])){
+                  $thisCategory = $_GET["category"];
+                  $query1 = "SELECT * FROM mastercategory WHERE masterCategory = '$thisCategory'";
+              }
+
+              else if(isset($_GET["subCategory"])){
+                  $thisCategory = $_GET["subCategory"];
+                  $query1 = "SELECT * FROM subcategory WHERE subCategory = '$thisCategory'";
+              }
+
+              else if(isset($_GET["subsubCategory"])){
+                  $thisCategory = $_GET["subsubCategory"];
+                  $query1 = "SELECT * FROM category WHERE categoryName = '$thisCategory'";
+              }
+
               $result1 = mysqli_query($connection, $query1);
               if($result1)
               {
                   if ($row1 = mysqli_fetch_assoc($result1))
                   {
-                      $masterCatPic = $row1['pic'];
-                      $masterDescription = $row1['description'];
-                  }
-              }
+                      if($row1['pic'])
+                      {
+                          $masterCatPic = $row1['pic'];
+                          $masterDescription = $row1['description'];
+
       ?>
               <div class="row">
                   <div class="col-md-12">
@@ -374,6 +435,9 @@ $start_from = ($page-1) * $per_page;
               </div>
               <div class="row" style="margin-top: 12px"></div>
               <?php
+                      }
+                  }
+              }
           }?>
 
       <div class="box-heading category-heading"><span>Showing <?php echo $start_from+1?>-<?php if(($start_from+1)==$total_records)echo $total_records; else if($start_from+$per_page>=$total_records)echo $total_records ;else echo $start_from+$per_page ?> of <?php echo $total_records?> products</span>
@@ -408,14 +472,26 @@ $start_from = ($page-1) * $per_page;
               <!-- Product-->
               <?php
 
+              $thisCategory = null;
+
               if($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET["minPrice"]) && isset($_GET["maxPrice"]))
               {
                   if(isset($_GET["color"]) && $color != 'null')
                   {
-                      if(isset($_GET["category"]))
-                      {
-                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND a.Category = '$masterCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      if(isset($_GET["category"])){
+                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND masterrsub.masterCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                       }
+
+                      else if(isset($_GET["subCategory"])){
+                          $thisCategory = $_GET["subCategory"];
+                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId INNER JOIN subbcategory ON a.category = subbcategory.categoryName WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND subbcategory.subCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      }
+
+                      else if(isset($_GET["subsubCategory"])){
+                          $thisCategory = $_GET["subsubCategory"];
+                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND a.category = $thisCategory ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      }
+
                       else
                       {
                           $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
@@ -424,21 +500,41 @@ $start_from = ($page-1) * $per_page;
                   }
                   else
                   {
-                      if (isset($_GET["category"]))
-                      {
-                          $sql = "SELECT articleId,price,articleName,picture1,discount FROM article where price <= '$maxPrice' AND price >= '$minPrice' AND Category = '$masterCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      if(isset($_GET["category"])){
+                          $thisCategory = $_GET["category"];
+                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory where a.price <= '$maxPrice' AND a.price >= '$minPrice' AND masterrsub.masterCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      }
+
+                      else if(isset($_GET["subCategory"])){
+                          $thisCategory = $_GET["subCategory"];
+                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName where price <= '$maxPrice' AND price >= '$minPrice' AND subbcategory.subCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      }
+
+                      else if(isset($_GET["subsubCategory"])){
+                          $thisCategory = $_GET["subsubCategory"];
+                          $sql = "SELECT articleId, price, articleName, picture1, discount FROM article where price <= '$maxPrice' AND price >= '$minPrice' AND Category = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                       }
                       else
                       {
-                          $sql = "SELECT articleId,price,articleName,picture1,discount FROM article where price <= '$maxPrice' AND price >= '$minPrice' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                          $sql = "SELECT articleId, price, articleName, picture1,discount FROM article where price <= '$maxPrice' AND price >= '$minPrice' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                       }
                   }
               }
               else
               {
-                  if (isset($_GET["category"]))
-                  {
-                      $sql = "SELECT articleId, price, articleName, picture1, discount FROM article WHERE Category = '$masterCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                  if(isset($_GET["category"])){
+                      $thisCategory = $_GET["category"];
+                      $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory where masterrsub.masterCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                  }
+
+                  else if(isset($_GET["subCategory"])){
+                      $thisCategory = $_GET["subCategory"];
+                      $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName where subbcategory.subCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                  }
+
+                  else if(isset($_GET["subsubCategory"])){
+                      $thisCategory = $_GET["subsubCategory"];
+                      $sql = "SELECT articleId, price, articleName, picture1, discount FROM article WHERE Category = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                   }
                   else
                   {
@@ -649,7 +745,8 @@ $start_from = ($page-1) * $per_page;
 
             if(isset($_GET['category']))
             {
-                $query3 = "SELECT subcategory.subCategory FROM subcategory INNER JOIN masterrsub ON subcategory.subCategory = masterrsub.subCategory INNER JOIN masterCategory ON mastercategory.masterCategory = masterrsub.masterCategory WHERE masterrsub.masterCategory = '$masterCategory' AND subcategory.status = '1' LIMIT 8";
+                $thisCategory = $_GET['category'];
+                $query3 = "SELECT subcategory.subCategory FROM subcategory INNER JOIN masterrsub ON subcategory.subCategory = masterrsub.subCategory INNER JOIN masterCategory ON mastercategory.masterCategory = masterrsub.masterCategory WHERE masterrsub.masterCategory = '$thisCategory' AND subcategory.status = '1' LIMIT 8";
             }
             else
             {
