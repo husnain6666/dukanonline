@@ -139,7 +139,7 @@ function randomPassword() {
     }
 </script>
 <?php
-$path ="http://www.electroshop.pk/photo/";
+$path ="../images/products/";
 $pic11="";
 $pic22="";
 $pic33="";
@@ -329,7 +329,7 @@ if (isset($_POST['submit1'])) {
         $sale = true;
     }
 
-$path1="../photo/";
+$path1="../images/products/";
     $art_name=$_POST['article_name'];
     $name = $_FILES['pic1']['name'];
     $size = $_FILES['pic1']['size'];
@@ -610,21 +610,21 @@ $p1="";
                   </div>
 
                   <div id="successModal" class="modal fade modal-success" role="dialog">
-                      <div class="modal-dialog">
+                    <div class="modal-dialog">
 
-                          <!-- Modal content-->
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                  <h4 class="modal-title">Success</h4>
-                              </div>
-                              <div class="modal-body">
-                                  <h4>Action Successful&nbsp;<i class="glyphicon glyphicon-ok"></i></h4>
-                              </div>
-                          </div>
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Success</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Action Successful&nbsp;<i class="glyphicon glyphicon-ok"></i></h4>
+                            </div>
+                        </div>
 
-                      </div>
-                  </div>
+                    </div>
+                </div>
 
               
               

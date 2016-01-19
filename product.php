@@ -50,7 +50,7 @@ include "top_header.php";
                   if(isset($_GET['articleId']))
                   {
                   $articleId = $_GET['articleId'];
-                  $sql = "SELECT specification,category,price,articleName, brand, articleId, quantity, discount, picture1, picture2, picture3, category FROM article WHERE articleId='$articleId'";
+                  $sql = "SELECT specification,category,price,articleName, brand, articleId, quantity, discount, picture1, picture2, picture3 FROM article WHERE articleId='$articleId'";
                   $result = mysqli_query($connection, $sql);
                   //if($result->num_rows > 0)
                   //{
@@ -68,7 +68,6 @@ include "top_header.php";
                       $articleId = $table_record['articleId'];
                       $quantity = $table_record['quantity'];
                       $discount = $table_record['discount'];
-                      $category = $table_record['category'];
                       $discountedPrice = ($price * $discount)/100;
                       $discountedPrice = $price - $discountedPrice;
 
@@ -150,7 +149,7 @@ include "top_header.php";
                                   <?php
                                   }
                                   $ratingLimit++;
-                              } ?>
+                              }?>
                            <span>This product has <?php echo $totalReviews?> review(s) <a href="#a">Add Review</a></span> </div>
                       </div>
                       <!-- end: Title and rating info -->
@@ -188,7 +187,6 @@ include "top_header.php";
                               <div class="short-info-opt">
                                   <div class="att-row">
                                       <div class="qty-wr">
-
                                           <div class="qty-text hidden-xs">Qty:</div>
                                           <div class="quantity-inp">
                                               <input value="<?php echo $articleId ?>" id = "articleId" type="hidden" >
@@ -198,7 +196,12 @@ include "top_header.php";
                                           <div class="quantity-txt"><a href="#a" class="qty qtyplus" ><i class="fa fa-plus fa-fw"></i></a></div>
                                       </div>
                                       <?php
-                                      if($category == "Clothing") {
+                                      // Search color in table. If color is present than show color
+                                          $col_present = "select color from color where articleId = '$articleId'";
+                                          $col_result = mysqli_query($connection, $col_present);
+                                          $table_record8 = mysqli_fetch_array($col_result);
+                                          $color_is_present = $table_record8['color'];
+                                      if($color_is_present != "") {
                                           ?>
                                           <div class="color-wr">
                                               <div class="color-options">
@@ -221,31 +224,43 @@ include "top_header.php";
                                                   </ul>
                                               </div>
                                           </div>
-                                            <div class="size-wr">
-                                                <div class="size-options">
-                                                    <ul class="pull-left">
-                                                        <li class="input-prepend dropdown" data-select="true"><a
-                                                                class="add-on dropdown-toggle" data-hover="dropdown"
-                                                                data-toggle="dropdown" href="#a"> <span
-                                                                    class="dropdown-display">Size</span> <i
-                                                                    class="fa fa-sort fa-fw"></i> </a>
-                                                            <!-- this hidden field is used to contain the selected option from the dropdown -->
-                                                            <input class="dropdown-field" type="hidden" value="" id="size">
-                                                            <ul class="dropdown-menu" role="menu">
-                                                                <li><a href="#a" data-value="XS">XS</a></li>
-                                                                <li><a href="#a" data-value="S">S</a></li>
-                                                                <li><a href="#a" data-value="M">M</a></li>
-                                                                <li><a href="#a" data-value="N">N</a></li>
-                                                                <li><a href="#a" data-value="L">L</a></li>
-                                                                <li><a href="#a" data-value="XL">XL</a></li>
-                                                                <li><a href="#a" data-value="XXL">XXL</a></li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
                                         <?php
-                                        }// end if
+                                        }
+                                      // Search size in table. If size is present than show size
+                                          $size_present = "select size from size where articleId = $articleId";
+                                          $size_result = mysqli_query($connection, $size_present);
+                                          $table_record9 = mysqli_fetch_array($size_result);
+                                          $size_is_present = $table_record9['size'];
+                                      if($size_is_present != "") {
+                                          // end if
+                                      ?>
+                                      <div class="size-wr">
+                                          <div class="size-options">
+                                              <ul class="pull-left">
+                                                  <li class="input-prepend dropdown" data-select="true"><a
+                                                          class="add-on dropdown-toggle" data-hover="dropdown"
+                                                          data-toggle="dropdown" href="#a"> <span
+                                                              class="dropdown-display">Size</span> <i
+                                                              class="fa fa-sort fa-fw"></i> </a>
+                                                      <!-- this hidden field is used to contain the selected option from the dropdown -->
+                                                      <input class="dropdown-field" type="hidden" value="">
+                                                      <ul class="dropdown-menu" role="menu">
+                                                          <?php
+                                                          $size_query = "select c.size from size c inner join article a on a.articleId=c.articleId where c.articleId = '$articleId'";
+                                                          $size_result = mysqli_query($connection, $size_query);
+                                                          while($table_record10 = mysqli_fetch_array($size_result)){
+                                                              $size = $table_record10['size'];
+                                                              ?>
+                                                              <li><a href="#a" data-value="<?php echo $size;?>"><?php echo $size;?></a></li>
+                                                          <?php }// end while loop
+                                                          ?>
+                                                      </ul>
+                                                  </li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                      <?php
+                                      }// end if
                                       ?>
                                   </div>
                               </div>
@@ -327,12 +342,12 @@ include "top_header.php";
       <!-- Details Info/Reviews/Tags -->
       <!-- Nav tabs -->
       <ul class="nav nav-tabs blog-tabs nav-justified">
-        <li class=""><a href="#details-info" data-toggle="tab"><i class="fa  fa-th-list fa-fw"></i> Details Info</a></li>
+        <li class="active"><a href="#details-info" data-toggle="tab"><i class="fa  fa-th-list fa-fw"></i> Details Info</a></li>
         <li><a href="#reviews" data-toggle="tab"><i class="fa fa-comments fa-fw"></i> Reviews</a></li>
       </ul>
       <!-- Tab panes -->
       <div class="tab-content">
-        <div class="tab-pane col-lg-12 col-md-12 col-sm-12" id="details-info">
+        <div class="tab-pane active col-lg-12 col-md-12 col-sm-12" id="details-info">
           <p><?php
               $pieces = explode("0_0", $specifications);
               ?> <h4>INTRODUCTION</h4><?php echo $pieces[0];?>
@@ -566,7 +581,7 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
                                       ?>
                                       <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                         <span class="price-old"><span
-                                                                class="sym"></span>&nbsp;</span></div>
+                                                                class="sym">Rs.</span><?php echo $price_R;?></span></div>
                                       <?php
                                       $ratingLimit = 0;
                                       $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
@@ -600,7 +615,7 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
                                                   data-toggle="tooltip" title="Add to Compare"><i
                                                   class="fa fa-retweet fa-fw"></i></button>
                                           <button class="btn btn-default btn-wishlist pull-left"
-                                                  data-toggle="tooltip" title="Add to Wishlist" onclick="addWish(<?php echo $articleId ?>)"><i
+                                                  data-toggle="tooltip" title="Add to Wishlist"><i
                                                   class="fa fa-heart fa-fw"></i></button>
                                           <button class="btn btn-default btn-addtocart pull-left"
                                                   data-toggle="tooltip" title="Add to Cart"><i
@@ -690,7 +705,7 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
                                               data-toggle="tooltip" title="Add to Compare"><i
                                               class="fa fa-retweet fa-fw"></i></button>
                                       <button class="btn btn-default btn-wishlist pull-left"
-                                              data-toggle="tooltip" title="Add to Wishlist" onclick="addWish(<?php echo $articleId ?>)"><i
+                                              data-toggle="tooltip" title="Add to Wishlist"><i
                                               class="fa fa-heart fa-fw"></i></button>
                                       <button class="btn btn-default btn-addtocart pull-left"
                                               data-toggle="tooltip" title="Add to Cart"><i

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
+
 <?php include "top_header.php";
-      include "connectdb.php";
-?>
+      include "connectdb.php";?>
     <!-- end: Top Heading Bar -->
 
     <div class="f-space20"></div>
@@ -25,11 +25,8 @@
                 $arrayIndex++;
             }
         ?>
-        <script src="js/notie.js"></script>
-        <script src="js/total.js"></script>
 
-
-        <!-- Top Searches for tablets and large screens -->
+<!-- Top Searches for tablets and large screens -->
 <div class="top-searchs hidden-xs"><span class="title">Top
           Searches</span> <span class="links"> <a href="product.php?articleId=<?php echo $articleIdCollection[0];?>"><?php echo $articleCollection[0];?> |</a> <a href="product.php?articleId=<?php echo $articleIdCollection[1];?>"><?php echo $articleCollection[1];?> |</a> <a href="product.php?articleId=<?php echo $articleIdCollection[2];?>"><?php echo $articleCollection[2];?> |</a> <a href="product.php?articleId=<?php echo $articleIdCollection[3];?>"><?php echo $articleCollection[3];?> |</a> <a href="product.php?articleId=<?php echo $articleIdCollection[4];?>"><?php echo $articleCollection[4];?></a> |</span> </div>
 <!-- end: Top Searches -->
@@ -132,7 +129,7 @@
                         <div class="item active">
                             <div class="row box-product">
                                 <?php
-                                $sql = "SELECT articleId,price,articleName,picture1,discount FROM article where weekDeal='1' limit 15";
+                                $sql = "SELECT articleId,price,articleName,picture1,discount, pictureTag FROM article where weekDeal='1' limit 15";
                                 $result=mysqli_query($connection,$sql);
                                 $slideCount = 0;
                                 while($table_record=mysqli_fetch_array($result)) {
@@ -141,6 +138,7 @@
                                     $price = $table_record['price'];
                                     $picture1 = $table_record['picture1'];
                                     $discount = $table_record['discount'];
+                                    $picTag = $table_record['pictureTag'];
                                     $discountedPrice = ($price * $discount) / 100;
                                     $discountedPrice = $price - $discountedPrice;
 
@@ -163,8 +161,12 @@
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                             <div class="product-block">
                                                 <div class="image">
-                                                    <div class="product-label product-sale"><span>SALE</span></div>
-                                                    <a class="img"
+                                                    <?php
+                                                    if($picTag != ""){
+                                                    ?>
+                                                    <div class="product-label product-sale"><span><?php echo $picTag;?></span></div>
+                                                    <?php } ?>
+                                                <a class="img"
                                                        href="product.php?articleId=<?php echo $articleId;?>"><img
                                                             alt="product info"
                                                             src="images/products/<?php echo $picture1;?>"
@@ -275,7 +277,11 @@
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                     <div class="product-block">
                                         <div class="image">
-                                            <div class="product-label product-sale"><span>SALE12</span></div>
+                                            <?php
+                                            if($picTag != ""){
+                                                ?>
+                                                <div class="product-label product-sale"><span><?php echo $picTag;?></span></div>
+                                            <?php } ?>
                                             <a class="img"
                                                href="product.php?articleId=<?php echo $articleId;?>"><img
                                                     alt="product info"
@@ -406,7 +412,7 @@
                             <div class="row box-product">
                                 <?php
 
-                                $sql = "SELECT articleId,price,articleName,picture1,discount FROM article where Sale='1' limit 16";
+                                $sql = "SELECT articleId,price,articleName,picture1,discount,pictureTag FROM article where Sale='1' limit 16";
                                 $result=mysqli_query($connection,$sql);
                                 $slideCount = 0;
                                 while($table_record=mysqli_fetch_array($result)) {
@@ -415,6 +421,7 @@
                                 $price = $table_record['price'];
                                 $picture1 = $table_record['picture1'];
                                 $discount = $table_record['discount'];
+                                $discount = $table_record['pictureTag'];
                                 $discountedPrice = ($price * $discount) / 100;
                                 $discountedPrice = $price - $discountedPrice;
 
@@ -437,7 +444,11 @@
                                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                         <div class="product-block">
                                             <div class="image">
-                                                <div class="product-label product-sale"><span>SALE</span></div>
+                                                <?php
+                                                if($picTag != ""){
+                                                    ?>
+                                                    <div class="product-label product-sale"><span><?php echo $picTag;?></span></div>
+                                                <?php } ?>
                                                 <a class="img"
                                                    href="product.php?articleId=<?php echo $articleId;?>"><img
                                                         alt="product info"
@@ -524,7 +535,11 @@
                                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                     <div class="product-block">
                                         <div class="image">
-                                            <div class="product-label product-sale"><span>SALE</span></div>
+                                            <?php
+                                            if($picTag != ""){
+                                                ?>
+                                                <div class="product-label product-sale"><span><?php echo $picTag;?></span></div>
+                                            <?php } ?>
                                             <a class="img"
                                                href="product.php?articleId=<?php echo $articleId;?>"><img
                                                     alt="product info"
@@ -652,7 +667,7 @@
                         <div class="item active">
                             <div class="row box-product">
                                 <?php
-                                $sql = "SELECT articleId,price,articleName,picture1,discount FROM article group by articleId desc limit 16";
+                                $sql = "SELECT articleId,price,articleName,picture1,discount,pictureTag FROM article group by articleId desc limit 16";
                                 $result=mysqli_query($connection,$sql);
                                 $slideCount = 0;
                                 while($table_record=mysqli_fetch_array($result)) {
@@ -661,6 +676,7 @@
                                 $price = $table_record['price'];
                                 $picture1 = $table_record['picture1'];
                                 $discount = $table_record['discount'];
+                                $picTag = $table_record['pictureTag'];
                                 $discountedPrice = ($price * $discount) / 100;
                                 $discountedPrice = $price - $discountedPrice;
 
@@ -683,7 +699,11 @@
                                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                         <div class="product-block">
                                             <div class="image">
-                                                <div class="product-label product-sale"><span>SALE</span></div>
+                                                <?php
+                                                if($picTag != ""){
+                                                    ?>
+                                                    <div class="product-label product-sale"><span><?php echo $picTag;?></span></div>
+                                                <?php } ?>
                                                 <a class="img"
                                                    href="product.php?articleId=<?php echo $articleId;?>"><img
                                                         alt="product info"
@@ -794,7 +814,11 @@
                                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                                     <div class="product-block">
                                         <div class="image">
-                                            <div class="product-label product-sale"><span>SALE</span></div>
+                                            <?php
+                                            if($picTag != ""){
+                                                ?>
+                                                <div class="product-label product-sale"><span><?php echo $picTag;?></span></div>
+                                            <?php } ?>
                                             <a class="img"
                                                href="product.php?articleId=<?php echo $articleId;?>"><img
                                                     alt="product info"

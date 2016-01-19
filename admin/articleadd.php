@@ -59,8 +59,9 @@ if(isset($_POST['submit1']))
 
     }
 
-
-
+    $pictag = $_POST["picTag"];
+    $color = $_POST["colors"];
+    $prodSize = $_POST["size"];
 
     if (empty($_POST["introspec"]))
     {
@@ -140,7 +141,7 @@ if(isset($_POST['submit1']))
     //  } else {
     $tp=$_POST["tp"];
     //  }
-    $path ="../photo/";
+    $path ="../images/products/";
     $art_name=$_POST['article_name'];
     $name = $_FILES['pic1']['name'];
     $size = $_FILES['pic1']['size'];
@@ -269,12 +270,30 @@ if(isset($_POST['submit1']))
     $date1 = $_POST['datepicker'];
     $parts = explode('/', $date1);
     $date = "$parts[2]-$parts[0]-$parts[1]";
+    $color1 = explode(',', $color);
 
-
-    $sql = "INSERT INTO article(articleName,Category,brand,specification,weekDeal,bestSeller,Sale,price, discount, date,picture1,picture2,picture3) VALUES('$article_name','$categoryName','$brandsname','$description','$hotdeal','$bestsale','$sale','$ppp','$tp','$date','$pic1','$pic2','$pic3')";
-
+    $sql = "INSERT INTO article(articleName,Category,brand,specification,weekDeal,bestSeller,Sale,price, discount, date,picture1,picture2,picture3,pictureTag) VALUES('$article_name','$categoryName','$brandsname','$description','$hotdeal','$bestsale','$sale','$ppp','$tp','$date','$pic1','$pic2','$pic3','$picTag')";
     $result = mysqli_query($CONNECTION, $sql);
 
+    $sql = "select max(articleId) as articleId from article";
+    $result1 = mysqli_query($CONNECTION, $sql);
+    $notify = mysqli_fetch_assoc($result1);
+    $articleId = $notify['articleId'];
+    $i = 0;
+    while($i < count($color1))
+    {
+        $sql = "INSERT INTO color(color, articleId) VALUES('$color1[$i]',$articleId)";
+        $result2 = mysqli_query($CONNECTION, $sql);
+        $i++;
+    }
+    $size1 = explode(',', $prodSize);
+    $j = 0;
+    while($j < count($size1))
+    {
+        $sql1 = "INSERT INTO size(size, articleId) VALUES('$size1[$j]',$articleId)";
+        $result3 = mysqli_query($CONNECTION, $sql1);
+        $j++;
+    }
 
     header("LOCATION: addArticle.php");
 }

@@ -1160,7 +1160,7 @@ a.color3:hover {
 .product-block .product-meta .big-price {
 	-moz-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
-	font-size: 35px;
+	font-size: 30px;
 	font-weight: 900;
 	opacity: 0;
 	overflow: hidden;
@@ -1190,7 +1190,7 @@ a.color3:hover {
 	font-weight: 900;
 	height: auto;
 	opacity: 1;
-	overflow: visable;
+	overflow: visible;
 	width: auto;
 	transition: all 0.7s ease-in-out;
 	-moz-transition: all 0.7s ease-in-out;
@@ -3330,7 +3330,7 @@ h2 {
 }
 .product-details .price-new {
 	display: block;
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: 900;
 	padding-top: 10px;
 }
@@ -4594,7 +4594,7 @@ line-height: 20px;
 .product-block-nt .product-meta .big-price {
     height: auto;
     opacity: 1;
-    overflow: visable;
+    overflow: visible;
 }
 .product-block-nt .product-meta .small-price {
     height: 0px;
