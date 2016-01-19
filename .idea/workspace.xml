@@ -338,7 +338,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453186951421</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Merge branches 'husnain' and 'khalid' of https://github.com/husnain6666/dukanonline into husnain&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;css/style.css&#10;&#9;index.php&#10;&#9;main_bar.php&#10;&#9;product.php&#10;">
+      <created>1453186965874</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1453186965874</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
