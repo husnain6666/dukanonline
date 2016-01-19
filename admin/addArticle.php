@@ -332,7 +332,7 @@ function randomPassword() {
                       <div class="col-sm-4">
                           <input type="text" id="datepicker" class="form-control" name="datepicker" value="<?php
                           $dt = new DateTime();
-                          echo $dt->format('d/m/Y');
+                          echo $dt->format('m/d/Y');
 ?>" required>
                           <span class="error"><font
                                   color="red"> <?php if (isset($errors['date'])) echo $errors['date']; ?></font></span>

@@ -151,7 +151,7 @@ header("location: login.php");
                             </thead>
                             <tbody id="userData">
                             <?php
-                            $query = "SELECT * FROM article";
+                            $query = "SELECT * FROM article ";
                             $result = mysqli_query($CONNECTION, $query);
                             if ($result) {
                                 if ($result->num_rows > 0) {
