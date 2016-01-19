@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="159fda90-2f6d-4009-8ab1-614885ddbaf3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aboutUs.php" afterPath="$PROJECT_DIR$/aboutUs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/addArticle.php" afterPath="$PROJECT_DIR$/admin/addArticle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/articleadd.php" afterPath="$PROJECT_DIR$/admin/articleadd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category-grid.php" afterPath="$PROJECT_DIR$/category-grid.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_bar.php" afterPath="$PROJECT_DIR$/main_bar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dukanonline.iws" />
@@ -87,6 +82,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <push-targets>
+      <push-target-info repo="$PROJECT_DIR$" source="husnain" target-remote="origin" target-branch="master" />
+    </push-targets>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -322,7 +320,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453186737331</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Merge branches 'husnain' and 'khalid' of https://github.com/husnain6666/dukanonline into husnain&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;css/style.css&#10;&#9;index.php&#10;&#9;main_bar.php&#10;&#9;product.php&#10;">
+      <created>1453186770421</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1453186770421</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
