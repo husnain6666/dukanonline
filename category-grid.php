@@ -81,6 +81,21 @@ $start_from = ($page-1) * $per_page;
         //  $start_from = ($page-1) * $per_page;
 
 
+//Dynamic shop by min max limit
+
+$priceQuery = "SELECT min(price) AS minP, max(price) AS maxP FROM article";
+
+$result = mysqli_query($connection, $priceQuery);
+if($result)
+{
+    while($row = mysqli_fetch_array($result))
+    {
+        $minPrice = $row["minP"];
+        $maxPrice = $row["maxP"];
+    }
+}
+
+
           if($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET["minPrice"]) && isset($_GET["maxPrice"]))
           {
               if(isset($_GET["color"]) && $color != 'null')
@@ -883,8 +898,8 @@ $start_from = ($page-1) * $per_page;
                 <span>Price range</span>
                 <div class="pricerange">
                     <input type="text" id="price-range" name="price-range"
-                           data-from="<?php if(isset($_GET['minPrice'])){echo $_GET['minPrice'];} else echo '10';?>"
-                           data-to="<?php if(isset($_GET['maxPrice'])){echo $_GET['maxPrice'];} else echo '100000';?>"
+                           data-from="<?php if(isset($_GET['minPrice'])){echo $_GET['minPrice'];}?>"
+                           data-to="<?php if(isset($_GET['maxPrice'])){echo $_GET['maxPrice'];}?>"
                            data-type="double" data-step="100" data-hasgrid="true"
                            data-hideminmax="true" data-hidefromto="true" data-prettify="false"
                         />
@@ -1013,6 +1028,7 @@ $start_from = ($page-1) * $per_page;
         xmlhttp.send();
 
         count = 0;
+        notie.alert(1, "Compare List Cleared!", 2)
     }
 
     function addToCompare(id, name) {
@@ -1085,7 +1101,7 @@ $start_from = ($page-1) * $per_page;
         }
         else
         {
-            alert("Please select atleast 2 items to compare");
+            notie.alert(3, "Please select atleast 2 items to compare", 2);
         }
     }
 
@@ -1112,7 +1128,7 @@ $start_from = ($page-1) * $per_page;
                 currentURL = currentURL.replace(shopByRegex, "minPrice=" + minPrice + "&maxPrice=" + maxPrice + "&color=" + color);
                 window.location.href = currentURL;
             }
-            else alert("Not Found!");
+            else notie.alert(3, "Not Found!", 2);
         }
     }
 
@@ -1143,7 +1159,7 @@ $start_from = ($page-1) * $per_page;
                 currentURL = currentURL.replace(sortByRegex, "sortBy=" + type);
                 window.location.href = currentURL;
             }
-            else alert("Not Found!");
+            else notie.alert(3, "Not Found!", 2);
         }
     }
 
@@ -1165,7 +1181,7 @@ $start_from = ($page-1) * $per_page;
                 currentURL = currentURL.replace(perPageRegex, "perPage=" + items);
                 window.location.href = currentURL;
             }
-            else alert("Not Found!");
+            else notie.alert(3, "Not Found!", 2);
         }
     }
 
@@ -1187,7 +1203,7 @@ $start_from = ($page-1) * $per_page;
                 currentURL = currentURL.replace(pageRegex, "page=" + x);
                 window.location.href = currentURL;
             }
-            else alert("Not Found!");
+            else notie.alert(3, "Not Found!", 2);
         }
     }
 
@@ -1209,8 +1225,8 @@ $start_from = ($page-1) * $per_page;
 
         //Filter by Price Slider
         $("#price-range").ionRangeSlider({
-            min: 10,                        // min value
-            max: 100000,                       // max valuec
+            min: <?=$minPrice?>,                        // min value
+            max: <?=$maxPrice?>,
             type: "double",                 // slider type
             step: 50,                       // slider step
             postfix: "",             		// postfix text
