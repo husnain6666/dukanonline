@@ -136,7 +136,7 @@
                         <br>
                         <p>StoreOnline Pakistan task is outlined uniquely to give the most recent and most attractive internet shopping knowledge in Pakistan to your entryway step. We are additionally the Pioneers in Online Shopping In Pakistan and are buckling down and in addition keen to keep up that profile. </p>
                         <br>
-                        <p>Gladly, we are the greatest web shopping entryway in Pakistan which gives just electrical customer items and machines. We have a straightforward procedure, no concealed costs or additional charges strategy. </p>
+                        <p>Gladly, we are the greatest web shopping entryway in Pakistan which gives just electrical customer items and products. We have a straightforward procedure, no concealed costs or additional charges strategy. </p>
                         </br>
                         <p>We have a maxim in our organization surroundings, "Wish & Get", and that fantasy is to put our clients to the need and convey what they seek, making them grin. </p>
                         </br>

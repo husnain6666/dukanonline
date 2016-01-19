@@ -396,7 +396,7 @@ $i=1;
                                     ?>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <img src="../images/category/<?=$masterCatPic?>" width="100%"/>
+                                            <img src="images/category/<?=$masterCatPic?>" width="100%"/>
                                             <div style="width: 100%; height: 100px; background-color: black; opacity: 0.8; color:white; font-size: 18px; margin-top: -100px; text-align: center; padding: 10px">
                                                 <p><?=$masterDescription?></p>
                                             </div>

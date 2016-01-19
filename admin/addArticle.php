@@ -161,18 +161,44 @@ function randomPassword() {
                               <select class="form-control col-sm-9" name="categoryName" required>
                                   <?php
                                   include("dbConnect.php");
-                                  $query = "SELECT * FROM `category`";
-                                  $result = mysqli_query($CONNECTION, $query);
-                                  if ($result) {
-                                      if ($result->num_rows > 0) {
-                                          while ($notify = mysqli_fetch_assoc($result)) {
+                                  $query5 = "SELECT masterCategory FROM `mastercategory`";
+                                  $query6 = "SELECT subCategory FROM `subcategory`";
+                                  $query7 = "SELECT categoryName FROM `category`";
+                                  $result5 = mysqli_query($CONNECTION, $query5);
+                                  $result6 = mysqli_query($CONNECTION, $query6);
+                                  $result7 = mysqli_query($CONNECTION, $query7);
+                                  if ($result5) {
+                                      if ($result5->num_rows > 0) {
+                                          while ($notify = mysqli_fetch_assoc($result5)) {
+                                              $categoryName = $notify['masterCategory'];
+                                              echo "<span class='label label-danger'>$count</span>";
+                                              ?>
+                                              <option><?php echo $categoryName; ?></option>
+                                          <?php }
+                                      }
+                                  }
+                                  if ($result6) {
+                                      if ($result6->num_rows > 0) {
+                                          while ($notify = mysqli_fetch_assoc($result6)) {
+                                              $categoryName = $notify['subCategory'];
+                                              echo "<span class='label label-danger'>$count</span>";
+                                              ?>
+                                              <option><?php echo $categoryName; ?></option>
+                                          <?php }
+                                      }
+                                  }
+
+                                  if ($result7) {
+                                      if ($result7->num_rows > 0) {
+                                          while ($notify = mysqli_fetch_assoc($result7)) {
                                               $categoryName = $notify['categoryName'];
                                               echo "<span class='label label-danger'>$count</span>";
                                               ?>
                                               <option><?php echo $categoryName; ?></option>
                                           <?php }
                                       }
-                                  } ?>
+                                  }
+                                  ?>
                               </select>
                           </div>
 
@@ -304,7 +330,10 @@ function randomPassword() {
                       <label for="to" class="col-sm-2 control-label" align="left">Date*</label>
 
                       <div class="col-sm-4">
-                          <input type="text" id="datepicker" class="form-control" name="datepicker" required>
+                          <input type="text" id="datepicker" class="form-control" name="datepicker" value="<?php
+                          $dt = new DateTime();
+                          echo $dt->format('d/m/Y');
+?>" required>
                           <span class="error"><font
                                   color="red"> <?php if (isset($errors['date'])) echo $errors['date']; ?></font></span>
                       </div>

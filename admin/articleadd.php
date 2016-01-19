@@ -272,6 +272,11 @@ if(isset($_POST['submit1']))
     $date = "$parts[2]-$parts[0]-$parts[1]";
     $color1 = explode(',', $color);
 
+    ?>
+    <script>
+        alert(<?php echo $categoryName; ?>);
+    </script>
+<?php
     $sql = "INSERT INTO article(articleName,Category,brand,specification,weekDeal,bestSeller,Sale,price, discount, date,picture1,picture2,picture3,pictureTag) VALUES('$article_name','$categoryName','$brandsname','$description','$hotdeal','$bestsale','$sale','$ppp','$tp','$date','$pic1','$pic2','$pic3','$picTag')";
     $result = mysqli_query($CONNECTION, $sql);
 
