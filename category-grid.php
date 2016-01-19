@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 <?php
 include("connectdb.php");
 include "top_header.php";
@@ -479,22 +488,22 @@ $start_from = ($page-1) * $per_page;
                   if(isset($_GET["color"]) && $color != 'null')
                   {
                       if(isset($_GET["category"])){
-                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND masterrsub.masterCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                          $sql = "SELECT a.* FROM article as a INNER JOIN color as c ON a.articleId = c.articleId INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND masterrsub.masterCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                       }
 
                       else if(isset($_GET["subCategory"])){
                           $thisCategory = $_GET["subCategory"];
-                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId INNER JOIN subbcategory ON a.category = subbcategory.categoryName WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND subbcategory.subCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                          $sql = "SELECT a.* FROM article as a INNER JOIN color as c ON a.articleId = c.articleId INNER JOIN subbcategory ON a.category = subbcategory.categoryName WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND subbcategory.subCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                       }
 
                       else if(isset($_GET["subsubCategory"])){
                           $thisCategory = $_GET["subsubCategory"];
-                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND a.category = $thisCategory ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                          $sql = "SELECT a.* FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' AND a.category = $thisCategory ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                       }
 
                       else
                       {
-                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                          $sql = "SELECT a.* FROM article as a INNER JOIN color as c ON a.articleId = c.articleId WHERE a.price <= '$maxPrice' AND a.price >= '$minPrice' AND c.color = '$color' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                       }
 
                   }
@@ -502,21 +511,21 @@ $start_from = ($page-1) * $per_page;
                   {
                       if(isset($_GET["category"])){
                           $thisCategory = $_GET["category"];
-                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory where a.price <= '$maxPrice' AND a.price >= '$minPrice' AND masterrsub.masterCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                          $sql = "SELECT a.* FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory where a.price <= '$maxPrice' AND a.price >= '$minPrice' AND masterrsub.masterCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                       }
 
                       else if(isset($_GET["subCategory"])){
                           $thisCategory = $_GET["subCategory"];
-                          $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName where price <= '$maxPrice' AND price >= '$minPrice' AND subbcategory.subCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                          $sql = "SELECT a.* FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName where price <= '$maxPrice' AND price >= '$minPrice' AND subbcategory.subCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                       }
 
                       else if(isset($_GET["subsubCategory"])){
                           $thisCategory = $_GET["subsubCategory"];
-                          $sql = "SELECT articleId, price, articleName, picture1, discount FROM article where price <= '$maxPrice' AND price >= '$minPrice' AND Category = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                          $sql = "SELECT * FROM article where price <= '$maxPrice' AND price >= '$minPrice' AND Category = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                       }
                       else
                       {
-                          $sql = "SELECT articleId, price, articleName, picture1,discount FROM article where price <= '$maxPrice' AND price >= '$minPrice' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                          $sql = "SELECT * FROM article where price <= '$maxPrice' AND price >= '$minPrice' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                       }
                   }
               }
@@ -524,34 +533,42 @@ $start_from = ($page-1) * $per_page;
               {
                   if(isset($_GET["category"])){
                       $thisCategory = $_GET["category"];
-                      $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory where masterrsub.masterCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      $sql = "SELECT a.* FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName INNER JOIN masterrsub ON subbcategory.subCategory = masterrsub.subCategory where masterrsub.masterCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                   }
 
                   else if(isset($_GET["subCategory"])){
                       $thisCategory = $_GET["subCategory"];
-                      $sql = "SELECT a.articleId, a.price, a.articleName, a.picture1, a.discount FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName where subbcategory.subCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      $sql = "SELECT a.* FROM article AS a INNER JOIN subbcategory ON a.category = subbcategory.categoryName where subbcategory.subCategory = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                   }
 
                   else if(isset($_GET["subsubCategory"])){
                       $thisCategory = $_GET["subsubCategory"];
-                      $sql = "SELECT articleId, price, articleName, picture1, discount FROM article WHERE Category = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      $sql = "SELECT * FROM article WHERE Category = '$thisCategory' ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                   }
                   else
                   {
-                      $sql = "SELECT articleId, price, articleName, picture1, discount FROM article ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      $sql = "SELECT * FROM article ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
                   }
               }
 
               $result=mysqli_query($connection,$sql);
               $slideCount = 0;
+              $modalCount = 0;
               while($table_record = mysqli_fetch_array($result)) {
                   $articleName = $table_record['articleName'];
                   $articleId = $table_record['articleId'];
+                  $articleQuantity = $table_record['quantity'];
                   $price = $table_record['price'];
                   $picture1 = $table_record['picture1'];
+                  $picture2 = $table_record['picture2'];
+                  $picture3 = $table_record['picture3'];
                   $discount = $table_record['discount'];
                   $discountedPrice = ($price * $discount) / 100;
                   $discountedPrice = $price - $discountedPrice;
+                  $brand = $table_record['brand'];
+                  $specs = $table_record['specification'];
+                  $pieces = explode("0_0", $specs);
+
 
                   $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
 
@@ -565,12 +582,29 @@ $start_from = ($page-1) * $per_page;
                   } else {
                       $avgRating = 5;
                   }
+
+
                   ?>
                   <!-- Product -->
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                       <div class="product-block">
                           <div class="image">
                               <div class="product-label product-sale"><span>SALE</span></div>
+
+                              <a href="#" type="button" class="" data-toggle="modal" data-target="#myModal<?=$modalCount?>">
+                                  <div class="product-label product-sale" style="margin-left: 208px"><i class="fa fa-eye"></i></div>
+                              </a>
+
+                              <style>
+                                  .modal-backdrop
+                                  {
+                                      opacity:0.8 !important;
+                                  }
+                              </style>
+
+
+
+
                               <a class="img"
                                  href="product.php?articleId=<?php echo $articleId;?>"><img
                                       alt="product info"
@@ -618,7 +652,11 @@ $start_from = ($page-1) * $per_page;
                               } else {
                                   $avgRating = 5;
                               }
+
+                              require("quickView.php");
                               ?>
+
+
                               <div class="rating"><?php
                                   while ($ratingLimit < 5) {
                                       if ($ratingLimit < $avgRating) {
@@ -1026,13 +1064,14 @@ $start_from = ($page-1) * $per_page;
 
         else if(count > 2)
         {
-            alert("No more than 3 items can be compared simultaneously!");
+            notie.alert(3, "No more than 3 items can be compared simultaneously!", 2);
         }
 
         else if(id == document.getElementById('firstComp').innerHTML || id == document.getElementById('secComp').innerHTML || id == document.getElementById('thirdComp').innerHTML)
         {
-            alert("Item already in compare list!");
+            notie.alert(3, "Item already in compare list!", 2);
         }
+        notie.alert(1, 'Added To Compare List!', 2);
     }
 
     function compareBtnPress() {
@@ -1152,6 +1191,10 @@ $start_from = ($page-1) * $per_page;
         }
     }
 
+    function changeImage(picture, modalCount) {
+        document.getElementById('product-image'+modalCount).src = 'images/products/'+picture;
+    }
+
 
     (function($) {
         "use strict";
@@ -1189,6 +1232,8 @@ $start_from = ($page-1) * $per_page;
 
 </script>
 
+
+<script src="js/notie.js"></script>
 <!-- Style Switcher JS -->
 <script src="js/style-switch.js" type="text/javascript"></script>
 <section id="style-switch" class="bgcolor3">
