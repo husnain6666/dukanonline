@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="159fda90-2f6d-4009-8ab1-614885ddbaf3" name="Default" comment="">
+    <list default="true" id="159fda90-2f6d-4009-8ab1-614885ddbaf3" name="Default" comment="Merge branches 'husnain' and 'khalid' of https://github.com/husnain6666/dukanonline into husnain&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;css/style.css&#10;&#9;index.php&#10;&#9;main_bar.php&#10;&#9;product.php&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dukanonline.iws" />
@@ -30,7 +30,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-32.26923" vertical-offset="3275" max-vertical-offset="19482">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3275" max-vertical-offset="19482">
               <caret line="242" column="95" selection-start-line="242" selection-start-column="91" selection-end-line="242" selection-end-column="95" />
               <folding>
                 <marker date="1452940700372" expanded="true" signature="419:524" placeholder="SELECT SUBST..article..." />
@@ -60,14 +60,13 @@
       <file leaf-file-name="addArticle.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/addArticle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39517626" vertical-offset="5465" max-vertical-offset="12835">
+            <state vertical-scroll-proportion="8.83287" vertical-offset="2507" max-vertical-offset="12835">
               <caret line="334" column="48" selection-start-line="334" selection-start-column="48" selection-end-line="334" selection-end-column="48" />
               <folding>
                 <marker date="1453186392032" expanded="true" signature="6861:6904" placeholder="SELECT maste..." />
                 <marker date="1453186392032" expanded="true" signature="6952:6989" placeholder="SELECT subCa..." />
                 <marker date="1453186392032" expanded="true" signature="7037:7072" placeholder="SELECT categ..." />
                 <marker date="1453186392032" expanded="true" signature="9808:9835" placeholder="SELECT brand..brand..." />
-                <marker date="1453186392032" expanded="true" signature="22199:22280" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -83,7 +82,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <push-targets>
-      <push-target-info repo="$PROJECT_DIR$" source="husnain" target-remote="origin" target-branch="husnain" />
+      <push-target-info repo="$PROJECT_DIR$" source="husnain" target-remote="origin" target-branch="master" />
     </push-targets>
   </component>
   <component name="IdeDocumentHistory">
@@ -323,9 +322,6 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -333,6 +329,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -456,14 +455,19 @@
       <option name="project" value="LOCAL" />
       <updated>1453187401055</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Merge branches 'husnain' and 'khalid' of https://github.com/husnain6666/dukanonline into husnain&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;css/style.css&#10;&#9;index.php&#10;&#9;main_bar.php&#10;&#9;product.php&#10;">
+      <created>1453187473802</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1453187473802</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -473,13 +477,14 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19180088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32913387" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -749,7 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.18312387" vertical-offset="102" max-vertical-offset="4216">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,7 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.1636364" vertical-offset="0" max-vertical-offset="6545">
           <caret line="7" column="5" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,9 +807,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="344" max-vertical-offset="901">
           <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding>
-            <marker date="1452932265777" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..mastercategory..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -814,9 +815,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="2023">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1452700812000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..userinfo..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -824,11 +823,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="2907">
           <caret line="15" column="64" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="64" />
-          <folding>
-            <marker date="1452939776220" expanded="true" signature="-1:-1" placeholder="SELECT userI..userinfo..." />
-            <marker date="1452939776220" expanded="true" signature="-1:-1" placeholder="SELECT count..wishlist..." />
-            <marker date="1452939776220" expanded="true" signature="-1:-1" placeholder="select * fro..userinfo..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -836,7 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3265306" vertical-offset="2170" max-vertical-offset="3502">
           <caret line="138" column="144" selection-start-line="138" selection-start-column="144" selection-end-line="138" selection-end-column="144" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,10 +843,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.23943663" vertical-offset="510" max-vertical-offset="7310">
           <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding>
-            <marker date="1452935657115" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1452935657115" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..mastercategory..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -860,12 +851,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25" vertical-offset="4550" max-vertical-offset="5355">
           <caret line="276" column="39" selection-start-line="276" selection-start-column="39" selection-end-line="276" selection-end-column="39" />
-          <folding>
-            <marker date="1453114123717" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1453114123717" expanded="true" signature="-1:-1" placeholder="select max(a..article..." />
-            <marker date="1453114123717" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1453114123717" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -873,13 +859,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.01056338" vertical-offset="6794" max-vertical-offset="19176">
           <caret line="400" column="78" selection-start-line="400" selection-start-column="74" selection-end-line="400" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-32.26923" vertical-offset="3275" max-vertical-offset="19482">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3275" max-vertical-offset="19482">
           <caret line="242" column="95" selection-start-line="242" selection-start-column="91" selection-end-line="242" selection-end-column="95" />
           <folding>
             <marker date="1452940700372" expanded="true" signature="419:524" placeholder="SELECT SUBST..article..." />
@@ -907,14 +892,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/addArticle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39517626" vertical-offset="5465" max-vertical-offset="12835">
+        <state vertical-scroll-proportion="8.83287" vertical-offset="2507" max-vertical-offset="12835">
           <caret line="334" column="48" selection-start-line="334" selection-start-column="48" selection-end-line="334" selection-end-column="48" />
           <folding>
             <marker date="1453186392032" expanded="true" signature="6861:6904" placeholder="SELECT maste..." />
             <marker date="1453186392032" expanded="true" signature="6952:6989" placeholder="SELECT subCa..." />
             <marker date="1453186392032" expanded="true" signature="7037:7072" placeholder="SELECT categ..." />
             <marker date="1453186392032" expanded="true" signature="9808:9835" placeholder="SELECT brand..brand..." />
-            <marker date="1453186392032" expanded="true" signature="22199:22280" placeholder="..." />
           </folding>
         </state>
       </provider>
