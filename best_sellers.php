@@ -1,5 +1,5 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-block sidebar">
-    <div class="box-heading"><span>Best Seller</span></div>
+    <div class="box-heading"><span>Best Sellers</span> <a class="fa fa-plus fa-lg" href="category-grid.php?b=1" data-toggle="tooltip" data-original-title='View More' id="view"></a></div>
 <div class="box-content">
     <div class="box-products slide carousel-fade" id="productc5">
         <ol class="carousel-indicators">
@@ -7,7 +7,7 @@
             $carouselCount = 0;
             $limit = 0;
             $fu = 0;
-            $countqry = "select count(articleId) as count from article where bestSeller = '1'";
+            $countqry = "select count(articleId) as count from article where bestSeller = '1' limit 4";
             $result=mysqli_query($connection,$countqry);
             $table_record=mysqli_fetch_array($result);
             $limit = $table_record['count'];
@@ -22,7 +22,7 @@
         <div class="carousel-inner">
             <?php
             $count = 0;
-            $sql = "SELECT articleId,price,articleName,picture1 FROM article where bestSeller='1' group by articleId DESC limit 8";
+            $sql = "SELECT articleId,price,articleName,picture1 FROM article where bestSeller='1' group by articleId DESC limit 4";
             $result=mysqli_query($connection,$sql);
 
             while($table_record=mysqli_fetch_array($result)){
