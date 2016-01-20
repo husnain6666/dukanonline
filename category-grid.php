@@ -33,12 +33,6 @@ if(isset($_GET["subsubCategory"])){
     $subsubCategory = null;
 }
 
-if(isset($_GET["minPrice"])) {
-    $minPrice = $_GET["minPrice"];
-}
-if(isset($_GET["maxPrice"])) {
-    $maxPrice = $_GET["maxPrice"];
-}
 if(isset($_GET["color"])) {
     $color = $_GET["color"];
 }
@@ -81,8 +75,12 @@ $start_from = ($page-1) * $per_page;
         //  $start_from = ($page-1) * $per_page;
 
 
-//Dynamic shop by min max limit
+if(isset($_GET["minPrice"]) && isset($_GET["maxPrice"])) {
+    $minPrice = $_GET["minPrice"];
+    $maxPrice = $_GET["maxPrice"];
+}
 
+//Dynamic shop by min max limit
 $priceQuery = "SELECT min(price) AS minP, max(price) AS maxP FROM article";
 
 $result = mysqli_query($connection, $priceQuery);
@@ -90,11 +88,10 @@ if($result)
 {
     while($row = mysqli_fetch_array($result))
     {
-        $minPrice = $row["minP"];
-        $maxPrice = $row["maxP"];
+        $minP = $row["minP"];
+        $maxP = $row["maxP"];
     }
 }
-
 
           if($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET["minPrice"]) && isset($_GET["maxPrice"]))
           {
@@ -842,7 +839,7 @@ if($result)
                                         {
                                             $categoryName = $row5['categoryName'];
                                         ?>
-                                        <li class="item"><a href="#a"><?=$categoryName?></a></li>
+                                        <li class="item"><a href="category-grid.php?subsubCategory=<?=$categoryName?>"><?=$categoryName?></a></li>
                                         <?php
                                         }
                                     }?>
@@ -1225,8 +1222,8 @@ if($result)
 
         //Filter by Price Slider
         $("#price-range").ionRangeSlider({
-            min: <?=$minPrice?>,                        // min value
-            max: <?=$maxPrice?>,
+            min: <?=$minP?>,                        // min value
+            max: <?=$maxP?>,
             type: "double",                 // slider type
             step: 50,                       // slider step
             postfix: "",             		// postfix text
