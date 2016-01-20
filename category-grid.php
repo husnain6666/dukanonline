@@ -623,7 +623,7 @@ if($result)
 
 
 
-                              
+
                                 <a class="img"
                                  href="product.php?articleId=<?php echo $articleId;?>"><img style="height: 20em"
                                       alt="product info"
