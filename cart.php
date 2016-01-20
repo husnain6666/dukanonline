@@ -137,8 +137,9 @@ if($articleId!=-9999){
     $discount = $table_record['discount'];
     $discountedPrice = ($price * $discount)/100;
     $discountedPrice = $price - $discountedPrice;
+    $totalPrice = $discountedPrice*$quantity;
+    $totalPrice = ceil($totalPrice);
 
-    $totalPrice=$discountedPrice*$quantity;
 
     $sql = "SELECT orderdetails.articleId FROM orderdetails inner join userinfo on orderdetails.userId=userinfo.userId and userinfo.emailAddress = '$userName' and orderdetails.trackingNo = '$trackingNo'";
     $result=mysqli_query($connection,$sql);
@@ -248,8 +249,11 @@ $color=$table_record['color'];
 $size=$table_record['size'];
 $discountedPrice = ($price * $discount)/100;
 $discountedPrice = $price - $discountedPrice;
+$discountedPrice = ceil($discountedPrice);
 $category=$table_record['Category'];
+$totalPrice = ceil($totalPrice);
 $overAllprice += $totalPrice;
+$overAllprice = ceil($overAllprice);
 
 ?>
 
@@ -260,7 +264,7 @@ $overAllprice += $totalPrice;
             <div class="col-md-2 col-sm-3 hidden-xs p-wr">
                 <div class="product-attrb-wr">
                     <div class="product-attrb">
-                        <div class="image"> <a class="img" href="product.php?articleId=<?php echo $articleId; ?>" ><img alt="product info" src="images/products/<?php echo $picture1?>" title="product title"></a> </div>
+                        <div class="image"> <a class="img" href="product.php?articleId=<?php echo $articleId; ?>" ><img style="width: 100%;height: 100%;" alt="product info" src="images/products/<?php echo $picture1?>" title="product title"></a> </div>
                     </div>
                 </div>
             </div>

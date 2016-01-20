@@ -180,6 +180,7 @@ $total_records=2;
                         $discountedPrice = 0;
                         $discountedPrice = ($price * $discount)/100;
                         $discountedPrice = $price - $discountedPrice;
+                        $discountedPrice = ceil($discountedPrice);
 
                     $query2="SELECT count(articleId) as totalReviews FROM reviews WHERE articleId = '$articleId' ";
                     $result2=mysqli_query($connection,$query2);

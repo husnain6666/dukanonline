@@ -270,6 +270,7 @@ if($result)
                   $discount = $table_record['discount'];
                   $discountedPrice = ($price * $discount) / 100;
                   $discountedPrice = $price - $discountedPrice;
+                  $discountedPrice = ceil($discountedPrice);
 
                   $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
 
@@ -293,17 +294,17 @@ if($result)
                   ?>
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <?php } ?>
-                      <div class="product-block-nt">
+                      <div class="product-block-nt ">
                           <div class="image">
                               <div class="product-label product-sale"><span>SALE</span></div>
                               <a class="img"
-                                 href="product.php?articleId=<?php echo $articleId;?>"><img
+                                 href="product.php?articleId=<?php echo $articleId;?>"><img style="height: 20em"
                                       alt="product info"
                                       src="images/products/<?php echo $picture1?>"
-                                      title="product title"></a>
-                          </div>
+                                      title="product title"
+                                      ></a></div>
 
-                          <div class="product-meta">
+                          <div class="product-meta ">
 
                               <a href="product.php?articleId=<?php echo $articleId;?>"><span class="name"><?= $articleName;?></span></a>
                               <div class="row clearfix f-space20"></div>
@@ -315,7 +316,11 @@ if($result)
 
                                   <tr>
                                       <td>Price</td>
+                                      <?php if($discount > 0) { ?>
                                       <td><span class="price-new">Rs. <?php echo $discountedPrice;?></span> <span>&nbsp &nbsp</span> <small><strike>Rs. <?php echo $price;?></strike></small></td>
+                                      <?php } else { ?>
+                                      <td><span class="price-new">Rs. <?php echo $price;?></span></td>
+                                      <?php } ?>
                                   </tr>
 
                                   <tr>
@@ -391,7 +396,7 @@ if($result)
                               ?>
 
                               <div class="small-btns">
-                                  <button class="btn btn-default btn-wishlist pull-left"
+                                  <button class="btn btn-default btn-wishlist pull-left" onclick="addWish(<?php echo $articleId ?>)"
                                           data-toggle="tooltip" title="Add to Wishlist"><i
                                           class="fa fa-heart fa-fw"></i></button>
                                   <button class="btn btn-default btn-addtocart pull-left"
@@ -577,6 +582,7 @@ if($result)
                   $discount = $table_record['discount'];
                   $discountedPrice = ($price * $discount) / 100;
                   $discountedPrice = $price - $discountedPrice;
+                  $discountedPrice = ceil($discountedPrice);
                   $brand = $table_record['brand'];
                   $specs = $table_record['specification'];
                   $pieces = explode("0_0", $specs);
@@ -617,8 +623,8 @@ if($result)
 
 
 
-                              <a class="img"
-                                 href="product.php?articleId=<?php echo $articleId;?>"><img
+                                <a class="img"
+                                 href="product.php?articleId=<?php echo $articleId;?>"><img style="height: 20em"
                                       alt="product info"
                                       src="images/products/<?php echo $picture1?>"
                                       title="product title"></a></div>
@@ -626,10 +632,21 @@ if($result)
                               <div class="name"><a
                                       href="product.php?articleId=<?php echo $articleId;?>"><?php echo $articleName;?></a>
                               </div>
-                              <div class="big-price"><span class="price-new"><span
-                                          class="sym">Rs.</span><?php echo $discountedPrice;?></span>
+
+
+
+                              <?php if($discount > 0) { ?>
+                                  <div class="big-price"><span class="price-new"><span
+                                              class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                         <span class="price-old"><span
                                                                 class="sym">Rs.</span><?php echo $price;?></span></div>
+                              <?php
+                              } else { ?>
+                                  <div class="big-price"><span class="price-new"><span
+                                              class="sym">Rs.</span><?php echo $price;?></span>
+                                  </div>
+                              <?php } ?>
+
                               <?php if ($check !== false) { //check if user is logged in or not?>
                                   <div class="big-btns"><a
                                           class="btn btn-default btn-view pull-left"
@@ -648,8 +665,7 @@ if($result)
                               <?php }// end else
                               ?>
                               <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
-                                                        <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
+                                  <span class="price-old"><span class="sym"></span>&nbsp;</span></div>
                               <?php
                               $ratingLimit = 0;
                               $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
@@ -1003,212 +1019,6 @@ if($result)
 
 <!--My Javascript-->
 <script>
-    var currentURL = window.location.href;
-    var count = 0;
-    count = document.getElementById("hiddenCmpListCounter").innerHTML;
-
-
-
-    function clearCompare() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById('firstComp').innerHTML = "No Item Selected";
-                document.getElementById('secComp').innerHTML = "No Item Selected";
-                document.getElementById('thirdComp').innerHTML = "No Item Selected";
-                document.getElementById('firstCompName').innerHTML = "No Item Selected";
-                document.getElementById('secCompName').innerHTML = "No Item Selected";
-                document.getElementById('thirdCompName').innerHTML = "No Item Selected";
-            }
-        }
-        xmlhttp.open("GET", "addToCompareList.php?articleId=" + '-1' , true);
-        xmlhttp.send();
-
-        count = 0;
-        notie.alert(1, "Compare List Cleared!", 2)
-    }
-
-    function addToCompare(id, name) {
-
-
-
-        if(count == 0 && id != document.getElementById('secComp').innerHTML && id != document.getElementById('thirdComp').innerHTML)
-        {
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById('firstComp').innerHTML = id;
-                    document.getElementById('firstCompName').innerHTML = name;
-                }
-            }
-            xmlhttp.open("GET", "addToCompareList.php?articleId=" + id , true);
-            xmlhttp.send();
-
-            count++;
-        }
-        else if(count == 1 && id != document.getElementById('firstComp').innerHTML && id != document.getElementById('thirdComp').innerHTML)
-        {
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById('secComp').innerHTML = id;
-                    document.getElementById('secCompName').innerHTML = name;
-                }
-            }
-            xmlhttp.open("GET", "addToCompareList.php?articleId=" + id , true);
-            xmlhttp.send();
-
-            count++;
-        }
-        else if(count == 2 && id != document.getElementById('firstComp').innerHTML && id != document.getElementById('secComp').innerHTML)
-        {
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById('thirdComp').innerHTML = id;
-                    document.getElementById('thirdCompName').innerHTML = name;
-                }
-            }
-            xmlhttp.open("GET", "addToCompareList.php?articleId=" + id , true);
-            xmlhttp.send();
-
-            count++;
-        }
-
-        else if(count > 2)
-        {
-            notie.alert(3, "No more than 3 items can be compared simultaneously!", 2);
-        }
-
-        else if(id == document.getElementById('firstComp').innerHTML || id == document.getElementById('secComp').innerHTML || id == document.getElementById('thirdComp').innerHTML)
-        {
-            notie.alert(3, "Item already in compare list!", 2);
-        }
-        notie.alert(1, 'Added To Compare List!', 2);
-    }
-
-    function compareBtnPress() {
-        var firstComp = document.getElementById("firstComp").innerHTML;
-        var secComp = document.getElementById("secComp").innerHTML;
-        var thirdComp = document.getElementById("thirdComp").innerHTML;
-
-        if(firstComp != "No Item Selected" && secComp != "No Item Selected")
-        {
-            window.location = "category-grid.php?compItem1=" +firstComp+ "&compItem2=" +secComp+ "&compItem3=" +thirdComp;
-        }
-        else
-        {
-            notie.alert(3, "Please select atleast 2 items to compare", 2);
-        }
-    }
-
-    var color = null;
-    function shopBy()
-    {
-        var x = document.getElementById("price-range").value.split(';');
-        var minPrice = x[0];
-        var maxPrice = x[1];
-
-        if(currentURL.search('minPrice=') == -1) {
-            if(currentURL.search('[?]') == -1) {
-                window.location = currentURL + "?minPrice=" + minPrice + "&maxPrice=" + maxPrice + "&color=" + color;
-            }
-            else {
-                window.location = currentURL + "&minPrice=" + minPrice + "&maxPrice=" + maxPrice + "&color=" + color;
-            }
-        }
-        else {
-            var shopByRegex = /minPrice[=][0-9]+[&]maxPrice[=][0-9]+[&]color[=][a-z]+/;
-            var results = shopByRegex.exec( currentURL );
-            if( results != null )
-            {
-                currentURL = currentURL.replace(shopByRegex, "minPrice=" + minPrice + "&maxPrice=" + maxPrice + "&color=" + color);
-                window.location.href = currentURL;
-            }
-            else notie.alert(3, "Not Found!", 2);
-        }
-    }
-
-    function clearShopBy()
-    {
-        window.location = "category-grid.php";
-    }
-
-    function selectedColor(id)
-    {
-        color = id;
-    }
-
-    function sortBy(type) {
-        if (currentURL.search('sortBy=') == -1) {
-            if (currentURL.search('[?]') == -1) {
-                window.location = currentURL + "?sortBy=" + type;
-            }
-            else {
-                window.location = currentURL + "&sortBy=" + type;
-            }
-        }
-        else {
-            var sortByRegex = /sortBy[=][a-z|_]+/;
-            var results = sortByRegex.exec( currentURL );
-            if( results != null )
-            {
-                currentURL = currentURL.replace(sortByRegex, "sortBy=" + type);
-                window.location.href = currentURL;
-            }
-            else notie.alert(3, "Not Found!", 2);
-        }
-    }
-
-    function perPage(items)
-    {
-        if(currentURL.search('perPage=') == -1) {
-            if(currentURL.search('[?]') == -1) {
-                window.location = currentURL + "?perPage=" + items;
-            }
-            else {
-                window.location = currentURL + "&perPage=" + items;
-            }
-        }
-        else {
-            var perPageRegex = /perPage[=][0-9]+/;
-            var results = perPageRegex.exec( currentURL );
-            if( results != null )
-            {
-                currentURL = currentURL.replace(perPageRegex, "perPage=" + items);
-                window.location.href = currentURL;
-            }
-            else notie.alert(3, "Not Found!", 2);
-        }
-    }
-
-    function pageNo(x)
-    {
-        if(currentURL.search('page=') == -1) {
-            if(currentURL.search('[?]') == -1) {
-                window.location = currentURL + "?page=" + x;
-            }
-            else {
-                window.location = currentURL + "&page=" + x;
-            }
-        }
-        else {
-            var pageRegex = /page[=][0-9]+/;
-            var results = pageRegex.exec( currentURL );
-            if( results != null )
-            {
-                currentURL = currentURL.replace(pageRegex, "page=" + x);
-                window.location.href = currentURL;
-            }
-            else notie.alert(3, "Not Found!", 2);
-        }
-    }
-
-    function changeImage(picture, modalCount) {
-        document.getElementById('product-image'+modalCount).src = 'images/products/'+picture;
-    }
-
-
     (function($) {
         "use strict";
         //Mega Menu
@@ -1222,8 +1032,8 @@ if($result)
 
         //Filter by Price Slider
         $("#price-range").ionRangeSlider({
-            min: <?=$minP?>,                        // min value
-            max: <?=$maxP?>,
+            min: <?=0?>,                        // min value
+            max: <?=$maxP+500?>,
             type: "double",                 // slider type
             step: 50,                       // slider step
             postfix: "",             		// postfix text
@@ -1245,6 +1055,7 @@ if($result)
 
 </script>
 
+<script src="js/total.js"></script>
 
 <script src="js/notie.js"></script>
 <!-- Style Switcher JS -->

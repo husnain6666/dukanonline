@@ -2,11 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3 col-xs-12 shopinfo">
-                <h4 class="title">FLATSHOP</h4>
-                <p> This Efficiently negotiate robust communities with extensible systems.
-                    Appropriately productize top-line leadership skills rather than team
-                    building applications.</p>
-                <p> Phosfluorescently extend highly efficient schemas with intermandated. </p>
+                <h4 class="title">Store Online</h4>
+                <p> www.StoreOnline.pk is a task of StoreOnline® Pakistan. We are surely endeavoring and working hard proficiently round the clock to give you the best shopper electronic items online on brilliant costs.
+                </p>
+                <p> StoreOnline Pakistan task is outlined uniquely to give the most recent and most attractive internet shopping knowledge in Pakistan to your entryway step. We are additionally the Pioneers in Online Shopping In Pakistan and are buckling down and in addition keen to keep up that profile. </p>
             </div>
             <div class="col-sm-3 col-xs-12 footermenu">
                 <h4 class="title">Information</h4>

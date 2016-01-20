@@ -70,6 +70,7 @@ include "top_header.php";
                       $discount = $table_record['discount'];
                       $discountedPrice = ($price * $discount)/100;
                       $discountedPrice = $price - $discountedPrice;
+                      $discountedPrice = ceil($discountedPrice);
 
                       $query2="SELECT count(articleId) as totalReviews FROM reviews WHERE articleId = '$articleId'";
                       $result2=mysqli_query($connection,$query2);
@@ -289,9 +290,8 @@ include "top_header.php";
                               <div class="product-btns">
                                   <div class="product-big-btns">
                                       <a href="cart.php?articleId=<?php echo $articleId; ?> " >   <button class="btn btn-addtocart" onclick="insertquantityinshoppingcart()"> <i class="fa fa-shopping-cart fa-fw"></i> Add to Cart </button></a>
-                                      <button class="btn btn-compare" data-toggle="tooltip" title="Add to Compare"> <i class="fa fa-retweet fa-fw"></i> </button>
+                                      <button class="btn btn-compare" data-toggle="tooltip" title="Add to Compare" onclick="addToCompare(<?=$articleId?>, '<?=$articleName?>')"> <i class="fa fa-retweet fa-fw"></i> </button>
                                       <button class="btn btn-wishlist" data-toggle="tooltip" title="Add to Wishlist" onclick="addWish(<?php echo $articleId ?>)"> <i class="fa fa-heart fa-fw"></i> </button>
-                                      <button class="btn btn-sendtofriend" data-toggle="tooltip" title="Send to Friend"> <i class="fa fa-envelope fa-fw"></i> </button>
                                   </div>
                               </div>
                           </div>
@@ -303,9 +303,8 @@ include "top_header.php";
                                   <div class="product-btns">
                                       <div class="product-big-btns">
                                           <a href="signUp.php" > <button class="btn btn-addtocart" onclick="">  <i class="fa fa-shopping-cart fa-fw"></i> Add to Cart </button> </a>
-                                          <a href="signUp.php" > <button class="btn btn-compare" data-toggle="tooltip" title="Add to Compare"> <i class="fa fa-retweet fa-fw"></i> </button> </a>
+                                          <a href="signUp.php" > <button class="btn btn-compare" data-toggle="tooltip" title="Add to Compare" > <i class="fa fa-retweet fa-fw"></i> </button> </a>
                                           <a href="signUp.php" > <button class="btn btn-wishlist" data-toggle="tooltip" title="Add to Wishlist"> <i class="fa fa-heart fa-fw"></i> </button> </a>
-                                          <a href="signUp.php" > <button class="btn btn-sendtofriend" data-toggle="tooltip" title="Send to Friend"> <i class="fa fa-envelope fa-fw"></i> </button> </a>
                                       </div>
                                   </div>
                               </div>
@@ -528,6 +527,7 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
                       $discount = $table_record1_R['discount'];
                       $discountedPrice = ($price_R * $discount) / 100;
                       $discountedPrice = $price_R - $discountedPrice;
+                      $discountedPrice = ceil($discountedPrice);
 
                       $query3_R = "select (select count(rating) from ratings where articleId = '$articleId_R') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId_R'";
                       $result3_R=mysqli_query($connection,$query3_R);
@@ -557,15 +557,24 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
                                          href="product.php?articleId=<?php echo $articleId_R;?>"><img
                                               alt="product info"
                                               src="images/products/<?php echo $picture1_R?>"
-                                              title="product title"></a></div>
+                                              title="product title"
+                                              style="height: 35%;width: 100%;"
+                                              ></a></div>
                                   <div class="product-meta">
                                       <div class="name"><a
                                               href="product.php?articleId=<?php echo $articleId_R;?>"><?php echo $articleName_R;?></a>
                                       </div>
-                                      <div class="big-price"><span class="price-new"><span
-                                                  class="sym">Rs.</span><?php echo $discountedPrice;?></span>
+                                      <?php if($discount > 0) { ?>
+                                          <div class="big-price"><span class="price-new"><span
+                                                      class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                         <span class="price-old"><span
                                                                 class="sym">Rs.</span><?php echo $price_R;?></span></div>
+                                      <?php
+                                      } else { ?>
+                                          <div class="big-price"><span class="price-new"><span
+                                                      class="sym">Rs.</span><?php echo $price_R;?></span>
+                                          </div>
+                                      <?php } ?>
                                       <?php if ($check !== false) { //check if user is logged in or not?>
                                           <div class="big-btns"><a
                                                   class="btn btn-default btn-view pull-left"
@@ -583,10 +592,12 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
                                                  href="create_an_account.php">BUY NOW!</a></div>
                                       <?php }// end else
                                       ?>
+
+
                                       <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
-                                                        <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price_R;?></span></div>
-                                      <?php
+                                      <span class="price-old"><span class="sym"></span>&nbsp;</span></div>
+
+                                  <?php
                                       $ratingLimit = 0;
                                       $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
 
@@ -614,17 +625,33 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
                                               $ratingLimit++;
                                           }?>
                                       </div>
-                                      <div class="small-btns">
-                                          <button class="btn btn-default btn-compare pull-left"
-                                                  data-toggle="tooltip" title="Add to Compare"><i
-                                                  class="fa fa-retweet fa-fw"></i></button>
-                                          <button class="btn btn-default btn-wishlist pull-left"
-                                                  data-toggle="tooltip" title="Add to Wishlist"><i
-                                                  class="fa fa-heart fa-fw"></i></button>
-                                          <button class="btn btn-default btn-addtocart pull-left"
-                                                  data-toggle="tooltip" title="Add to Cart"><i
-                                                  class="fa fa-shopping-cart fa-fw"></i></button>
-                                      </div>
+                                      <?php if($check == 1){ ?>
+                                          <div class="small-btns">
+                                              <button class="btn btn-default btn-compare pull-left" onclick="addToCompare(<?=$articleId_R?>, '<?=$articleName_R?>')"
+                                                      data-toggle="tooltip" title="Add to Compare"><i
+                                                      class="fa fa-retweet fa-fw"></i></button>
+                                              <button class="btn btn-default btn-wishlist pull-left"
+                                                      data-toggle="tooltip" title="Add to Wishlist" onclick="addWish(<?php echo $articleId_R ?>)"><i
+                                                      class="fa fa-heart fa-fw"></i></button>
+                                              <a href="cart.php?articleId=<?php echo $articleId_R; ?> " > <button class="btn btn-default btn-addtocart pull-left" onclick="insertquantityinshoppingcart()"
+                                                      data-toggle="tooltip" title="Add to Cart"><i
+                                                      class="fa fa-shopping-cart fa-fw"></i></button> </a>
+
+                                          </div>
+                                      <?php  } else { ?>
+                                          <div class="small-btns">
+                                              <button class="btn btn-default btn-compare pull-left"
+                                                      data-toggle="tooltip" title="Add to Compare" onclick="window.location.href='signUp.php';"><i
+                                                      class="fa fa-retweet fa-fw"></i></button>
+                                              <button class="btn btn-default btn-wishlist pull-left"
+                                                      data-toggle="tooltip" title="Add to Wishlist" onclick="window.location.href='signUp.php';"><i
+                                                      class="fa fa-heart fa-fw"></i></button>
+                                              <button class="btn btn-default btn-addtocart pull-left"
+                                                      data-toggle="tooltip" title="Add to Cart" onclick="window.location.href='signUp.php';"><i
+                                                      class="fa fa-shopping-cart fa-fw"></i></button>
+                                          </div>
+                                      <?php  } ?>
+
                                   </div>
                                   <div class="meta-back"></div>
                               </div>
@@ -647,15 +674,24 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
                                      href="product.php?articleId=<?php echo $articleId_R;?>"><img
                                           alt="product info"
                                           src="images/products/<?php echo $picture1_R?>"
-                                          title="product title"></a></div>
+                                          title="product title"
+                                          style="height: 35%;width: 100%;"
+                                          ></a></div>
                               <div class="product-meta">
                                   <div class="name"><a
                                           href="product.php?articleId=<?php echo $articleId_R;?>"><?php echo $articleName_R;?></a>
                                   </div>
-                                  <div class="big-price"><span class="price-new"><span
-                                              class="sym">Rs.</span><?php echo $discountedPrice;?></span>
+                                  <?php if($discount > 0) { ?>
+                                      <div class="big-price"><span class="price-new"><span
+                                                  class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                         <span class="price-old"><span
                                                                 class="sym">Rs.</span><?php echo $price_R;?></span></div>
+                                  <?php
+                                  } else { ?>
+                                      <div class="big-price"><span class="price-new"><span
+                                                  class="sym">Rs.</span><?php echo $price_R;?></span>
+                                      </div>
+                                  <?php } ?>
                                   <?php if ($check !== false) { //check if user is logged in or not?>
                                       <div class="big-btns"><a
                                               class="btn btn-default btn-view pull-left"
@@ -674,8 +710,7 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
                                   <?php }// end else
                                   ?>
                                   <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
-                                                        <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price_R;?></span></div>
+                                  <span class="price-old"><span class="sym"></span>&nbsp;</span></div>
                                   <?php
                                   $ratingLimit = 0;
                                   $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
@@ -704,17 +739,31 @@ and r.articleId = '$articleId' GROUP BY t.rating ORDER BY t.rating DESC limit 5"
                                           $ratingLimit++;
                                       }?>
                                   </div>
-                                  <div class="small-btns">
-                                      <button class="btn btn-default btn-compare pull-left"
-                                              data-toggle="tooltip" title="Add to Compare"><i
-                                              class="fa fa-retweet fa-fw"></i></button>
-                                      <button class="btn btn-default btn-wishlist pull-left"
-                                              data-toggle="tooltip" title="Add to Wishlist"><i
-                                              class="fa fa-heart fa-fw"></i></button>
-                                      <button class="btn btn-default btn-addtocart pull-left"
-                                              data-toggle="tooltip" title="Add to Cart"><i
-                                              class="fa fa-shopping-cart fa-fw"></i></button>
-                                  </div>
+                                  <?php if($check == 1){ ?>
+                                      <div class="small-btns">
+                                          <button class="btn btn-default btn-compare pull-left" onclick="addToCompare(<?=$articleId_R?>, '<?=$articleName_R?>')"
+                                                  data-toggle="tooltip" title="Add to Compare"><i
+                                                  class="fa fa-retweet fa-fw"></i></button>
+                                          <button class="btn btn-default btn-wishlist pull-left"
+                                                  data-toggle="tooltip" title="Add to Wishlist" onclick="addWish(<?php echo $articleId_R ?>)"><i
+                                                  class="fa fa-heart fa-fw"></i></button>
+                                          <button class="btn btn-default btn-addtocart pull-left"
+                                                  data-toggle="tooltip" title="Add to Cart"><i
+                                                  class="fa fa-shopping-cart fa-fw"></i></button>
+                                      </div>
+                                  <?php  } else { ?>
+                                      <div class="small-btns">
+                                          <button class="btn btn-default btn-compare pull-left"
+                                                  data-toggle="tooltip" title="Add to Compare" onclick="window.location.href='signUp.php';"><i
+                                                  class="fa fa-retweet fa-fw"></i></button>
+                                          <button class="btn btn-default btn-wishlist pull-left"
+                                                  data-toggle="tooltip" title="Add to Wishlist" onclick="window.location.href='signUp.php';"><i
+                                                  class="fa fa-heart fa-fw"></i></button>
+                                          <button class="btn btn-default btn-addtocart pull-left"
+                                                  data-toggle="tooltip" title="Add to Cart" onclick="window.location.href='signUp.php';"><i
+                                                  class="fa fa-shopping-cart fa-fw"></i></button>
+                                      </div>
+                                  <?php  } ?>
                               </div>
                               <div class="meta-back"></div>
                           </div>
