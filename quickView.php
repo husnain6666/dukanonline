@@ -75,7 +75,7 @@
                             <div class="product-btns-wr col-md-6 col-sm-6 col-xs-12">
                                 <div class="product-btns">
                                     <div style="height:3px" class="col-md-12 col-sm-12 col-xs-12"></div>
-                                    <button class="btn btn-primary col-md-12 col-sm-12 col-xs-12"> <i class="fa fa-shopping-cart fa-fw"></i> Add to Cart </button>
+                                    <a href="product.php?articleId=<?=$articleId?>" class="btn btn-primary col-md-12 col-sm-12 col-xs-12"> <i class="fa fa-shopping-cart fa-fw"></i> View Details </a>
                                     <div style="height:6px" class="col-md-12 col-sm-12 col-xs-12"></div>
                                     <button class="btn btn-warning col-md-6 col-sm-6 col-xs-6" onclick="addToCompare(<?=$articleId?>, '<?=$articleName?>')"
                                             data-toggle="tooltip" title="Add to Compare">
@@ -95,7 +95,7 @@
                             <div class="short-info-wr col-md-12 col-sm-12 col-xs-12">
                                 <div class="short-info">
                                     <?php ?>
-                                    <div class="product-attr-text">Availability: <span class="available" id="avalability"><?php if($articleQuantity == 0){echo "Out of Stock"; echo "<script>document.getElementById('avalability').style.color = 'orange';</script>";} else echo "In Stock";?></span></div>
+                                    <div class="product-attr-text">Availability: <span class="available" id="avalability">In Stock</span></div>
                                     <div class="product-attr-text">Product Code: <span><?=$articleId?></span></div>
                                     <div class="product-attr-text">Brand: <span><?=$brand?></span></div>
                                     <p class="short-info-p"><?=$pieces[0]?></p>
