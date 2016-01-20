@@ -196,7 +196,7 @@ $total_records=2;
                         <!-- Image -->
                         <div class="col-md-4 col-sm-12 col-xs-12 product-image">
                             <div class="image">
-                                <a class="img" href="#"><img height="273px" alt="product info" src="photo/<?php echo $picture1 ?>" title=<?php echo $articleName; ?> class="ani-image" ></a> </div>
+                                <a class="img" href="#"><img height="273px" alt="product info" src="images/products/<?php echo $picture1 ?>" title=<?php echo $articleName; ?> class="ani-image" ></a> </div>
                         </div>
                         <!-- end: Image -->
 

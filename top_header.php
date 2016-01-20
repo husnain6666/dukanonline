@@ -87,6 +87,7 @@ $wishno='Wishlist(0)';
 ?>
 
 <body>
+<script src="notie.js"></script>
 <!-- Header -->
 <header>
     <!-- Top Heading Bar -->
@@ -116,7 +117,7 @@ $wishno='Wishlist(0)';
                                     </div>
                                     <button class="btn medium color1 pull-right" name="submit" type="submit">Login</button>
                                 </form>
-                                <form action="facebook.php">
+                                <form action="signUp.php">
                                     <button type="submit" class="btn medium color1 pull-left" type="submit" style="margin-top: -20px; width: 180px;margin-left: -10px">Signup</button>
                                 </form>
                                     <form action="facebook.php">

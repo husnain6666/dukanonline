@@ -186,15 +186,19 @@ include "top_header.php";
                           <div class="short-info-opt-wr col-md-12 col-sm-12 col-xs-12">
                               <div class="short-info-opt">
                                   <div class="att-row">
+
                                       <div class="qty-wr">
                                           <div class="qty-text hidden-xs">Qty:</div>
                                           <div class="quantity-inp">
                                               <input value="<?php echo $articleId ?>" id = "articleId" type="hidden" >
-                                              <input type="text" class="quantity-input" name="quantity"fgsrgsrth id="quantity" value="1">
+                                              <input type="text" class="quantity-input" name="p_quantity" value="1">
                                           </div>
                                           <div class="quantity-txt"><a href="#a" class="qty qtyminus" ><i class="fa fa-minus fa-fw"></i></a></div>
                                           <div class="quantity-txt"><a href="#a" class="qty qtyplus" ><i class="fa fa-plus fa-fw"></i></a></div>
                                       </div>
+
+
+
                                       <?php
                                       // Search color in table. If color is present than show color
                                           $col_present = "select color from color where articleId = '$articleId'";
@@ -298,10 +302,10 @@ include "top_header.php";
                               <div class="product-btns-wr col-md-8 col-sm-8 col-xs-12">
                                   <div class="product-btns">
                                       <div class="product-big-btns">
-                                          <a href="signUp.php?articleId=<?php echo $articleId; ?> " >        <button class="btn btn-addtocart" onclick=""> > <i class="fa fa-shopping-cart fa-fw"></i> Add to Cart </button> </a>
-                                          <button class="btn btn-compare" data-toggle="tooltip" title="Add to Compare"> <i class="fa fa-retweet fa-fw"></i> </button>
-                                          <button class="btn btn-wishlist" data-toggle="tooltip" title="Add to Wishlist" onclick="addWish(<?php echo $articleId ?>)"> <i class="fa fa-heart fa-fw"></i> </button>
-                                          <button class="btn btn-sendtofriend" data-toggle="tooltip" title="Send to Friend"> <i class="fa fa-envelope fa-fw"></i> </button>
+                                          <a href="signUp.php" > <button class="btn btn-addtocart" onclick="">  <i class="fa fa-shopping-cart fa-fw"></i> Add to Cart </button> </a>
+                                          <a href="signUp.php" > <button class="btn btn-compare" data-toggle="tooltip" title="Add to Compare"> <i class="fa fa-retweet fa-fw"></i> </button> </a>
+                                          <a href="signUp.php" > <button class="btn btn-wishlist" data-toggle="tooltip" title="Add to Wishlist"> <i class="fa fa-heart fa-fw"></i> </button> </a>
+                                          <a href="signUp.php" > <button class="btn btn-sendtofriend" data-toggle="tooltip" title="Send to Friend"> <i class="fa fa-envelope fa-fw"></i> </button> </a>
                                       </div>
                                   </div>
                               </div>

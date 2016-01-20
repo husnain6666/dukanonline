@@ -271,7 +271,7 @@ $overAllprice += $totalPrice;
                             <h3><a href="product.php?articleId=<?php echo $articleId; ?>" ><?php echo $articleName; ?></a></h3>
                         </div>
                         <div class="price"> <span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice; ?></span><?php if($discountedPrice < $price){ ?> <span class="price-old"><span class="sym">Rs.</span><?php echo $price; ?></span> <?php } ?></div>
-                        <a href="product.php?articleId=<?php echo $articleId; ?>" class="btn normal color2">Edit Order</a> </div>
+                            <a href="product.php?articleId=<?php echo $articleId; ?>" class="btn normal color2">Edit Order</a> </div>
                 </div>
             </div>
             <div class="col-md-3 hidden-sm hidden-xs p-wr">
