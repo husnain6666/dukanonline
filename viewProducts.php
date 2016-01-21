@@ -614,7 +614,6 @@ $i=1;
                                                 } else {
                                                     $avgRating = 5;
                                                 }
-                                                require("quickView.php");
                                                 ?>
 
 
