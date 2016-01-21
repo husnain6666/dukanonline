@@ -2,7 +2,6 @@
 include('session.php');
 include('connectdb.php');
 ?>
-
 <!--[if IE 7 ]><html class="ie ie7 lte9 lte8 lte7" lang="en-US"><![endif]-->
 <!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en-US">	<![endif]-->
 <!--[if IE 9]><html class="ie ie9 lte9" lang="en-US"><![endif]-->
@@ -39,6 +38,17 @@ include('connectdb.php');
     <!-- Style Switcher -->
     <link href="css/style-switch.css" rel="stylesheet" type="text/css"/>
     <!-- Color -->
+    <link href="css/skin/color.css" id="colorstyle" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <!--[if IE 8]>
+    <script type="text/javascript" src="js/selectivizr.js"></script>
+
 
     <link href="css/skin/mono-red.css" id="colorstyle" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -96,6 +106,16 @@ $wishno='Wishlist(0)';
             <div class="col-md-12">
                 <div class="topheadrow">
                     <ul class="nav nav-pills pull-right">
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#a">USD <i class="fa fa-angle-down fa-fw"></i> </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#a">USD</a></li>
+                                <li><a href="#a">PKR</a></li>
+                                <li><a href="#a">JPY</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#a"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-xs">My Cart</span></a> </li>
+                        <li> <a href="#a"> <i class="fa fa-heart fa-fw"></i> <span class="hidden-xs">Wishlist(0)</span></a> </li>
                         <?php
                         // check whether the user is logged in or not
                         if(!isset( $_SESSION['loginUser'])){

@@ -97,6 +97,7 @@
                     <i class="fa fa-mail-forward"></i> <span>Send Newsletter</span> <i class=""></i>
                 </a>
             </li>
+
         </ul>
     </section>
     <!-- /.sidebar -->

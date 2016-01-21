@@ -11,12 +11,12 @@
         <!-- search -->
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 pull-right">
             <div class="searchbar">
-                <form action="#">
+                <form >
                     <ul class="pull-left">
                         <li class="input-prepend dropdown" data-select="true"> <a class="add-on dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <span class="dropdown-display">All
                 Categories</span> <i class="fa fa-sort fa-fw"></i> </a>
-                            <!-- this hidden field is used to contain the selected option from the dropdown -->
-                            <input class="dropdown-field" type="hidden" value="All Categories"/>
+                            <!-- this hidden field is used to contain the selected option from the dropdown-->
+                            <input class="dropdown-field" type="hidden" id="select" value="All Categories" onchange="changeManufacturer();"/>
                             <ul class="dropdown-menu" role="menu">
                                 <?php
                                 include_once("connectdb.php");
@@ -35,14 +35,43 @@
                             </ul>
                         </li>
                     </ul>
+
                     <div class="searchbox pull-left">
-                        <input class="searchinput" id="search" placeholder="Search..." type="search">
-                        <button class="fa fa-search fa-fw" type="submit"></button>
+                        <input class="typeahead tt-query" onkeyup="handleKeyPress(event)" type="text" name="typeahead"  autocomplete="off" spellcheck="false" placeholder="Search..." id="searchid">
                     </div>
+
                 </form>
             </div>
         </div>
         <!-- end: search -->
-
     </div>
 </div>
+<script>
+    function handleKeyPress(e){
+        var key=e.keyCode || e.which;
+        if (key==13){
+            changeManufacturer1();
+        }
+    }
+    function changeManufacturer1() {
+
+        var search = document.getElementById("searchid").value;
+        url1 = 'category-grid.php?searchQuery=' + search;
+        window.location.assign(url1);
+    }
+    function changeManufacturer() {
+
+        var search = document.getElementById("select").value;
+        url1 = 'category-grid.php?searchQuery=' + search;
+        window.location.assign(url1);
+    }
+
+    $(document).ready(function(){
+        $('input.typeahead').typeahead({
+            name: 'typeahead',
+            remote:'search.php?key=%QUERY',
+            limit : 10
+        });
+    });
+</script>
+<script src="js/typeahead.min.js"></script>
