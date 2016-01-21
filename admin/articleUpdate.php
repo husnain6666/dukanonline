@@ -800,26 +800,7 @@ $p1="";
 
 
 
-                    <div class="form-group">
-                        <label for="category" class="col-sm-2 control-label">Chose Color*</label>
-                        <div class="col-sm-4">
-                            <select class="form-control col-sm-9" id="ChoseColors">
-                                <?php
-                                include("dbConnect.php");
-                                $query ="SELECT * FROM `color`";
-                                $result = mysqli_query($CONNECTION, $query);
-                                if($result) {
-                                    if($result->num_rows > 0) {
-                                        while ($notify = mysqli_fetch_assoc($result)) {
-                                            $categoryName=$notify['colorName'];
-                                            echo  "<span class='label label-danger'>$count</span>";
-                                            ?>
-                                            <option><?php echo $categoryName; ?></option>
-                                        <?php } }}?>
-                            </select>
-                        </div>
-                    </div>
-<!--
+
                     <div class="form-group">
                         <label for="TIME IN" class="col-sm-2 control-label" align="left">Color*</label>
                         <div class="col-md-9">

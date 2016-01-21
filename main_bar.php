@@ -70,10 +70,11 @@ if($_SERVER['REQUEST_URI'] !== "/dukanonline/index.php")
             {
             $masterCategory = $row1['masterCategory'];
             $masterCatPic = $row1['pic'];
+            $picLogo = $row1['piclogo'];
             ?>
 
             <li class="hidden-xs">
-                <a href="category-grid.php?category=<?=$masterCategory?>"> <i class="fa fa-files-o"></i> <span><?=$masterCategory?></span> <i class="fa fa-angle-right"></i> </a>
+                <a href="category-grid.php?category=<?=$masterCategory?>"> <i class="<?php echo $picLogo; ?>"></i> <span><?=$masterCategory?></span> <i class="fa fa-angle-right"></i> </a>
                 <div class="dropdown-menu flyout-menu">
                     <!-- Sub Menu -->
                     <ul>
