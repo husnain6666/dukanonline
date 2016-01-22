@@ -1,71 +1,71 @@
 <!-- Quick View modal -->
 <div class="modal fade" id="myModal<?=$modalCount?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-      <div class="modal-content">
-          <div class="modal-body">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
 
-              <div class="single-product">
-                  <!-- Images -->
-                  <div class="images col-md-6 col-sm-12 col-xs-12">
-                      <div class="row">
-                          <!-- Small Images -->
-                          <div class="thumbs col-md-3 col-sm-3 col-xs-3"  id="thumbs">
-                              <ul>
-                                  <li class="" onclick="changeImage('<?php echo $picture1?>', <?=$modalCount?>)"><a href="#a" data-image="images/products/<?php echo $picture1?>" data-zoom-image="images/products/<?php echo $picture1?>" class="elevatezoom-gallery active" ><img src="images/products/<?php echo $picture1?>" alt="small image" /></a></li>
-                                  <?php
-                                  if($picture2 != "")
-                                  {
-                                      ?>
-                                      <li class="" onclick="changeImage('<?php echo $picture2?>', <?=$modalCount?>)"> <a href="#a" data-image="images/products/<?php echo $picture2?>" data-zoom-image="images/products/<?php echo $picture2?>"  class="elevatezoom-gallery" > <img src="images/products/<?php echo $picture2?>" alt="small image" /></a></li>
-                                  <?php
-                                  }
-                                  ?>
-                                  <?php
-                                  if($picture3 != "")
-                                  {
-                                      ?>
-                                      <li class="" onclick="changeImage('<?php echo $picture3?>', <?=$modalCount?>)"> <a href="#a" data-image="images/products/<?php echo $picture3?>" data-zoom-image="images/products/<?php echo $picture3?>" class="elevatezoom-gallery"><img src="images/products/<?php echo $picture3?>" alt="small image" /></a></li>
-                                  <?php
-                                  }
-                                  ?>
-                              </ul>
-                          </div>
-                          <!-- end: Small Images -->
-                          <!-- Big Image and Zoom -->
-                          <div class="big-image col-md-9 col-sm-9 col-xs-9" id="big-img"> <img id="product-image<?=$modalCount?>" src="images/products/<?php echo $picture1?>"  alt="big image" /> </div>
-                          <!-- end: Big Image and Zoom -->
-
-
-                      </div>
-                  </div>
-
-                  <!-- end: Images -->
-
-                  <div class="product-details col-md-6">
-
-                      <!-- Title and rating info -->
-                      <div class="row">
-                          <div class="col-md-12 col-sm-12 col-xs-12">
-                              <div class="title">
-                                <h1><?=$articleName?></h1>
-                                <div class="rating">
+                <div class="single-product">
+                    <!-- Images -->
+                    <div class="images col-md-6 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <!-- Small Images -->
+                            <div class="thumbs col-md-3 col-sm-3 col-xs-3"  id="thumbs">
+                                <ul>
+                                    <li class="" onclick="changeImage('<?php echo $picture1?>', <?=$modalCount?>)"><a href="#a" data-image="images/products/<?php echo $picture1?>" data-zoom-image="images/products/<?php echo $picture1?>" class="elevatezoom-gallery active" ><img src="images/products/<?php echo $picture1?>" alt="small image" /></a></li>
                                     <?php
-                                    while ($ratingLimit < 5) {
-                                        if ($ratingLimit < $avgRating) {
-                                            ?>
-                                            <i class="fa fa-star"></i>
-                                        <?php } else {
-                                            ?>
-                                            <i class="fa fa-star-o"></i>
+                                    if($picture2 != "")
+                                    {
+                                        ?>
+                                        <li class="" onclick="changeImage('<?php echo $picture2?>', <?=$modalCount?>)"> <a href="#a" data-image="images/products/<?php echo $picture2?>" data-zoom-image="images/products/<?php echo $picture2?>"  class="elevatezoom-gallery" > <img src="images/products/<?php echo $picture2?>" alt="small image" /></a></li>
+                                    <?php
+                                    }
+                                    ?>
+                                    <?php
+                                    if($picture3 != "")
+                                    {
+                                        ?>
+                                        <li class="" onclick="changeImage('<?php echo $picture3?>', <?=$modalCount?>)"> <a href="#a" data-image="images/products/<?php echo $picture3?>" data-zoom-image="images/products/<?php echo $picture3?>" class="elevatezoom-gallery"><img src="images/products/<?php echo $picture3?>" alt="small image" /></a></li>
+                                    <?php
+                                    }
+                                    ?>
+                                </ul>
+                            </div>
+                            <!-- end: Small Images -->
+                            <!-- Big Image and Zoom -->
+                            <div class="big-image col-md-9 col-sm-9 col-xs-9" id="big-img"> <img id="product-image<?=$modalCount?>" src="images/products/<?php echo $picture1?>"  alt="big image" /> </div>
+                            <!-- end: Big Image and Zoom -->
+
+
+                        </div>
+                    </div>
+
+                    <!-- end: Images -->
+
+                    <div class="product-details col-md-6">
+
+                        <!-- Title and rating info -->
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="title">
+                                    <h1><?=$articleName?></h1>
+                                    <div class="rating">
                                         <?php
-                                        }
-                                        $ratingLimit++;
-                                    }?>
-                                    This product has <?=$totalRatings?> reviews
+                                        while ($ratingLimit < 5) {
+                                            if ($ratingLimit < $avgRating) {
+                                                ?>
+                                                <i class="fa fa-star"></i>
+                                            <?php } else {
+                                                ?>
+                                                <i class="fa fa-star-o"></i>
+                                            <?php
+                                            }
+                                            $ratingLimit++;
+                                        }?>
+                                        This product has <?=$totalRatings?> reviews
+                                    </div>
                                 </div>
-                              </div>
-                          </div>
-                      </div>
+                            </div>
+                        </div>
 
 
                         <div class="row">

@@ -5,6 +5,7 @@
             <div class="rec-banner blue">
                 <div class="banner"> <i class="fa fa-thumbs-up"></i>
                     <h3>Guarantee</h3>
+                    <p>100% customer satisfaction guaranteed</p>
                 </div>
             </div>
         </div>
@@ -28,6 +29,7 @@
             <div class="rec-banner lightblue">
                 <div class="banner"> <i class="fa fa-female"></i>
                     <h3>Sale</h3>
+                    <p>Buy products on sale every now and then</p>
                 </div>
             </div>
         </div>
