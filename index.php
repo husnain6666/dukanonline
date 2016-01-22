@@ -188,14 +188,7 @@ include "connectdb.php";?>
                                                 <span class="price-old"><span class="sym">Rs.</span><?php echo $price;?></span></div>
                                             <div class="small-price"><span class="price-new">Rs.<?php echo $discountedPrice;?></span></div>
 
-
-
-
-
-
-
-
-
+                                             <button class="btn btn-primary pull-right">hhh </button>
                                             <?php /*
                                                 $ratingLimit = 0;
                                                 $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
@@ -460,31 +453,14 @@ include "connectdb.php";?>
                                             </div>
                                             <div class="big-price"><span class="price-new"><span
                                                         class="sym">Rs.</span><?php echo $discountedPrice;?></span>
-                                                <span class="price-old"><span class="sym">Rs.</span><?php echo $price;?></span></div>
-                                            <div class="small-price"><span class="price-new">Rs.<?php echo $discountedPrice;?></span></div>
-
-
-                                            <?php if ($check !== false) { //check if user is logged in or not?>
-                                                <div class="big-btns"><a
-                                                        class="btn btn-default btn-view pull-left"
-                                                        href="product.php?articleId=<?php echo $articleId; ?>">View</a>
-                                                    <a class="btn btn-default btn-addtocart pull-right"
-                                                       onclick="addtocart(<?php echo $articleId; ?>)" href="#">BUY
-                                                        NOW!</a></div>
-                                            <?php }// end if
-                                            else {
-                                                ?>
-                                                <div class="big-btns"><a
-                                                        class="btn btn-default btn-view pull-left"
-                                                        href="product.php?articleId=<?php echo $articleId;?>">View</a>
-                                                    <a class="btn btn-default btn-addtocart pull-right"
-                                                       href="create_an_account.php">BUY NOW!</a></div>
-                                            <?php }// end else
-                                            ?>
+                                                        <span class="price-old"><span
+                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
 
 
 
 
+
+                                            
 
                                             <?php /*
                                                 $ratingLimit = 0;

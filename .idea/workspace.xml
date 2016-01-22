@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="159fda90-2f6d-4009-8ab1-614885ddbaf3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/category-grid.php" afterPath="$PROJECT_DIR$/category-grid.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout.php" afterPath="$PROJECT_DIR$/checkout.php" />
+    <list default="true" id="159fda90-2f6d-4009-8ab1-614885ddbaf3" name="Default" comment="Merge branch 'khalid' of https://github.com/husnain6666/dukanonline into husnain&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;css/custom.css&#10;&#9;index.php&#10;&#9;main_bar.php&#10;&#9;main_header.php&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/insertAdd.php" afterPath="$PROJECT_DIR$/admin/insertAdd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_bar.php" afterPath="$PROJECT_DIR$/main_bar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main_header.php" afterPath="$PROJECT_DIR$/main_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orderinfo.php" afterPath="$PROJECT_DIR$/orderinfo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/posters.php" afterPath="$PROJECT_DIR$/admin/posters.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product.php" afterPath="$PROJECT_DIR$/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/removePoster.php" afterPath="$PROJECT_DIR$/admin/removePoster.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/total.js" afterPath="$PROJECT_DIR$/js/total.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dukanonline.iws" />
@@ -41,23 +31,92 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26226416" vertical-offset="3125" max-vertical-offset="12733">
-              <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+            <state vertical-scroll-proportion="3.090566" vertical-offset="6216" max-vertical-offset="12325">
+              <caret line="462" column="44" selection-start-line="462" selection-start-column="44" selection-end-line="462" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
-                <marker date="1453450305015" expanded="true" signature="385:490" placeholder="SELECT SUBST..article..." />
-                <marker date="1453450305015" expanded="true" signature="8775:8880" placeholder="SELECT artic..article..." />
-                <marker date="1453450305015" expanded="true" signature="9724:9882" placeholder="select (sele..ratings..." />
-                <marker date="1453450305015" expanded="true" signature="9732:9796" placeholder="select count..ratings..." />
-                <marker date="1453450305015" expanded="true" signature="16562:16662" placeholder="SELECT artic..article..." />
-                <marker date="1453450305015" expanded="true" signature="17500:17658" placeholder="select (sele..ratings..." />
-                <marker date="1453450305015" expanded="true" signature="17508:17572" placeholder="select count..ratings..." />
-                <marker date="1453450305015" expanded="true" signature="22168:22326" placeholder="select (sele..ratings..." />
-                <marker date="1453450305015" expanded="true" signature="22176:22240" placeholder="select count..ratings..." />
-                <marker date="1453450305015" expanded="true" signature="25340:25449" placeholder="SELECT artic..article..." />
-                <marker date="1453450305015" expanded="true" signature="26287:26445" placeholder="select (sele..ratings..." />
-                <marker date="1453450305015" expanded="true" signature="26295:26359" placeholder="select count..ratings..." />
-                <marker date="1453450305015" expanded="true" signature="34376:34567" placeholder="SELECT title..." />
+                <marker date="1453461840319" expanded="true" signature="385:490" placeholder="SELECT SUBST..article..." />
+                <marker date="1453461840319" expanded="true" signature="8775:8880" placeholder="SELECT artic..article..." />
+                <marker date="1453461840319" expanded="true" signature="9724:9882" placeholder="select (sele..ratings..." />
+                <marker date="1453461840319" expanded="true" signature="9732:9796" placeholder="select count..ratings..." />
+                <marker date="1453461840319" expanded="true" signature="16656:16756" placeholder="SELECT artic..article..." />
+                <marker date="1453461840319" expanded="true" signature="17594:17752" placeholder="select (sele..ratings..." />
+                <marker date="1453461840319" expanded="true" signature="17602:17666" placeholder="select count..ratings..." />
+                <marker date="1453461840319" expanded="true" signature="22262:22420" placeholder="select (sele..ratings..." />
+                <marker date="1453461840319" expanded="true" signature="22270:22334" placeholder="select count..ratings..." />
+                <marker date="1453461840319" expanded="true" signature="25434:25543" placeholder="SELECT artic..article..." />
+                <marker date="1453461840319" expanded="true" signature="26381:26539" placeholder="select (sele..ratings..." />
+                <marker date="1453461840319" expanded="true" signature="26389:26453" placeholder="select count..ratings..." />
+                <marker date="1453461840319" expanded="true" signature="32981:33172" placeholder="SELECT title..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category-grid.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/category-grid.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-98.96154" vertical-offset="9259" max-vertical-offset="18564">
+              <caret line="696" column="23" selection-start-line="696" selection-start-column="23" selection-end-line="696" selection-end-column="23" />
+              <folding>
+                <marker date="1453443999548" expanded="true" signature="2048:2106" placeholder="SELECT min(p..article..." />
+                <marker date="1453443999548" expanded="true" signature="2625:2980" placeholder="SELECT a.art..article..." />
+                <marker date="1453443999548" expanded="true" signature="3150:3429" placeholder="SELECT a.art..article..." />
+                <marker date="1453443999548" expanded="true" signature="3605:3804" placeholder="SELECT a.art..article..." />
+                <marker date="1453443999548" expanded="true" signature="3901:4067" placeholder="SELECT a.art..article..." />
+                <marker date="1453443999548" expanded="true" signature="4276:4557" placeholder="SELECT a.art..article..." />
+                <marker date="1453443999548" expanded="true" signature="4727:4932" placeholder="SELECT a.art..article..." />
+                <marker date="1453443999548" expanded="true" signature="5127:5239" placeholder="SELECT artic..article..." />
+                <marker date="1453443999548" expanded="true" signature="5335:5416" placeholder="SELECT artic..article..." />
+                <marker date="1453443999548" expanded="true" signature="5617:5844" placeholder="SELECT a.art..article..." />
+                <marker date="1453443999548" expanded="true" signature="5998:6149" placeholder="SELECT a.art..article..." />
+                <marker date="1453443999548" expanded="true" signature="6324:6386" placeholder="SELECT artic..article..." />
+                <marker date="1453443999548" expanded="true" signature="6467:6496" placeholder="SELECT artic..article..." />
+                <marker date="1453443999548" expanded="true" signature="9545:9650" placeholder="SELECT artic..article..." />
+                <marker date="1453443999548" expanded="true" signature="9725:9853" placeholder="SELECT artic..article..." />
+                <marker date="1453443999548" expanded="true" signature="10540:10698" placeholder="select (sele..ratings..." />
+                <marker date="1453443999548" expanded="true" signature="10548:10612" placeholder="select count..ratings..." />
+                <marker date="1453443999548" expanded="true" signature="14227:14385" placeholder="select (sele..ratings..." />
+                <marker date="1453443999548" expanded="true" signature="14235:14299" placeholder="select count..ratings..." />
+                <marker date="1453443999548" expanded="true" signature="18909:18976" placeholder="SELECT * FRO..mastercategory..." />
+                <marker date="1453443999548" expanded="true" signature="19133:19194" placeholder="SELECT * FRO..subcategory..." />
+                <marker date="1453443999548" expanded="true" signature="19357:19416" placeholder="SELECT * FRO..category..." />
+                <marker date="1453443999548" expanded="true" signature="22635:23034" placeholder="SELECT a.* F..article..." />
+                <marker date="1453443999548" expanded="true" signature="23229:23552" placeholder="SELECT a.* F..article..." />
+                <marker date="1453443999548" expanded="true" signature="23753:23994" placeholder="SELECT a.* F..article..." />
+                <marker date="1453443999548" expanded="true" signature="24116:24326" placeholder="SELECT a.* F..article..." />
+                <marker date="1453443999548" expanded="true" signature="24573:24898" placeholder="SELECT a.* F..article..." />
+                <marker date="1453443999548" expanded="true" signature="25093:25338" placeholder="SELECT a.* F..article..." />
+                <marker date="1453443999548" expanded="true" signature="25539:25695" placeholder="SELECT * FRO..article..." />
+                <marker date="1453443999548" expanded="true" signature="25816:25941" placeholder="SELECT * FRO..article..." />
+                <marker date="1453443999548" expanded="true" signature="26183:26454" placeholder="SELECT a.* F..article..." />
+                <marker date="1453443999548" expanded="true" signature="26633:26828" placeholder="SELECT a.* F..article..." />
+                <marker date="1453443999548" expanded="true" signature="27013:27119" placeholder="SELECT * FRO..article..." />
+                <marker date="1453443999548" expanded="true" signature="27224:27297" placeholder="SELECT * FRO..article..." />
+                <marker date="1453443999548" expanded="true" signature="28377:28535" placeholder="select (sele..ratings..." />
+                <marker date="1453443999548" expanded="true" signature="28385:28449" placeholder="select count..ratings..." />
+                <marker date="1453443999548" expanded="true" signature="32957:33115" placeholder="select (sele..ratings..." />
+                <marker date="1453443999548" expanded="true" signature="32965:33029" placeholder="select count..ratings..." />
+                <marker date="1453443999548" expanded="true" signature="38184:38457" placeholder="SELECT categ..category..." />
+                <marker date="1453443999548" expanded="true" signature="39355:39650" placeholder="SELECT subca..subcategory..." />
+                <marker date="1453443999548" expanded="true" signature="39725:39972" placeholder="SELECT subca..subcategory..." />
+                <marker date="1453443999548" expanded="true" signature="40280:40579" placeholder="SELECT count..category..." />
+                <marker date="1453443999548" expanded="true" signature="41695:41973" placeholder="SELECT categ..category..." />
+                <marker date="1453443999548" expanded="true" signature="43531:43565" placeholder="SELECT * FRO..color..." />
+                <marker date="1453443999548" expanded="true" signature="45410:45451" placeholder="SELECT * FRO..comparelist..." />
+                <marker date="1453443999548" expanded="true" signature="46157:46207" placeholder="SELECT artic..article..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="session.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/session.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="510">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="25" />
+              <folding>
+                <marker date="1453459297566" expanded="true" signature="279:332" placeholder="select * fro..userinfo..." />
               </folding>
             </state>
           </provider>
@@ -66,8 +125,8 @@
       <file leaf-file-name="best_sellers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/best_sellers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8076925" vertical-offset="2" max-vertical-offset="1122">
-              <caret line="9" column="101" selection-start-line="9" selection-start-column="101" selection-end-line="9" selection-end-column="101" />
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1122">
+              <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
               <folding>
                 <marker date="1453448437217" expanded="true" signature="512:588" placeholder="select count..." />
                 <marker date="1453448437217" expanded="true" signature="1162:1271" placeholder="SELECT artic..article..." />
@@ -76,34 +135,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_bar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_bar.php">
+      <file leaf-file-name="top_header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/top_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4278" max-vertical-offset="5338">
-              <caret line="262" column="28" selection-start-line="262" selection-start-column="25" selection-end-line="262" selection-end-column="28" />
+            <state vertical-scroll-proportion="-6.490909" vertical-offset="2091" max-vertical-offset="3230">
+              <caret line="144" column="116" selection-start-line="144" selection-start-column="116" selection-end-line="144" selection-end-column="116" />
               <folding>
-                <marker date="1453443656560" expanded="true" signature="2691:2781" placeholder="SELECT COUNT..mastercategory..." />
-                <marker date="1453443656560" expanded="true" signature="3052:3107" placeholder="SELECT * FRO..mastercategory..." />
-                <marker date="1453443656560" expanded="true" signature="3728:4044" placeholder="SELECT count..subcategory..." />
-                <marker date="1453443656560" expanded="true" signature="4417:4714" placeholder="SELECT subca..subcategory..." />
-                <marker date="1453443656560" expanded="true" signature="5354:5653" placeholder="SELECT count..category..." />
-                <marker date="1453443656560" expanded="true" signature="6107:6385" placeholder="SELECT categ..category..." />
-                <marker date="1453443656560" expanded="true" signature="11657:11851" placeholder="select count..orderdetails..." />
-                <marker date="1453443656560" expanded="true" signature="12054:12239" placeholder="select order..orderdetails..." />
-                <marker date="1453443656560" expanded="true" signature="13126:13184" placeholder="select track..orderdetails..." />
-                <marker date="1453443656560" expanded="true" signature="13445:13799" placeholder="SELECT artic..orderdetails..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="1411">
-              <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
-              <folding>
-                <marker date="1453444086368" expanded="true" signature="1563:1616" placeholder="SELECT * FRO..mastercategory..." />
+                <element signature="n#style#0;n#div#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#3;n#div#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,7 +158,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <push-targets>
-      <push-target-info repo="$PROJECT_DIR$" source="husnain" target-remote="origin" target-branch="husnain" />
+      <push-target-info repo="$PROJECT_DIR$" source="husnain" target-remote="origin" target-branch="master" />
     </push-targets>
   </component>
   <component name="IdeDocumentHistory">
@@ -156,6 +195,7 @@
         <option value="$PROJECT_DIR$/category-grid.php" />
         <option value="$PROJECT_DIR$/main_header.php" />
         <option value="$PROJECT_DIR$/best_sellers.php" />
+        <option value="$PROJECT_DIR$/admin/session.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -211,48 +251,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dukanonline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dukanonline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dukanonline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dukanonline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dukanonline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dukanonline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dukanonline" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -519,13 +517,20 @@
       <option name="project" value="LOCAL" />
       <updated>1453445325878</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Merge branch 'khalid' of https://github.com/husnain6666/dukanonline into husnain&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;css/custom.css&#10;&#9;index.php&#10;&#9;main_bar.php&#10;&#9;main_header.php&#10;">
+      <created>1453451387402</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1453451387402</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -535,14 +540,13 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19162996" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32747602" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -581,13 +585,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/addWish.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/session.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -701,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/articleadd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.022222223" vertical-offset="4565" max-vertical-offset="5355">
-          <caret line="269" column="27" selection-start-line="269" selection-start-column="21" selection-end-line="269" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.8257372" vertical-offset="681" max-vertical-offset="1054">
@@ -726,6 +716,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2933" max-vertical-offset="8432">
           <caret line="182" column="66" selection-start-line="182" selection-start-column="66" selection-end-line="182" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -778,13 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/top_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="3230">
-          <caret line="44" column="6" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/search.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="371" max-vertical-offset="969">
@@ -834,14 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/addArticle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5944" max-vertical-offset="12835">
-          <caret line="360" column="154" selection-start-line="360" selection-start-column="149" selection-end-line="360" selection-end-column="154" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/removePoster.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="340">
@@ -862,6 +838,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7796" max-vertical-offset="8449">
           <caret line="491" column="0" selection-start-line="491" selection-start-column="0" selection-end-line="491" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -869,6 +846,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.3076925" vertical-offset="8834" max-vertical-offset="12376">
           <caret line="510" column="79" selection-start-line="510" selection-start-column="79" selection-end-line="510" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -888,48 +866,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/category-grid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0735848" vertical-offset="12727" max-vertical-offset="18564">
-          <caret line="684" column="30" selection-start-line="684" selection-start-column="30" selection-end-line="684" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="130" max-vertical-offset="1411">
-          <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
-          <folding>
-            <marker date="1453444086368" expanded="true" signature="1563:1616" placeholder="SELECT * FRO..mastercategory..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="153">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_bar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4278" max-vertical-offset="5338">
-          <caret line="262" column="28" selection-start-line="262" selection-start-column="25" selection-end-line="262" selection-end-column="28" />
-          <folding>
-            <marker date="1453443656560" expanded="true" signature="2691:2781" placeholder="SELECT COUNT..mastercategory..." />
-            <marker date="1453443656560" expanded="true" signature="3052:3107" placeholder="SELECT * FRO..mastercategory..." />
-            <marker date="1453443656560" expanded="true" signature="3728:4044" placeholder="SELECT count..subcategory..." />
-            <marker date="1453443656560" expanded="true" signature="4417:4714" placeholder="SELECT subca..subcategory..." />
-            <marker date="1453443656560" expanded="true" signature="5354:5653" placeholder="SELECT count..category..." />
-            <marker date="1453443656560" expanded="true" signature="6107:6385" placeholder="SELECT categ..category..." />
-            <marker date="1453443656560" expanded="true" signature="11657:11851" placeholder="select count..orderdetails..." />
-            <marker date="1453443656560" expanded="true" signature="12054:12239" placeholder="select order..orderdetails..." />
-            <marker date="1453443656560" expanded="true" signature="13126:13184" placeholder="select track..orderdetails..." />
-            <marker date="1453443656560" expanded="true" signature="13445:13799" placeholder="SELECT artic..orderdetails..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -944,10 +885,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="510">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="25" />
+          <folding>
+            <marker date="1453459297566" expanded="true" signature="279:332" placeholder="select * fro..userinfo..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48658317" vertical-offset="102" max-vertical-offset="1411">
+          <caret line="22" column="87" selection-start-line="22" selection-start-column="87" selection-end-line="22" selection-end-column="87" />
+          <folding>
+            <marker date="1453444086368" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..mastercategory..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_bar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31484795" vertical-offset="4278" max-vertical-offset="5338">
+          <caret line="262" column="28" selection-start-line="262" selection-start-column="25" selection-end-line="262" selection-end-column="28" />
+          <folding>
+            <marker date="1453443656560" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..mastercategory..." />
+            <marker date="1453443656560" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..mastercategory..." />
+            <marker date="1453443656560" expanded="true" signature="-1:-1" placeholder="SELECT count..subcategory..." />
+            <marker date="1453443656560" expanded="true" signature="-1:-1" placeholder="SELECT subca..subcategory..." />
+            <marker date="1453443656560" expanded="true" signature="-1:-1" placeholder="SELECT count..category..." />
+            <marker date="1453443656560" expanded="true" signature="-1:-1" placeholder="SELECT categ..category..." />
+            <marker date="1453443656560" expanded="true" signature="-1:-1" placeholder="select count..orderdetails..." />
+            <marker date="1453443656560" expanded="true" signature="-1:-1" placeholder="select order..orderdetails..." />
+            <marker date="1453443656560" expanded="true" signature="-1:-1" placeholder="select track..orderdetails..." />
+            <marker date="1453443656560" expanded="true" signature="-1:-1" placeholder="SELECT artic..orderdetails..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.490909" vertical-offset="2091" max-vertical-offset="3230">
+          <caret line="144" column="116" selection-start-line="144" selection-start-column="116" selection-end-line="144" selection-end-column="116" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#3;n#div#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/addArticle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4283019" vertical-offset="4363" max-vertical-offset="12835">
+          <caret line="270" column="81" selection-start-line="270" selection-start-column="71" selection-end-line="270" selection-end-column="81" />
+          <folding>
+            <marker date="1453189518897" expanded="true" signature="-1:-1" placeholder="SELECT maste..." />
+            <marker date="1453189518897" expanded="true" signature="-1:-1" placeholder="SELECT subCa..." />
+            <marker date="1453189518897" expanded="true" signature="-1:-1" placeholder="SELECT categ..." />
+            <marker date="1453189518897" expanded="true" signature="-1:-1" placeholder="SELECT brand..brand..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/articleadd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3" vertical-offset="1575" max-vertical-offset="5355">
+          <caret line="102" column="32" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/best_sellers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8076925" vertical-offset="2" max-vertical-offset="1122">
-          <caret line="9" column="101" selection-start-line="9" selection-start-column="101" selection-end-line="9" selection-end-column="101" />
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1122">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
           <folding>
             <marker date="1453448437217" expanded="true" signature="512:588" placeholder="select count..." />
             <marker date="1453448437217" expanded="true" signature="1162:1271" placeholder="SELECT artic..article..." />
@@ -955,25 +967,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/category-grid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-98.96154" vertical-offset="9259" max-vertical-offset="18564">
+          <caret line="696" column="23" selection-start-line="696" selection-start-column="23" selection-end-line="696" selection-end-column="23" />
+          <folding>
+            <marker date="1453443999548" expanded="true" signature="2048:2106" placeholder="SELECT min(p..article..." />
+            <marker date="1453443999548" expanded="true" signature="2625:2980" placeholder="SELECT a.art..article..." />
+            <marker date="1453443999548" expanded="true" signature="3150:3429" placeholder="SELECT a.art..article..." />
+            <marker date="1453443999548" expanded="true" signature="3605:3804" placeholder="SELECT a.art..article..." />
+            <marker date="1453443999548" expanded="true" signature="3901:4067" placeholder="SELECT a.art..article..." />
+            <marker date="1453443999548" expanded="true" signature="4276:4557" placeholder="SELECT a.art..article..." />
+            <marker date="1453443999548" expanded="true" signature="4727:4932" placeholder="SELECT a.art..article..." />
+            <marker date="1453443999548" expanded="true" signature="5127:5239" placeholder="SELECT artic..article..." />
+            <marker date="1453443999548" expanded="true" signature="5335:5416" placeholder="SELECT artic..article..." />
+            <marker date="1453443999548" expanded="true" signature="5617:5844" placeholder="SELECT a.art..article..." />
+            <marker date="1453443999548" expanded="true" signature="5998:6149" placeholder="SELECT a.art..article..." />
+            <marker date="1453443999548" expanded="true" signature="6324:6386" placeholder="SELECT artic..article..." />
+            <marker date="1453443999548" expanded="true" signature="6467:6496" placeholder="SELECT artic..article..." />
+            <marker date="1453443999548" expanded="true" signature="9545:9650" placeholder="SELECT artic..article..." />
+            <marker date="1453443999548" expanded="true" signature="9725:9853" placeholder="SELECT artic..article..." />
+            <marker date="1453443999548" expanded="true" signature="10540:10698" placeholder="select (sele..ratings..." />
+            <marker date="1453443999548" expanded="true" signature="10548:10612" placeholder="select count..ratings..." />
+            <marker date="1453443999548" expanded="true" signature="14227:14385" placeholder="select (sele..ratings..." />
+            <marker date="1453443999548" expanded="true" signature="14235:14299" placeholder="select count..ratings..." />
+            <marker date="1453443999548" expanded="true" signature="18909:18976" placeholder="SELECT * FRO..mastercategory..." />
+            <marker date="1453443999548" expanded="true" signature="19133:19194" placeholder="SELECT * FRO..subcategory..." />
+            <marker date="1453443999548" expanded="true" signature="19357:19416" placeholder="SELECT * FRO..category..." />
+            <marker date="1453443999548" expanded="true" signature="22635:23034" placeholder="SELECT a.* F..article..." />
+            <marker date="1453443999548" expanded="true" signature="23229:23552" placeholder="SELECT a.* F..article..." />
+            <marker date="1453443999548" expanded="true" signature="23753:23994" placeholder="SELECT a.* F..article..." />
+            <marker date="1453443999548" expanded="true" signature="24116:24326" placeholder="SELECT a.* F..article..." />
+            <marker date="1453443999548" expanded="true" signature="24573:24898" placeholder="SELECT a.* F..article..." />
+            <marker date="1453443999548" expanded="true" signature="25093:25338" placeholder="SELECT a.* F..article..." />
+            <marker date="1453443999548" expanded="true" signature="25539:25695" placeholder="SELECT * FRO..article..." />
+            <marker date="1453443999548" expanded="true" signature="25816:25941" placeholder="SELECT * FRO..article..." />
+            <marker date="1453443999548" expanded="true" signature="26183:26454" placeholder="SELECT a.* F..article..." />
+            <marker date="1453443999548" expanded="true" signature="26633:26828" placeholder="SELECT a.* F..article..." />
+            <marker date="1453443999548" expanded="true" signature="27013:27119" placeholder="SELECT * FRO..article..." />
+            <marker date="1453443999548" expanded="true" signature="27224:27297" placeholder="SELECT * FRO..article..." />
+            <marker date="1453443999548" expanded="true" signature="28377:28535" placeholder="select (sele..ratings..." />
+            <marker date="1453443999548" expanded="true" signature="28385:28449" placeholder="select count..ratings..." />
+            <marker date="1453443999548" expanded="true" signature="32957:33115" placeholder="select (sele..ratings..." />
+            <marker date="1453443999548" expanded="true" signature="32965:33029" placeholder="select count..ratings..." />
+            <marker date="1453443999548" expanded="true" signature="38184:38457" placeholder="SELECT categ..category..." />
+            <marker date="1453443999548" expanded="true" signature="39355:39650" placeholder="SELECT subca..subcategory..." />
+            <marker date="1453443999548" expanded="true" signature="39725:39972" placeholder="SELECT subca..subcategory..." />
+            <marker date="1453443999548" expanded="true" signature="40280:40579" placeholder="SELECT count..category..." />
+            <marker date="1453443999548" expanded="true" signature="41695:41973" placeholder="SELECT categ..category..." />
+            <marker date="1453443999548" expanded="true" signature="43531:43565" placeholder="SELECT * FRO..color..." />
+            <marker date="1453443999548" expanded="true" signature="45410:45451" placeholder="SELECT * FRO..comparelist..." />
+            <marker date="1453443999548" expanded="true" signature="46157:46207" placeholder="SELECT artic..article..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26226416" vertical-offset="3125" max-vertical-offset="12733">
-          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+        <state vertical-scroll-proportion="3.090566" vertical-offset="6216" max-vertical-offset="12325">
+          <caret line="462" column="44" selection-start-line="462" selection-start-column="44" selection-end-line="462" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#8;n#!!top" expanded="true" />
-            <marker date="1453450305015" expanded="true" signature="385:490" placeholder="SELECT SUBST..article..." />
-            <marker date="1453450305015" expanded="true" signature="8775:8880" placeholder="SELECT artic..article..." />
-            <marker date="1453450305015" expanded="true" signature="9724:9882" placeholder="select (sele..ratings..." />
-            <marker date="1453450305015" expanded="true" signature="9732:9796" placeholder="select count..ratings..." />
-            <marker date="1453450305015" expanded="true" signature="16562:16662" placeholder="SELECT artic..article..." />
-            <marker date="1453450305015" expanded="true" signature="17500:17658" placeholder="select (sele..ratings..." />
-            <marker date="1453450305015" expanded="true" signature="17508:17572" placeholder="select count..ratings..." />
-            <marker date="1453450305015" expanded="true" signature="22168:22326" placeholder="select (sele..ratings..." />
-            <marker date="1453450305015" expanded="true" signature="22176:22240" placeholder="select count..ratings..." />
-            <marker date="1453450305015" expanded="true" signature="25340:25449" placeholder="SELECT artic..article..." />
-            <marker date="1453450305015" expanded="true" signature="26287:26445" placeholder="select (sele..ratings..." />
-            <marker date="1453450305015" expanded="true" signature="26295:26359" placeholder="select count..ratings..." />
-            <marker date="1453450305015" expanded="true" signature="34376:34567" placeholder="SELECT title..." />
+            <marker date="1453461840319" expanded="true" signature="385:490" placeholder="SELECT SUBST..article..." />
+            <marker date="1453461840319" expanded="true" signature="8775:8880" placeholder="SELECT artic..article..." />
+            <marker date="1453461840319" expanded="true" signature="9724:9882" placeholder="select (sele..ratings..." />
+            <marker date="1453461840319" expanded="true" signature="9732:9796" placeholder="select count..ratings..." />
+            <marker date="1453461840319" expanded="true" signature="16656:16756" placeholder="SELECT artic..article..." />
+            <marker date="1453461840319" expanded="true" signature="17594:17752" placeholder="select (sele..ratings..." />
+            <marker date="1453461840319" expanded="true" signature="17602:17666" placeholder="select count..ratings..." />
+            <marker date="1453461840319" expanded="true" signature="22262:22420" placeholder="select (sele..ratings..." />
+            <marker date="1453461840319" expanded="true" signature="22270:22334" placeholder="select count..ratings..." />
+            <marker date="1453461840319" expanded="true" signature="25434:25543" placeholder="SELECT artic..article..." />
+            <marker date="1453461840319" expanded="true" signature="26381:26539" placeholder="select (sele..ratings..." />
+            <marker date="1453461840319" expanded="true" signature="26389:26453" placeholder="select count..ratings..." />
+            <marker date="1453461840319" expanded="true" signature="32981:33172" placeholder="SELECT title..." />
           </folding>
         </state>
       </provider>
