@@ -52,6 +52,73 @@
 
     <div class="row clearfix f-space10"></div>
 
+    <div class="col-lg-12">
+        <div class="col-lg-9">
+            <div class="row clearfix f-space10"></div>
+            <div class="box-heading"><span>YOUR ACCOUNT DETAILS</span></div>
+
+            <div class="contactform" >
+
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <p><strong>If you are already registered please login here
+
+                        </strong></p>
+                </div>
+                <form  method="post" action="login.php">
+                    <div class="row">
+                        <div class="col-lg-11 col-md-11 col-sm-6 ">
+                            <div class="row">
+
+                                <div class="col-lg-5 col-md-9 col-sm-6">
+                                    <input class="input4 " type="email" id="firstName" name="emailAddress" placeholder="Email*" required=""  >
+
+                                </div>
+
+                                <div class="col-lg-5 col-md-9 col-sm-6">
+                                    <input type="password" class="input4" id="lastName" name="password" placeholder="Password*"required="" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12" style="padding-bottom: 1%">
+                            <input class="btn large color2 pull-left" type="submit" value="Login" name="submit">
+                            </div>
+                        <div class="col-md-12">
+
+                        <a href="facebook.php" class="btn large color2 pull-left" type="" style="background: #0075b0;" value="Login Through Facebook" name="facebook">Login Through Facebook</a>
+
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3 " style="margin-left:-50px ;margin-top:10px ">
+            <div class="container ">
+                <div class="col-md-3 col-sm-12 col-xs-12 box-block page-sidebar">
+                    <div class="box-heading"><span>Best Sellers</span></div>
+                    <!-- Best Sellers Products -->
+                    <div class="box-content">
+                        <?php include "best_sellers.php";?>
+                    </div>
+                    <!-- end: Best Sellers Products -->
+                    <!-- Special Product Start Products -->
+
+                    <!-- end: special product -->
+                    <div class="clearfix f-space10"></div>
+                </div>
+                <div class="clearfix f-space10"></div>
+                <?php include "specials.php";?>
+            </div>
+
+            <div class="clearfix f-space10"></div>
+
+        </div>
+    </div>
 
 
     <div class="col-lg-12">
