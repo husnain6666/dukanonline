@@ -5,7 +5,7 @@
             <div class="rec-banner blue">
                 <div class="banner"> <i class="fa fa-thumbs-up"></i>
                     <h3>Guarantee</h3>
-                    <p>100% Money Back Guarantee*</p>
+                    <p>100% customer satisfaction guaranteed</p>
                 </div>
             </div>
         </div>
@@ -20,16 +20,16 @@
         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
             <div class="rec-banner orange">
                 <div class="banner"> <i class="fa fa-headphones"></i>
-                    <h3>24/7 Support</h3>
-                    <p>We support everything we sell</p>
+                    <h3>Live Support</h3>
+                    <p>Online Customer support</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
             <div class="rec-banner lightblue">
                 <div class="banner"> <i class="fa fa-female"></i>
-                    <h3>Summer Sale</h3>
-                    <p>Upto 50% off on all women wear</p>
+                    <h3>Sale</h3>
+                    <p>Buy products on sale every now and then</p>
                 </div>
             </div>
         </div>
@@ -37,15 +37,14 @@
             <div class="rec-banner darkblue">
                 <div class="banner"> <i class="fa fa-gift"></i>
                     <h3>Surprise Gift</h3>
-                    <p>Value $50 on orders over $700</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
             <div class="rec-banner black">
                 <div class="banner"> <i class="fa fa-truck"></i>
-                    <h3>Free Shipping</h3>
-                    <p>All over in world over $100</p>
+                    <h3>Shipping</h3>
+                    <p>All over in Pakistan</p>
                 </div>
             </div>
         </div>

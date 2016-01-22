@@ -1,57 +1,61 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box-block sidebar">
+    <div class="box-heading"><span>Best Sellers</span> <a class="fa fa-plus fa-lg" href="category-grid.php?b=1" data-toggle="tooltip" data-original-title='View More' id="view"></a></div>
 <div class="box-content">
-    <div class="box-products slide carousel-fade" id="productc4">
+    <div class="box-products slide carousel-fade" id="productc5">
         <ol class="carousel-indicators">
-            <li class="active" data-slide-to="0" data-target="#productc4"></li>
-            <li class="" data-slide-to="1" data-target="#productc4"></li>
-            <li class="" data-slide-to="2" data-target="#productc4"></li>
+            <?php
+            $carouselCount = 0;
+            $limit = 0;
+            $fu = 0;
+            $countqry = "select count(articleId) as count from article where bestSeller = '1' limit 4";
+            $result=mysqli_query($connection,$countqry);
+            $table_record=mysqli_fetch_array($result);
+            $limit = $table_record['count'];
+            while($fu < $limit){
+                $carouselCount++;
+                ?>
+                <li class="<?php if($carouselCount == 1){echo "active";}?>" data-slide-to="<?php echo $fu;?>" data-target="#productc5"></li>
+            <?php
+                $fu++;
+            }// end while loop?>
         </ol>
         <div class="carousel-inner">
+            <?php
+            $count = 0;
+            $sql = "SELECT articleId,price,articleName,picture1 FROM article where bestSeller='1' group by articleId DESC limit 4";
+            $result=mysqli_query($connection,$sql);
+
+            while($table_record=mysqli_fetch_array($result)){
+            $articleName =$table_record['articleName'];
+            $articleId =$table_record['articleId'];
+            $price = $table_record['price'];
+            $picture1 = $table_record['picture1'];
+            $count++;
+            ?>
             <!-- item -->
-            <div class="item active">
+            <div class="item <?php if($count == 1){echo "active";}?>">
                 <div class="product-block">
                     <div class="image">
                         <div class="product-label product-hot"><span>HOT</span></div>
-                        <a class="img" href="product.html"><img alt="product info" src="images/products/product1.jpg" title="product title"></a> </div>
+                        <a class="img" href="product.php?articleId=<?php echo $articleId;?>"><img alt="product info" src="images/products/<?php echo $picture1?>" title="product title"></a> </div>
                     <div class="product-meta">
-                        <div class="name"><a href="product.html">Ladies Stylish Handbag</a></div>
-                        <div class="big-price"> <span class="price-new"><span class="sym">$</span>96</span> </div>
-                        <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
-                                Cart</a> </div>
+                        <div class="name"><a href="product.php?articleId=<?php echo $articleId;?>"><?php echo $articleName?></a></div>
+                        <div class="big-price"> <span class="price-new"><span class="sym">Rs.</span><?php echo $price?></span> </div>
+                        <?php        if( $check!== false ) { //check if user is logged in or not?>
+                            <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="product.php?articleId=<?php echo $articleId;?>">View</a> <a class="btn btn-default btn-addtocart pull-right" onclick="addtocart(<?php echo $articleId ?>)" href="#">BUY NOW!</a> </div>
+                        <?php }// end if
+                        else{?>
+                            <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="product.php?articleId=<?php echo $articleId;?>">View</a> <a class="btn btn-default btn-addtocart pull-right" href="create_an_account.php">BUY NOW!</a> </div>
+                        <?php }// end else?>
                     </div>
                     <div class="meta-back"></div>
                 </div>
             </div>
-            <!-- end: item -->
-            <!-- item -->
-            <div class="item">
-                <div class="product-block">
-                    <div class="image"> <a class="img" href="product.html"><img alt="product info" src="images/products/product2.jpg" title="product title"></a> </div>
-                    <div class="product-meta">
-                        <div class="name"><a href="product.html">Strips Stylish Handbag</a></div>
-                        <div class="big-price"> <span class="price-new"><span class="sym">$</span>654.87</span> </div>
-                        <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
-                                Cart</a> </div>
-                    </div>
-                    <div class="meta-back"></div>
-                </div>
-            </div>
-            <!-- end: item -->
-            <!-- item -->
-            <div class="item">
-                <div class="product-block">
-                    <div class="image"> <a class="img" href="product.html"> <img alt="product info" src="images/products/product3.jpg" title="product title"></a> </div>
-                    <div class="product-meta">
-                        <div class="name"><a href="product.html">Females Stylish Handbag</a></div>
-                        <div class="big-price"> <span class="price-new"><span class="sym">$</span>1600</span> </div>
-                        <div class="big-btns"> <a class="btn btn-default btn-view pull-left" href="#">View</a> <a class="btn btn-default btn-addtocart pull-right" href="#">Add to
-                                Cart</a> </div>
-                    </div>
-                    <div class="meta-back"></div>
-                </div>
-            </div>
+            <?php }?>
             <!-- end: item -->
         </div>
     </div>
-    <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#productc4"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#productc4"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
+    <div class="carousel-controls"> <a class="carousel-control left" data-slide="prev" href="#productc5"> <i class="fa fa-angle-left fa-fw"></i> </a> <a class="carousel-control right" data-slide="next" href="#productc5"> <i class="fa fa-angle-right fa-fw"></i> </a> </div>
     <div class="nav-bg"></div>
+</div>
 </div>
