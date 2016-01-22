@@ -682,7 +682,7 @@ if($result)
                                   $avgRating = 5;
                               }
 
-                              //require("quickView.php");
+                              require("quickView.php");
                               ?>
 
 

@@ -165,7 +165,7 @@ include_once('session.php');
                                             "<td class='col-md-2'> {$add['date']} </td>" .
                                             "<td class='col-md-1'> {$add['notification']} </td>" .
                                             "<td align='center' class='col-md-3'>" .
-                                            "<a  href='../index.php' target='_blank'><button  class='btn btn-primary btn-xs' data-toggle='modal' data-target='' title='' onclick=''><i class='fa fa-eye'></i></button></a>&nbsp;<a href='updatePoster.php?Id={$add['addId']}' target='_blank'><button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)' data-original-title='Reset Password'><i class='fa fa-refresh'></i></button>&nbsp;" .
+                                            "<a  href='../index.php' target='_blank'><button  class='btn btn-primary btn-xs' data-toggle='modal' data-target='' title='' onclick=''><i class='fa fa-eye'></i></button></a>&nbsp;<a href='updatePoster.php?Id={$add['addId']}' target='_blank'><button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)' data-original-title='Reset Password'><i class='fa fa-refresh'></i></button>&nbsp;<a  href='removePoster.php?a={$add['addId']}' target=''><button  class='btn btn-danger btn-xs' data-toggle='modal' data-target='' title='' onclick=''><i class='fa fa-minus'></i></button></a>" .
                                             "</td>" .
                                             "</tr>";
                                     }

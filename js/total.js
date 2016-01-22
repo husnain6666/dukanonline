@@ -3,19 +3,19 @@
  */
 function Total(str,articleId){
 //alert("hello");
-/*var quantity=document.getElementById(quantity1).value;
-var price=document.getElementById("price").innerHTML;
-var total_Amount=quantity*price;
-document.getElementById("price").innerHTML=quantity1;
-*/
-  // document.getElementById("alpha").innerHTML=str;
-   // document.getElementById("alpha").innerHTML=articleId;
+    /*var quantity=document.getElementById(quantity1).value;
+     var price=document.getElementById("price").innerHTML;
+     var total_Amount=quantity*price;
+     document.getElementById("price").innerHTML=quantity1;
+     */
+    // document.getElementById("alpha").innerHTML=str;
+    // document.getElementById("alpha").innerHTML=articleId;
 
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             document.getElementById("alpha").innerHTML = "";
-  //     alert    (ok);
+            //     alert    (ok);
         }
     }
 
@@ -235,6 +235,26 @@ function addtocartNewfeatured(article){
 }
 
 
+function insertonlyquantityinshoppingcart(){
+
+    // alert("ok");
+
+    var quantity=document.getElementById("quantity").value;
+    var articleId=document.getElementById("articleId").value;
+    alert(quantity);
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            var newLocation = "cart.php?articleId="+articleId+"&quantity=" + quantity ;
+            window.location = newLocation;
+            //header("location:shopping_cart.php");
+        }
+    }
+    xmlhttp.open("GET", "cart.php?quantity=" + quantity +"&articleId=" + articleId , true);
+    xmlhttp.send();
+}
+
 
 
 
@@ -243,17 +263,21 @@ function insertquantityinshoppingcart(){
 
     var quantity=document.getElementById("quantity").value;
     var articleId=document.getElementById("articleId").value;
+    var color=document.getElementById("color").value;
+    var size=document.getElementById("size").value;
     alert(quantity);
     alert(articleId);
+    alert(size);
+    alert(color);
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            var newLocation = "cart.php?articleId="+articleId+"&quantity=" + quantity;
+            var newLocation = "cart.php?articleId="+articleId+"&quantity=" + quantity+"&color="+ color +"&size="+ size ;
             window.location = newLocation;
             //header("location:shopping_cart.php");
         }
     }
-    xmlhttp.open("GET", "cart.php?quantity=" + quantity +"&articleId=" + articleId , true);
+    xmlhttp.open("GET", "cart.php?quantity=" + quantity +"&articleId=" + articleId +"&color="+ color +"&size="+ size , true);
     xmlhttp.send();
 }
 

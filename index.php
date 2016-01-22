@@ -121,7 +121,7 @@ include "connectdb.php";?>
 <div class="container">
     <div class="row">
 
-        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 main-column box-block">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 main-column box-block">
             <div class="box-heading"><span>Weekly Hot Deals</span> <a class="fa fa-plus fa-lg" href="category-grid.php?w=1" data-toggle="tooltip" data-original-title='View More' id="view"></a></div>
             <div class="box-content">
                 <div class="box-products slide" id="productc1">
@@ -165,7 +165,7 @@ include "connectdb.php";?>
                             <div class="row">
                                 <?php } ?>
                                 <!-- Product -->
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                     <div class="product-block">
                                         <div class="image">
                                             <?php
@@ -187,6 +187,13 @@ include "connectdb.php";?>
                                                         class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                 <span class="price-old"><span class="sym">Rs.</span><?php echo $price;?></span></div>
                                             <div class="small-price"><span class="price-new">Rs.<?php echo $discountedPrice;?></span></div>
+
+
+
+
+
+
+
 
 
                                             <?php /*
@@ -310,6 +317,30 @@ include "connectdb.php";?>
                                                         class="sym">Rs.</span><?php echo $discountedPrice;?></span>
                                                 <span class="price-old"><span class="sym">Rs.</span><?php echo $price;?></span></div>
                                             <div class="small-price"><span class="price-new">Rs.<?php echo $discountedPrice;?></span></div>
+
+
+
+                                            <?php if ($check !== false) { //check if user is logged in or not?>
+                                                <div class="big-btns"><a
+                                                        class="btn btn-default btn-view pull-left"
+                                                        href="product.php?articleId=<?php echo $articleId; ?>">View</a>
+                                                    <a class="btn btn-default btn-addtocart pull-right"
+                                                       onclick="addtocart(<?php echo $articleId; ?>)" href="#">BUY
+                                                        NOW!</a></div>
+                                            <?php }// end if
+                                            else {
+                                                ?>
+                                                <div class="big-btns"><a
+                                                        class="btn btn-default btn-view pull-left"
+                                                        href="product.php?articleId=<?php echo $articleId;?>">View</a>
+                                                    <a class="btn btn-default btn-addtocart pull-right"
+                                                       href="create_an_account.php">BUY NOW!</a></div>
+                                            <?php }// end else
+                                            ?>
+
+
+
+
                                             <?php /*
                                                 $ratingLimit = 0;
                                                 $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";
@@ -336,7 +367,7 @@ include "connectdb.php";?>
                                                         <?php
                                                         }
                                                         $ratingLimit++;
-                                                    } */?>
+                                                    } */ ?>
                                             <!--</div>-->
 
                                         </div>
@@ -404,6 +435,7 @@ include "connectdb.php";?>
                         <div class="item active">
                             <div class="row box-product">
                             <br/>
+                                <hr/>
                             <br/>
                                 <?php } ?>
                                 <!-- Product -->
@@ -419,15 +451,19 @@ include "connectdb.php";?>
                                                href="product.php?articleId=<?php echo $articleId;?>"><img
                                                     alt="product info"
                                                     src="images/products/<?php echo $picture1;?>"
-                                                    title="product title"></a></div>
+                                                    title="product title"
+                                                    style="height: 17em;width: 100%"
+                                                    ></a></div>
                                         <div class="product-meta">
                                             <div class="name"><a
                                                     href="product.php?articleId=<?php echo $articleId;?>"><?php echo $articleName;?></a>
                                             </div>
                                             <div class="big-price"><span class="price-new"><span
                                                         class="sym">Rs.</span><?php echo $discountedPrice;?></span>
-                                                        <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
+                                                <span class="price-old"><span class="sym">Rs.</span><?php echo $price;?></span></div>
+                                            <div class="small-price"><span class="price-new">Rs.<?php echo $discountedPrice;?></span></div>
+
+
                                             <?php if ($check !== false) { //check if user is logged in or not?>
                                                 <div class="big-btns"><a
                                                         class="btn btn-default btn-view pull-left"
@@ -445,9 +481,11 @@ include "connectdb.php";?>
                                                        href="create_an_account.php">BUY NOW!</a></div>
                                             <?php }// end else
                                             ?>
-                                            <div class="small-price"><span class="price-new"><span class="sym">Rs.</span><?php echo $discountedPrice;?></span>
-                                                        <span class="price-old"><span
-                                                                class="sym">Rs.</span><?php echo $price;?></span></div>
+
+
+
+
+
                                             <?php /*
                                                 $ratingLimit = 0;
                                                 $query3 = "select (select count(rating) from ratings where articleId = '$articleId') as totalRating, SUM(rating) as sumRating from ratings where articleId = '$articleId'";

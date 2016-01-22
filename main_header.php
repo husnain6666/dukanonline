@@ -20,7 +20,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <?php
                                 include_once("connectdb.php");
-                                $query = "SELECT * FROM mastercategory";
+                                $query = "SELECT * FROM mastercategory where status = 1 limit 8";
                                 $result = mysqli_query($connection, $query);
                                 if($result)
                                 {
