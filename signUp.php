@@ -30,7 +30,7 @@
     <div class="row clearfix"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="breadcrumb"> <a href="index.php"> <i class="fa fa-home fa-fw"></i> Home </a> <i class="fa fa-angle-right fa-fw"></i> <a href="SignUp.php"> Sign Up </a></div>
                 <!-- Quick Help for tablets and large screens -->
                 <div class="quick-message hidden-xs">
@@ -52,29 +52,27 @@
 
     <div class="row clearfix f-space10"></div>
 
-    <div class="col-lg-12">
-        <div class="col-lg-9">
+    <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
             <div class="row clearfix f-space10"></div>
             <div class="box-heading"><span>YOUR ACCOUNT DETAILS</span></div>
 
             <div class="contactform" >
 
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <p><strong>If you are already registered please login here
-
-                        </strong></p>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p><strong>If you are already registered please login here</strong></p>
                 </div>
                 <form  method="post" action="login.php">
                     <div class="row">
-                        <div class="col-lg-11 col-md-11 col-sm-6 ">
+                        <div class="col-lg-11 col-md-11 col-sm-6 col-xs-12">
                             <div class="row">
 
-                                <div class="col-lg-5 col-md-9 col-sm-6">
+                                <div class="col-lg-5 col-md-9 col-sm-6 col-xs-12">
                                     <input class="input4 " type="email" id="firstName" name="emailAddress" placeholder="Email*" required=""  >
 
                                 </div>
 
-                                <div class="col-lg-5 col-md-9 col-sm-6">
+                                <div class="col-lg-5 col-md-9 col-sm-6 col-xs-12">
                                     <input type="password" class="input4" id="lastName" name="password" placeholder="Password*"required="" >
                                 </div>
                             </div>
@@ -83,10 +81,10 @@
 
 
                     <div class="row">
-                        <div class="col-md-12" style="padding-bottom: 1%">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-bottom: 1%">
                             <input class="btn large color2 pull-left" type="submit" value="Login" name="submit">
                             </div>
-                        <div class="col-md-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
                         <a href="facebook.php" class="btn large color2 pull-left" type="" style="background: #0075b0;" value="Login Through Facebook" name="facebook">Login Through Facebook</a>
 
@@ -96,157 +94,132 @@
 
                 </form>
             </div>
+
+            <div class="row clearfix f-space10"></div>
+            <div class="box-heading"><span>Register</span></div>
+
+            <div class="contactform" >
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p><strong>Customer information</strong></p>
+                </div>
+                <form  method="post" action="register_user.php" onsubmit="return validation();">
+                    <div class="row">
+                        <div class="col-lg-11 col-md-11 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <h5 style="margin-top: 30px">First Name</h5>
+                                </div>
+                                <div class="col-lg-5 col-md-9 col-sm-6 col-xs-12">
+                                    <input class="input4" id="firstName" name="fName" placeholder="First Name*" onblur="validation()" onkeyup="validation()" >
+
+                                </div>
+                                <div class="col-lg-3 col-md-9 col-sm-6 col-xs-12">
+                                    <p id="fName1"style="text-align: center;margin-top: 20px"></p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-11 col-md-11 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <h5 style="margin-top: 30px">Last Name</h5>
+                                </div>
+                                <div class="col-lg-5 col-md-9 col-sm-6 col-xs-12">
+                                    <input class="input4" id="lastName" name="lName" placeholder="Last Name*" onblur="validation()" onkeyup="validation()" >
+
+                                </div>
+                                <div class="col-lg-3 col-md-9 col-sm-6 col-xs-12">
+                                    <p id="lName1"style="text-align: center;margin-top: 20px"></p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-11 col-md-11 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <h5 style="margin-top: 30px">Email</h5>
+                                </div>
+                                <div class="col-lg-5 col-md-9 col-sm-6 col-xs-12">
+                                    <input  class="input4" id="emailid" name="email" placeholder="xxx@xxx.xxx*" onkeyup="checkEmail(this.value)" onblur="checkEmail(this.value)" onchange="checkEmail(this.value)" >
+
+                                </div>
+                                <div class="col-lg-3 col-md-9 col-sm-6 col-xs-12">
+                                    <p id="emailValid"style="text-align: center;margin-top: 20px" > </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-11 col-md-11 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <h5 style="margin-top: 30px">Password</h5>
+                                </div>
+                                <div class="col-lg-5 col-md-9 col-sm-6 col-xs-12">
+                                    <input type="password" class="input4" id="passwordid" name="password" placeholder="Password*"  onblur="validation()" onkeyup="validation()">
+
+                                </div>
+                                <div class="col-lg-3 col-md-9 col-sm-6 col-xs-12">
+                                    <p id="passwordValid"style="text-align: center;margin-top: 20px"></p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-11 col-md-11 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                    <h5 style="margin-top: 30px">Contact Number</h5>
+                                </div>
+                                <div class="col-lg-5 col-md-9 col-sm-6 col-xs-12">
+                                    <input class="input4" id="contactid" name="contact" placeholder="Contact Number*" onblur="validation()"onkeypress="return event.charCode > 47 && event.charCode < 58;"  onkeyup="validation()" >
+
+                                </div>
+                                <div class="col-lg-3 col-md-9 col-sm-6 col-xs-12">
+                                    <p id="contactValid"style="text-align: center;margin-top: 20px"></p>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <input class="btn large color2 pull-right" type="submit" value="Register" name="submit">
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+
+
         </div>
-        <div class="col-md-3 " style="margin-left:-50px ;margin-top:10px ">
-            <div class="container ">
-                <div class="col-md-3 col-sm-12 col-xs-12 box-block page-sidebar">
-                    <div class="box-heading"><span>Best Sellers</span></div>
+        <div class="class=col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="row clearfix f-space10"></div>
+
                     <!-- Best Sellers Products -->
-                    <div class="box-content">
                         <?php include "best_sellers.php";?>
-                    </div>
-                    <!-- end: Best Sellers Products -->
-                    <!-- Special Product Start Products -->
 
-                    <!-- end: special product -->
-                    <div class="clearfix f-space10"></div>
-                </div>
-                <div class="clearfix f-space10"></div>
-                <?php include "specials.php";?>
-            </div>
 
-            <div class="clearfix f-space10"></div>
+
+            <div class="row clearfix f-space10"></div>
+            <div class="row clearfix f-space10"></div>
+            <div class="row clearfix f-space10"></div>
+            <div class="row clearfix f-space10"></div>
+            <div class="row clearfix f-space10"></div>
+
+                    <?php include "specials.php";?>
+
+
+
 
         </div>
     </div>
 
 
-    <div class="col-lg-12">
-        <div class="col-lg-9">
-        <div class="row clearfix f-space10"></div>
-        <div class="box-heading"><span>Register</span></div>
-
-        <div class="contactform" >
-
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <p><strong>Customer information</strong></p>
-            </div>
-            <form  method="post" action="register_user.php" onsubmit="return validation();">
-                <div class="row">
-                    <div class="col-lg-11 col-md-11 col-sm-6 ">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <h5 style="margin-top: 30px">First Name</h5>
-                            </div>
-                            <div class="col-lg-5 col-md-9 col-sm-6">
-                                <input class="input4" id="firstName" name="fName" placeholder="First Name*" onblur="validation()" onkeyup="validation()" >
-
-                            </div>
-                            <div class="col-lg-3 col-md-9 col-sm-6">
-                                <p id="fName1"style="text-align: center;margin-top: 20px"></p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-11 col-md-11 col-sm-6 ">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <h5 style="margin-top: 30px">Last Name</h5>
-                            </div>
-                            <div class="col-lg-5 col-md-9 col-sm-6">
-                                <input class="input4" id="lastName" name="lName" placeholder="Last Name*" onblur="validation()" onkeyup="validation()" >
-
-                            </div>
-                            <div class="col-lg-3 col-md-9 col-sm-6">
-                                <p id="lName1"style="text-align: center;margin-top: 20px"></p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-11 col-md-11 col-sm-6 ">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <h5 style="margin-top: 30px">Email</h5>
-                            </div>
-                            <div class="col-lg-5 col-md-9 col-sm-6">
-                                <input  class="input4" id="emailid" name="email" placeholder="xxx@xxx.xxx*" onkeyup="checkEmail(this.value)" onblur="checkEmail(this.value)" onchange="checkEmail(this.value)" >
-
-                            </div>
-                            <div class="col-lg-3 col-md-9 col-sm-6">
-                                <p id="emailValid"style="text-align: center;margin-top: 20px" > </p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-11 col-md-11 col-sm-6 ">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <h5 style="margin-top: 30px">Password</h5>
-                            </div>
-                            <div class="col-lg-5 col-md-9 col-sm-6">
-                                <input type="password" class="input4" id="passwordid" name="password" placeholder="Password*"  onblur="validation()" onkeyup="validation()">
-
-                            </div>
-                            <div class="col-lg-3 col-md-9 col-sm-6">
-                                <p id="passwordValid"style="text-align: center;margin-top: 20px"></p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-11 col-md-11 col-sm-6 ">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-3">
-                                <h5 style="margin-top: 30px">Contact Number</h5>
-                            </div>
-                            <div class="col-lg-5 col-md-9 col-sm-6">
-                                <input class="input4" id="contactid" name="contact" placeholder="Contact Number*" onblur="validation()"onkeypress="return event.charCode > 47 && event.charCode < 58;"  onkeyup="validation()" >
-
-                            </div>
-                            <div class="col-lg-3 col-md-9 col-sm-6">
-                                <p id="contactValid"style="text-align: center;margin-top: 20px"></p>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <input class="btn large color2 pull-right" type="submit" value="Register" name="submit">
-                    </div>
-
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12" id="validationfield" style="background: #f5f5f5;height: 40px;margin-top: 20px" >
-                    <p id="checkForm"style="text-align: center;margin-top: 10px;font: bold"></p>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="col-md-3 " style="margin-left:-50px ;margin-top:10px ">
-        <div class="container ">
-            <div class="col-md-3 col-sm-12 col-xs-12 box-block page-sidebar">
-                <div class="box-heading"><span>Best Sellers</span></div>
-                <!-- Best Sellers Products -->
-                <div class="box-content">
-                    <?php include "best_sellers.php";?>
-                </div>
-                <!-- end: Best Sellers Products -->
-                <!-- Special Product Start Products -->
-
-                <!-- end: special product -->
-                <div class="clearfix f-space10"></div>
-            </div>
-            <div class="clearfix f-space10"></div>
-            <?php include "specials.php";?>
-        </div>
-
-    <div class="clearfix f-space10"></div>
-
-    </div>
-</div>
 </div>
 
 <!-- end: container-->

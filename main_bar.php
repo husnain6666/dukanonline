@@ -1,11 +1,11 @@
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 menu-col">
     <div class="menu-heading <?php
-    if($_SERVER['REQUEST_URI'] !== "/dukanonline/index.php")
+    if($_SERVER['REQUEST_URI'] !== "/index.php")
         echo "menuHeadingdropdown";
     ?>" <span> <i class="fa fa-bars"></i> Categories</span> </div>
 <!-- Mega Menu -->
 <div class="menu3dmega vertical <?php
-if($_SERVER['REQUEST_URI'] !== "/dukanonline/index.php")
+if($_SERVER['REQUEST_URI'] !== "/index.php")
     echo "menuMegasub";
 ?>" id="menuMega">
     <ul>
@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_URI'] !== "/dukanonline/index.php")
             <div class="dropdown-menu flyout-menu">
                 <!-- Sub Menu -->
                 <ul>
-                    <li><a href="about.php">About us</a></li>
+                    <li><a href="aboutUs.php">About us</a></li>
                     <li><a href="blog.php">Blog</a></li>
                     <li> <a href="#a"><span>Account</span> <i class="fa fa-caret-right"></i> </a>
                         <ul class="dropdown-menu sub flyout-menu">
@@ -228,9 +228,9 @@ $arrow_count++;
     <div class="menu-links hidden-xs">
         <ul class="nav nav-pills nav-justified">
             <li> <a href="index.php"> <i class="fa fa-home fa-fw"></i> <span class="hidden-sm">Home</span></a> </li>
-            <li> <a href="about.php"> <i class="fa fa-info-circle fa-fw"></i> <span class="hidden-sm">About</span></a> </li>
             <li> <a href="blog.html"> <i class="icons"><span><img src="images/icons/jug.png" width="14" height="18"></span></i> <span class="hidden-sm">Appliances</span></a> </li>
             <li> <a href="contact.php"> <i class="fa"><img src="images/icons/kitchen.png" width="19" height="18"></i> <span class="hidden-sm ">Kitchen</span></a> </li>
+            <li> <a href="aboutUs.php"> <i class="fa fa-info-circle fa-fw"></i> <span class="hidden-sm">About</span></a> </li>
             <?php
 
             $totalAmount=0;

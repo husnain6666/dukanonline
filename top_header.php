@@ -124,7 +124,7 @@ $wishno='Wishlist(0)';
                         ?>
                             <li> <a href="signUp.php"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-xs">My Cart</span></a> </li>
                             <li> <a href="signUp.php" id="wishno"> <i class="fa fa-heart fa-fw"></i> <span class="hidden-xs"><?php echo $wishno; ?></span></a> </li>
-                            <li class="dropdown"> <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#a"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> Login</span></a>
+                            <li class="dropdown" onclick="window.location.href='signUp.php'"> <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="signUp.php"> <i class="fa fa-user fa-fw"></i> <span class="hidden-xs"> Login</span></a>
                             <div class="loginbox dropdown-menu" style="height: 380px;width: 350px;"> <span class="form-header">Login</span>
                                 <form method="post" action="login.php">
                                     <div class="form-group"> <i class="fa fa-user fa-fw"></i>
