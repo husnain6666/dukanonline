@@ -22,7 +22,7 @@
         <div class="carousel-inner">
             <?php
             $count = 0;
-            $sql = "SELECT articleId,price,articleName,picture1 FROM article where bestSeller='1' group by articleId DESC limit 4";
+            $sql = "SELECT articleId,price,articleName,picture1 FROM article where bestSeller='1' group by articleId DESC limit 8";
             $result=mysqli_query($connection,$sql);
 
             while($table_record=mysqli_fetch_array($result)){

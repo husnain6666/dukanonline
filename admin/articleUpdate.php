@@ -171,7 +171,7 @@ $picture3;
 if (!empty($_GET['q'])) {
     include("dbConnect.php");
     $q = $_GET['q'];
-    $query = "SELECT  * from article WHERE  article.articleId='$q'";
+    $query = "SELECT * from article WHERE  article.articleId='$q'";
     $result = mysqli_query($CONNECTION, $query);
     if ($result) {
         if ($result->num_rows > 0) {
@@ -189,7 +189,7 @@ if (!empty($_GET['q'])) {
                 $picture2 = $notify['picture2'];
                 $picture3 = $notify['picture3'];
 
-
+                $pictureTag = $notify['pictureTag'];
                 $specification = $notify['specification'];
                 $myArray = explode('0_0', $specification);
                $intrduction= $myArray[0];
@@ -477,21 +477,47 @@ $p1="";
     }
 
 
-    if (empty($error)) {
-      //  $sql = "UPDATE `article` SET `articleName`='$article_name' ,`Category`='$category' ,`brand`='$bN' ,`specification`='$description' ,`weekDeal`='$hotdeal',bestSeller='$bestsale' ,Sale='$sale',`price`='$ppp' ,`quantity`='$quantity',`discount`='$tp'  ,`date`='$date' ,`color`='$color' $p1 $p2 $p3  WHERE articleId='$ar_id'";
-  $sql = "UPDATE `article` SET `articleName`='$article_name' ,`Category`='$category' ,`brand`='$bN' ,`specification`='$description' ,`weekDeal`='$hotdeal',bestSeller='$bestsale' ,Sale='$sale',`price`='$ppp' ,`discount`='$tp'  ,`date`='$date'  $p1 $p2 $p3  WHERE articleId='$ar_id'";
-
+    if (empty($error))
+    {
+        $pictag = $_POST["picTag"];
+        $color = $_POST["colors"];
+        $prodSize = $_POST["size"];
+        //$sql = "UPDATE `article` SET `articleName`='$article_name' ,`Category`='$category' ,`brand`='$bN' ,`specification`='$description' ,`weekDeal`='$hotdeal',bestSeller='$bestsale' ,Sale='$sale',`price`='$ppp' ,`quantity`='$quantity',`discount`='$tp'  ,`date`='$date' ,`color`='$color' $p1 $p2 $p3  WHERE articleId='$ar_id'";
+        $sql = "UPDATE `article` SET `articleName`='$article_name' ,`Category`='$category' ,`brand`='$bN' ,`specification`='$description' ,`weekDeal`='$hotdeal',bestSeller='$bestsale' ,Sale='$sale',`price`='$ppp' ,`discount`='$tp' , pictureTag = $pictag ,`date`='$date'  $p1 $p2 $p3  WHERE articleId='$ar_id'";
         $result = mysqli_query($CONNECTION, $sql);
-
+        echo $color;
+        if($color != "") {
+            $color1 = explode(',', $color);
+            $colDelQuery = "Delete from color where articleId = $ar_id";
+            $delResult = mysqli_query($CONNECTION, $colDelQuery);
+            $i = 0;
+            echo count($color1);
+            while ($i < count($color1)) {
+                $sql = "INSERT INTO color(color, articleId) VALUES('$color1[$i]',$ar_id)";
+                $result2 = mysqli_query($CONNECTION, $sql);
+                $i++;
+            }
+        }
+        echo $prodSize;
+        if($prodSize != "") {
+            $size1 = explode(',', $prodSize);
+            $sizeDelQuery = "Delete from size where articleId = $ar_id";
+            $delResult = mysqli_query($CONNECTION, $sizeDelQuery);
+            $j = 0;
+            echo count($size1);
+            while($j < count($size1))
+            {
+                $sql1 = "INSERT INTO size(size, articleId) VALUES('$size1[$j]',$ar_id)";
+                $result3 = mysqli_query($CONNECTION, $sql1);
+                $j++;
+            }
+        }
         echo'<style type="text/css">
                 #idalert {
                     visibility: visible;
                 }
             </style>';
-
-
-
-}
+    }
 }
 ?>
 
@@ -798,26 +824,106 @@ $p1="";
                       
                      </div>
 
-
-
                     <div class="form-group">
-                        <label for="category" class="col-sm-2 control-label">Chose Color*</label>
+                        <label for="specification" class="col-sm-2 control-label">Picture Tag</label>
+
                         <div class="col-sm-4">
-                            <select class="form-control col-sm-9" id="ChoseColors">
-                                <?php
-                                include("dbConnect.php");
-                                $query ="SELECT * FROM `color`";
-                                $result = mysqli_query($CONNECTION, $query);
-                                if($result) {
-                                    if($result->num_rows > 0) {
-                                        while ($notify = mysqli_fetch_assoc($result)) {
-                                            $categoryName=$notify['colorName'];
-                                            echo  "<span class='label label-danger'>$count</span>";
-                                            ?>
-                                            <option><?php echo $categoryName; ?></option>
-                                        <?php } }}?>
+                            <select class="form-control col-sm-9" name="picTag">
+                                <option><?php echo $pictureTag;?></option>
+                                <option>HOT</option>
+                                <option>SALE</option>
+                                <option>NEW</option>
+                                <option>FEATURED</option>
                             </select>
                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category" class="col-sm-2 control-label">Choose Color</label>
+                        <div class="col-sm-2">
+                            <select class="form-control col-sm-9" id="ChoseColors">
+                                <option>red</option>
+                                <option>green</option>
+                                <option>black</option>
+                                <option>blue</option>
+                                <option>yellow</option>
+                                <option>orange</option>
+                                <option>purple</option>
+                            </select>
+                        </div>
+                        <?php
+                            $colorArray;
+                            $colorCount = 0;
+                            $selectColor = "Select color from color where articleId = $ar_id";
+                            $colorResult = mysqli_query($CONNECTION, $selectColor);
+                        if ($colorResult->num_rows > 0) {
+                            while ($notify = mysqli_fetch_assoc($colorResult)) {
+                                $colorArray[$colorCount] = $notify['color'];
+                                $colorCount++;
+                            }
+                        }
+                        ?>
+                        <label for="TIME IN" class="col-sm-1 control-label"  align="right">Color</label>
+                      <span class="col-sm-5"><input type="text" align="left"id="colorid" name="colors" class="form-control" value="<?php
+                          $showColorCount = 0;
+                          while($showColorCount < ($colorCount))
+                          {
+                              echo $colorArray[$showColorCount];
+                              if($showColorCount+1 != $colorCount)
+                                  echo ",";
+                              $showColorCount++;
+                          }
+                          $colorCount = 0;
+                          $showColorCount = 0;
+                          ?>"/>
+                          </span>
+                        <span class="error" ><font color="red"> <?php //if(isset($errors['color'])) echo $errors['color'];?></font></span>
+                        <a class="btn btn-primary" onclick='f1()' data-toggle="tooltip" data-original-title='Add Color'  id="colorp"><i class="fa fa-plus"></i></a>
+                        <a class="btn btn-danger" onclick='f2()' data-toggle="tooltip" data-original-title='Remove Color'  id="color-"><i class="fa fa-minus"></i></a>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category" class="col-sm-2 control-label">Choose Size</label>
+                        <div class="col-sm-2">
+                            <select class="form-control col-sm-9" id="ChooseSize">
+                                <option>XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>N</option>
+                                <option>L</option>
+                                <option>XL</option>
+                                <option>XXL</option>
+                            </select>
+                        </div>
+                        <?php
+                        $sizeArray;
+                        $sizeCount = 0;
+                        $selectSize = "Select size from size where articleId = $ar_id";
+                        $sizeResult = mysqli_query($CONNECTION, $selectSize);
+                        if ($sizeResult->num_rows > 0) {
+                            while ($notify = mysqli_fetch_assoc($sizeResult)) {
+                                $sizeArray[$sizeCount] = $notify['size'];
+                                $sizeCount++;
+                            }
+                        }
+                        ?>
+                        <label for="TIME IN" class="col-sm-1 control-label"  align="right">Size</label>
+                      <span class="col-sm-5"><input type="text" align="left"id="sizeid" name="size" class="form-control" value="<?php
+                          $showSizeCount = 0;
+                          while($showSizeCount < ($sizeCount))
+                          {
+                              echo $sizeArray[$showSizeCount];
+                              if($showSizeCount+1 != $sizeCount)
+                                  echo ",";
+                              $showSizeCount++;
+                          }
+                          $sizeCount = 0;
+                          $showSizeCount = 0;
+                          ?>"/>
+                          </span>
+                        <span class="error" ><font color="red"> <?php //if(isset($errors['color'])) echo $errors['color'];?></font></span>
+                        <a class="btn btn-primary" onclick='f3()' data-toggle="tooltip" data-original-title='Add Size'  id="sizep"><i class="fa fa-plus"></i></a>
+                        <a class="btn btn-danger" onclick='f4()' data-toggle="tooltip" data-original-title='Remove Size'  id="size-"><i class="fa fa-minus"></i></a>
                     </div>
 <!--
                     <div class="form-group">
@@ -950,6 +1056,169 @@ $p1="";
 
 </script>
 <script>
+
+    function f1()
+    {
+        var com=-1;
+        var sel=document.getElementById("ChoseColors");
+        var sv = sel.options[sel.selectedIndex].value;
+        var color=document.getElementById("colorid").value;
+        if(color=="")
+        {
+            document.getElementById("colorid").value=sv;
+        }
+        else
+        {
+            var res = color.split(",");
+            for(var i = 0; i < res.length; i++)
+            {
+                if(res[i]==sv){
+                    com=0;
+                }
+
+            }
+            if(com==-1)
+            {
+                document.getElementById("colorid").value=color+","+sv;
+            }
+            else
+            {
+                alert("Color already Exists!");
+            }
+        }
+    }
+
+    function f2()
+    {
+        var com;
+        var text="s";
+        var sel=document.getElementById("ChoseColors");
+        var sv = sel.options[sel.selectedIndex].value;
+        var color=document.getElementById("colorid").value;
+        if(color=="")
+        {
+        }
+        else
+        {
+            var res = color.split(",");
+            for(var i = 0; i < res.length; i++)
+            {
+                var n = res[i].localeCompare(sv);
+                if(n==0)
+                {
+                    com=i;
+                    break;
+                }
+
+            }
+            for(var i = 0; i < res.length; i++)
+            {
+                if(res[com]==res[i]){
+
+                }else{
+                    if(text=="s")
+                    {
+                        text=res[i];
+                    }
+                    else
+                    {
+                        text=text+","+res[i];
+                    }
+                }
+
+
+            }
+            if(text=="s"){
+                text="";
+            }
+            document.getElementById("colorid").value=text;
+
+        }
+
+
+    }
+
+    function f3()
+    {
+        var com=-1;
+        var sel=document.getElementById("ChooseSize");
+        var sv = sel.options[sel.selectedIndex].value;
+        var color=document.getElementById("sizeid").value;
+        if(color=="")
+        {
+            document.getElementById("sizeid").value=sv;
+        }
+        else
+        {
+            var res = color.split(",");
+            for(var i = 0; i < res.length; i++)
+            {
+                if(res[i]==sv){
+                    com=0;
+                }
+
+            }
+            if(com==-1)
+            {
+                document.getElementById("sizeid").value=color+","+sv;
+            }
+            else
+            {
+                alert("Size already Exists!");
+            }
+        }
+    }
+
+    function f4()
+    {
+        var com;
+        var text="s";
+        var sel=document.getElementById("ChooseSize");
+        var sv = sel.options[sel.selectedIndex].value;
+        var color=document.getElementById("sizeid").value;
+        if(color=="")
+        {
+        }
+        else
+        {
+            var res = color.split(",");
+            for(var i = 0; i < res.length; i++)
+            {
+                var n = res[i].localeCompare(sv);
+                if(n==0)
+                {
+                    com=i;
+                    break;
+                }
+
+            }
+            for(var i = 0; i < res.length; i++)
+            {
+                if(res[com]==res[i]){
+
+                }else{
+                    if(text=="s")
+                    {
+                        text=res[i];
+                    }
+                    else
+                    {
+                        text=text+","+res[i];
+                    }
+                }
+
+
+            }
+            if(text=="s"){
+                text="";
+            }
+            document.getElementById("sizeid").value=text;
+
+        }
+
+
+    }
+
   $(function() {
     $( "#datepicker" ).datepicker();
   });

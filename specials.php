@@ -13,6 +13,8 @@
                 $table_record1=mysqli_fetch_array($result1);
                 $limit1 = $table_record1['count'];
                 while($fu1 < $limit1){
+                    if($fu1 == 8)
+                        break;
                     $carouselCount1++;
                     ?>
                     <li class="<?php if($carouselCount1 == 1){echo "active";}?>" data-slide-to="<?php echo $fu1;?>" data-target="#productc4"></li>

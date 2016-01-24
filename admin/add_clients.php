@@ -9,7 +9,7 @@ include_once('session.php');
 <head>
 
     <meta charset="UTF-8">
-    <title>Add Poster</title>
+    <title>Add/Update Clients</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.4 -->
@@ -184,7 +184,7 @@ include_once('session.php');
                                             "<td class='col-md-4'> {$add['clientId']} </td>" .
                                             "<td class='col-md-5'> <img src='../{$add['picture']}' width='170px' height='100px' border='1'  /> </td>" .
                                             "<td align='center' class='col-md-3'>" .
-                                            "<a  href='../index.php' target='_blank'><button  class='btn btn-primary btn-xs' data-toggle='modal' data-target='' title='' onclick=''><i class='fa fa-eye'></i></button></a>&nbsp;<a href='updateClient.php?Id={$add['clientId']}' target='_blank'><button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)' data-original-title='Reset Password'><i class='fa fa-refresh'></i></button>&nbsp;" .
+                                            "<a  href='../index.php' target='_blank'><button  class='btn btn-primary btn-xs' data-toggle='modal' data-target='' title='' onclick=''><i class='fa fa-eye'></i></button></a>&nbsp;<a href='updateClient.php?Id={$add['clientId']}' target='_blank'><button class='btn btn-success btn-xs' data-toggle='modal' data-target='' title='' onclick='newtab(this)' data-original-title='Reset Password'><i class='fa fa-refresh'></i></button>&nbsp;<a  href='removeRecords.php?query=clients&id={$add['clientId']}' target=''><button  class='btn btn-danger btn-xs' data-toggle='modal' data-target='' title='' onclick=''><i class='fa fa-minus'></i></button></a>" .
                                             "</td>" .
                                             "</tr>";
                                     }
@@ -196,6 +196,7 @@ include_once('session.php');
                         <br/>
                         <br/>
                     </div>
+
                     </div>
 
                 </div><!-- /.col -->
