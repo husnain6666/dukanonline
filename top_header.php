@@ -1,6 +1,7 @@
 <?php
 include('session.php');
 include('connectdb.php');
+
 ?>
 <!--[if IE 7 ]><html class="ie ie7 lte9 lte8 lte7" lang="en-US"><![endif]-->
 <!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en-US">	<![endif]-->
@@ -84,6 +85,8 @@ if(isset( $_SESSION['loginUser'])) {
     $result1 = mysqli_query($connection, $query1);
     $row1 = mysqli_fetch_array($result1);
     $userId =$row1['userId'];
+    $_SESSION["userId"] = $userId;
+
 
     $query = "SELECT count(userId) as wishno from wishlist where userId='$userId'";
     $result = mysqli_query($connection, $query);
@@ -112,6 +115,71 @@ $wishno='Wishlist(0)';
                                 <li><a href="#a">JPY</a></li>
                             </ul>
                         </li>
+
+                        <?php
+
+                        if(isset( $_SESSION['loginId'])) {
+                        $userId = $_SESSION["userId"];
+                        $item1 = "No Item Selected";
+                        $item2 = "No Item Selected";
+                        $item3 = "No Item Selected";
+                        $counter = 0;
+                        $itemName = ["No Item Selected", "No Item Selected", "No Item Selected"];
+
+                        $query = "SELECT * FROM comparelist WHERE userId = $userId";
+                        $result = mysqli_query($connection, $query);
+                        if($result)
+                        {
+                            while($row = mysqli_fetch_assoc($result))
+                            {
+
+                                if($row['item1']) { $item1 = $row['item1']; $counter++;}
+                                if($row['item2']) {  $item2 = $row['item2']; $counter++;}
+                                if($row['item3']) { $item3 = $row['item3']; $counter++;}
+                            }
+                            echo "<p id='hiddenCmpListCounter' hidden>$counter</p>";
+
+                        }
+
+                        for($i=0; $i<3; $i++)
+                        {
+                            $item = [$item1, $item2, $item3];
+                            $query1 = "SELECT articleName FROM article WHERE articleId = $item[$i]";
+                            $result1 = mysqli_query($connection, $query1);
+                            if($result1) {
+                                while ($row1 = mysqli_fetch_assoc($result1)) {
+                                    if ($row1['articleName']) {
+                                        $itemName[$i] = $row1['articleName'];
+                                    }
+                                }
+                            }
+                        }
+                        ?>
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#"><i class="fa fa-retweet fa-fw"></i> <span class="hidden-xs">Compare List</span><i class="fa fa-angle-down fa-fw"></i> </a>
+                            <ul class="dropdown-menu" style="width: 200px" role="menu">
+                                <li><a href="product.php"><i hidden id="firstComp"><?=$item1?></i> <i id="firstCompName"><?=$itemName[0]?></i></a></li>
+                                <li><a href="product.php"><i hidden id="secComp"><?=$item2?></i> <i id="secCompName"><?=$itemName[1]?></i></a></li>
+                                <li><a href="product.php"><i hidden id="thirdComp"><?=$item3?></i> <i id="thirdCompName"><?=$itemName[2]?></i></a></li>
+                                <div style="border-top: 1px solid #f5791f">
+                                    <a href="#" class="btn col-md-6" onclick="clearCompare()">Clear</a>
+                                    <a href="#" class="btn col-md-6" onclick="compareBtnPress()">Compare</a>
+                                </div>
+                            </ul>
+                        </li>
+                        <?php
+                        }
+                        else
+                        {?>
+
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#"><i class="fa fa-retweet fa-fw"></i> <span class="hidden-xs">Compare List</span><i class="fa fa-angle-down fa-fw"></i> </a>
+                            <ul class="dropdown-menu" style="width: 200px" role="menu">
+                                <li><a href="signUp.php">Sign in to compare items</a></li>
+                            </ul>
+                        </li>
+                                <?php }
+                        ?>
+
                         <li> <a href="#a"> <i class="fa fa-shopping-cart fa-fw"></i> <span class="hidden-xs">My Cart</span></a> </li>
                         <li> <a href="#a"> <i class="fa fa-heart fa-fw"></i> <span class="hidden-xs">Wishlist(0)</span></a> </li>
                         <?php

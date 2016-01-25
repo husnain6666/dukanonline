@@ -13,7 +13,7 @@ include("connectdb.php");
 include "top_header.php";
 $check = false; //REMOVE IT AFTER IMPLEMENTING SESSION
 $userId = 1; //REMOVE IT AFTER IMPLEMENTING SESSION
-$counter = 0;
+
 $thisCategory = null;
 
 if(isset($_GET["category"])){
@@ -102,7 +102,7 @@ if($result)
                   {
                       if($_GET["category"] == "all")
                       {
-                          $sql = "SELECT * FROM article ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                          $sql = "SELECT * FROM article";
                       }
                       else
                       {
@@ -152,7 +152,7 @@ if($result)
                   {
                       if($_GET["category"] == "all")
                       {
-                          $sql = "SELECT * FROM article ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                          $sql = "SELECT * FROM article";
                       }
                       else
                       {
@@ -202,7 +202,7 @@ if($result)
               if(isset($_GET["category"])){
                   if($_GET["category"] == "all")
                   {
-                      $sql = "SELECT * FROM article ORDER BY $orderBy $orderByValue LIMIT $start_from, $per_page";
+                      $sql = "SELECT * FROM article";
                   }
                   else
                   {
@@ -1012,6 +1012,7 @@ if($result)
 
             <?php
             $totalSubSubCategory = 0;
+
             $subsubCatItemCount = 0;
             $iterationCounter = 0;
             $x = 0;
@@ -1026,15 +1027,26 @@ if($result)
             }
             else if(isset($_GET['subCategory']))
             {
+                $subCatCount = 0;
+                $categoryName = null;
                 $subcat = $_GET['subCategory'];
-                $query5 = "SELECT category.categoryName FROM category INNER JOIN subbcategory ON category.categoryName = subbcategory.categoryName INNER JOIN subcategory ON subbcategory.subCategory = subcategory.subCategory WHERE subcategory.subCategory = '$subcat' AND category.status = '1' LIMIT 21";
+
+                $query9 = "SELECT count(category.categoryName) AS totalCategories FROM category INNER JOIN subbcategory ON category.categoryName = subbcategory.categoryName INNER JOIN subcategory ON subbcategory.subCategory = subcategory.subCategory WHERE subcategory.subCategory = '$subcat' AND category.status = '1'";
+                $result9 = mysqli_query($connection, $query9);
+                if($result9) {
+                    while ($row9 = mysqli_fetch_assoc($result9)) {
+                        $totalCategories = $row9['totalCategories'];
+                    }
+                }
+
+
+                $query5 = "SELECT category.categoryName FROM category INNER JOIN subbcategory ON category.categoryName = subbcategory.categoryName INNER JOIN subcategory ON subbcategory.subCategory = subcategory.subCategory WHERE subcategory.subCategory = '$subcat' AND category.status = '1' LIMIT 4";
                 $result5 = mysqli_query($connection, $query5);
                 if($result5) {
                     while ($row5 = mysqli_fetch_assoc($result5))
                     {
                         $categoryName = $row5['categoryName'];
-                        ?>
-
+                    ?>
                         <div class="panel panel-default">
                             <div class="panel-heading closed" data-parent="#blogcategories" data-toggle="collapse">
                                 <h4 class="panel-title"><a href="category-grid.php?subsubCategory=<?=$categoryName?>"> <?=$categoryName?> </a></h4>
@@ -1043,6 +1055,16 @@ if($result)
                     <?php
                     }
                 }
+                if($totalCategories >= 4)
+                {
+                ?>
+                <div class="panel panel-default">
+                    <div class="panel-heading closed" data-parent="#blogcategories" data-toggle="collapse">
+                        <h4 class="panel-title"><a href="category-grid.php?subCategory=<?=$_GET['subCategory']?>"> View More </a></h4>
+                    </div>
+                </div>
+            <?php
+                }
             }
 
             else {
@@ -1050,12 +1072,24 @@ if($result)
 
             if(isset($_GET['category']))
             {
+                $totalSubCategory = 0;
                 $thisCategory = $_GET['category'];
-                $query3 = "SELECT subcategory.subCategory FROM subcategory INNER JOIN masterrsub ON subcategory.subCategory = masterrsub.subCategory INNER JOIN masterCategory ON mastercategory.masterCategory = masterrsub.masterCategory WHERE masterrsub.masterCategory = '$thisCategory' AND subcategory.status = '1' LIMIT 8";
+
+                $query2 = "SELECT count(subcategory.subCategory) as totalSubCategory FROM subcategory INNER JOIN masterrsub ON subcategory.subCategory = masterrsub.subCategory INNER JOIN masterCategory ON mastercategory.masterCategory = masterrsub.masterCategory WHERE masterrsub.masterCategory = '$thisCategory'";
+                $result2 = mysqli_query($connection, $query2);
+                if($result2)
+                {
+                    while($row2 = mysqli_fetch_assoc($result2))
+                    {
+                        $totalSubCategory = $row2['totalSubCategory'];
+                    }
+                }
+
+                $query3 = "SELECT subcategory.subCategory FROM subcategory INNER JOIN masterrsub ON subcategory.subCategory = masterrsub.subCategory INNER JOIN masterCategory ON mastercategory.masterCategory = masterrsub.masterCategory WHERE masterrsub.masterCategory = '$thisCategory' AND subcategory.status = '1' LIMIT 4";
             }
             else
             {
-                $query3 = "SELECT subcategory.subCategory FROM subcategory INNER JOIN masterrsub ON subcategory.subCategory = masterrsub.subCategory INNER JOIN masterCategory ON mastercategory.masterCategory = masterrsub.masterCategory WHERE subcategory.status = '1' LIMIT 8";
+                $query3 = "SELECT subcategory.subCategory FROM subcategory INNER JOIN masterrsub ON subcategory.subCategory = masterrsub.subCategory INNER JOIN masterCategory ON mastercategory.masterCategory = masterrsub.masterCategory WHERE subcategory.status = '1' LIMIT 5";
             }
             $result3 = mysqli_query($connection, $query3);
             if($result3)
@@ -1087,7 +1121,7 @@ if($result)
                                 <ul>
 
                                     <?php
-                                    $query5 = "SELECT category.categoryName FROM category INNER JOIN subbcategory ON category.categoryName = subbcategory.categoryName INNER JOIN subcategory ON subbcategory.subCategory = subcategory.subCategory WHERE subcategory.subCategory = '$subCategory' AND category.status = '1' LIMIT 21";
+                                    $query5 = "SELECT category.categoryName FROM category INNER JOIN subbcategory ON category.categoryName = subbcategory.categoryName INNER JOIN subcategory ON subbcategory.subCategory = subcategory.subCategory WHERE subcategory.subCategory = '$subCategory' AND category.status = '1' LIMIT 3";
                                     $result5 = mysqli_query($connection, $query5);
                                     if($result5) {
                                         while ($row5 = mysqli_fetch_assoc($result5))
@@ -1097,14 +1131,32 @@ if($result)
                                         <li class="item"><a href="category-grid.php?subsubCategory=<?=$categoryName?>"><?=$categoryName?></a></li>
                                         <?php
                                         }
-                                    }?>
+                                    }
+                                    if($totalSubSubCategory >= 3)
+                                    {
+                                    ?>
+                                        <li class="item"><a href="category-grid.php?subCategory=<?=$subCategory?>">View More</a></li>
+                                    <?php
+                                    }
+                                    ?>
                                 </ul>
                             </div>
                         </div>
+
                     </div>
 
             <?php
                 }
+            }
+            if($totalSubCategory >= 4)
+            {?>
+            <div class="panel panel-default">
+                <div class="panel-heading closed" data-parent="#blogcategories" data-target="#collapse<?=$x?>"
+                     data-toggle="collapse">
+                    <h4 class="panel-title"><a href="#a"> View More </a></h4>
+                </div>
+            </div>
+            <?php
             }
             }
           ?>
@@ -1168,61 +1220,7 @@ if($result)
         <div class="clearfix f-space20"></div>
 
       <div class="box-heading"><span>Compare</span></div>
-      <!-- Compare -->
-      <div class="box-content">
-        <div class="compare" id="compareList">
-            <?php
-                $item1 = "No Item Selected";
-                $item2 = "No Item Selected";
-                $item3 = "No Item Selected";
-                $itemName = ["No Item Selected", "No Item Selected", "No Item Selected"];
 
-                $query = "SELECT * FROM comparelist WHERE userId = $userId";
-                $result = mysqli_query($connection, $query);
-                if($result)
-                {
-                    while($row = mysqli_fetch_assoc($result))
-                    {
-
-                        if($row['item1']) { $item1 = $row['item1']; $counter++;}
-                        if($row['item2']) {  $item2 = $row['item2']; $counter++;}
-                        if($row['item3']) { $item3 = $row['item3']; $counter++;}
-                    }
-                    echo "<p id='hiddenCmpListCounter' hidden>$counter</p>";
-
-                }
-
-                for($i=0; $i<3; $i++)
-                {
-                    $item = [$item1, $item2, $item3];
-                    $query1 = "SELECT articleName FROM article WHERE articleId = $item[$i]";
-                    $result1 = mysqli_query($connection, $query1);
-                    if($result1) {
-                        while ($row1 = mysqli_fetch_assoc($result1)) {
-                            if ($row1['articleName']) {
-                                $itemName[$i] = $row1['articleName'];
-                            }
-                        }
-                    }
-                }
-
-            ?>
-            <span>
-                <a href="product.php"><i hidden id="firstComp"><?=$item1?></i> <i id="firstCompName"><?=$itemName[0]?></i></a>
-                <!--<a href="#" class="pull-right"><i class="fa fa-times fa-fw"></i></a>-->
-            </span>
-            <span>
-                <a href="product.php"><i hidden id="secComp"><?=$item2?></i> <i id="secCompName"><?=$itemName[1]?></i></a>
-            </span>
-            <span>
-                <a href="product.php"><i hidden id="thirdComp"><?=$item3?></i> <i id="thirdCompName"><?=$itemName[2]?></i></a>
-            </span>
-
-            <button class="btn color1 normal" onclick="clearCompare()">Clear</button>
-            <button class="btn color1 normal pull-right" onclick="compareBtnPress()">Compare</button>
-        </div>
-
-        <!-- Compare -->
       </div>
       <div class="clearfix f-space30"></div>
       <!-- Get Updates Box -->

@@ -1,7 +1,8 @@
 <?php
 include_once("connectdb.php");
+session_start();
 
-$userId = 1; //Remove after implementing sessions
+$userId = $_SESSION["userId"]; //Remove after implementing sessions
 $counter = 0;
 $defaultText = "No Item Selected";
 $item1 = -1;
