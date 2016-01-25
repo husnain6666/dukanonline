@@ -15,7 +15,7 @@ include('connectdb.php');
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
     <meta content="Flatroshop online shopping point" name="description">
     <meta content="logoby.us" name="author">
-    <link href="images/ico.html" rel="shortcut icon">
+    <link href="images/icons/storeOnline.ico" rel="shortcut icon">
     <title>Flatro - Online Shop Template</title>
 
     <!-- Reset CSS -->

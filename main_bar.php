@@ -1,12 +1,13 @@
 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 menu-col">
             <div class="menu-heading <?php
-            if($_SERVER['REQUEST_URI'] !== "/dukanonline/index.php")
+            $url =  "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+            if($url !== "/index.php" && $url !== "http://localhost:63342/dukanonline/" && $url !== "www.storeonline.pk" && $url !== "http://www.storeonline.pk")
                 echo "menuHeadingdropdown";
             ?>" <span> <i class="fa fa-bars"></i> Categories</span> </div>
-            <!-- Mega Menu -->
-            <div class="menu3dmega vertical <?php
-            if($_SERVER['REQUEST_URI'] !== "/dukanonline/index.php")
-                echo "menuMegasub";
+<!-- Mega Menu -->
+<div class="menu3dmega vertical <?php
+if($url !== "/index.php" && $url !== "storeonline.pk" && $url !== "www.storeonline.pk" && $url !== "http://www.storeonline.pk")
+    echo "menuMegasub";
             ?>" id="menuMega">
                 <ul>
                     <!-- Menu Item Links for Mobiles Only -->

@@ -18,6 +18,12 @@
         $redirectSuccess = "location:addDealer.php?message=Record deleted successfully!";
         $redirectFail = "location:addDealer.php?message=Could not delete client!";
     }
+    else if($query == "slider")
+    {
+        $sql = "Delete from $query where sliderId = $id";
+        $redirectSuccess = "location:addIndexSlider.php?message=Record deleted successfully!";
+        $redirectFail = "location:addIndexSlider.php?message=Could not delete slider!";
+    }
     else {
         if($query == "clients") {
             header("location:add_clients.php?message=Could not delete record!");

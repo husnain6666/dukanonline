@@ -1,10 +1,10 @@
 <div class="container">
     <div class="row clearfix">
         <div class="col-lg-3 col-xs-12">
-            <div class="logo"> <a href="index.php" title="Flatro Template"><!-- <img alt="Flatro - Responsive Metro Inspired Flat ECommerce theme" src="images/logo2.png"> -->
-                    <div class="logoimage"><i class="fa fa-shopping-cart fa-fw"></i></div>
-                    <div class="logotext"><span><strong>FLATRO</strong></span><span>SHOP</span></div>
-                    <span class="slogan">ONLINE STORE</span></a> </div>
+            <div class="logo"> <a href="index.php" title="Store Online">
+                    <img alt="" src="images/icons/Store%20Online.jpg" width="210px" height="80px">
+                    </a>
+                </div>
         </div>
         <!-- end: logo -->
         <div class="visible-xs f-space20"></div>
